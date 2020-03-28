@@ -6,7 +6,7 @@
 template<typename Port, std::uint32_t PortNum>
 class Pin {
 public:
-  void SetInput() const {
+  static void SetInput() {
     static_assert(PortNum <= 15U, "There are only 16 pins on port");
     volatile auto value = Port::MODER::Get() ;
     value &= ~ (3 << (PortNum * 2U)) ;
@@ -14,7 +14,7 @@ public:
     Port::MODER::Write(value);
   }
   
-  void SetOutput() const {
+  static void SetOutput() {
     static_assert(PortNum <= 15U, "There are only 16 pins on port");
     volatile auto value = Port::MODER::Get() ;
     value &= ~ (3 << (PortNum * 2U)) ;
@@ -22,7 +22,7 @@ public:
     Port::MODER::Write(value);
   }
  
-  void SetAlternate() const {
+  static void SetAlternate() {
     static_assert(PortNum <= 15U, "There are only 16 pins on port");
     volatile auto value = Port::MODER::Get() ;
     value &= ~(3 << (PortNum * 2U)) ;
@@ -30,7 +30,7 @@ public:
     Port::MODER::Write(value);
   }
   
-  bool IsSet() const {
+  static bool IsSet() {
     static_assert(PortNum <= 15U, "There are only 16 pins on port");
     return ((Port::IDR::Get() & (1 << PortNum)) != 0);
   } 
