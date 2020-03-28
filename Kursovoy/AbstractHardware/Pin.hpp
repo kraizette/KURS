@@ -35,4 +35,4 @@ public:
     return ((Port::IDR::Get() & (1 << PortNum)) != 0);
   } 
 };
-#endif //PIN_HPP
+#endif //pin_hpp

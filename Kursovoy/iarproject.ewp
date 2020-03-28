@@ -2143,6 +2143,21 @@
     </group>
     <group>
         <name>Application</name>
+        <group>
+            <name>Button</name>
+            <file>
+                <name>$PROJ_DIR$\Applications\Button\Button.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Button\Subscriber.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Button\TaskButton.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Button\TaskButton.hpp</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Rtos</name>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>4105255976</fileChecksum>
+    <fileChecksum>2502005714</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -229,6 +229,13 @@
             <file>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp</file>
             <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
             <file>$TOOLKIT_DIR$\inc\cpp\chrono</file>
+            <file>$PROJ_DIR$\AbstractHardware\SPI.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\TaskButton.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\TaskButton.o</file>
+            <file>$PROJ_DIR$\Applications\Button\TaskButton.cpp</file>
+            <file>$PROJ_DIR$\Applications\Button\TaskButton.hpp</file>
+            <file>$PROJ_DIR$\Applications\Button\Button.hpp</file>
+            <file>$PROJ_DIR$\Applications\Button\Subscriber.hpp</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -573,6 +580,19 @@
                 </tool>
             </inputs>
         </file>
+        <file>
+            <name>$PROJ_DIR$\Applications\Button\TaskButton.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 226</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 225</file>
+                </tool>
+            </outputs>
+        </file>
         <forcedrebuild>
             <name>$PROJ_DIR$\Rtos\FreeRtos\portable\Common\mpu_wrappers.c</name>
             <tool>ICCARM</tool>
@@ -588,6 +608,10 @@
         <forcedrebuild>
             <name>$PROJ_DIR$\Application\userbutton.cpp</name>
             <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
         </forcedrebuild>
     </configuration>
     <configuration>
