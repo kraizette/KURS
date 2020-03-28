@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         28/Mar/2020  14:02:40
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         28/Mar/2020  14:40:45
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWF6B6.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EWD607.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -1015,7 +1015,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
       9          void SensorDirector::HandleButtonPushed() {
    \                     _ZN14SensorDirector18HandleButtonPushedEv: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     10            std::cout << " ТЕРМИНАЛ " << std::endl ;
+     10            std::cout << " Terminal " << std::endl ;
    \        0x2   0x....             LDR.N    R1,??DataTable1
    \        0x4   0x....             LDR.N    R0,??DataTable1_1
    \        0x6   0x....'....        BL       _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
@@ -1045,17 +1045,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
 
    \                                 In section .rodata, align 4
    \                     ?_0:
-   \        0x0   0x20 0xD0          DC8 " \320\242\320\225\320\240\320\234\320\230\320\235\320\220\320\233 "
-   \              0xA2 0xD0    
-   \              0x95 0xD0    
-   \              0xA0 0xD0    
-   \              0x9C 0xD0    
-   \              0x98 0xD0    
-   \              0x9D 0xD0    
-   \              0x90 0xD0    
-   \              0x9B 0x20    
+   \        0x0   0x20 0x54          DC8 " Terminal "
+   \              0x65 0x72    
+   \              0x6D 0x69    
+   \              0x6E 0x61    
+   \              0x6C 0x20    
    \              0x00         
-   \       0x13   0x00               DC8 0
+   \        0xB   0x00               DC8 0
 
    Maximum stack usage in bytes:
 
@@ -1199,7 +1195,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
        4  ??DataTable1
        4  ??DataTable1_1
        4  ??DataTable1_2
-      20  ?_0
+      12  ?_0
        2  SensorDirector::Execute()
        4  SensorDirector::HandleButtonPushed for ISubscriber/-604/()
       18  SensorDirector::HandleButtonPushed()
@@ -1258,11 +1254,11 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
 
  
      5 bytes in section .bss
-   395 bytes in section .rodata
+   387 bytes in section .rodata
  1'598 bytes in section .text
  
  36 bytes of CODE  memory (+ 1'562 bytes shared)
- 20 bytes of CONST memory (+   375 bytes shared)
+ 12 bytes of CONST memory (+   375 bytes shared)
   0 bytes of DATA  memory (+     5 bytes shared)
 
 Errors: none

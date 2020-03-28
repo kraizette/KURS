@@ -39,7 +39,7 @@ int __low_level_init(void) {
 }
 }
 
-SensorDirector mySensorDirector () ;
+SensorDirector mySensorDirector;
 TaskButton myTaskButton (mySensorDirector);
 
 

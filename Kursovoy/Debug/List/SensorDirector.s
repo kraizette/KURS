@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        28/Mar/2020  14:02:39
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        28/Mar/2020  14:40:45
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWF6B6.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EWD607.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -1774,7 +1774,7 @@ _ZTSSt11_Wrap_facetISt5ctypeIcEE:
         DATA
 ?_0:
         DATA8
-        DC8 " \320\242\320\225\320\240\320\234\320\230\320\235\320\220\320\233 "
+        DC8 " Terminal "
         DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(0)
@@ -1836,7 +1836,7 @@ _ZN14SensorDirector18HandleButtonPushedEv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//   10   std::cout << " ТЕРМИНАЛ " << std::endl ;
+//   10   std::cout << " Terminal " << std::endl ;
         LDR.N    R1,??DataTable1
         LDR.N    R0,??DataTable1_1
           CFI FunCall _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
@@ -2014,11 +2014,11 @@ _ZN14SensorDirector18HandleButtonPushedEv:
         END
 // 
 //     5 bytes in section .bss
-//   395 bytes in section .rodata
+//   387 bytes in section .rodata
 // 1'598 bytes in section .text
 // 
 // 36 bytes of CODE  memory (+ 1'562 bytes shared)
-// 20 bytes of CONST memory (+   375 bytes shared)
+// 12 bytes of CONST memory (+   375 bytes shared)
 //  0 bytes of DATA  memory (+     5 bytes shared)
 //
 //Errors: none
