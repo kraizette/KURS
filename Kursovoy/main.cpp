@@ -1,7 +1,6 @@
 #include "rtos.hpp"         // for Rtos
 #include "event.hpp"        // for Event
-#include "rccregisters.hpp" // for RCC
-#include "Pin.hpp" //for gpioa
+
 std::uint32_t SystemCoreClock = 16'000'000U;
 
 #include "gpioaregisters.hpp" //for gpioa
@@ -10,7 +9,12 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "gpiodregisters.hpp" //for gpiod
 #include "gpioeregisters.hpp" //for gpioe
 #include "gpiohregisters.hpp" //for gpioh
+#include "rccregisters.hpp" // for RCC
 
+#include "Pin.hpp" //for Pin
+#include "TaskButton.hpp" //for TaskButton
+#include "SensorDirector.hpp" //for SensorDirector
+#include "ISubscriber.hpp" //for SensorDirector
 
 extern "C" {
 int __low_level_init(void) {
@@ -35,24 +39,16 @@ int __low_level_init(void) {
 }
 }
 
+SensorDirector mySensorDirector () ;
+TaskButton myTaskButton (mySensorDirector);
+
+
 int main()
 {
-  //using namespace OsWrapper;
-  //Rtos::CreateThread(myTask, "myTask", ThreadPriority::lowest);   //FIXME Чисто для примера
-  //Rtos::Start();
-   //GPIOA::MODER::MODER5::Output::Set() ;
-  Pin<GPIOA,6>  PinA6;
-  PinA6.SetAlternate();
-  Pin<GPIOC,13>  userButton;
-  userButton.SetInput();
-  int status;
-  if (!userButton.IsSet())
-    {
-      status = 5;
-    }
-  else
-  {
-    status = 2;
-  }
+  using namespace OsWrapper;
+  Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
+  Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);
+  Rtos::Start();
+
   return 0;
 }

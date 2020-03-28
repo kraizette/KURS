@@ -955,7 +955,7 @@
                 <expressions>
                     <item>Stat</item>
                     <item>status</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

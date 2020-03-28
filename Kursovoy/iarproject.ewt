@@ -2394,6 +2394,15 @@
                 <name>$PROJ_DIR$\Applications\Button\TaskButton.hpp</name>
             </file>
         </group>
+        <group>
+            <name>Sensor</name>
+            <file>
+                <name>$PROJ_DIR$\Applications\Sensor\SensorDirector.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Sensor\SensorDirector.hpp</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Rtos</name>

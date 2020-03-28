@@ -372,6 +372,9 @@
                     <state>$PROJ_DIR$\..\CortexLib\Common</state>
                     <state>$PROJ_DIR$\..\CortexLib\Common\Singleton</state>
                     <state>$PROJ_DIR$\AbstractHardware</state>
+                    <state>$PROJ_DIR$\Applications</state>
+                    <state>$PROJ_DIR$\Applications\Button</state>
+                    <state>$PROJ_DIR$\Applications\Sensor</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2156,6 +2159,15 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\Applications\Button\TaskButton.hpp</name>
+            </file>
+        </group>
+        <group>
+            <name>Sensor</name>
+            <file>
+                <name>$PROJ_DIR$\Applications\Sensor\SensorDirector.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Sensor\SensorDirector.hpp</name>
             </file>
         </group>
     </group>
