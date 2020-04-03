@@ -49,7 +49,9 @@ private:
       case Mode::Slave:
         SPIModule :: CR1 :: MSTR :: Slave :: Set() ;
         break ;
-      default: assert(false) ;
+      default:
+        assert(false) ;
+        break ;
       }
     }
     
@@ -61,7 +63,9 @@ private:
       case DataFormat::Bit16:
         SPIModule :: CR1 :: DFF :: Data16bit :: Set() ;
         break ;
-      default: assert(false) ;
+      default:
+        assert(false) ;
+        break ;
       }
     }
     
@@ -73,7 +77,9 @@ private:
       case FrameFormat::LSB:
         SPIModule :: CR1 :: LSBFIRST :: LsbFirst :: Set() ;
         break ;
-      default: assert(false) ;
+      default:
+        assert(false) ;
+        break ;
       }
     }
     
@@ -103,7 +109,9 @@ private:
       case BaudRate::DIV256:
         SPIModule :: CR1 :: BR :: PclockDiv256 :: Set() ;
         break ;
-      default: assert(false) ;
+      default:
+        assert(false) ;
+        break ;
       }
     }
     
@@ -125,7 +133,9 @@ private:
         SPIModule :: CR1 :: CPOL :: High :: Set() ;
         SPIModule :: CR1 :: CPHA :: Phase2edge :: Set() ;
         break;
-      default: assert(false) ;    
+      default:
+        assert(false) ;
+        break ;
       }
     }
 };

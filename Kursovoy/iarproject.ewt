@@ -2376,7 +2376,7 @@
         <group>
             <name>Pin</name>
             <file>
-                <name>$PROJ_DIR$\AbstractHardware\Pin.hpp</name>
+                <name>$PROJ_DIR$\AbstractHardware\Pin\Pin.hpp</name>
             </file>
         </group>
         <group>
@@ -2697,10 +2697,10 @@
         <group>
             <name>SPI</name>
             <file>
-                <name>$PROJ_DIR$\AbstractHardware\SPI.hpp</name>
+                <name>$PROJ_DIR$\AbstractHardware\SPI\SPI.hpp</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\AbstractHardware\SPIConfig.hpp</name>
+                <name>$PROJ_DIR$\AbstractHardware\SPI\SPIConfig.hpp</name>
             </file>
         </group>
         <group>
