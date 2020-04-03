@@ -1,7 +1,6 @@
 //Pin.hpp
 
-#ifndef _pin_hpp
-#define _pin_hpp
+#pragma once
 
 template<typename Port, std::uint32_t PortNum>
 class Pin {
@@ -35,4 +34,3 @@ public:
     return ((Port::IDR::Get() & (1 << PortNum)) != 0) ;
   } 
 } ;
-#endif //pin_hpp

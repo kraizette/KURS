@@ -101,7 +101,7 @@ TaskButton.pbi: \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\FreeRtos/rtosdefs.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\eventmode.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button/ISubscriber.hpp \
-  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\Pin.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\Pin\Pin.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button/Button.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Registers\STM32F411\gpiocregisters.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\gpiocfieldvalues.hpp \

@@ -49,8 +49,13 @@ TaskButton myTaskButton (mySensorDirector);
 int main()
 {
   SPI<SPI2> SPI2;
-  SPI2.Config(Mode::Master, DataFormat::Bit16, FrameFormat::LSB,
-              BaudRate::DIV16, TimingRelationships::MODE11 );
+  SPIConfig SPI2Config;
+  SPI2Config.mode = Mode::Master;
+  SPI2Config.dataformat = DataFormat::Bit16;
+  SPI2Config.frameformat = FrameFormat::MSB;
+  SPI2Config.baudrate = BaudRate::DIV4;
+  SPI2Config.timingrelationships = TimingRelationships::MODE11;
+  SPI2.Config(SPI2Config);
   using namespace OsWrapper;
   Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
   Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);

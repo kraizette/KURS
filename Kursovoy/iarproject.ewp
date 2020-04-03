@@ -372,6 +372,8 @@
                     <state>$PROJ_DIR$\..\CortexLib\Common</state>
                     <state>$PROJ_DIR$\..\CortexLib\Common\Singleton</state>
                     <state>$PROJ_DIR$\AbstractHardware</state>
+                    <state>$PROJ_DIR$\AbstractHardware\SPI</state>
+                    <state>$PROJ_DIR$\AbstractHardware\Pin</state>
                     <state>$PROJ_DIR$\Applications</state>
                     <state>$PROJ_DIR$\Applications\Button</state>
                     <state>$PROJ_DIR$\Applications\Sensor</state>
@@ -2141,6 +2143,12 @@
     <group>
         <name>AbstractHardware</name>
         <group>
+            <name>Pin</name>
+            <file>
+                <name>$PROJ_DIR$\AbstractHardware\Pin.hpp</name>
+            </file>
+        </group>
+        <group>
             <name>Registers</name>
             <group>
                 <name>STM32F411</name>
@@ -2455,12 +2463,18 @@
                 <name>$PROJ_DIR$\..\CortexLib\AbstractHardware\Registers\registertype.hpp</name>
             </file>
         </group>
-        <file>
-            <name>$PROJ_DIR$\AbstractHardware\Pin.hpp</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\AbstractHardware\SPI.hpp</name>
-        </file>
+        <group>
+            <name>SPI</name>
+            <file>
+                <name>$PROJ_DIR$\AbstractHardware\SPI.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AbstractHardware\SPIConfig.hpp</name>
+            </file>
+        </group>
+        <group>
+            <name>USART</name>
+        </group>
     </group>
     <group>
         <name>Application</name>

@@ -64,6 +64,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\Common\Singleton
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware
 -I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\SPI
+-I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\Pin
+-I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button
@@ -129,6 +133,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\CortexLib\Common
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\CortexLib\Common\Singleton
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware
+-I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\SPI
+-I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\Pin
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications
 -I
