@@ -96,7 +96,7 @@ public :
     BUSY :: SetAlternate();
   };
   
-  static void Init() override {
+  void Init() override {
     Reset(); //EPD_4IN2BC_Reset();
     RST :: Set(); //DEV_Digital_Write(EPD_RST_PIN, 1);
     RST :: Reset(); //DEV_Digital_Write(EPD_RST_PIN, 0);
@@ -107,83 +107,88 @@ public :
     SendData(0x17);//EPD_4IN2BC_SendData(0x17);
     SendData(0x17); //EPD_4IN2BC_SendData(0x17); // 07 0f 17 1f 27 2F 37 2f
     SendCommand(Command::PowerOn);//EPD_4IN2BC_SendCommand(0x04); // POWER_ON
-    while(BUSY == 0) {}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
+    while(BUSY.IsSet()) {}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
     SendCommand(Command::PanelSetting);//EPD_4IN2BC_SendCommand(0x00); // PANEL_SETTING
     SendData(0x0F);//EPD_4IN2BC_SendData(0x0F); // LUT from OTP
-  };
-  
-  static void TurnOn() override {
-    SendCommand(Command::DisplayRefresh); // EPD_4IN2BC_SendCommand(0x12); // DISPLAY_REFRESH
-    while(BUSY == 0) {};//EPD_4IN2BC_ReadBusy();
-  };
-  
-  static void Clear() override {
-    SendCommand(Command::ResolutionSetting);
-    SendData(W >> 8);
-    SendData(W & 0xff);
-    SendData(H >> 8);
-    SendData(H & 0xff);
-    
-    SendCommand(Command::DisplayStartTransmission1);
-    for (int i = 0; i < W / 8 * H; i ++) {
-      SendData(0xFF);
-    };
-    SendCommand(Command::DisplayStartTransmission2);
-    for (int i = 0; i < W / 8 * H; i ++) {
-      SendData(0xFF);
-    };    
-  };
-  
-  static void Display(uint8_t *buff, size_t lenght) override {
-    SendCommand (Command :: ResolutionSetting);
-    SendData(W >> 8);        
-    SendData(W & 0xff);
-    SendData(H >> 8);
-    SendData(H & 0xff);
-    
+    SetLut();
     SendCommand (Command :: VCMDCSetting);
-    SendData(0x12);
-    
+    SendData(0x12);  
     SendCommand (Command :: VcomDataIntervalSetting);
     SendCommand (0x97);
-    if (buff != 0) {
+  };
+  
+  void Clear() override {
+    SetResolution();
+    SendCommand(Command::DisplayStartTransmission1);
+    for (int i = 0; i < W / 8 * H; i ++) {
+      SendData(BlackColor);
+    }
+    SendCommand(Command::DisplayStartTransmission2);
+    for (int i = 0; i < W / 8 * H; i ++) {
+      SendData(BlackColor);
+    }    
+    Refresh();
+  };
+  
+  void Display(uint8_t *buff, size_t lenght) override {
+    SetResolution();
+    if (buff != nullptr) {
       SendCommand(Command :: DisplayStartTransmission1);
-      for(int i = 0; i < W / 8 * H; i++) {
-        SendData(0xFF);
+      for(int j = 0; j < W / 8 * H; j++) {
+        SendData(BlackColor);
       }
       SendCommand(Command :: DisplayStartTransmission2); 
       for(int i = 0; i < W / 8 * H; i++) {
-        SendData(&buff[lenght]);
+        SendData(buff[i+j*W]);
       }                  
     };
-    
-    SetLut();
     SendCommand (Command :: DisplayRefresh);
-    while(BUSY == 0) {};
+    while(BUSY.IsSet()) {};
   };
   
 private :
-  static void SendCommand(Command command) {
+  void SendCommand(Command command) {
     DC :: Reset(); //DEV_Digital_Write(EPD_DC_PIN, 0);
     CS :: Reset(); //DEV_Digital_Write(EPD_CS_PIN, 0);
     SPI::WriteByte(command); //DEV_SPI_WriteByte(Reg);
-    CS :: Set(); //DEV_Digital_Write(EPD_CS_PIN, 1);
+    EndSendData(); //DEV_Digital_Write(EPD_CS_PIN, 1);
   };
   
-  static void SendData(uint8_t data) {
-    DC :: Set(); //DEV_Digital_Write(EPD_DC_PIN, 1);
-    CS :: Reset(); //DEV_Digital_Write(EPD_CS_PIN, 0);
+  void SendData(uint8_t data) {
+    StartSendData();
     SPI :: WriteByte(data); //DEV_SPI_WriteByte(Data);
-    CS :: Set();//DEV_Digital_Write(EPD_CS_PIN, 1);
+    EndSendData();//DEV_Digital_Write(EPD_CS_PIN, 1);
   };
   
-  static void Reset() {
+  void Reset() {
     RST :: Set(); //DEV_Digital_Write(EPD_RST_PIN, 1);
     RST :: Reset(); //DEV_Digital_Write(EPD_RST_PIN, 0);
     RST :: Set();//DEV_Digital_Write(EPD_RST_PIN, 1);
   };
   
-  static void SetLut() {
+  void Refresh() override {
+    SendCommand(Command::DisplayRefresh); // EPD_4IN2BC_SendCommand(0x12); // DISPLAY_REFRESH
+    while(BUSY.IsSet()) {};//EPD_4IN2BC_ReadBusy();
+  };
+  
+  void SetResolution() {
+    SendCommand (Command :: ResolutionSetting);
+    SendData(W >> 8);        
+    SendData(W & 0xff);
+    SendData(H >> 8);
+    SendData(H & 0xff); 
+  };
+  
+  void StartSendData() {
+     DC :: Set() ;
+     CS :: Reset() ;
+  };
+  
+  void EndSendData() {
+     CS :: Set() ;
+  };
+  
+  void SetLut() {
     unsigned int i;
     SendCommand(Command::VCOMLUT);
     for (i = 0; i < 44; i ++) {
