@@ -377,6 +377,9 @@
                     <state>$PROJ_DIR$\Applications</state>
                     <state>$PROJ_DIR$\Applications\Button</state>
                     <state>$PROJ_DIR$\Applications\Sensor</state>
+                    <state>$PROJ_DIR$\Applications\Output</state>
+                    <state>$PROJ_DIR$\Applications\Output\Display</state>
+                    <state>$PROJ_DIR$\Applications\Output\Display\Driver</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2484,7 +2487,7 @@
                 <name>$PROJ_DIR$\Applications\Button\Button.hpp</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\Applications\Button\Subscriber.hpp</name>
+                <name>$PROJ_DIR$\Applications\Button\ISubscriber.hpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\Applications\Button\TaskButton.cpp</name>
@@ -2492,6 +2495,24 @@
             <file>
                 <name>$PROJ_DIR$\Applications\Button\TaskButton.hpp</name>
             </file>
+        </group>
+        <group>
+            <name>Output</name>
+            <group>
+                <name>BlueTooth</name>
+            </group>
+            <group>
+                <name>Display</name>
+                <group>
+                    <name>Driver</name>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Output\Display\Driver\DisplayDriver.hpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Output\Display\Driver\IDisplayDriver.hpp</name>
+                    </file>
+                </group>
+            </group>
         </group>
         <group>
             <name>Sensor</name>

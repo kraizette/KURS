@@ -1,4 +1,4 @@
-//Subscriber.hpp
+//ISubscriber.hpp
 
 #pragma once
 

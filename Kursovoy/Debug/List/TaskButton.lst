@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         03/Apr/2020  12:56:31
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         08/Apr/2020  17:07:27
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWA5FE.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW786A.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -66,6 +66,12 @@
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\
 #        -I
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\
 #        -Ol --c++ --no_exceptions --no_rtti)
 #    Locale       =  C
 #    List file    =
