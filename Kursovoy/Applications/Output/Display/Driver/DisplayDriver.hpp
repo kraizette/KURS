@@ -133,10 +133,6 @@ public :
   void Display(uint8_t *buff, size_t lenght) override {
     SetResolution();
     if (buff != nullptr) {
-      SendCommand(Command :: DisplayStartTransmission1);
-      for(int j = 0; j < W / 8 * H; j++) {
-        SendData(BlackColor);
-      }
       SendCommand(Command :: DisplayStartTransmission2); 
       for(int i = 0; i < W / 8 * H; i++) {
         SendData(buff[i+j*W]);
