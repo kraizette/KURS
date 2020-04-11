@@ -165,7 +165,7 @@ private :
     //for (int i = 0; i < 100000; i ++) {};
   };
   
-  void Refresh() override {
+  void Refresh() {
     SendCommand(Command::DisplayRefresh); // EPD_4IN2BC_SendCommand(0x12); // DISPLAY_REFRESH
     while(BUSY.IsSet()) {};//EPD_4IN2BC_ReadBusy();
   };
