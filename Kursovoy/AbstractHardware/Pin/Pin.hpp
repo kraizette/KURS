@@ -8,9 +8,11 @@ public:
     static void Reset() {
       Port::BSRR::Write((1U << PortNum ) << 16U);
   }
+  
     static void Set() {
       Port::BSRR::Write(1U << PortNum);
   }
+  
   static void SetInput() {
     static_assert(PortNum <= 15U, "There are only 16 pins on port") ;
     volatile auto value = Port::MODER::Get() ;

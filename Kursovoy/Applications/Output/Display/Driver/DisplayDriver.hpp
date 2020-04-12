@@ -87,29 +87,39 @@ public :
     SPI2Config.frameformat = FrameFormat :: MSB;
     SPI2Config.baudrate = BaudRate :: DIV2;
     SPI2Config.timingrelationships = TimingRelationships :: MODE11;
- 
+    SPI2Config.bidimode = BIDImode :: LINE2;
+    SPI2Config.csmode = CSmode :: SOFTEN;
+    SPI2Config.crcen = CRCen :: DISABLE;
+    SPI:: Enable();
     SPI :: Config(SPI2Config);
+    
     DIN :: SetAlternate();
     CLK :: SetAlternate();
-    CS :: SetAlternate();
-    DC :: SetAlternate();
-    RST :: SetAlternate();
-    BUSY :: SetAlternate();
+    CS :: SetOutput();
+    DC :: SetOutput();
+    RST :: SetOutput();
+    BUSY :: SetInput();
   }
   
   void Init() override {
     Reset(); //EPD_4IN2BC_Reset();
     SendCommand(CommandEInk::BoosterSoftStart);//EPD_4IN2BC_SendCommand(0x06); // BOOSTER_SOFT_START
+    StartSendData(); 
     SendData(0x17);//Booster Soft Start(BTST) BT_PHA[7:0] SPI
     SendData(0x17);//Booster Soft Start(BTST) BT_PHB[7:0] SPI
     SendData(0x17); //Booster Soft Start(BTST) BT_PHC[5:0] SPI
+    EndSendData(); 
     SendCommand(CommandEInk::PowerOn);//EPD_4IN2BC_SendCommand(0x04); // POWER_ON
     while(BUSY::IsSet()) {}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
     SendCommand(CommandEInk::PanelSetting);//EPD_4IN2BC_SendCommand(0x00); // PANEL_SETTING
+    StartSendData();
     SendData(0x0F); //Panel Setting (PSR) RES[1:0],REG,KW/R,UD,SHL,SHD_N,RST_N// LUT from OTP
+    EndSendData();
     SetLut();
     SendCommand (CommandEInk :: VCMDCSetting);
+    StartSendData();
     SendData(0x12); //Display Refresh(DRF)
+    EndSendData();
     SendCommand (CommandEInk :: VcomDataIntervalSetting);
   }
   
@@ -117,6 +127,7 @@ public :
     const std::uint8_t BlackColor = 0xff;
     SetResolution();
     SendCommand(CommandEInk::DisplayStartTransmission1);
+    StartSendData();
     for (int i = 0; i < W / 8 * H; i ++) {
       SendData(BlackColor);
     }
@@ -124,20 +135,21 @@ public :
     for (int i = 0; i < W / 8 * H; i ++) {
       SendData(BlackColor);
     }    
+    EndSendData();
     Refresh();
   }
   
   void Display(uint8_t *buff, size_t lenght) override {
     SetResolution();
     if (buff != nullptr) {
-      for (std::uint16_t j = 0; j < H; j++) {
       SendCommand(CommandEInk :: DisplayStartTransmission2); 
       StartSendData();
-      for(std::uint16_t i = 0; i < W; i++) {
+      for (std::uint16_t j = 0; j < H; j++) {
+        for(std::uint16_t i = 0; i < W; i++) {
         SendData(buff[i+j*W]);
-      }
+        }
+      } 
       EndSendData();
-      }
     };
     Refresh();
   }
@@ -173,10 +185,12 @@ private :
   void SetResolution() {
     SendCommand (CommandEInk :: ResolutionSetting);
     const std::uint8_t BlackColor = 0xff;
+    StartSendData();
     SendData(W >> 8);        
     SendData(W & BlackColor);
     SendData(H >> 8);
     SendData(H & BlackColor); 
+    EndSendData();
   }
   
   void StartSendData() {
@@ -191,24 +205,34 @@ private :
   void SetLut() {
     unsigned int i;
     SendCommand(CommandEInk::VCOMLUT);
+    StartSendData();
     for (i = 0; i < 44; i ++) {
       SendData(LUT_VCOM[i]);
     }
+    EndSendData();
     SendCommand(CommandEInk::LUTW2W);
+    StartSendData();
     for (i = 0; i < 42; i ++) {
       SendData(LUT_W2W[i]);
     }
+    EndSendData();
     SendCommand(CommandEInk::LUTB2W);
+    StartSendData();
     for (i = 0; i < 42; i ++) {
       SendData(LUT_B2W[i]);
     }
+    EndSendData();
     SendCommand(CommandEInk::LUTW2B);
+    StartSendData();
     for (i = 0; i < 42; i ++) {
       SendData(LUT_W2B[i]);
     }
+    EndSendData();
     SendCommand(CommandEInk::LUTB2B);
+    StartSendData();
     for (i = 0; i < 42; i ++) {
       SendData(LUT_B2B[i]);
-    }    
+    }
+    EndSendData();    
   }
 };

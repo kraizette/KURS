@@ -39,9 +39,18 @@ int __low_level_init(void) {
   RCC::AHB1ENR::GPIOEEN::Enable::Set() ;
   RCC::AHB1ENR::GPIOHEN::Enable::Set() ;
   RCC::APB1ENR::SPI2EN::Enable::Set() ;
+  GPIOB::AFRH::AFRH13::Af5::Set() ;
+  GPIOB::AFRH::AFRH15::Af5::Set() ;
   return 1;
 }
 }
+
+using ResetPin = Pin<GPIOC, 3U> ;
+using DcPin = Pin<GPIOB, 2U> ;
+using CsPin = Pin<GPIOB, 1U> ;
+using BusyPin = Pin<GPIOC, 2U> ;
+using DinPin = Pin<GPIOC, 2U> ;
+using ClkPin = Pin<GPIOC, 3U> ;
 
 SensorDirector mySensorDirector;
 TaskButton myTaskButton (mySensorDirector);
@@ -50,7 +59,7 @@ TaskButton myTaskButton (mySensorDirector);
 int main()
 {
   DisplayDriver<SPI<SPI2>,Pin<GPIOA,1>,Pin<GPIOA,2>,Pin<GPIOA,3>,Pin<GPIOA,4>,
-  Pin<GPIOA,5>,Pin<GPIOA,6>,400,300> EInkDisplay;
+  Pin<GPIOA,5>,Pin<GPIOB,6>,400,300> EInkDisplay;
   EInkDisplay.Clear();
   using namespace OsWrapper;
   Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
