@@ -380,6 +380,7 @@
                     <state>$PROJ_DIR$\Applications\Output</state>
                     <state>$PROJ_DIR$\Applications\Output\Display</state>
                     <state>$PROJ_DIR$\Applications\Output\Display\Driver</state>
+                    <state>$PROJ_DIR$\Applications\Output\Format</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

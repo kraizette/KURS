@@ -90,8 +90,8 @@ public :
     SPI2Config.bidimode = BIDImode :: LINE2;
     SPI2Config.csmode = CSmode :: SOFTEN;
     SPI2Config.crcen = CRCen :: DISABLE;
-    SPI:: Enable();
     SPI :: Config(SPI2Config);
+    SPI:: Enable();
     
     DIN :: SetAlternate();
     CLK :: SetAlternate();
@@ -124,18 +124,18 @@ public :
   }
   
   void Clear() override {
-    const std::uint8_t BlackColor = 0xff;
+    const std::uint8_t WhiteColor = 0xff;
     SetResolution();
     SendCommand(CommandEInk::DisplayStartTransmission1);
     StartSendData();
     for (int i = 0; i < W / 8 * H; i ++) {
-      SendData(BlackColor);
+      SendData(WhiteColor);
     }
     EndSendData();
     SendCommand(CommandEInk::DisplayStartTransmission2);
     StartSendData();
     for (int i = 0; i < W / 8 * H; i ++) {
-      SendData(BlackColor);
+      SendData(WhiteColor);
     }    
     EndSendData();
     Refresh();
@@ -186,12 +186,12 @@ private :
   
   void SetResolution() {
     SendCommand (CommandEInk :: ResolutionSetting);
-    const std::uint8_t BlackColor = 0xff;
+    const std::uint8_t WhiteColor = 0xff;
     StartSendData();
     SendData(W >> 8);        
-    SendData(W & BlackColor);
+    SendData(W & WhiteColor);
     SendData(H >> 8);
-    SendData(H & BlackColor); 
+    SendData(H & WhiteColor); 
     EndSendData();
   }
   

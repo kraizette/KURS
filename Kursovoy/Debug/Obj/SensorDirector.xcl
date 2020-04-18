@@ -80,6 +80,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver
 -I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format
+-I
 C:\Programs\IAR Arm\arm\inc
 -I
 C:\Programs\IAR Arm\arm\inc\c
@@ -155,6 +157,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver
+-I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

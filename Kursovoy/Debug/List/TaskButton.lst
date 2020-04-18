@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         12/Apr/2020  14:53:12
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         18/Apr/2020  15:32:48
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EW8F66.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW93F.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -72,6 +72,8 @@
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\
 #        -I
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\
 #        -Ol --c++ --no_exceptions --no_rtti)
 #    Locale       =  C
 #    List file    =

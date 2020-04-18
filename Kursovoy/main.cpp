@@ -17,7 +17,11 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "SPI.hpp" //for SPI 
 #include "TaskButton.hpp" //for TaskButton
 #include "SensorDirector.hpp" //for SensorDirector
-#include "ISubscriber.hpp" //for SensorDirector
+#include "ISubscriber.hpp" //for ISubscriber
+#include "EInkDisplay.hpp" //for EInkDisplay
+#include "DisplayView.hpp" //for DisplayView
+#include "DisplayDirector.hpp" //for DisplayDirector
+#include "Format.hpp" //for Format
 
 extern "C" {
 int __low_level_init(void) {
@@ -58,8 +62,9 @@ TaskButton myTaskButton (mySensorDirector);
 
 int main()
 {
-  DisplayDriver<SPI<SPI2>,Pin<GPIOA,1>,Pin<GPIOA,2>,Pin<GPIOA,3>,Pin<GPIOA,4>,
-  Pin<GPIOA,5>,Pin<GPIOB,6>,400,300> EInkDisplay;
+  DisplayDriver<SPI<SPI2>,DinPin,ClkPin,CsPin,DcPin, ResetPin,BusyPin,
+                400,300> EInkDisplay;
+  EInkDisplay.Init();
   EInkDisplay.Clear();
   using namespace OsWrapper;
   Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);

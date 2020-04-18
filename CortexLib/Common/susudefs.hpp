@@ -13,11 +13,11 @@
 
 struct SusuString 
 {
-    const char * str;
+    char * str; //const
     std::size_t size;
 
     template <std::size_t N>
-    explicit constexpr SusuString(char const (&s)[N])
+    explicit constexpr SusuString(char (&s)[N]) //char const
         : str(s)
         , size(N - 1) 
     {
