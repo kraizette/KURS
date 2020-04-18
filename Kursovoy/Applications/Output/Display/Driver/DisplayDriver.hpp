@@ -110,7 +110,7 @@ public :
     SendData(0x17); //Booster Soft Start(BTST) BT_PHC[5:0] SPI
     EndSendData(); 
     SendCommand(CommandEInk::PowerOn);//EPD_4IN2BC_SendCommand(0x04); // POWER_ON
-    while(BUSY::IsSet()) {}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
+    while(!BUSY::IsSet()) {}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
     SendCommand(CommandEInk::PanelSetting);//EPD_4IN2BC_SendCommand(0x00); // PANEL_SETTING
     StartSendData();
     SendData(0x0F); //Panel Setting (PSR) RES[1:0],REG,KW/R,UD,SHL,SHD_N,RST_N// LUT from OTP
@@ -131,7 +131,9 @@ public :
     for (int i = 0; i < W / 8 * H; i ++) {
       SendData(BlackColor);
     }
+    EndSendData();
     SendCommand(CommandEInk::DisplayStartTransmission2);
+    StartSendData();
     for (int i = 0; i < W / 8 * H; i ++) {
       SendData(BlackColor);
     }    

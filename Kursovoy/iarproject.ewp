@@ -2500,6 +2500,9 @@
             <name>Output</name>
             <group>
                 <name>BlueTooth</name>
+                <group>
+                    <name>Driver</name>
+                </group>
             </group>
             <group>
                 <name>Display</name>
@@ -2512,6 +2515,21 @@
                         <name>$PROJ_DIR$\Applications\Output\Display\Driver\IDisplayDriver.hpp</name>
                     </file>
                 </group>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\Display\DisplayDirector.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\Display\DisplayView.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\Display\EInkDisplay.hpp</name>
+                </file>
+            </group>
+            <group>
+                <name>Format</name>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\Format\Format.hpp</name>
+                </file>
             </group>
         </group>
         <group>
