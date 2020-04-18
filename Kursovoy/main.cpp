@@ -14,7 +14,8 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "DisplayDriver.hpp" //for DisplayDriver
 
 #include "Pin.hpp" //for Pin
-#include "SPI.hpp" //for SPI 
+#include "SPI.hpp" //for SPI
+#include "USART.hpp"
 #include "TaskButton.hpp" //for TaskButton
 #include "SensorDirector.hpp" //for SensorDirector
 #include "ISubscriber.hpp" //for ISubscriber

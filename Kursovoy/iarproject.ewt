@@ -2705,6 +2705,12 @@
         </group>
         <group>
             <name>USART</name>
+            <file>
+                <name>$PROJ_DIR$\AbstractHardware\USART\USART.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\AbstractHardware\USART\USARTConfig.hpp</name>
+            </file>
         </group>
     </group>
     <group>
