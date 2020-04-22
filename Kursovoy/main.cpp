@@ -11,7 +11,6 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "gpiohregisters.hpp" //for gpioh
 #include "rccregisters.hpp" // for RCC
 #include "spi2registers.hpp" //for SPI2
-#include "DisplayDriver.hpp" //for DisplayDriver
 
 #include "Pin.hpp" //for Pin
 #include "SPI.hpp" //for SPI
@@ -19,6 +18,7 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "TaskButton.hpp" //for TaskButton
 #include "SensorDirector.hpp" //for SensorDirector
 #include "ISubscriber.hpp" //for ISubscriber
+#include "DisplayDriver.hpp" //for DisplayDriver
 #include "EInkDisplay.hpp" //for EInkDisplay
 #include "DisplayView.hpp" //for DisplayView
 #include "DisplayDirector.hpp" //for DisplayDirector
@@ -64,9 +64,8 @@ TaskButton myTaskButton (mySensorDirector);
 int main()
 {
   DisplayDriver<SPI<SPI2>,DinPin,ClkPin,CsPin,DcPin, ResetPin,BusyPin,
-                400,300> EInkDisplay;
-  EInkDisplay.Init();
-  EInkDisplay.Clear();
+                400,300> Driver;
+  EInkDisplay<400,300> Display(Driver);
   using namespace OsWrapper;
   Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
   Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);

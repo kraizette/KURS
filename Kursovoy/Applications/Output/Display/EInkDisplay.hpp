@@ -1,6 +1,7 @@
 #pragma once
 
 #include "susudefs.hpp"
+#include "DisplayDriver.hpp"
 
 struct Point
 {
@@ -15,26 +16,36 @@ struct Point
 
 template <std::uint16_t W, std::uint16_t H>
 class EInkDisplay {
-public:
-  static void DrawString(uint16_t x, SusuString& string) {
-  }
-  
-  static void Update() {
-  }
-  
-  static void ClearWindow() {
-  } 
-  
 private:
-  static void DrawPoint(Point point) {
+  void DrawPoint(Point point) {
     assert((point.X <= W) || (point.Y <= H)) ;
     std::uint32_t Addr = point.X / 8 + point.Y  * W;
     std::uint32_t Rdata = Canva[Addr]; 
     Canva[Addr] = Rdata & ~(0x80U >> (point.X % 8)); //black dot
   }
   
-  static void DrawChar(uint16_t x, uint16_t y, char symbol) {
+  void DrawChar(uint16_t x, uint16_t y, char symbol) {
   }  
   
-  static unsigned char Canva[((W % 8 == 0)? (W/ 8 ): (W/ 8 + 1)) * H];
+  unsigned char Canva[((W % 8 == 0)? (W/ 8 ): (W/ 8 + 1)) * H];
+  
+  IDisplayDriver& myDriver;
+  
+public:
+EInkDisplay(IDisplayDriver& driver): myDriver(driver)
+ {
+   myDriver.Init();
+ }
+ 
+  void Update() {
+    myDriver.Clear();
+    myDriver.Display(Canva, sizeof(Canva));
+  }
+  
+  void ClearWindow() {
+  } 
+  
+  void DrawString(uint16_t x, SusuString& string) {
+  }
+ 
 };
