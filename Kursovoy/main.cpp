@@ -23,6 +23,7 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "DisplayView.hpp" //for DisplayView
 #include "DisplayDirector.hpp" //for DisplayDirector
 #include "Format.hpp" //for Format
+#include "IDisplayView.hpp"
 
 extern "C" {
 int __low_level_init(void) {

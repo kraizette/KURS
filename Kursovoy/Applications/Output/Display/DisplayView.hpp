@@ -1,5 +1,8 @@
+//DisplayView.hpp
+#include "IDisplayView.hpp"
 #pragma once
-class DisplayView {
+
+class DisplayView : public IDisplayView { 
 public:
   void Update() {
   }

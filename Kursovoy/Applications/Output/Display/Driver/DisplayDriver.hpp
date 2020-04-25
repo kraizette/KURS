@@ -4,7 +4,6 @@
 #pragma once
 
 #include "IDisplayDriver.hpp"  //for IDisplayDriver
-#include <iostream>
 #include "SPIConfig.hpp" //for SPI::Config(SPIConfig spiconfig) 
 
 constexpr unsigned char LUT_VCOM[] = {

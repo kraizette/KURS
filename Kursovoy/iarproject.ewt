@@ -2758,6 +2758,9 @@
                 <file>
                     <name>$PROJ_DIR$\Applications\Output\Display\EInkDisplay.hpp</name>
                 </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\Display\IDisplayView.hpp</name>
+                </file>
             </group>
             <group>
                 <name>Format</name>
