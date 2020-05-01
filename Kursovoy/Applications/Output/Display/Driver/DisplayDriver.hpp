@@ -7,7 +7,7 @@
 #include "SPIConfig.hpp" //for SPI::Config(SPIConfig spiconfig) 
 
 constexpr unsigned char LUT_VCOM[] = {
-  0x00, 0x0E, 0x00, 0x00, 0x00, 0x01,        
+  0x00, 0x0E, 0x0E, 0x00, 0x00, 0x02,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,        
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,        
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,        
@@ -17,7 +17,7 @@ constexpr unsigned char LUT_VCOM[] = {
 };
 
 constexpr unsigned char LUT_W2W[] = {
-  0xA0, 0x0E, 0x00, 0x00, 0x00, 0x01,
+  0xA0, 0x0E, 0x00, 0x00, 0x00, 0x02,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -27,7 +27,7 @@ constexpr unsigned char LUT_W2W[] = {
 };
 
 constexpr unsigned char LUT_B2W[] = {
-  0xA0, 0x0E, 0x00, 0x00, 0x00, 0x01,
+  0xA0, 0x0E, 0x00, 0x00, 0x00, 0x02,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -37,7 +37,7 @@ constexpr unsigned char LUT_B2W[] = {
 };
 
 constexpr unsigned char LUT_B2B[] = {
-  0x50, 0x0E, 0x00, 0x00, 0x00, 0x01,
+  0x50, 0x0E, 0x00, 0x00, 0x00, 0x02,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -47,7 +47,7 @@ constexpr unsigned char LUT_B2B[] = {
 };
 
 constexpr unsigned char LUT_W2B[] = {
-0x50, 0x0E, 0x00, 0x00, 0x00, 0x01,
+0x50, 0x0E, 0x00, 0x00, 0x00, 0x02,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -55,6 +55,7 @@ constexpr unsigned char LUT_W2B[] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,         
 };
+
 
 enum class CommandEInk : std::uint8_t{
   PanelSetting  = 0x00,
@@ -72,7 +73,10 @@ enum class CommandEInk : std::uint8_t{
   PLL  = 0x30,
   VcomDataIntervalSetting  = 0x50,
   ResolutionSetting  = 0x61,
-  VCMDCSetting  = 0x82
+  VCMDCSetting  = 0x82,
+  PartialWindow = 0x90,
+  PartialIn = 0x91,
+  PartialOut = 0x92,
 };
 
 template <typename SPI, typename DIN, typename CLK, typename CS, typename DC,
@@ -103,23 +107,35 @@ public :
   void Init() override {
     Reset(); //EPD_4IN2BC_Reset();
     SendCommand(CommandEInk::BoosterSoftStart);//EPD_4IN2BC_SendCommand(0x06); // BOOSTER_SOFT_START
-    StartSendData(); 
+    StartSendData();
     SendData(0x17);//Booster Soft Start(BTST) BT_PHA[7:0] SPI
     SendData(0x17);//Booster Soft Start(BTST) BT_PHB[7:0] SPI
     SendData(0x17); //Booster Soft Start(BTST) BT_PHC[5:0] SPI
-    EndSendData(); 
+    EndSendData();
+
+    SendCommand(CommandEInk::PowerOff);
+    while(!BUSY::IsSet()) {for (int i = 0; i< 100000; i++) {};}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
     SendCommand(CommandEInk::PowerOn);//EPD_4IN2BC_SendCommand(0x04); // POWER_ON
-    while(!BUSY::IsSet()) {}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
+    while(!BUSY::IsSet()) {for (int i = 0; i< 100000; i++) {};}; //EPD_4IN2BC_ReadBusy();//0: busy, 1: idle
+
     SendCommand(CommandEInk::PanelSetting);//EPD_4IN2BC_SendCommand(0x00); // PANEL_SETTING
     StartSendData();
-    SendData(0x0F); //Panel Setting (PSR) RES[1:0],REG,KW/R,UD,SHL,SHD_N,RST_N// LUT from OTP
+    SendData(0x3F); //Panel Setting (PSR) RES[1:0],REG,KW/R,UD,SHL,SHD_N,RST_N// LUT from OTP
     EndSendData();
-    SetLut();
+
+    StartSendData();
+    SendCommand(CommandEInk::PLL); // PLL setting
+    SendData(0x3C); // 3A 100HZ   29 150Hz 39 200HZ	31 171HZ
+
     SendCommand (CommandEInk :: VCMDCSetting);
     StartSendData();
-    SendData(0x12); //Display Refresh(DRF)
+    SendData(0x3A); //Display Refresh(DRF)
     EndSendData();
+
     SendCommand (CommandEInk :: VcomDataIntervalSetting);
+    StartSendData();
+    SendData(0x97); //Display Refresh(DRF)
+    EndSendData();
   }
   
   void Clear() override {
@@ -141,46 +157,56 @@ public :
   }
   
   void Display(uint8_t *buff, size_t lenght) override {
-    SetResolution();
-    if (buff != nullptr) {
-      SendCommand(CommandEInk :: DisplayStartTransmission2); 
-      StartSendData();
-      for (std::uint16_t j = 0; j < H; j++) {
-        for(std::uint16_t i = 0; i < W; i++) {
-        SendData(buff[i+j*W]);
-        }
-      } 
-      EndSendData();
-    };
+    SendCommand(CommandEInk::PartialIn) ;
+    SendCommand(CommandEInk::PartialWindow) ;
+    StartSendData();
+    SendData(0 >> 8U) ;
+    SendData(0 & 0xf8) ;
+    SendData(((0 & 0xf8) + W - 1U) >> 8) ;
+    SendData(((0 & 0xf8) + W - 1U) | 0x07U) ;
+    SendData(0 >> 8) ;
+    SendData( 0 & 0xff) ;
+    SendData((0 + H - 1U) >> 8U) ;
+    SendData((0 + H - 1U) & 0xff) ;
+    SendData(0x01) ;
+    EndSendData();
+    SendCommand(CommandEInk::DisplayStartTransmission2);
+    StartSendData();
+    for (size_t j = 0; j < lenght; ++j) {
+      SendData(buff[j]);
+    }
+    EndSendData();
     Refresh();
   }
-  
+
+
 private :
   void SendCommand(CommandEInk command) {
     DC :: Reset(); //DEV_Digital_Write(EPD_DC_PIN, 0);
     CS :: Reset(); //DEV_Digital_Write(EPD_CS_PIN, 0);
     SPI::WriteByte(static_cast<std::uint8_t>(command)); //DEV_SPI_WriteByte(Reg);
-    EndSendData(); //DEV_Digital_Write(EPD_CS_PIN, 1);
+	CS::Set() ; //    DEV_Digital_Write(EPD_CS_PIN, 1);
   }
   
   void SendData(std::uint8_t data) {
-    //StartSendData();
+   // StartSendData();
     SPI :: WriteByte(data); //DEV_SPI_WriteByte(Data);
-    //EndSendData();//DEV_Digital_Write(EPD_CS_PIN, 1);
+   // EndSendData();//DEV_Digital_Write(EPD_CS_PIN, 1);
   }
   
   void Reset() {
     RST :: Set(); //DEV_Digital_Write(EPD_RST_PIN, 1);
-    //for (int i = 0; i < 100000; i ++) {};
+    for (int i = 0; i < 1000000; i ++) {};
     RST :: Reset(); //DEV_Digital_Write(EPD_RST_PIN, 0);
-    //for (int i = 0; i < 100000; i ++) {};
+    for (int i = 0; i < 1000000; i ++) {};
     RST :: Set();//DEV_Digital_Write(EPD_RST_PIN, 1);
-    //for (int i = 0; i < 100000; i ++) {};
+    for (int i = 0; i < 1000000; i ++) {};
   }
   
   void Refresh() {
+    SetLut() ;
     SendCommand(CommandEInk::DisplayRefresh); // EPD_4IN2BC_SendCommand(0x12); // DISPLAY_REFRESH
-    while(BUSY::IsSet()) {};//EPD_4IN2BC_ReadBusy();
+    while(!BUSY::IsSet()) {};//EPD_4IN2BC_ReadBusy();
   }
   
   void SetResolution() {
@@ -211,24 +237,29 @@ private :
       SendData(LUT_VCOM[i]);
     }
     EndSendData();
+
     SendCommand(CommandEInk::LUTW2W);
     StartSendData();
+
     for (i = 0; i < 42; i ++) {
       SendData(LUT_W2W[i]);
     }
     EndSendData();
+
     SendCommand(CommandEInk::LUTB2W);
     StartSendData();
     for (i = 0; i < 42; i ++) {
       SendData(LUT_B2W[i]);
     }
     EndSendData();
+
     SendCommand(CommandEInk::LUTW2B);
     StartSendData();
     for (i = 0; i < 42; i ++) {
       SendData(LUT_W2B[i]);
     }
     EndSendData();
+
     SendCommand(CommandEInk::LUTB2B);
     StartSendData();
     for (i = 0; i < 42; i ++) {

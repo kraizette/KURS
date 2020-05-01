@@ -2771,6 +2771,42 @@
         </group>
         <group>
             <name>Sensor</name>
+            <group>
+                <name>Driver</name>
+            </group>
+            <group>
+                <name>Variables</name>
+                <group>
+                    <name>Temperature</name>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Sensor\Variables\Celsius.hpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Sensor\Variables\Fahrenheit.hpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Sensor\Variables\IUnits.hpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Sensor\Variables\Kelvin.hpp</name>
+                    </file>
+                </group>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Sensor\Variables\DewPoint.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Sensor\Variables\Humidity.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Sensor\Variables\IVariable.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Sensor\Variables\Pressure.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Sensor\Variables\Temperature.hpp</name>
+                </file>
+            </group>
             <file>
                 <name>$PROJ_DIR$\Applications\Sensor\SensorDirector.cpp</name>
             </file>

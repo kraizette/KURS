@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         22/Apr/2020  13:19:03
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         01/May/2020  20:34:05
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWE79C.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW897D.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -69,6 +69,10 @@
 #        -I
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\
 #        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Driver\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\
+#        -I
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\
 #        -I
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\
@@ -89,6 +93,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
       1          //SensorDirector.cpp
       2          
       3          #include "SensorDirector.hpp" 
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp SusuString<4U> &std::forward<SusuString<4U> &>(SusuString<4U> &)
+   \                     _ZSt7forwardIR10SusuStringILj4EEEOT_RNSt16remove_referenceIS3_E4typeE: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp float &std::forward<float &>(float &)
+   \                     _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp size_t std::char_traits<char>::length(char const *)
@@ -124,6 +138,42 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \                     ??eq_int_type_1: (+1)
    \        0xE   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
    \       0x10   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::pair<SusuString<4U>, float>::pair<SusuString<4U> &, float &, void>(SusuString<4U> &, float &)
+   \                     _ZNSt4pairI10SusuStringILj4EEfEC1IRS1_RfvEEOT_OT0_: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0008             MOVS     R0,R1
+   \        0x6   0x0015             MOVS     R5,R2
+   \        0x8   0x....'....        BL       _ZSt7forwardIR10SusuStringILj4EEEOT_RNSt16remove_referenceIS3_E4typeE
+   \        0xC   0x6800             LDR      R0,[R0, #+0]
+   \        0xE   0x6020             STR      R0,[R4, #+0]
+   \       0x10   0x0028             MOVS     R0,R5
+   \       0x12   0x....'....        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+   \       0x16   0x6800             LDR      R0,[R0, #+0]
+   \       0x18   0x6060             STR      R0,[R4, #+4]
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::pair<SusuString<4U>, float> std::make_pair<SusuString<4U> &, float &>(SusuString<4U> &, float &)
+   \                     _ZSt9make_pairIR10SusuStringILj4EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0010             MOVS     R0,R2
+   \        0x8   0x....'....        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+   \        0xC   0x0006             MOVS     R6,R0
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x....'....        BL       _ZSt7forwardIR10SusuStringILj4EEEOT_RNSt16remove_referenceIS3_E4typeE
+   \       0x14   0x0032             MOVS     R2,R6
+   \       0x16   0x0001             MOVS     R1,R0
+   \       0x18   0x4668             MOV      R0,SP
+   \       0x1A   0x....'....        BL       _ZNSt4pairI10SusuStringILj4EEfEC1IRS1_RfvEEOT_OT0_
+   \       0x1E   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x22   0xE9C4 0x2300      STRD     R2,R3,[R4, #+0]
+   \       0x26   0xBD73             POP      {R0,R1,R4-R6,PC}  ;; return
 
    \                                 In section .text, align 2
    \   __code __interwork __vfp std::_Wrap_facet<std::ios::_Ctype>::deleter ~_Wrap_facet()
@@ -1001,6 +1051,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \       0x2A   0x0020             MOVS     R0,R4
    \       0x2C   0xBD10             POP      {R4,PC}          ;; return
 
+   \                                 In section .text, align 2
+   \   __interwork __vfp void SusuString<4U>::Set<2U>(char const (&)[2])
+   \                     _ZN10SusuStringILj4EE3SetILj2EEEvRAT__Kc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x2202             MOVS     R2,#+2
+   \        0x6   0x0020             MOVS     R0,R4
+   \        0x8   0x....'....        BL       __aeabi_memcpy
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
    \                                 In section .rodata, align 1
    \   __absolute bool const std::chrono::system_clock::is_steady
    \                     _ZNSt6chrono12system_clock9is_steadyE:
@@ -1015,27 +1075,108 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \   __absolute bool const std::chrono::steady_clock::is_steady
    \                     _ZNSt6chrono12steady_clock9is_steadyE:
    \        0x0   0x01               DC8 1
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp std::pair<SusuString<4U>, float> Kelvin::GetTemperature(float)
+   \                     _ZN6Kelvin14GetTemperatureEf: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xEE10 0x0A10      VMOV     R0,S0
+   \        0x8   0x....'....        BL       __aeabi_f2d
+   \        0xC   0xF05F 0x3266      MOVS     R2,#+1717986918
+   \       0x10   0x4B07             LDR.N    R3,??GetTemperature_0  ;; 0x40711266
+   \       0x12   0x....'....        BL       __aeabi_dadd
+   \       0x16   0x....'....        BL       __aeabi_d2f
+   \       0x1A   0x9001             STR      R0,[SP, #+4]
+   \       0x1C   0x4905             LDR.N    R1,??GetTemperature_0+0x4
+   \       0x1E   0x4668             MOV      R0,SP
+   \       0x20   0x....'....        BL       _ZN10SusuStringILj4EE3SetILj2EEEvRAT__Kc
+   \       0x24   0xAA01             ADD      R2,SP,#+4
+   \       0x26   0x4669             MOV      R1,SP
+   \       0x28   0x0020             MOVS     R0,R4
+   \       0x2A   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj4EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x2E   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+   \                     ??GetTemperature_0:
+   \       0x30   0x4071'1266        DC32     0x40711266
+   \       0x34   0x....'....        DC32     _ZZN6Kelvin14GetTemperatureEfEs
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp std::pair<SusuString<4U>, float> Fahrenheit::GetTemperature(float)
+   \                     _ZN10Fahrenheit14GetTemperatureEf: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xEEF2 0x0A02      VMOV.F32 S1,#9.0
+   \        0x8   0xEE20 0x0A20      VMUL.F32 S0,S0,S1
+   \        0xC   0xEEF1 0x0A04      VMOV.F32 S1,#5.0
+   \       0x10   0xEE80 0x0A20      VDIV.F32 S0,S0,S1
+   \       0x14   0xEDDF 0x0A07      VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
+   \       0x18   0xEE30 0x0A20      VADD.F32 S0,S0,S1
+   \       0x1C   0xED8D 0x0A01      VSTR     S0,[SP, #+4]
+   \       0x20   0x4905             LDR.N    R1,??GetTemperature_1+0x4
+   \       0x22   0x4668             MOV      R0,SP
+   \       0x24   0x....'....        BL       _ZN10SusuStringILj4EE3SetILj2EEEvRAT__Kc
+   \       0x28   0xAA01             ADD      R2,SP,#+4
+   \       0x2A   0x4669             MOV      R1,SP
+   \       0x2C   0x0020             MOVS     R0,R4
+   \       0x2E   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj4EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x32   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+   \                     ??GetTemperature_1:
+   \       0x34   0x4200'0000        DC32     0x42000000
+   \       0x38   0x....'....        DC32     _ZZN10Fahrenheit14GetTemperatureEfEs
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp std::pair<SusuString<4U>, float> Celsius::GetTemperature(float)
+   \                     _ZN7Celsius14GetTemperatureEf: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xED8D 0x0A01      VSTR     S0,[SP, #+4]
+   \        0x8   0x4904             LDR.N    R1,??GetTemperature_2
+   \        0xA   0x4668             MOV      R0,SP
+   \        0xC   0x....'....        BL       _ZN10SusuStringILj4EE3SetILj2EEEvRAT__Kc
+   \       0x10   0xAA01             ADD      R2,SP,#+4
+   \       0x12   0x4669             MOV      R1,SP
+   \       0x14   0x0020             MOVS     R0,R4
+   \       0x16   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj4EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x1A   0xBD13             POP      {R0,R1,R4,PC}    ;; return
+   \                     ??GetTemperature_2:
+   \       0x1C   0x....'....        DC32     _ZZN7Celsius14GetTemperatureEfEs
+
+   \                                 In section .rodata, align 4
+   \   __absolute Fahrenheit const SensorDirector::fahrenheit
+   \                     _ZN14SensorDirector10fahrenheitE:
+   \        0x0   0x....'....        DC32 _ZTV10Fahrenheit + 0x8
+
+   \                                 In section .rodata, align 4
+   \   __absolute Kelvin const SensorDirector::kelvin
+   \                     _ZN14SensorDirector6kelvinE:
+   \        0x0   0x....'....        DC32 _ZTV6Kelvin + 0x8
+
+   \                                 In section .rodata, align 4
+   \   __absolute Celsius const SensorDirector::celsius
+   \                     _ZN14SensorDirector7celsiusE:
+   \        0x0   0x....'....        DC32 _ZTV7Celsius + 0x8
       4          #include <iostream>
-      5          
+      5          #include "Temperature.hpp"
+      6          
 
    \                                 In section .text, align 2, keep-with-next
-      6          void SensorDirector::Execute() {
-      7          }
+      7          void SensorDirector::Execute() {
+      8          }
    \                     _ZN14SensorDirector7ExecuteEv: (+1)
    \        0x0   0x4770             BX       LR               ;; return
-      8          
+      9          
 
    \                                 In section .text, align 2, keep-with-next
-      9          void SensorDirector::HandleButtonPushed() {
+     10          void SensorDirector::HandleButtonPushed() {
    \                     _ZN14SensorDirector18HandleButtonPushedEv: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     10            std::cout << " Terminal " << std::endl ;
+     11            std::cout << " Terminal " << std::endl ;
    \        0x2   0x....             LDR.N    R1,??DataTable1
    \        0x4   0x....             LDR.N    R0,??DataTable1_1
    \        0x6   0x....'....        BL       _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
    \        0xA   0x....             LDR.N    R1,??DataTable1_2
    \        0xC   0x....'....        BL       _ZNSolsEPFRSoS_E
-     11          }
+     12          }
    \       0x10   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .text, align 2, keep-with-next
@@ -1071,12 +1212,26 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
 
    .cstack Function
    ------- --------
+      16   Celsius::GetTemperature(float)
+        16   -> SusuString<4U>::Set<2U>(char const (&)[2])
+        16   -> std::make_pair<SusuString<4U> &, float &>(SusuString<4U> &, float &)
+      16   Fahrenheit::GetTemperature(float)
+        16   -> SusuString<4U>::Set<2U>(char const (&)[2])
+        16   -> std::make_pair<SusuString<4U> &, float &>(SusuString<4U> &, float &)
+      16   Kelvin::GetTemperature(float)
+        16   -> SusuString<4U>::Set<2U>(char const (&)[2])
+        16   -> __aeabi_d2f
+        16   -> __aeabi_dadd
+        16   -> __aeabi_f2d
+        16   -> std::make_pair<SusuString<4U> &, float &>(SusuString<4U> &, float &)
        0   SensorDirector::Execute()
        0   SensorDirector::HandleButtonPushed for ISubscriber/-604/()
          0   -> SensorDirector::HandleButtonPushed()
        8   SensorDirector::HandleButtonPushed()
          8   -> std::operator<<<std::char_traits<char>>(std::ostream &, char const *)
          8   -> std::ostream::operator<<(std::ostream &(*)(std::ostream &))
+       8   SusuString<4U>::Set<2U>(char const (&)[2])
+         8   -> __aeabi_memcpy
        8   std::_Wrap_facet<std::ios::_Ctype>::_Wrap_facet()
          8   -> std::ctype<char>::subobject ctype()
        8   std::_Wrap_facet<std::ios::_Ctype>::deleter ~_Wrap_facet()
@@ -1099,6 +1254,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
          8   -> std::ios::widen(char) const
          8   -> std::ostream::flush()
          8   -> std::ostream::put(char)
+       0   std::forward<SusuString<4U> &>(SusuString<4U> &)
+       0   std::forward<float &>(float &)
        8   std::ios::clear(std::ios_base::iostate, bool)
          8   -> std::ios_base::clear(std::ios_base::iostate, bool)
        0   std::ios::fill() const
@@ -1116,6 +1273,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
        0   std::ios_base::rdstate() const
        0   std::ios_base::width() const
        0   std::ios_base::width(int)
+      24   std::make_pair<SusuString<4U> &, float &>(SusuString<4U> &, float &)
+        24   -> std::forward<SusuString<4U> &>(SusuString<4U> &)
+        24   -> std::forward<float &>(float &)
+        24   -> std::pair<SusuString<4U>, float>::pair<SusuString<4U> &, float &, void>(SusuString<4U> &, float &)
        0   std::operator&(std::ios_base::fmtflags, std::ios_base::fmtflags)
       56   std::operator<<<std::char_traits<char>>(std::ostream &, char const *)
         56   -> std::char_traits<char>::eq_int_type(int const &, int const &)
@@ -1187,6 +1348,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
         16   -> std::ostream::flush()
        8   std::ostream::sentry::~sentry()
          8   -> std::ostream::_Flush_sentry::subobject ~_Flush_sentry()
+      16   std::pair<SusuString<4U>, float>::pair<SusuString<4U> &, float &, void>(SusuString<4U> &, float &)
+        16   -> std::forward<SusuString<4U> &>(SusuString<4U> &)
+        16   -> std::forward<float &>(float &)
        0   std::streambuf::_Pnavail() const
        0   std::streambuf::_Pninc()
        8   std::streambuf::pubsync()
@@ -1210,9 +1374,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
        4  ??DataTable1_1
        4  ??DataTable1_2
       12  ?_0
+      32  Celsius::GetTemperature(float)
+      60  Fahrenheit::GetTemperature(float)
+      56  Kelvin::GetTemperature(float)
        2  SensorDirector::Execute()
        4  SensorDirector::HandleButtonPushed for ISubscriber/-604/()
       18  SensorDirector::HandleButtonPushed()
+       4  SensorDirector::celsius
+       4  SensorDirector::fahrenheit
+       4  SensorDirector::kelvin
+      14  SusuString<4U>::Set<2U>(char const (&)[2])
        4  _MyFacet
       24  std::_Wrap_facet<std::ios::_Ctype>::_Wrap_facet()
       20  std::_Wrap_facet<std::ios::_Ctype>::deleter ~_Wrap_facet()
@@ -1229,6 +1400,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
        6  std::ctype<char>::widen(char) const
        2  std::ctype<char>::~ctype()
       46  std::endl<char, std::char_traits<char>>(std::ostream &)
+       2  std::forward<SusuString<4U> &>(SusuString<4U> &)
+       2  std::forward<float &>(float &)
       24  std::ios::clear(std::ios_base::iostate, bool)
        6  std::ios::fill() const
        4  std::ios::rdbuf() const
@@ -1240,6 +1413,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
        4  std::ios_base::rdstate() const
        4  std::ios_base::width() const
        8  std::ios_base::width(int)
+      40  std::make_pair<SusuString<4U> &, float &>(SusuString<4U> &, float &)
        6  std::operator&(std::ios_base::fmtflags, std::ios_base::fmtflags)
      434  std::operator<<<std::char_traits<char>>(std::ostream &, char const *)
        8  std::operator|=(std::ios_base::iostate &, std::ios_base::iostate)
@@ -1258,21 +1432,22 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
      118  std::ostream::put(char)
      114  std::ostream::sentry::sentry(std::ostream &)
       14  std::ostream::sentry::~sentry()
+      30  std::pair<SusuString<4U>, float>::pair<SusuString<4U> &, float &, void>(SusuString<4U> &, float &)
       24  std::streambuf::_Pnavail() const
       14  std::streambuf::_Pninc()
       10  std::streambuf::pubsync()
       50  std::streambuf::sputc(char)
       10  std::streambuf::sputn(char const *, int)
       32  std::use_facet<std::ios::_Ctype>()
-     373  -- Other
+     503  -- Other
 
  
      5 bytes in section .bss
-   387 bytes in section .rodata
- 1'598 bytes in section .text
+   529 bytes in section .rodata
+ 1'834 bytes in section .text
  
- 36 bytes of CODE  memory (+ 1'562 bytes shared)
- 12 bytes of CONST memory (+   375 bytes shared)
+ 36 bytes of CODE  memory (+ 1'798 bytes shared)
+ 12 bytes of CONST memory (+   517 bytes shared)
   0 bytes of DATA  memory (+     5 bytes shared)
 
 Errors: none

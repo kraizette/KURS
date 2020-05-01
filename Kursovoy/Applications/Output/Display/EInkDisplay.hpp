@@ -17,35 +17,36 @@ struct Point
 template <std::uint16_t W, std::uint16_t H>
 class EInkDisplay {
 private:
-  void DrawPoint(Point point) {
-    assert((point.X <= W) || (point.Y <= H)) ;
-    std::uint32_t Addr = point.X / 8 + point.Y  * W;
-    std::uint32_t Rdata = Canva[Addr]; 
-    Canva[Addr] = Rdata & ~(0x80U >> (point.X % 8)); //black dot
-  }
-  
-  void DrawChar(uint16_t x, uint16_t y, char symbol) {
-  }  
-  
+  static constexpr std::uint16_t WidthByte = (W % 8 == 0)? (W / 8 ): (W / 8 + 1);
+
+public:
   unsigned char Canva[((W % 8 == 0)? (W/ 8 ): (W/ 8 + 1)) * H];
   
   IDisplayDriver& myDriver;
   
-public:
-EInkDisplay(IDisplayDriver& driver): myDriver(driver)
- {
+  EInkDisplay(IDisplayDriver& driver): myDriver(driver) {
    myDriver.Init();
  }
  
+  void DrawPoint(Point point) {
+    assert((point.X <= W) || (point.Y <= H)) ;
+    std::uint32_t Addr = point.X / 8 + point.Y  * WidthByte;
+    std::uint32_t Rdata = Canva[Addr]; 
+    Canva[Addr] = Rdata | (0x80U >> (point.X % 8)); //white dot
+  }
+  
+  void DrawChar(uint16_t x, uint16_t y, char symbol) {
+  }  
+ 
   void Update() {
-    myDriver.Clear();
+
     myDriver.Display(Canva, sizeof(Canva));
   }
   
   void ClearWindow() {
+	  myDriver.Clear();
   } 
   
-  void DrawString(uint16_t x, SusuString& string) {
-  }
- 
+  void DrawString(uint16_t x, SusuStringView& string) {
+  } 
 };

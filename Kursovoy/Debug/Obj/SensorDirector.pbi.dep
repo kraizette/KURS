@@ -101,4 +101,12 @@ SensorDirector.pbi: \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\FreeRtos/rtosdefs.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\eventmode.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\ISubscriber.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\IVariable.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\IUnits.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Kelvin.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables/IUnits.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Fahrenheit.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Celsius.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Temperature.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables/IVariable.hpp \
   C:\Programs\IAR\ Arm\arm\inc\cpp\iostream

@@ -2,6 +2,7 @@
 
 #include "SensorDirector.hpp" 
 #include <iostream>
+#include "Temperature.hpp"
 
 void SensorDirector::Execute() {
 }

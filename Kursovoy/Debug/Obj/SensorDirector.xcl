@@ -76,6 +76,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor
 -I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Driver
+-I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables
+-I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display
@@ -155,6 +159,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor
+-I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Driver
+-I
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables
 -I
 D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output
 -I

@@ -24,6 +24,10 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "DisplayDirector.hpp" //for DisplayDirector
 #include "Format.hpp" //for Format
 #include "IDisplayView.hpp"
+#include "IUnits.hpp"
+#include "Fahrenheit.hpp"
+#include "Temperature.hpp"
+#include "IVariable.hpp"
 
 extern "C" {
 int __low_level_init(void) {
@@ -31,13 +35,13 @@ int __low_level_init(void) {
   RCC::CR::HSION::On::Set();
   while (RCC::CR::HSIRDY::NotReady::IsSet()) {
   }
-  
+
   //Switch system clock on external oscillator
   RCC::CFGR::SW::Hsi::Set();
   while (!RCC::CFGR::SWS::Hsi::IsSet()) {
   }
-  
-  RCC::APB2ENR::SYSCFGEN::Enable::Set() ; 
+
+  RCC::APB2ENR::SYSCFGEN::Enable::Set() ;
   RCC::AHB1ENR::GPIOAEN::Enable::Set() ;
   RCC::AHB1ENR::GPIOBEN::Enable::Set() ;
   RCC::AHB1ENR::GPIOCEN::Enable::Set() ;
@@ -51,22 +55,36 @@ int __low_level_init(void) {
 }
 }
 
-using ResetPin = Pin<GPIOC, 3U> ;
-using DcPin = Pin<GPIOB, 2U> ;
-using CsPin = Pin<GPIOB, 1U> ;
-using BusyPin = Pin<GPIOC, 2U> ;
-using DinPin = Pin<GPIOC, 2U> ;
-using ClkPin = Pin<GPIOC, 3U> ;
+using ResetPin = Pin<GPIOC, 3U>;
+using DcPin = Pin<GPIOB, 2U>;
+using CsPin = Pin<GPIOB, 1U>;
+using BusyPin = Pin<GPIOC, 2U>;
+using DinPin = Pin<GPIOB, 15U>;
+using ClkPin = Pin<GPIOB, 13U>;
 
 SensorDirector mySensorDirector;
-TaskButton myTaskButton (mySensorDirector);
-
+TaskButton myTaskButton(mySensorDirector);
+DisplayDriver<SPI<SPI2>,DinPin,ClkPin,CsPin,DcPin, ResetPin,BusyPin, 400,300> Driver;
+EInkDisplay<400,300> Display(Driver);
 
 int main()
 {
-  DisplayDriver<SPI<SPI2>,DinPin,ClkPin,CsPin,DcPin, ResetPin,BusyPin,
-                400,300> Driver;
-  EInkDisplay<400,300> Display(Driver);
+  Display.ClearWindow() ;
+  for (int k = 0 ; k < 300; k= k+ 30)
+  {
+
+	  for (int i = k; i < k+40; i++)
+		  for (int j = k; j < k+30; j++)
+		  {
+			  Display.DrawPoint(Point(i, j));
+		  }
+
+	  Display.Update();
+  }
+  SusuStringView test("hi") ;
+  SusuString<10> test1;
+  test1.Set("Hello") ;
+
   using namespace OsWrapper;
   Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
   Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);
