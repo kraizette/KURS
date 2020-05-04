@@ -4,6 +4,8 @@
 
 #include "SPIConfig.hpp" //for SPI::Config(SPIConfig spiconfig) 
 
+
+
 template <typename SPIModule>
 class SPI {
 public:
@@ -33,6 +35,25 @@ public:
     }
   }
   
+  static bool ReadData(uint8_t *data, size_t lenght) {
+    bool result = true;
+    //если длина нулевая (нечего читать)
+    assert(lenght > 0);
+    for (size_t index = 0; index < lenght; index++)
+    {
+      //передаем байт данных
+      auto bytedata= ReadByte();
+      if(std::get<bool>(bytedata) == true){
+      data[index] = std::get<uint8_t>(bytedata);
+      }
+      else {
+        result = false; 
+        break;
+      }
+    }
+    return result;
+  }
+  
   static void WriteByte(uint8_t Byte) {
     //ждем, пока буфер передатчика не освободится
     while (SPIModule :: SR :: TXE :: TxBufferNotEmpty :: IsSet()) {
@@ -42,6 +63,27 @@ public:
     //ждем, пока SPI освободится от предыдущей передачи
     while (SPIModule :: SR :: BSY :: Busy :: IsSet()) {
     }
+  }
+  
+  static std::pair<uint8_t, bool> ReadByte() {
+    /*
+    Bit 0 RXNE: Receive buffer not empty
+    0: Rx buffer empty
+    1: Rx buffer not empty
+    */
+    uint8_t value = 0U;
+    bool result = true;
+    int i = 0;
+    //ждем, пока закончит чтение
+    while ((SPIModule :: SR :: RXNE :: Value0 :: IsSet()) && (i< 1000)) {
+      i++ ;
+    } 
+    if (i == 1000) {
+      result = false;
+    };
+    //читаем байт данных
+    value = SPIModule :: DR :: Read() ;
+    return std::make_pair(value,result) ;
   }
   
 private: 

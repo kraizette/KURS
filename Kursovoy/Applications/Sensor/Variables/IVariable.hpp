@@ -1,6 +1,7 @@
 //IVariable.hpp
-#pragma once
 
+#pragma once
+using VariableValue =  std::pair<SusuStringView, float>;
 struct IVariable {
-  virtual std::pair<SusuString<4>, float> Get(float code) = 0 ;
+  virtual VariableValue Get(float code) = 0 ;
 } ;

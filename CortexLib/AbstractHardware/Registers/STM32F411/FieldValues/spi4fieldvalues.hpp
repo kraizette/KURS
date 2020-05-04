@@ -15,8 +15,8 @@
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_BIDIMODE_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_BIDIMODE_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_BIDIMODE_Values, BaseType, 1U> ;
+  using Unidirectional2Line = FieldValue<SPI4_CR1_BIDIMODE_Values, BaseType, 0U> ;
+  using Bidirectional1Line = FieldValue<SPI4_CR1_BIDIMODE_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
@@ -29,8 +29,8 @@ struct SPI4_CR1_BIDIOE_Values: public RegisterField<Reg, offset, size, AccessMod
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_CRCEN_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_CRCEN_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_CRCEN_Values, BaseType, 1U> ;
+  using CrcCalcDisable = FieldValue<SPI4_CR1_CRCEN_Values, BaseType, 0U> ;
+  using CrcCalcEnable = FieldValue<SPI4_CR1_CRCEN_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
@@ -43,8 +43,8 @@ struct SPI4_CR1_CRCNEXT_Values: public RegisterField<Reg, offset, size, AccessMo
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_DFF_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_DFF_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_DFF_Values, BaseType, 1U> ;
+  using Data8bit = FieldValue<SPI4_CR1_DFF_Values, BaseType, 0U> ;
+  using Data16bit = FieldValue<SPI4_CR1_DFF_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
@@ -57,8 +57,8 @@ struct SPI4_CR1_RXONLY_Values: public RegisterField<Reg, offset, size, AccessMod
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_SSM_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_SSM_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_SSM_Values, BaseType, 1U> ;
+  using NssSoftwareDisable = FieldValue<SPI4_CR1_SSM_Values, BaseType, 0U> ;
+  using NssSoftwareEnable = FieldValue<SPI4_CR1_SSM_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
@@ -71,49 +71,49 @@ struct SPI4_CR1_SSI_Values: public RegisterField<Reg, offset, size, AccessMode>
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_LSBFIRST_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_LSBFIRST_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_LSBFIRST_Values, BaseType, 1U> ;
+  using MsbFirst = FieldValue<SPI4_CR1_LSBFIRST_Values, BaseType, 0U> ;
+  using LsbFirst = FieldValue<SPI4_CR1_LSBFIRST_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_SPE_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_SPE_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_SPE_Values, BaseType, 1U> ;
+  using Disable = FieldValue<SPI4_CR1_SPE_Values, BaseType, 0U> ;
+  using Enable = FieldValue<SPI4_CR1_SPE_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_BR_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_BR_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_BR_Values, BaseType, 1U> ;
-  using Value2 = FieldValue<SPI4_CR1_BR_Values, BaseType, 2U> ;
-  using Value3 = FieldValue<SPI4_CR1_BR_Values, BaseType, 3U> ;
-  using Value4 = FieldValue<SPI4_CR1_BR_Values, BaseType, 4U> ;
-  using Value5 = FieldValue<SPI4_CR1_BR_Values, BaseType, 5U> ;
-  using Value6 = FieldValue<SPI4_CR1_BR_Values, BaseType, 6U> ;
-  using Value7 = FieldValue<SPI4_CR1_BR_Values, BaseType, 7U> ;
+  using PclockDiv2 = FieldValue<SPI4_CR1_BR_Values, BaseType, 0U> ;
+  using PclockDiv4 = FieldValue<SPI4_CR1_BR_Values, BaseType, 1U> ;
+  using PclockDiv8 = FieldValue<SPI4_CR1_BR_Values, BaseType, 2U> ;
+  using PclockDiv16 = FieldValue<SPI4_CR1_BR_Values, BaseType, 3U> ;
+  using PclockDiv32 = FieldValue<SPI4_CR1_BR_Values, BaseType, 4U> ;
+  using PclockDiv64 = FieldValue<SPI4_CR1_BR_Values, BaseType, 5U> ;
+  using PclockDiv128 = FieldValue<SPI4_CR1_BR_Values, BaseType, 6U> ;
+  using PclockDiv256 = FieldValue<SPI4_CR1_BR_Values, BaseType, 7U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_MSTR_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_MSTR_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_MSTR_Values, BaseType, 1U> ;
+  using Slave = FieldValue<SPI4_CR1_MSTR_Values, BaseType, 0U> ;
+  using Master = FieldValue<SPI4_CR1_MSTR_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_CPOL_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_CPOL_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_CPOL_Values, BaseType, 1U> ;
+  using Low = FieldValue<SPI4_CR1_CPOL_Values, BaseType, 0U> ;
+  using High = FieldValue<SPI4_CR1_CPOL_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CR1_CPHA_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_CR1_CPHA_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_CR1_CPHA_Values, BaseType, 1U> ;
+  using Phase1edge = FieldValue<SPI4_CR1_CPHA_Values, BaseType, 0U> ;
+  using Phase2edge = FieldValue<SPI4_CR1_CPHA_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
@@ -175,8 +175,8 @@ struct SPI4_SR_TIFRFE_Values: public RegisterField<Reg, offset, size, AccessMode
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_SR_BSY_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_SR_BSY_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_SR_BSY_Values, BaseType, 1U> ;
+  using NotBusy = FieldValue<SPI4_SR_BSY_Values, BaseType, 0U> ;
+  using Busy = FieldValue<SPI4_SR_BSY_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
@@ -217,8 +217,8 @@ struct SPI4_SR_CHSIDE_Values: public RegisterField<Reg, offset, size, AccessMode
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_SR_TXE_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
-  using Value0 = FieldValue<SPI4_SR_TXE_Values, BaseType, 0U> ;
-  using Value1 = FieldValue<SPI4_SR_TXE_Values, BaseType, 1U> ;
+  using TxBufferNotEmpty = FieldValue<SPI4_SR_TXE_Values, BaseType, 0U> ;
+  using TxBufferEmpty = FieldValue<SPI4_SR_TXE_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 

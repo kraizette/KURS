@@ -11,6 +11,7 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "gpiohregisters.hpp" //for gpioh
 #include "rccregisters.hpp" // for RCC
 #include "spi2registers.hpp" //for SPI2
+#include "spi4registers.hpp" //for SPI2
 
 #include "Pin.hpp" //for Pin
 #include "SPI.hpp" //for SPI
@@ -19,6 +20,7 @@ std::uint32_t SystemCoreClock = 16'000'000U;
 #include "SensorDirector.hpp" //for SensorDirector
 #include "ISubscriber.hpp" //for ISubscriber
 #include "DisplayDriver.hpp" //for DisplayDriver
+#include "SensorDriver.hpp"
 #include "EInkDisplay.hpp" //for EInkDisplay
 #include "DisplayView.hpp" //for DisplayView
 #include "DisplayDirector.hpp" //for DisplayDirector
@@ -54,7 +56,7 @@ int __low_level_init(void) {
   return 1;
 }
 }
-
+//for SPI2 - display
 using ResetPin = Pin<GPIOC, 3U>;
 using DcPin = Pin<GPIOB, 2U>;
 using CsPin = Pin<GPIOB, 1U>;
@@ -62,10 +64,17 @@ using BusyPin = Pin<GPIOC, 2U>;
 using DinPin = Pin<GPIOB, 15U>;
 using ClkPin = Pin<GPIOB, 13U>;
 
+//for SPI4 - BME280
+using MOSIPin = Pin<GPIOB, 13U>;
+using SCKPin = Pin<GPIOB, 13U>;
+using MISOPin = Pin<GPIOB, 13U>;
+using CSPin = Pin<GPIOB, 13U>;
+
 SensorDirector mySensorDirector;
 TaskButton myTaskButton(mySensorDirector);
-DisplayDriver<SPI<SPI2>,DinPin,ClkPin,CsPin,DcPin, ResetPin,BusyPin, 400,300> Driver;
-EInkDisplay<400,300> Display(Driver);
+DisplayDriver<SPI<SPI2>,DinPin,ClkPin,CsPin,DcPin, ResetPin,BusyPin, 400,300> EInkDisplayDriver;
+EInkDisplay<400,300> Display(EInkDisplayDriver);
+SensorDriver<SPI<SPI4>,MOSIPin,SCKPin, MISOPin,CSPin> BME280Driver;
 
 int main()
 {
@@ -81,7 +90,7 @@ int main()
 
 	  Display.Update();
   }
-  SusuStringView test("hi") ;
+  //SusuStringView test("hi") ;
   SusuString<10> test1;
   test1.Set("Hello") ;
 

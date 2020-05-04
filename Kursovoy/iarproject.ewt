@@ -2773,6 +2773,12 @@
             <name>Sensor</name>
             <group>
                 <name>Driver</name>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Sensor\Driver\ISensorDriver.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Sensor\Driver\SensorDriver.hpp</name>
+                </file>
             </group>
             <group>
                 <name>Variables</name>
@@ -2807,6 +2813,9 @@
                     <name>$PROJ_DIR$\Applications\Sensor\Variables\Temperature.hpp</name>
                 </file>
             </group>
+            <file>
+                <name>$PROJ_DIR$\Applications\Sensor\BME280.hpp</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\Applications\Sensor\SensorDirector.cpp</name>
             </file>

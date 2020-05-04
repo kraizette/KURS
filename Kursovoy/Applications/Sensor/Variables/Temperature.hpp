@@ -1,3 +1,5 @@
+//Temperature.hpp
+
 #pragma once
 
 #include "IVariable.hpp"
@@ -14,9 +16,9 @@ public:
   void SetNextUnits() {
     (index < UnitsCounts) ? index++ : index = 0U ;
   }
-  std::pair<SusuString<4>, float> Get(float code) override {
-    auto& currentUnits = *unitsList[index] ;
-    std::pair<SusuString<4>, float> temperature = currentUnits.GetTemperature(code) ;
+  std::pair<SusuStringView, float> Get(float code) override {
+    auto const& currentUnits = *unitsList[index] ;
+    std::pair<SusuStringView, float> temperature = currentUnits.GetTemperature(code) ;
     auto name = temperature.first;
     auto value = temperature.second;
     return std::make_pair(name,value);

@@ -39,12 +39,11 @@ public:
   }  
  
   void Update() {
-
     myDriver.Display(Canva, sizeof(Canva));
   }
   
   void ClearWindow() {
-	  myDriver.Clear();
+    myDriver.Clear();
   } 
   
   void DrawString(uint16_t x, SusuStringView& string) {

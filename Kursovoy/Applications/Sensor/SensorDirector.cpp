@@ -8,5 +8,5 @@ void SensorDirector::Execute() {
 }
 
 void SensorDirector::HandleButtonPushed() {
-  std::cout << " Terminal " << std::endl ;
+  temperature.SetNextUnits();
 }

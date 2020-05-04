@@ -4,10 +4,9 @@
 
 class Fahrenheit : public IUnits { 
 public:
-  std::pair<SusuString<4>, float> GetTemperature(float code) override {
-    float value = (code* 9/5)+32.0F;
-    SusuString<4> name;
-    name.Set("F") ;
+  std::pair<SusuStringView, float> GetTemperature(float code) const override {
+    float value = (code * 9/5)+32.0F;
+    SusuStringView name("F");
     return std::make_pair(name,value) ;
   }
 } ;
