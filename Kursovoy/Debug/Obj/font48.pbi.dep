@@ -1,0 +1,10 @@
+font48.pbi: \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\Fonts\font48.cpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\Fonts/font.hpp \
+  C:\Programs\IAR\ Arm\arm\inc\cpp\cstdint \
+  C:\Programs\IAR\ Arm\arm\inc\c\stdint.h \
+  C:\Programs\IAR\ Arm\arm\inc\c\ycheck.h \
+  C:\Programs\IAR\ Arm\arm\inc\c\yvals.h \
+  C:\Programs\IAR\ Arm\arm\inc\c\DLib_Defaults.h \
+  C:\\Programs\\IAR\ Arm\\arm\\inc\\c\\DLib_Config_Normal.h \
+  C:\Programs\IAR\ Arm\arm\inc\c\DLib_Product.h

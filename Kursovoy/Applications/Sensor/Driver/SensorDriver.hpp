@@ -149,7 +149,7 @@ public :
   void Init(void) {
     uint32_t value32=0;
     WriteReg(REG_SOFTRESET,SOFTRESET_VALUE);
-    while (ReadStatus() & STATUS_IM_UPDATE) ;
+    //while (ReadStatus() & STATUS_IM_UPDATE) ;
     ReadCoefficients();
     SetStandby(STBY_1000);
     SetFilter(FILTER_4);
@@ -161,19 +161,20 @@ public :
     SetMode(MODE_NORMAL);
   }
   
+  
     float ReadTemperature(void) {
     float temper_float = 0.0f;
     uint32_t temper_raw;
     int32_t val1, val2;
-    ReadReg(REGISTER_TEMPDATA,&temper_raw);
+    temper_raw = ReadReg(REGISTER_TEMPDATA);
     temper_raw >>= 4;
     val1 = ((((temper_raw>>3) - (CalibData.dig_T1 <<1))) *
             (CalibData.dig_T2)) >> 11;
     val2 = (((((temper_raw>>4) - ((int32_t)CalibData.dig_T1)) *
 		((temper_raw>>4) - ((int32_t)CalibData.dig_T1))) >> 12) *
 		((int32_t)CalibData.dig_T3)) >> 14;
-    temper_int = val1 + val2;
-    temper_float = ((temper_int * 5 + 128) >> 8);
+    //temper_int = val1 + val2;
+    //temper_float = ((temper_int * 5 + 128) >> 8);
     temper_float /= 100.0f;
     return temper_float;
   }
@@ -183,9 +184,9 @@ public :
     uint32_t press_raw, pres_int;
     int64_t val1, val2, p;
     ReadTemperature(); // must be done first to get t_fine
-    ReadReg(REGISTER_PRESSUREDATA,&press_raw);
+    press_raw = ReadReg(REGISTER_PRESSUREDATA);
     press_raw >>= 4;
-    val1 = ((int64_t) temper_int) - 128000;
+   // val1 = ((int64_t) temper_int) - 128000;
     val2 = val1 * val1 * (int64_t)CalibData.dig_P6;
     val2 = val2 + ((val1 * (int64_t)CalibData.dig_P5) << 17);
     val2 = val2 + ((int64_t)CalibData.dig_P4 << 35);
@@ -210,9 +211,9 @@ public :
     int16_t hum_raw;
     int32_t hum_raw_sign, v_x1_u32r;
     ReadTemperature(); // must be done first to get t_fine
-    ReadReg(REGISTER_HUMIDDATA,&hum_raw);
+    hum_raw = ReadReg(REGISTER_HUMIDDATA);
     hum_raw_sign = ((int32_t)hum_raw)&0x0000FFFF;
-    v_x1_u32r = (temper_int - ((int32_t)76800));
+    //v_x1_u32r = (temper_int - ((int32_t)76800));
     v_x1_u32r = (((((hum_raw_sign << 14) - (((int32_t)CalibData.dig_H4) << 20) -
 		(((int32_t)CalibData.dig_H5) * v_x1_u32r)) + ((int32_t)16384)) >> 15) *
 		(((((((v_x1_u32r * ((int32_t)CalibData.dig_H6)) >> 10) *
@@ -230,21 +231,21 @@ public :
 private:
  
   void ReadCoefficients(void) {
-    ReadReg(REGISTER_DIG_T1,&CalibData.dig_T1);
-    ReadReg(REGISTER_DIG_T2,&CalibData.dig_T2);
-    ReadReg(REGISTER_DIG_T3,&CalibData.dig_T3);
-    ReadReg(REGISTER_DIG_P1,&CalibData.dig_P1);
-    ReadReg(REGISTER_DIG_P2,&CalibData.dig_P2);
-    ReadReg(REGISTER_DIG_P3,&CalibData.dig_P3);
-    ReadReg(REGISTER_DIG_P4,&CalibData.dig_P4);
-    ReadReg(REGISTER_DIG_P5,&CalibData.dig_P5);
-    ReadReg(REGISTER_DIG_P6,&CalibData.dig_P6);
-    ReadReg(REGISTER_DIG_P7,&CalibData.dig_P7);
-    ReadReg(REGISTER_DIG_P8,&CalibData.dig_P8);
-    ReadReg(REGISTER_DIG_P9,&CalibData.dig_P9);
-    CalibData.dig_H1 = ReadReg(REGISTER_DIG_H1);
-    ReadReg(REGISTER_DIG_H2,&CalibData.dig_H2);
-    CalibData.dig_H3 = ReadReg(REGISTER_DIG_H3);
+    CalibData.dig_T1 = ReadReg_U16(REGISTER_DIG_T1);
+    CalibData.dig_T2 = ReadReg_S16(REGISTER_DIG_T2);
+    CalibData.dig_T3 = ReadReg(REGISTER_DIG_T3);
+    CalibData.dig_P1 = ReadReg_U16(REGISTER_DIG_P1);
+    CalibData.dig_P2 = ReadReg(REGISTER_DIG_P2);
+    CalibData.dig_P3 = ReadReg(REGISTER_DIG_P3);
+    CalibData.dig_P4 = ReadReg(REGISTER_DIG_P4);
+    CalibData.dig_P5 = ReadReg(REGISTER_DIG_P5);
+    CalibData.dig_P6 = ReadReg(REGISTER_DIG_P6);
+    CalibData.dig_P7 = ReadReg(REGISTER_DIG_P7);
+    CalibData.dig_P8 = ReadReg(REGISTER_DIG_P8);
+    CalibData.dig_P9 = ReadReg_S16(REGISTER_DIG_P9);
+    CalibData.dig_H1 = ReadReg_U16(REGISTER_DIG_H1);
+    CalibData.dig_H2 = ReadReg_S16(REGISTER_DIG_H2);
+    CalibData.dig_H3 = ReadReg_U16(REGISTER_DIG_H3);
     CalibData.dig_H4 = (ReadReg(REGISTER_DIG_H4) << 4) | (ReadReg(REGISTER_DIG_H4+1) & 0xF);
     CalibData.dig_H5 = (ReadReg(REGISTER_DIG_H5+1) << 4) | (ReadReg(REGISTER_DIG_H5) >> 4);
     CalibData.dig_H6 = (int8_t)ReadReg(REGISTER_DIG_H6);
@@ -311,14 +312,62 @@ private:
     return rslt;
   };
   
-  static uint8_t ReadReg(uint8_t reg_addr, uint8_t *reg_data) {
-    int8_t rslt = 0;
-    size_t len = 1;
+  static uint8_t ReadReg(uint8_t RegAddr) {
+    int8_t rslt;
+
     //CS :: Set() ;
     CS :: Reset() ;
-    SPI :: WriteByte(reg_addr);
-    SPI :: ReadData(reg_data,len);
+    SPI :: WriteByte(RegAddr);
+    rslt = SPI::ReadByte() ;
     CS :: Set() ;
     return rslt;
   }
+  
+  static std::uint16_t ReadReg_U16(uint8_t RegAddr)
+{
+   std::uint8_t buf [2] ;
+   assert(buf != nullptr) ;
+
+   CS :: Reset() ;
+   SPI :: WriteByte(RegAddr);
+   buf[0] = SPI::ReadByte() ;
+   buf[1] = SPI::ReadByte() ;
+   CS :: Set() ;
+
+   std::uint16_t result = *reinterpret_cast<std::uint16_t*>(buf) ;
+   return result ;
+}
+
+  static std::int16_t ReadReg_S16(uint8_t RegAddr)
+{
+   std::int8_t buf [2] ;
+   assert(buf != nullptr) ;
+
+   CS :: Reset() ;
+   SPI :: WriteByte(RegAddr);
+   buf[0] = SPI::ReadByte() ;
+   buf[1] = SPI::ReadByte() ;
+   CS :: Set() ;
+
+   std::int16_t result = *reinterpret_cast<std::int16_t*>(buf) ;
+   return result ;
+}
+
+std::uint32_t ReadReg32(uint8_t RegAddr)
+{
+   std::uint8_t buf [4] ;
+   assert(buf != nullptr) ;
+
+   CS :: Reset() ;
+  SPI :: WriteByte(RegAddr);
+  buf[0]  = SPI::ReadByte() ;
+  buf[1] = SPI::ReadByte() ;
+  buf[2]  = SPI::ReadByte() ;
+  buf[3] = SPI::ReadByte() ;
+  CS :: Set() ;
+
+  std::uint32_t result = *reinterpret_cast<std::uint32_t*>(buf) ;
+
+  return result ;
+}
 };

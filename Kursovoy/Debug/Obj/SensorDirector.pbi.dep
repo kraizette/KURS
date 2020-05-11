@@ -94,6 +94,8 @@ SensorDirector.pbi: \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\include\event_groups.h \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\include/timers.h \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\Common\susudefs.hpp \
+  C:\Programs\IAR\ Arm\arm\inc\cpp\cassert \
+  C:\Programs\IAR\ Arm\arm\inc\c\assert.h \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\FreeRTOSConfig.h \
   C:\Programs\IAR\ Arm\arm\inc\cpp\chrono \
   C:\Programs\IAR\ Arm\arm\inc\cpp\ratio \

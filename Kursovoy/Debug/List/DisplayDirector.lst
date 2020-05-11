@@ -1,0 +1,575 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         11/May/2020  11:31:42
+# Copyright 1999-2019 IAR Systems AB.
+#
+#    Cpu mode     =  
+#    Endian       =  little
+#    Source file  =
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
+#    Command line =
+#        -f C:\Users\User\AppData\Local\Temp\EW4376.tmp
+#        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
+#        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\Obj --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e
+#        --fpu=VFPv4_sp --dlib_config "C:\Programs\IAR
+#        Arm\arm\inc\c\DLib_Config_Normal.h" -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\FreeRtos\
+#        -I D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\include\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\portable\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\portable\Common\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\portable\IAR\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\portable\IAR\ARM_CM4F\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\FreeRtos\portable\MemMang\
+#        -I D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\MyTasks\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Common\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\CMSIS\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Application\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Application\Diagnostic\
+#        -I D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AHardware\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AHardware\GpioPort\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AHardware\IrqController\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Pin\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Registers\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Port\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\AbstractHardware\Atomic\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\Common\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\..\CortexLib\Common\Singleton\
+#        -I D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\SPI\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\Pin\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\AbstractHardware\USART\
+#        -I D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\ -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Driver\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\Fonts\
+#        -Ol --c++ --no_exceptions --no_rtti)
+#    Locale       =  C
+#    List file    =
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List\DisplayDirector.lst
+#    Object file  =
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\Obj\DisplayDirector.o
+#
+###############################################################################
+
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
+      1          //DisplayDirector.cpp
+      2          
+      3          #include "DisplayDirector.hpp" 
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char *std::_Addressof<char>(char &, std::false_type)
+   \                     _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char *std::addressof<char>(char &)
+   \                     _ZSt9addressofIcEPT_RS0_: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char const *std::_Unchecked<char const *>(char const *)
+   \                     _ZSt10_UncheckedIPKcET_S2_: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Scalar_ptr_iterator_tag std::_Ptr_cat(char const *, char *)
+   \                     _ZSt8_Ptr_catPKcPc: (+1)
+   \        0x0   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorIcLj40EEC1EPKcj: (+1)
+   \        0x0   0x4411             ADD      R1,R1,R2
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorIcLj40EEC2EPKcj: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj40EEC1EPKcj
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_const_iterator<char, 40U> &std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
+   \                     _ZNSt21_Array_const_iteratorIcLj40EE10_RecheckedEPKc: (+1)
+   \        0x0   0x6001             STR      R1,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char const * std::_Array_const_iterator<char, 40U>::_Unchecked() const
+   \                     _ZNKSt21_Array_const_iteratorIcLj40EE10_UncheckedEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_iterator<char, 40U>::_Array_iterator(char *, size_t)
+   \                     _ZNSt15_Array_iteratorIcLj40EEC1EPcj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj40EEC2EPKcj
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_iterator<char, 40U> &std::_Array_iterator<char, 40U>::_Rechecked(char *)
+   \                     _ZNSt15_Array_iteratorIcLj40EE10_RecheckedEPc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj40EE10_RecheckedEPKc
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char * std::_Array_iterator<char, 40U>::_Unchecked() const
+   \                     _ZNKSt15_Array_iteratorIcLj40EE10_UncheckedEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt21_Array_const_iteratorIcLj40EE10_UncheckedEv
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char * std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
+   \                     _ZSt10_UncheckedIcLj40EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_: (+1)
+   \        0x0   0xB501             PUSH     {R0,LR}
+   \        0x2   0x4668             MOV      R0,SP
+   \        0x4   0x....'....        BL       _ZNKSt15_Array_iteratorIcLj40EE10_UncheckedEv
+   \        0x8   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_iterator<char, 40U> &std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
+   \                     _ZSt10_RecheckedIcLj40EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNSt15_Array_iteratorIcLj40EE10_RecheckedEPc
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char *std::_Copy_impl<char const *, char *>(char const *, char const *, char *, std::_Scalar_ptr_iterator_tag)
+   \                     _ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x000C             MOVS     R4,R1
+   \        0x4   0x0015             MOVS     R5,R2
+   \        0x6   0x1A24             SUBS     R4,R4,R0
+   \        0x8   0x0022             MOVS     R2,R4
+   \        0xA   0x002E             MOVS     R6,R5
+   \        0xC   0x0001             MOVS     R1,R0
+   \        0xE   0x0030             MOVS     R0,R6
+   \       0x10   0x....'....        BL       __aeabi_memmove
+   \       0x14   0xEB05 0x0004      ADD      R0,R5,R4
+   \       0x18   0xBD70             POP      {R4-R6,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char * std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
+   \                     _ZSt10_Copy_implIPKcPcET0_T_S4_S3_: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0031             MOVS     R1,R6
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0x....'....        BL       _ZSt8_Ptr_catPKcPc
+   \       0x10   0x0003             MOVS     R3,R0
+   \       0x12   0x0032             MOVS     R2,R6
+   \       0x14   0x0029             MOVS     R1,R5
+   \       0x16   0x0020             MOVS     R0,R4
+   \       0x18   0x....'....        BL       _ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag
+   \       0x1C   0xBD70             POP      {R4-R6,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::array<char, 40U>::iterator std::copy<char const *, std::array<char, 40U>::iterator>(char const *, char const *, std::array<char, 40U>::iterator)
+   \                     _ZSt4copyIPKcSt15_Array_iteratorIcLj40EEET0_T_S5_S4_: (+1)
+   \        0x0   0xB576             PUSH     {R1,R2,R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x9801             LDR      R0,[SP, #+4]
+   \        0x8   0x....'....        BL       _ZSt10_UncheckedIcLj40EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_
+   \        0xC   0x0006             MOVS     R6,R0
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x....'....        BL       _ZSt10_UncheckedIPKcET_S2_
+   \       0x14   0x0005             MOVS     R5,R0
+   \       0x16   0x0020             MOVS     R0,R4
+   \       0x18   0x....'....        BL       _ZSt10_UncheckedIPKcET_S2_
+   \       0x1C   0x0032             MOVS     R2,R6
+   \       0x1E   0x0029             MOVS     R1,R5
+   \       0x20   0x....'....        BL       _ZSt10_Copy_implIPKcPcET0_T_S4_S3_
+   \       0x24   0x0001             MOVS     R1,R0
+   \       0x26   0xA801             ADD      R0,SP,#+4
+   \       0x28   0x....'....        BL       _ZSt10_RecheckedIcLj40EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
+   \       0x2C   0x6800             LDR      R0,[R0, #+0]
+   \       0x2E   0xBD76             POP      {R1,R2,R4-R6,PC}  ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::array<char, 40U>::iterator std::array<char, 40U>::begin()
+   \                     _ZNSt5arrayIcLj40EE5beginEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt9addressofIcEPT_RS0_
+   \        0x6   0x2200             MOVS     R2,#+0
+   \        0x8   0x0001             MOVS     R1,R0
+   \        0xA   0x4668             MOV      R0,SP
+   \        0xC   0x....'....        BL       _ZNSt15_Array_iteratorIcLj40EEC1EPcj
+   \       0x10   0x6800             LDR      R0,[R0, #+0]
+   \       0x12   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp SusuString<40U>::SusuString()
+   \                     _ZN10SusuStringILj40EEC1Ev: (+1)
+   \        0x0   0x2128             MOVS     R1,#+40
+   \        0x2   0x6281             STR      R1,[R0, #+40]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void SusuString<40U>::Set<9U>(char const (&)[9])
+   \                     _ZN10SusuStringILj40EE3SetILj9EEEvRAT__Kc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x000C             MOVS     R4,R1
+   \        0x4   0x....'....        BL       _ZNSt5arrayIcLj40EE5beginEv
+   \        0x8   0x0002             MOVS     R2,R0
+   \        0xA   0xF114 0x0108      ADDS     R1,R4,#+8
+   \        0xE   0x0020             MOVS     R0,R4
+   \       0x10   0x....'....        BL       _ZSt4copyIPKcSt15_Array_iteratorIcLj40EEET0_T_S5_S4_
+   \       0x14   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void SusuString<40U>::Set<5U>(char const (&)[5])
+   \                     _ZN10SusuStringILj40EE3SetILj5EEEvRAT__Kc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x000C             MOVS     R4,R1
+   \        0x4   0x....'....        BL       _ZNSt5arrayIcLj40EE5beginEv
+   \        0x8   0x0002             MOVS     R2,R0
+   \        0xA   0x1D21             ADDS     R1,R4,#+4
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x....'....        BL       _ZSt4copyIPKcSt15_Array_iteratorIcLj40EEET0_T_S5_S4_
+   \       0x12   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp OsWrapper::TicksPerSecond std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+   \                     _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+   \        0x6   0x220A             MOVS     R2,#+10
+   \        0x8   0x2300             MOVS     R3,#+0
+   \        0xA   0x....'....        BL       __aeabi_ldivmod
+   \        0xE   0x9001             STR      R0,[SP, #+4]
+   \       0x10   0xA901             ADD      R1,SP,#+4
+   \       0x12   0x4668             MOV      R0,SP
+   \       0x14   0x....'....        BL       _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+   \       0x18   0x9800             LDR      R0,[SP, #+0]
+   \       0x1A   0xBD0E             POP      {R1-R3,PC}       ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+   \                     _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_: (+1)
+   \        0x0   0x6809             LDR      R1,[R1, #+0]
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp __int64_t std::chrono::duration<__int64_t, std::milli>::count() const
+   \                     _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv: (+1)
+   \        0x0   0xE9D0 0x0100      LDRD     R0,R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp uint32_t std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+   \                     _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_steady
+   \                     _ZNSt6chrono12system_clock9is_steadyE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::system_clock::is_monotonic
+   \                     _ZNSt6chrono12system_clock12is_monotonicE:
+   \        0x0   0x00               DC8 0
+
+   \                                 In section .rodata, align 1
+   \   __absolute bool const std::chrono::steady_clock::is_steady
+   \                     _ZNSt6chrono12steady_clock9is_steadyE:
+   \        0x0   0x01               DC8 1
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::RtosWrapper::wSleep(uint32_t)
+   \                     _ZN9OsWrapper11RtosWrapper6wSleepEj: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       vTaskDelay
+   \        0x6   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+   \                     _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE: (+1)
+   \        0x0   0xB583             PUSH     {R0,R1,R7,LR}
+   \        0x2   0xB082             SUB      SP,SP,#+8
+   \        0x4   0xA802             ADD      R0,SP,#+8
+   \        0x6   0x....'....        BL       _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x....'....        BL       _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+   \       0x12   0x....'....        BL       _ZN9OsWrapper11RtosWrapper6wSleepEj
+   \       0x16   0xB005             ADD      SP,SP,#+20
+   \       0x18   0xBD00             POP      {PC}             ;; return
+      4          #include <iostream>
+      5          
+
+   \                                 In section .text, align 4, keep-with-next
+      6          void DisplayDirector::Execute() {
+   \                     _ZN15DisplayDirector7ExecuteEv: (+1)
+   \        0x0   0xB530             PUSH     {R4,R5,LR}
+   \        0x2   0xB0AD             SUB      SP,SP,#+180
+   \        0x4   0x0004             MOVS     R4,R0
+      7            for(;;){
+      8            SusuString<40> test1;
+   \                     ??Execute_1: (+1)
+   \        0x6   0xA822             ADD      R0,SP,#+136
+   \        0x8   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+      9            test1.Set("Pressure");
+   \        0xC   0x4913             LDR.N    R1,??Execute_0
+   \        0xE   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj9EEEvRAT__Kc
+     10            SusuString<40> test2;
+   \       0x12   0xA817             ADD      R0,SP,#+92
+   \       0x14   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+     11            test2.Set("Humidity");
+   \       0x18   0x4911             LDR.N    R1,??Execute_0+0x4
+   \       0x1A   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj9EEEvRAT__Kc
+     12            SusuString<40> test3;
+   \       0x1E   0xA80C             ADD      R0,SP,#+48
+   \       0x20   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+     13            test3.Set("Temp");
+   \       0x24   0x490F             LDR.N    R1,??Execute_0+0x8
+   \       0x26   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj5EEEvRAT__Kc
+     14            SusuString<40> test4;
+   \       0x2A   0xA801             ADD      R0,SP,#+4
+   \       0x2C   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+     15            test4.Set("DewPoint");
+   \       0x30   0x490D             LDR.N    R1,??Execute_0+0xC
+   \       0x32   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj9EEEvRAT__Kc
+     16            myView.Update(test1,test2,test3,test4);
+   \       0x36   0xA801             ADD      R0,SP,#+4
+   \       0x38   0x9000             STR      R0,[SP, #+0]
+   \       0x3A   0xAB0C             ADD      R3,SP,#+48
+   \       0x3C   0xAA17             ADD      R2,SP,#+92
+   \       0x3E   0xA922             ADD      R1,SP,#+136
+   \       0x40   0xF8D4 0x045C      LDR      R0,[R4, #+1116]
+   \       0x44   0xF8D4 0x545C      LDR      R5,[R4, #+1116]
+   \       0x48   0x682D             LDR      R5,[R5, #+0]
+   \       0x4A   0x682D             LDR      R5,[R5, #+0]
+   \       0x4C   0x47A8             BLX      R5
+   \       0x4E   0x4A07             LDR.N    R2,??Execute_0+0x10
+   \       0x50   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+     17            Sleep(3000ms) ;
+   \       0x54   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x58   0xE7D5             B.N      ??Execute_1
+   \       0x5A   0xBF00             Nop      
+   \                     ??Execute_0:
+   \       0x5C   0x....'....        DC32     ?_0
+   \       0x60   0x....'....        DC32     ?_1
+   \       0x64   0x....'....        DC32     ?_2
+   \       0x68   0x....'....        DC32     ?_3
+   \       0x6C   0x....'....        DC32     ?_4
+     18            }
+     19          }
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0x50 0x72          DC8 "Pressure"
+   \              0x65 0x73    
+   \              0x73 0x75    
+   \              0x72 0x65    
+   \              0x00         
+   \        0x9   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x48 0x75          DC8 "Humidity"
+   \              0x6D 0x69    
+   \              0x64 0x69    
+   \              0x74 0x79    
+   \              0x00         
+   \        0x9   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .rodata, align 4
+   \                     ?_2:
+   \        0x0   0x54 0x65          DC8 "Temp"
+   \              0x6D 0x70    
+   \              0x00         
+   \        0x5   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .rodata, align 4
+   \                     ?_3:
+   \        0x0   0x44 0x65          DC8 "DewPoint"
+   \              0x77 0x50    
+   \              0x6F 0x69    
+   \              0x6E 0x74    
+   \              0x00         
+   \        0x9   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .rodata, align 8
+   \                     ?_4:
+   \        0x0   0x0000'0000'0      DC64 3'000
+   \              000'0BB8     
+     20          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+     192   DisplayDirector::Execute()
+       192   -- Indirect call
+       192   -> OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+       192   -> SusuString<40U>::Set<5U>(char const (&)[5])
+       192   -> SusuString<40U>::Set<9U>(char const (&)[9])
+       192   -> SusuString<40U>::SusuString()
+      24   OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+        24   -> OsWrapper::RtosWrapper::wSleep(uint32_t)
+        24   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+        24   -> std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       8   OsWrapper::RtosWrapper::wSleep(uint32_t)
+         8   -> vTaskDelay
+       8   SusuString<40U>::Set<5U>(char const (&)[5])
+         8   -> std::array<char, 40U>::begin()
+         8   -> std::copy<char const *, std::array<char, 40U>::iterator>(char const *, char const *, std::array<char, 40U>::iterator)
+       8   SusuString<40U>::Set<9U>(char const (&)[9])
+         8   -> std::array<char, 40U>::begin()
+         8   -> std::copy<char const *, std::array<char, 40U>::iterator>(char const *, char const *, std::array<char, 40U>::iterator)
+       0   SusuString<40U>::SusuString()
+       0   std::_Addressof<char>(char &, std::false_type)
+       0   std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
+       0   std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
+       0   std::_Array_const_iterator<char, 40U>::_Unchecked() const
+       8   std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
+         8   -> std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
+       8   std::_Array_iterator<char, 40U>::_Array_iterator(char *, size_t)
+         8   -> std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
+       8   std::_Array_iterator<char, 40U>::_Rechecked(char *)
+         8   -> std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
+       8   std::_Array_iterator<char, 40U>::_Unchecked() const
+         8   -> std::_Array_const_iterator<char, 40U>::_Unchecked() const
+      16   std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
+        16   -> std::_Copy_impl<char const *, char *>(char const *, char const *, char *, std::_Scalar_ptr_iterator_tag)
+        16   -> std::_Ptr_cat(char const *, char *)
+      16   std::_Copy_impl<char const *, char *>(char const *, char const *, char *, std::_Scalar_ptr_iterator_tag)
+        16   -> __aeabi_memmove
+       0   std::_Ptr_cat(char const *, char *)
+       8   std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
+         8   -> std::_Array_iterator<char, 40U>::_Rechecked(char *)
+       0   std::_Unchecked<char const *>(char const *)
+       8   std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
+         8   -> std::_Array_iterator<char, 40U>::_Unchecked() const
+       8   std::addressof<char>(char &)
+         8   -> std::_Addressof<char>(char &, std::false_type)
+       8   std::array<char, 40U>::begin()
+         8   -> std::_Array_iterator<char, 40U>::_Array_iterator(char *, size_t)
+         8   -> std::addressof<char>(char &)
+       0   std::chrono::duration<__int64_t, std::milli>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+      16   std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+        16   -> std::chrono::duration<__int64_t, std::milli>::count() const
+        16   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+        16 __aeabi_ldivmod
+      24   std::copy<char const *, std::array<char, 40U>::iterator>(char const *, char const *, std::array<char, 40U>::iterator)
+        24   -> std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
+        24   -> std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
+        24   -> std::_Unchecked<char const *>(char const *)
+        24   -> std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      12  ?_0
+      12  ?_1
+       8  ?_2
+      12  ?_3
+       8  ?_4
+     112  DisplayDirector::Execute()
+      26  OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+       8  OsWrapper::RtosWrapper::wSleep(uint32_t)
+      20  SusuString<40U>::Set<5U>(char const (&)[5])
+      22  SusuString<40U>::Set<9U>(char const (&)[9])
+       6  SusuString<40U>::SusuString()
+       2  std::_Addressof<char>(char &, std::false_type)
+       6  std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
+       4  std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
+       4  std::_Array_const_iterator<char, 40U>::_Unchecked() const
+       8  std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
+      14  std::_Array_iterator<char, 40U>::_Array_iterator(char *, size_t)
+      14  std::_Array_iterator<char, 40U>::_Rechecked(char *)
+       8  std::_Array_iterator<char, 40U>::_Unchecked() const
+      30  std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
+      26  std::_Copy_impl<char const *, char *>(char const *, char const *, char *, std::_Scalar_ptr_iterator_tag)
+       2  std::_Ptr_cat(char const *, char *)
+       8  std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
+       2  std::_Unchecked<char const *>(char const *)
+      10  std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
+       8  std::addressof<char>(char &)
+      20  std::array<char, 40U>::begin()
+       6  std::chrono::duration<__int64_t, std::milli>::count() const
+       4  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+       6  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+      28  std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       1  std::chrono::steady_clock::is_steady
+       1  std::chrono::system_clock::is_monotonic
+       1  std::chrono::system_clock::is_steady
+      48  std::copy<char const *, std::array<char, 40U>::iterator>(char const *, char const *, std::array<char, 40U>::iterator)
+     184  -- Other
+
+ 
+ 239 bytes in section .rodata
+ 452 bytes in section .text
+ 
+ 112 bytes of CODE  memory (+ 340 bytes shared)
+  52 bytes of CONST memory (+ 187 bytes shared)
+
+Errors: none
+Warnings: none

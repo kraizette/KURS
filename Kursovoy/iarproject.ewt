@@ -2742,6 +2742,27 @@
                 <name>Display</name>
                 <group>
                     <name>Driver</name>
+                    <group>
+                        <name>Fonts</name>
+                        <file>
+                            <name>$PROJ_DIR$\Applications\Output\Display\Driver\Fonts\font12.c</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\Applications\Output\Display\Driver\Fonts\font16.c</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\Applications\Output\Display\Driver\Fonts\font20.c</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\Applications\Output\Display\Driver\Fonts\font24.c</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\Applications\Output\Display\Driver\Fonts\font8.c</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\Applications\Output\Display\Driver\Fonts\fonts.h</name>
+                        </file>
+                    </group>
                     <file>
                         <name>$PROJ_DIR$\Applications\Output\Display\Driver\DisplayDriver.hpp</name>
                     </file>
@@ -2750,6 +2771,9 @@
                     </file>
                 </group>
                 <file>
+                    <name>$PROJ_DIR$\Applications\Output\Display\DisplayDirector.cpp</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\Applications\Output\Display\DisplayDirector.hpp</name>
                 </file>
                 <file>
@@ -2757,6 +2781,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\Applications\Output\Display\EInkDisplay.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\Display\IDisplay.hpp</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\Applications\Output\Display\IDisplayView.hpp</name>

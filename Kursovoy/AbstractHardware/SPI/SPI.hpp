@@ -44,7 +44,7 @@ public:
       //передаем байт данных
       auto bytedata= ReadByte();
       if(std::get<bool>(bytedata) == true){
-      data[index] = std::get<uint8_t>(bytedata);
+      data[index] = std::get<int8_t>(bytedata);
       }
       else {
         result = false; 
@@ -65,13 +65,13 @@ public:
     }
   }
   
-  static std::pair<uint8_t, bool> ReadByte() {
+  static std::pair<int8_t, bool> ReadByte() {
     /*
     Bit 0 RXNE: Receive buffer not empty
     0: Rx buffer empty
     1: Rx buffer not empty
     */
-    uint8_t value = 0U;
+    int8_t value = 0U;
     bool result = true;
     int i = 0;
     //ждем, пока закончит чтение
@@ -82,7 +82,7 @@ public:
       result = false;
     };
     //читаем байт данных
-    value = SPIModule :: DR :: Read() ;
+    value = SPIModule :: DR :: Get() ;
     return std::make_pair(value,result) ;
   }
   
