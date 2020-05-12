@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        11/May/2020  11:31:44
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        12/May/2020  12:20:41
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EW4C44.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EW76A5.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -84,6 +84,10 @@
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\
 //        -I
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\Fonts\
+//        -I
+//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
+//        -I
+//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\Driver\
 //        -Ol --c++ --no_exceptions --no_rtti)
 //    Locale       =  C
 //    List file    =
@@ -111,12 +115,16 @@
         PUBLIC _ZN10TaskButton7ExecuteEv
         PUBLIC _ZN10TaskButtonC1ER11ISubscriber
         PUBLIC _ZN10TaskButtonC2ER11ISubscriber
+        PUBLIC _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        PUBLIC _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
         PUBLIC _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
         PUBLIC _ZN3PinI5GPIOCLj13EE5IsSetEv
+        PUBLIC _ZN3PinI5GPIOCLj13EE8SetInputEv
         PUBLIC _ZN6ButtonI3PinI5GPIOCLj13EEE8IsPushedEv
+        PUBLIC _ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev
         PUBLIC _ZN9OsWrapper11RtosWrapper6wSleepEj
-        PUBLIC _ZN9OsWrapper6ThreadILj128EEC1Ev
-        PUBLIC _ZN9OsWrapper6ThreadILj128EEC2Ev
+        PUBLIC _ZN9OsWrapper6ThreadILj256EEC1Ev
+        PUBLIC _ZN9OsWrapper6ThreadILj256EEC2Ev
         PUBLIC _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
         PUBLIC _ZN9OsWrapper7IThreadC1Ev
         PUBLIC _ZN9OsWrapper7IThreadC2Ev
@@ -129,12 +137,12 @@
         PUBLIC _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
         PUBLIC _ZTI10TaskButton
         PUBLIC _ZTI11ISubscriber
-        PUBLIC _ZTIN9OsWrapper6ThreadILj128EEE
+        PUBLIC _ZTIN9OsWrapper6ThreadILj256EEE
         PUBLIC _ZTIN9OsWrapper7IThreadE
         PUBLIC _ZTISt10ctype_base
         PUBLIC _ZTS10TaskButton
         PUBLIC _ZTS11ISubscriber
-        PUBLIC _ZTSN9OsWrapper6ThreadILj128EEE
+        PUBLIC _ZTSN9OsWrapper6ThreadILj256EEE
         PUBLIC _ZTSN9OsWrapper7IThreadE
         PUBLIC _ZTSSt10ctype_base
         PUBLIC _ZTV10TaskButton
@@ -284,16 +292,16 @@ _ZTI11ISubscriber:
 _ZTI10TaskButton:
         DATA32
         DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 0x8, _ZTS10TaskButton
-        DC32 _ZTIN9OsWrapper6ThreadILj128EEE
+        DC32 _ZTIN9OsWrapper6ThreadILj256EEE
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTIN9OsWrapper6ThreadILj128EEE
+        SECTION_GROUP _ZTIN9OsWrapper6ThreadILj256EEE
         DATA
-// __absolute __si_class_type_info const <Typeinfo for OsWrapper::Thread<(unsigned int)128>>
-_ZTIN9OsWrapper6ThreadILj128EEE:
+// __absolute __si_class_type_info const <Typeinfo for OsWrapper::Thread<(unsigned int)256>>
+_ZTIN9OsWrapper6ThreadILj256EEE:
         DATA32
         DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 0x8
-        DC32 _ZTSN9OsWrapper6ThreadILj128EEE, _ZTIN9OsWrapper7IThreadE
+        DC32 _ZTSN9OsWrapper6ThreadILj256EEE, _ZTIN9OsWrapper7IThreadE
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTS11ISubscriber
@@ -316,12 +324,12 @@ _ZTSN9OsWrapper7IThreadE:
         DC8 0, 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSN9OsWrapper6ThreadILj128EEE
+        SECTION_GROUP _ZTSN9OsWrapper6ThreadILj256EEE
         DATA
-// __absolute char const <Typeinfo name for OsWrapper::Thread<(unsigned int)128>>[28]
-_ZTSN9OsWrapper6ThreadILj128EEE:
+// __absolute char const <Typeinfo name for OsWrapper::Thread<(unsigned int)256>>[28]
+_ZTSN9OsWrapper6ThreadILj256EEE:
         DATA8
-        DC8 "N9OsWrapper6ThreadILj128EEE"
+        DC8 "N9OsWrapper6ThreadILj256EEE"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTS10TaskButton
@@ -354,7 +362,7 @@ _ZTSSt10ctype_base:
         DATA
 ?_0:
         DATA64
-        DC64 300
+        DC64 100
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(0)
         SECTION_GROUP _ZNSt6chrono12system_clock9is_steadyE
@@ -424,11 +432,14 @@ _ZN10TaskButtonC1ER11ISubscriber:
         MOVS     R4,R0
         MOVS     R5,R1
         MOVS     R0,R4
-          CFI FunCall _ZN9OsWrapper6ThreadILj128EEC2Ev
-        BL       _ZN9OsWrapper6ThreadILj128EEC2Ev
+          CFI FunCall _ZN9OsWrapper6ThreadILj256EEC2Ev
+        BL       _ZN9OsWrapper6ThreadILj256EEC2Ev
         LDR.N    R0,??DataTable2
         STR      R0,[R4, #+0]
-        STR      R5,[R4, #+608]
+        ADDW     R0,R4,#+1116
+          CFI FunCall _ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev
+        BL       _ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev
+        STR      R5,[R4, #+1120]
 //    6 }
         MOVS     R0,R4
         POP      {R1,R4,R5,PC}    ;; return
@@ -446,28 +457,31 @@ _ZN10TaskButton7ExecuteEv:
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+8
         MOVS     R4,R0
-//    9   if (userbutton.IsPushed()) {
-        ADDS     R0,R4,#+604
+//    9   for(;;) {
+//   10     if (userbutton.IsPushed()) {
+??Execute_0:
+        ADDW     R0,R4,#+1116
           CFI FunCall _ZN6ButtonI3PinI5GPIOCLj13EEE8IsPushedEv
         BL       _ZN6ButtonI3PinI5GPIOCLj13EEE8IsPushedEv
         CMP      R0,#+0
-        BEQ.N    ??Execute_0
-//   10     subscriber.HandleButtonPushed() ;
-        LDR      R0,[R4, #+608]
-        LDR      R1,[R4, #+608]
+        BEQ.N    ??Execute_1
+//   11       subscriber.HandleButtonPushed() ;
+        LDR      R0,[R4, #+1120]
+        LDR      R1,[R4, #+1120]
         LDR      R1,[R1, #+0]
         LDR      R1,[R1, #+0]
           CFI FunCall
         BLX      R1
-??Execute_0:
+??Execute_1:
         LDR.N    R2,??DataTable2_1
         LDRD     R0,R1,[R2, #+0]
-//   11   }
-//   12   Sleep(300ms) ;
+//   12     }
+//   13     Sleep(100ms) ;
           CFI FunCall _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
         BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-//   13 } ;
-        POP      {R4,PC}          ;; return
+        B.N      ??Execute_0
+//   14   }
+//   15 };
           CFI EndBlock cfiBlock7
 
         SECTION `.text`:CODE:NOROOT(2)
@@ -541,27 +555,27 @@ _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE:
           CFI EndBlock cfiBlock10
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN9OsWrapper6ThreadILj128EEC2Ev
+        SECTION_GROUP _ZN9OsWrapper6ThreadILj256EEC2Ev
           CFI Block cfiBlock11 Using cfiCommon0
-          CFI Function _ZN9OsWrapper6ThreadILj128EEC2Ev
+          CFI Function _ZN9OsWrapper6ThreadILj256EEC2Ev
         THUMB
-// __code __interwork __vfp OsWrapper::Thread<128U>::subobject Thread()
-_ZN9OsWrapper6ThreadILj128EEC2Ev:
+// __code __interwork __vfp OsWrapper::Thread<256U>::subobject Thread()
+_ZN9OsWrapper6ThreadILj256EEC2Ev:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-          CFI FunCall _ZN9OsWrapper6ThreadILj128EEC1Ev
-        BL       _ZN9OsWrapper6ThreadILj128EEC1Ev
+          CFI FunCall _ZN9OsWrapper6ThreadILj256EEC1Ev
+        BL       _ZN9OsWrapper6ThreadILj256EEC1Ev
         POP      {R1,PC}          ;; return
           CFI EndBlock cfiBlock11
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN9OsWrapper6ThreadILj128EEC1Ev
+        SECTION_GROUP _ZN9OsWrapper6ThreadILj256EEC1Ev
           CFI Block cfiBlock12 Using cfiCommon0
-          CFI Function _ZN9OsWrapper6ThreadILj128EEC1Ev
+          CFI Function _ZN9OsWrapper6ThreadILj256EEC1Ev
         THUMB
-// __code __interwork __vfp OsWrapper::Thread<128U>::Thread()
-_ZN9OsWrapper6ThreadILj128EEC1Ev:
+// __code __interwork __vfp OsWrapper::Thread<256U>::Thread()
+_ZN9OsWrapper6ThreadILj256EEC1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -575,8 +589,30 @@ _ZN9OsWrapper6ThreadILj128EEC1Ev:
           CFI EndBlock cfiBlock12
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN3PinI5GPIOCLj13EE5IsSetEv
+        SECTION_GROUP _ZN3PinI5GPIOCLj13EE8SetInputEv
           CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function _ZN3PinI5GPIOCLj13EE8SetInputEv
+        THUMB
+// __interwork __vfp void Pin<GPIOC, 13U>::SetInput()
+_ZN3PinI5GPIOCLj13EE8SetInputEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+        STR      R0,[SP, #+0]
+        LDR      R0,[SP, #+0]
+        BICS     R0,R0,#0xC000000
+        STR      R0,[SP, #+0]
+        LDR      R0,[SP, #+0]
+          CFI FunCall _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock13
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN3PinI5GPIOCLj13EE5IsSetEv
+          CFI Block cfiBlock14 Using cfiCommon0
           CFI Function _ZN3PinI5GPIOCLj13EE5IsSetEv
         THUMB
 // __interwork __vfp bool Pin<GPIOC, 13U>::IsSet()
@@ -589,11 +625,29 @@ _ZN3PinI5GPIOCLj13EE5IsSetEv:
         LSRS     R0,R0,#+13
         ANDS     R0,R0,#0x1
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock13
+          CFI EndBlock cfiBlock14
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function _ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev
+        THUMB
+// __code __interwork __vfp Button<Pin<GPIOC, 13U>>::Button()
+_ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+          CFI FunCall _ZN3PinI5GPIOCLj13EE8SetInputEv
+        BL       _ZN3PinI5GPIOCLj13EE8SetInputEv
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock15
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN6ButtonI3PinI5GPIOCLj13EEE8IsPushedEv
-          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Block cfiBlock16 Using cfiCommon0
           CFI Function _ZN6ButtonI3PinI5GPIOCLj13EEE8IsPushedEv
         THUMB
 // __interwork __vfp bool Button<Pin<GPIOC, 13U>>::IsPushed()
@@ -612,25 +666,61 @@ _ZN6ButtonI3PinI5GPIOCLj13EEE8IsPushedEv:
 ??IsPushed_1:
         UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock14
+          CFI EndBlock cfiBlock16
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
-          CFI Block cfiBlock15 Using cfiCommon0
-          CFI Function _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+        SECTION_GROUP _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
           CFI NoCalls
         THUMB
-// __interwork __vfp uint32_t RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
-_ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
-        LDR.N    R0,??Get_0       ;; 0x40020810
+// __interwork __vfp void RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+_ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj:
+        LDR.N    R1,??Write_0     ;; 0x40020800
+        STR      R0,[R1, #+0]
+        BX       LR               ;; return
+        Nop      
+        DATA
+??Write_0:
+        DATA32
+        DC32     0x40020800
+          CFI EndBlock cfiBlock17
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp uint32_t RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+_ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv:
+        LDR.N    R0,??Get_0       ;; 0x40020800
         LDR      R0,[R0, #+0]
         BX       LR               ;; return
         Nop      
         DATA
 ??Get_0:
         DATA32
+        DC32     0x40020800
+          CFI EndBlock cfiBlock18
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp uint32_t RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+_ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
+        LDR.N    R0,??Get_1       ;; 0x40020810
+        LDR      R0,[R0, #+0]
+        BX       LR               ;; return
+        Nop      
+        DATA
+??Get_1:
+        DATA32
         DC32     0x40020810
-          CFI EndBlock cfiBlock15
+          CFI EndBlock cfiBlock19
 
         SECTION `.iar_vfe_vtableinfo_ZTV10TaskButton`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -643,7 +733,7 @@ _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTIN9OsWrapper6ThreadILj128EEE
+        DC32    _ZTIN9OsWrapper6ThreadILj256EEE
         DC32    0
         DC32    1
         DC32    _ZTI10TaskButton
@@ -653,7 +743,7 @@ _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
         DC32    _ZTIN9OsWrapper7IThreadE
         DC32    0
         DC32    1
-        DC32    _ZTIN9OsWrapper6ThreadILj128EEE
+        DC32    _ZTIN9OsWrapper6ThreadILj256EEE
         DC32    0
         DC32    1
         DC32    _ZTI10TaskButton
@@ -683,9 +773,9 @@ _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv:
         END
 // 
 // 171 bytes in section .rodata
-// 246 bytes in section .text
+// 314 bytes in section .text
 // 
-// 82 bytes of CODE  memory (+ 164 bytes shared)
+// 90 bytes of CODE  memory (+ 224 bytes shared)
 //  8 bytes of CONST memory (+ 163 bytes shared)
 //
 //Errors: none

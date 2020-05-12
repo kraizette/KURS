@@ -130,9 +130,7 @@ public :
     SCK :: SetAlternate();
     MISO :: SetAlternate();
     CS :: SetOutput();
-    
-    CS :: Set();
-    
+
     SPIConfig SPI4Config;
     SPI4Config.mode = Mode :: Master;
     SPI4Config.dataformat = DataFormat :: Bit8;
@@ -228,7 +226,7 @@ public :
     return hum_float;
   }
   
-private:
+//private:
  
   void ReadCoefficients(void) {
     CalibData.dig_T1 = ReadReg_U16(REGISTER_DIG_T1);
@@ -314,11 +312,10 @@ private:
   
   static uint8_t ReadReg(uint8_t RegAddr) {
     int8_t rslt;
-
-    //CS :: Set() ;
+    CS :: Set() ;
     CS :: Reset() ;
     SPI :: WriteByte(RegAddr);
-    rslt = SPI::ReadByte() ;
+    rslt = (SPI::ReadByte()).first  ;
     CS :: Set() ;
     return rslt;
   }
@@ -330,8 +327,8 @@ private:
 
    CS :: Reset() ;
    SPI :: WriteByte(RegAddr);
-   buf[0] = SPI::ReadByte() ;
-   buf[1] = SPI::ReadByte() ;
+   buf[0] = (SPI::ReadByte()).first  ;
+   buf[1] = (SPI::ReadByte()).first  ;
    CS :: Set() ;
 
    std::uint16_t result = *reinterpret_cast<std::uint16_t*>(buf) ;
@@ -345,8 +342,8 @@ private:
 
    CS :: Reset() ;
    SPI :: WriteByte(RegAddr);
-   buf[0] = SPI::ReadByte() ;
-   buf[1] = SPI::ReadByte() ;
+   buf[0] = (SPI::ReadByte()).first  ;
+   buf[1] = (SPI::ReadByte()).first  ;
    CS :: Set() ;
 
    std::int16_t result = *reinterpret_cast<std::int16_t*>(buf) ;

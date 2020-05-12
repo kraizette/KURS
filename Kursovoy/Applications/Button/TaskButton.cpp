@@ -6,8 +6,10 @@ TaskButton::TaskButton(ISubscriber& buttonsubscriber): subscriber(buttonsubscrib
 }
 
 void TaskButton::Execute() {
-  if (userbutton.IsPushed()) {
-    subscriber.HandleButtonPushed() ;
+  for(;;) {
+    if (userbutton.IsPushed()) {
+      subscriber.HandleButtonPushed() ;
+    }
+    Sleep(100ms) ;
   }
-  Sleep(300ms) ;
-} ;
+};

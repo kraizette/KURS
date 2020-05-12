@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         11/May/2020  11:31:44
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         12/May/2020  12:20:41
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EW4C44.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW76A5.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -82,6 +82,10 @@
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\
 #        -I
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\Fonts\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
+#        -I
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\Driver\
 #        -Ol --c++ --no_exceptions --no_rtti)
 #    Locale       =  C
 #    List file    =
@@ -183,21 +187,34 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
    \       0x18   0xBD00             POP      {PC}             ;; return
 
    \                                 In section .text, align 2
-   \   __code __interwork __vfp OsWrapper::Thread<128U>::subobject Thread()
-   \                     _ZN9OsWrapper6ThreadILj128EEC2Ev: (+1)
+   \   __code __interwork __vfp OsWrapper::Thread<256U>::subobject Thread()
+   \                     _ZN9OsWrapper6ThreadILj256EEC2Ev: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-   \        0x2   0x....'....        BL       _ZN9OsWrapper6ThreadILj128EEC1Ev
+   \        0x2   0x....'....        BL       _ZN9OsWrapper6ThreadILj256EEC1Ev
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
-   \   __code __interwork __vfp OsWrapper::Thread<128U>::Thread()
-   \                     _ZN9OsWrapper6ThreadILj128EEC1Ev: (+1)
+   \   __code __interwork __vfp OsWrapper::Thread<256U>::Thread()
+   \                     _ZN9OsWrapper6ThreadILj256EEC1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
    \        0x6   0x....'....        BL       _ZN9OsWrapper7IThreadC2Ev
    \        0xA   0x0020             MOVS     R0,R4
    \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Pin<GPIOC, 13U>::SetInput()
+   \                     _ZN3PinI5GPIOCLj13EE8SetInputEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv
+   \        0x6   0x9000             STR      R0,[SP, #+0]
+   \        0x8   0x9800             LDR      R0,[SP, #+0]
+   \        0xA   0xF030 0x6040      BICS     R0,R0,#0xC000000
+   \        0xE   0x9000             STR      R0,[SP, #+0]
+   \       0x10   0x9800             LDR      R0,[SP, #+0]
+   \       0x12   0x....'....        BL       _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj
+   \       0x16   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp bool Pin<GPIOC, 13U>::IsSet()
@@ -207,6 +224,15 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
    \        0x6   0x0B40             LSRS     R0,R0,#+13
    \        0x8   0xF010 0x0001      ANDS     R0,R0,#0x1
    \        0xC   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp Button<Pin<GPIOC, 13U>>::Button()
+   \                     _ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x....'....        BL       _ZN3PinI5GPIOCLj13EE8SetInputEv
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0xBD10             POP      {R4,PC}          ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp bool Button<Pin<GPIOC, 13U>>::IsPushed()
@@ -224,13 +250,33 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
    \       0x12   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 4
-   \   __interwork __vfp uint32_t RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
-   \                     _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv: (+1)
-   \        0x0   0x4801             LDR.N    R0,??Get_0       ;; 0x40020810
+   \   __interwork __vfp void RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+   \                     _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE5WriteIS0_vEEvj: (+1)
+   \        0x0   0x4901             LDR.N    R1,??Write_0     ;; 0x40020800
+   \        0x2   0x6008             STR      R0,[R1, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Write_0:
+   \        0x8   0x4002'0800        DC32     0x40020800
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp uint32_t RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+   \                     _ZN12RegisterBaseILj1073874944ELj32E13ReadWriteModeE3GetIS0_vEEjv: (+1)
+   \        0x0   0x4801             LDR.N    R0,??Get_0       ;; 0x40020800
    \        0x2   0x6800             LDR      R0,[R0, #+0]
    \        0x4   0x4770             BX       LR               ;; return
    \        0x6   0xBF00             Nop      
    \                     ??Get_0:
+   \        0x8   0x4002'0800        DC32     0x40020800
+
+   \                                 In section .text, align 4
+   \   __interwork __vfp uint32_t RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+   \                     _ZN12RegisterBaseILj1073874960ELj32E8ReadModeE3GetIS0_vEEjv: (+1)
+   \        0x0   0x4801             LDR.N    R0,??Get_1       ;; 0x40020810
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+   \        0x6   0xBF00             Nop      
+   \                     ??Get_1:
    \        0x8   0x4002'0810        DC32     0x40020810
       4          
 
@@ -248,13 +294,15 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x000D             MOVS     R5,R1
    \        0x6   0x0020             MOVS     R0,R4
-   \        0x8   0x....'....        BL       _ZN9OsWrapper6ThreadILj128EEC2Ev
+   \        0x8   0x....'....        BL       _ZN9OsWrapper6ThreadILj256EEC2Ev
    \        0xC   0x....             LDR.N    R0,??DataTable2
    \        0xE   0x6020             STR      R0,[R4, #+0]
-   \       0x10   0xF8C4 0x5260      STR      R5,[R4, #+608]
+   \       0x10   0xF204 0x405C      ADDW     R0,R4,#+1116
+   \       0x14   0x....'....        BL       _ZN6ButtonI3PinI5GPIOCLj13EEEC1Ev
+   \       0x18   0xF8C4 0x5460      STR      R5,[R4, #+1120]
       6          }
-   \       0x14   0x0020             MOVS     R0,R4
-   \       0x16   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+   \       0x1C   0x0020             MOVS     R0,R4
+   \       0x1E   0xBD32             POP      {R1,R4,R5,PC}    ;; return
       7          
 
    \                                 In section .text, align 2, keep-with-next
@@ -262,25 +310,28 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
    \                     _ZN10TaskButton7ExecuteEv: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
-      9            if (userbutton.IsPushed()) {
-   \        0x4   0xF514 0x7017      ADDS     R0,R4,#+604
+      9            for(;;) {
+     10              if (userbutton.IsPushed()) {
+   \                     ??Execute_0: (+1)
+   \        0x4   0xF204 0x405C      ADDW     R0,R4,#+1116
    \        0x8   0x....'....        BL       _ZN6ButtonI3PinI5GPIOCLj13EEE8IsPushedEv
    \        0xC   0x2800             CMP      R0,#+0
-   \        0xE   0xD006             BEQ.N    ??Execute_0
-     10              subscriber.HandleButtonPushed() ;
-   \       0x10   0xF8D4 0x0260      LDR      R0,[R4, #+608]
-   \       0x14   0xF8D4 0x1260      LDR      R1,[R4, #+608]
+   \        0xE   0xD006             BEQ.N    ??Execute_1
+     11                subscriber.HandleButtonPushed() ;
+   \       0x10   0xF8D4 0x0460      LDR      R0,[R4, #+1120]
+   \       0x14   0xF8D4 0x1460      LDR      R1,[R4, #+1120]
    \       0x18   0x6809             LDR      R1,[R1, #+0]
    \       0x1A   0x6809             LDR      R1,[R1, #+0]
    \       0x1C   0x4788             BLX      R1
-   \                     ??Execute_0: (+1)
+   \                     ??Execute_1: (+1)
    \       0x1E   0x....             LDR.N    R2,??DataTable2_1
    \       0x20   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
-     11            }
-     12            Sleep(300ms) ;
+     12              }
+     13              Sleep(100ms) ;
    \       0x24   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-     13          } ;
-   \       0x28   0xBD10             POP      {R4,PC}          ;; return
+   \       0x28   0xE7EC             B.N      ??Execute_0
+     14            }
+     15          };
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable2:
@@ -292,13 +343,15 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
 
    \                                 In section .rodata, align 8
    \                     ?_0:
-   \        0x0   0x0000'0000'0      DC64 300
-   \              000'012C     
+   \        0x0   0x0000'0000'0      DC64 100
+   \              000'0064     
 
    Maximum stack usage in bytes:
 
    .cstack Function
    ------- --------
+       8   Button<Pin<GPIOC, 13U>>::Button()
+         8   -> Pin<GPIOC, 13U>::SetInput()
        8   Button<Pin<GPIOC, 13U>>::IsPushed()
          8   -> Pin<GPIOC, 13U>::IsSet()
        0   OsWrapper::IThread::IThread()
@@ -310,19 +363,25 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
          8   -> OsWrapper::IThread::IThread()
        8   OsWrapper::RtosWrapper::wSleep(uint32_t)
          8   -> vTaskDelay
-       8   OsWrapper::Thread<128U>::Thread()
+       8   OsWrapper::Thread<256U>::Thread()
          8   -> OsWrapper::IThread::subobject IThread()
-       8   OsWrapper::Thread<128U>::subobject Thread()
-         8   -> OsWrapper::Thread<128U>::Thread()
+       8   OsWrapper::Thread<256U>::subobject Thread()
+         8   -> OsWrapper::Thread<256U>::Thread()
        8   Pin<GPIOC, 13U>::IsSet()
          8   -> RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
+       8   Pin<GPIOC, 13U>::SetInput()
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+         8   -> RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
+       0   RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+       0   RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
        0   RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
        8   TaskButton::Execute()
          8   -- Indirect call
          8   -> Button<Pin<GPIOC, 13U>>::IsPushed()
          8   -> OsWrapper::IThread::Sleep(std::chrono::milliseconds)
       16   TaskButton::TaskButton(ISubscriber &)
-        16   -> OsWrapper::Thread<128U>::subobject Thread()
+        16   -> Button<Pin<GPIOC, 13U>>::Button()
+        16   -> OsWrapper::Thread<256U>::subobject Thread()
        8   TaskButton::subobject TaskButton(ISubscriber &)
          8   -> TaskButton::TaskButton(ISubscriber &)
        0   std::chrono::duration<__int64_t, std::milli>::count() const
@@ -341,17 +400,21 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
        4  ??DataTable2
        4  ??DataTable2_1
        8  ?_0
+      12  Button<Pin<GPIOC, 13U>>::Button()
       20  Button<Pin<GPIOC, 13U>>::IsPushed()
       10  OsWrapper::IThread::IThread()
       26  OsWrapper::IThread::Sleep(std::chrono::milliseconds)
        8  OsWrapper::IThread::subobject IThread()
        8  OsWrapper::RtosWrapper::wSleep(uint32_t)
-      14  OsWrapper::Thread<128U>::Thread()
-       8  OsWrapper::Thread<128U>::subobject Thread()
+      14  OsWrapper::Thread<256U>::Thread()
+       8  OsWrapper::Thread<256U>::subobject Thread()
       14  Pin<GPIOC, 13U>::IsSet()
+      24  Pin<GPIOC, 13U>::SetInput()
+      12  RegisterBase<1073874944U, 32U, ReadWriteMode>::Get<ReadWriteMode, void>()
+      12  RegisterBase<1073874944U, 32U, ReadWriteMode>::Write<ReadWriteMode, void>(uint32_t)
       12  RegisterBase<1073874960U, 32U, ReadMode>::Get<ReadMode, void>()
       42  TaskButton::Execute()
-      24  TaskButton::TaskButton(ISubscriber &)
+      32  TaskButton::TaskButton(ISubscriber &)
        8  TaskButton::subobject TaskButton(ISubscriber &)
        6  std::chrono::duration<__int64_t, std::milli>::count() const
        4  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
@@ -364,9 +427,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\TaskButton
 
  
  171 bytes in section .rodata
- 246 bytes in section .text
+ 314 bytes in section .text
  
- 82 bytes of CODE  memory (+ 164 bytes shared)
+ 90 bytes of CODE  memory (+ 224 bytes shared)
   8 bytes of CONST memory (+ 163 bytes shared)
 
 Errors: none

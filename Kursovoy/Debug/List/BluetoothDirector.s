@@ -6,10 +6,10 @@
 //    Cpu mode     =  
 //    Endian       =  little
 //    Source file  =
-//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
+//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWF6B9.tmp
-//        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
+//        -f C:\Users\User\AppData\Local\Temp\EWF6B8.tmp
+//        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\Obj --no_cse
@@ -91,7 +91,7 @@
 //        -Ol --c++ --no_exceptions --no_rtti)
 //    Locale       =  C
 //    List file    =
-//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List\DisplayDirector.s
+//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List\BluetoothDirector.s
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -133,20 +133,21 @@
         PUBLIC _ZN14SensorDirector6kelvinE
         PUBLIC _ZN14SensorDirector7celsiusE
         PUBLIC _ZN14SensorDirectorC1Ev
-        PUBLIC _ZN15DisplayDirector7ExecuteEv
-        PUBLIC _ZN15DisplayDirectorC1ER12IDisplayView
-        PUBLIC _ZN15DisplayDirectorC2ER12IDisplayView
-        PUBLIC _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        PUBLIC _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        PUBLIC _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        PUBLIC _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        PUBLIC _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        PUBLIC _ZN17BluetoothDirector7ExecuteEv
+        PUBLIC _ZN17BluetoothDirectorC1ER9Bluetooth
+        PUBLIC _ZN17BluetoothDirectorC2ER9Bluetooth
+        PUBLIC _ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        PUBLIC _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        PUBLIC _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        PUBLIC _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        PUBLIC _ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         PUBLIC _ZN8DewPoint3GetEfz
         PUBLIC _ZN8DewPointC1Ev
         PUBLIC _ZN8Humidity3GetEfz
         PUBLIC _ZN8HumidityC1Ev
         PUBLIC _ZN8Pressure3GetEfz
         PUBLIC _ZN8PressureC1Ev
+        PUBLIC _ZN9Bluetooth4SendER10SusuStringILj40EE
         PUBLIC _ZN9IVariableC1Ev
         PUBLIC _ZN9IVariableC2Ev
         PUBLIC _ZN9OsWrapper11RtosWrapper6wSleepEj
@@ -215,8 +216,8 @@
         PUBLIC _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
         PUBLIC _ZTI10Fahrenheit
         PUBLIC _ZTI11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE
-        PUBLIC _ZTI12IDisplayView
-        PUBLIC _ZTI15DisplayDirector
+        PUBLIC _ZTI16IBluetoothDriver
+        PUBLIC _ZTI17BluetoothDirector
         PUBLIC _ZTI6IUnits
         PUBLIC _ZTI6Kelvin
         PUBLIC _ZTI7Celsius
@@ -230,8 +231,8 @@
         PUBLIC _ZTISt5_IosbIiE
         PUBLIC _ZTS10Fahrenheit
         PUBLIC _ZTS11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE
-        PUBLIC _ZTS12IDisplayView
-        PUBLIC _ZTS15DisplayDirector
+        PUBLIC _ZTS16IBluetoothDriver
+        PUBLIC _ZTS17BluetoothDirector
         PUBLIC _ZTS6IUnits
         PUBLIC _ZTS6Kelvin
         PUBLIC _ZTS7Celsius
@@ -245,20 +246,20 @@
         PUBLIC _ZTSSt5_IosbIiE
         PUBLIC _ZTV10Fahrenheit
         PUBLIC _ZTV11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE
-        PUBLIC _ZTV15DisplayDirector
+        PUBLIC _ZTV17BluetoothDirector
         PUBLIC _ZTV6Kelvin
         PUBLIC _ZTV7Celsius
         PUBLIC _ZTV8DewPoint
         PUBLIC _ZTV8Humidity
         PUBLIC _ZTV8Pressure
-        PUBLIC _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-        PUBLIC _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-        PUBLIC _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-        PUBLIC _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-        PUBLIC _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-        PUBLIC _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-        PUBLIC _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-        PUBLIC _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        PUBLIC _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        PUBLIC _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        PUBLIC _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        PUBLIC _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        PUBLIC _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        PUBLIC _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        PUBLIC _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        PUBLIC _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
         
           CFI Names cfiNames0
           CFI StackFrame CFA R13 DATA
@@ -306,10 +307,8 @@
           CFI D15 SameValue
           CFI EndCommon cfiCommon0
         
-// D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
-//    1 //DisplayDirector.cpp
-//    2 
-//    3 #include "DisplayDirector.hpp" 
+// D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
+//    1 #include "BluetoothDirector.hpp" 
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE
@@ -857,78 +856,83 @@ _ZTIN9OsWrapper7IThreadE:
         DC32 _ZTSN9OsWrapper7IThreadE
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        SECTION_GROUP _ZTI16IBluetoothDriver
         DATA
-// __absolute char const <_ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[10]
-_ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
-        DATA8
-        DC8 "%s%.3f %s"
-        DATA16
-        DC8 0, 0
+// __absolute __class_type_info const <Typeinfo for IBluetoothDriver>
+_ZTI16IBluetoothDriver:
+        DATA32
+        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8
+        DC32 _ZTS16IBluetoothDriver
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        SECTION_GROUP _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
         DATA
-// __absolute char const <_ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[11]
-_ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
+// __absolute char const <_ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[11]
+_ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
+        DATA8
+        DC8 "%s%.3f %s\012"
+        DC8 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        DATA
+// __absolute char const <_ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[11]
+_ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
         DATA8
         DC8 "Pressure: "
         DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        SECTION_GROUP _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
         DATA
-// __absolute char const <_ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[10]
-_ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
+// __absolute char const <_ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[11]
+_ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
         DATA8
-        DC8 "%s%.3f %s"
-        DATA16
-        DC8 0, 0
+        DC8 "%s%.3f %s\012"
+        DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        SECTION_GROUP _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
         DATA
-// __absolute char const <_ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[11]
-_ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
+// __absolute char const <_ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[11]
+_ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
         DATA8
         DC8 "Humidity: "
         DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        SECTION_GROUP _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
         DATA
-// __absolute char const <_ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[10]
-_ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
+// __absolute char const <_ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[11]
+_ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
         DATA8
-        DC8 "%s%.3f %s"
-        DATA16
-        DC8 0, 0
+        DC8 "%s%.3f %s\012"
+        DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        SECTION_GROUP _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
         DATA
-// __absolute char const <_ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[14]
-_ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
+// __absolute char const <_ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[14]
+_ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
         DATA8
         DC8 "Temperature: "
         DATA16
         DC8 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+        SECTION_GROUP _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
         DATA
-// __absolute char const <_ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[10]
-_ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
+// __absolute char const <_ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs>[11]
+_ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs:
         DATA8
-        DC8 "%s%.3f %s"
-        DATA16
-        DC8 0, 0
+        DC8 "%s%.3f %s\012"
+        DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        SECTION_GROUP _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
         DATA
-// __absolute char const <_ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[11]
-_ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
+// __absolute char const <_ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0>[11]
+_ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0:
         DATA8
         DC8 "DewPoint: "
         DC8 0
@@ -992,20 +996,12 @@ _ZTV11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7cel
         DC32 _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTV15DisplayDirector
+        SECTION_GROUP _ZTV17BluetoothDirector
         DATA
-// __absolute void (*const DisplayDirector::__vtbl[3])()
-_ZTV15DisplayDirector:
+// __absolute void (*const BluetoothDirector::__vtbl[3])()
+_ZTV17BluetoothDirector:
         DATA32
-        DC32 0x0, _ZTI15DisplayDirector, _ZN15DisplayDirector7ExecuteEv
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTI12IDisplayView
-        DATA
-// __absolute __class_type_info const <Typeinfo for IDisplayView>
-_ZTI12IDisplayView:
-        DATA32
-        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTS12IDisplayView
+        DC32 0x0, _ZTI17BluetoothDirector, _ZN17BluetoothDirector7ExecuteEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI6IUnits
@@ -1088,13 +1084,13 @@ _ZTI11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7cel
         DC32 _ZTI9IVariable
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTI15DisplayDirector
+        SECTION_GROUP _ZTI17BluetoothDirector
         DATA
-// __absolute __si_class_type_info const <Typeinfo for DisplayDirector>
-_ZTI15DisplayDirector:
+// __absolute __si_class_type_info const <Typeinfo for BluetoothDirector>
+_ZTI17BluetoothDirector:
         DATA32
         DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 0x8
-        DC32 _ZTS15DisplayDirector, _ZTIN9OsWrapper6ThreadILj512EEE
+        DC32 _ZTS17BluetoothDirector, _ZTIN9OsWrapper6ThreadILj512EEE
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTIN9OsWrapper6ThreadILj512EEE
@@ -1106,12 +1102,12 @@ _ZTIN9OsWrapper6ThreadILj512EEE:
         DC32 _ZTSN9OsWrapper6ThreadILj512EEE, _ZTIN9OsWrapper7IThreadE
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTS12IDisplayView
+        SECTION_GROUP _ZTS16IBluetoothDriver
         DATA
-// __absolute char const <Typeinfo name for IDisplayView>[15]
-_ZTS12IDisplayView:
+// __absolute char const <Typeinfo name for IBluetoothDriver>[19]
+_ZTS16IBluetoothDriver:
         DATA8
-        DC8 "12IDisplayView"
+        DC8 "16IBluetoothDriver"
         DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
@@ -1228,14 +1224,12 @@ _ZTSN9OsWrapper6ThreadILj512EEE:
         DC8 "N9OsWrapper6ThreadILj512EEE"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTS15DisplayDirector
+        SECTION_GROUP _ZTS17BluetoothDirector
         DATA
-// __absolute char const <Typeinfo name for DisplayDirector>[18]
-_ZTS15DisplayDirector:
+// __absolute char const <Typeinfo name for BluetoothDirector>[20]
+_ZTS17BluetoothDirector:
         DATA8
-        DC8 "15DisplayDirector"
-        DATA16
-        DC8 0, 0
+        DC8 "17BluetoothDirector"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTISt10ctype_base
@@ -1347,7 +1341,7 @@ _ZTSSt5_IosbIiE:
         DATA
 ?_12:
         DATA64
-        DC64 3'000
+        DC64 1'000
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(0)
         SECTION_GROUP _ZNSt6chrono12system_clock9is_steadyE
@@ -1409,20 +1403,19 @@ _ZN14SensorDirector6kelvinE:
 _ZN14SensorDirector7celsiusE:
         DATA32
         DC32 _ZTV7Celsius + 0x8
-//    4 #include <iostream>
-//    5 
+//    2 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock26 Using cfiCommon0
-          CFI Function _ZN15DisplayDirectorC2ER12IDisplayView
+          CFI Function _ZN17BluetoothDirectorC2ER9Bluetooth
         THUMB
-// __code __interwork __vfp DisplayDirector::subobject DisplayDirector(IDisplayView &)
-_ZN15DisplayDirectorC2ER12IDisplayView:
+// __code __interwork __vfp BluetoothDirector::subobject BluetoothDirector(Bluetooth &)
+_ZN17BluetoothDirectorC2ER9Bluetooth:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-          CFI FunCall _ZN15DisplayDirectorC1ER12IDisplayView
-        BL       _ZN15DisplayDirectorC1ER12IDisplayView
+          CFI FunCall _ZN17BluetoothDirectorC1ER9Bluetooth
+        BL       _ZN17BluetoothDirectorC1ER9Bluetooth
         POP      {R1,PC}          ;; return
           CFI EndBlock cfiBlock26
 
@@ -1436,17 +1429,17 @@ __sti__routine:
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
         LDR.N    R0,??DataTable3
-          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev
-        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev
+          CFI FunCall _ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev
+        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock27
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock28 Using cfiCommon0
-          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev
+          CFI Function _ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
-_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev:
+// static __code __interwork __vfp <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev>()
+_ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1470,10 +1463,10 @@ _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock29 Using cfiCommon0
-          CFI Function _ZN15DisplayDirectorC1ER12IDisplayView
+          CFI Function _ZN17BluetoothDirectorC1ER9Bluetooth
         THUMB
-//    6 DisplayDirector::DisplayDirector(IDisplayView& view): myView(view) { };
-_ZN15DisplayDirectorC1ER12IDisplayView:
+//    3 BluetoothDirector::BluetoothDirector(Bluetooth& mybluetooth): bluetooth(mybluetooth) {}; 
+_ZN17BluetoothDirectorC1ER9Bluetooth:
         PUSH     {R3-R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
@@ -1487,91 +1480,98 @@ _ZN15DisplayDirectorC1ER12IDisplayView:
         LDR.N    R0,??DataTable3_1
         STR      R0,[R4, #+0]
         STR      R5,[R4, #+2140]
-        ADDS     R0,R4,#+2144
+        ADDW     R0,R4,#+2148
           CFI FunCall _ZN14SensorDirectorC1Ev
         BL       _ZN14SensorDirectorC1Ev
         MOVS     R0,R4
         POP      {R1,R4,R5,PC}    ;; return
           CFI EndBlock cfiBlock29
-//    7 
+//    4 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock30 Using cfiCommon0
-          CFI Function _ZN15DisplayDirector7ExecuteEv
+          CFI Function _ZN17BluetoothDirector7ExecuteEv
         THUMB
-//    8 void DisplayDirector::Execute() {
-_ZN15DisplayDirector7ExecuteEv:
-        PUSH     {R4,R5,LR}
+//    5 void BluetoothDirector::Execute() { 
+_ZN17BluetoothDirector7ExecuteEv:
+        PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+12
-        SUB      SP,SP,#+420
-          CFI CFA R13+432
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        SUB      SP,SP,#+416
+          CFI CFA R13+424
         MOVS     R4,R0
-//    9   for(;;){
-//   10   tFormatData x = sensordirector.GetData();
+//    6   for (;;) {
+//    7     tFormatData x = sensordirector.GetData();
 ??Execute_0:
-        ADDS     R1,R4,#+2144
-        ADD      R0,SP,#+356
+        ADDW     R1,R4,#+2148
+        ADD      R0,SP,#+352
           CFI FunCall _ZN14SensorDirector7GetDataEv
         BL       _ZN14SensorDirector7GetDataEv
-//   11   auto f = Format::GetDisplayFormat(x); 
-        ADD      R1,SP,#+356
-        ADD      R0,SP,#+180
-          CFI FunCall _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        BL       _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-//   12   auto f0 = std::get<0>(f); 
-        ADD      R0,SP,#+180
+//    8     auto f = Format::GetBlueToothFormat(x);
+        ADD      R1,SP,#+352
+        ADD      R0,SP,#+176
+          CFI FunCall _ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        BL       _ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+//    9     auto pres = std::get<0>(f) ;
+        ADD      R0,SP,#+176
           CFI FunCall _ZSt3getILj0EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         BL       _ZSt3getILj0EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         MOVS     R1,R0
-        ADD      R0,SP,#+136
+        ADD      R0,SP,#+132
         MOVS     R2,#+44
           CFI FunCall __aeabi_memcpy4
         BL       __aeabi_memcpy4
-//   13   auto f1 = std::get<1>(f);
-        ADD      R0,SP,#+180
+//   10     bluetooth.Send(pres) ;
+        ADD      R1,SP,#+132
+        LDR      R0,[R4, #+2140]
+          CFI FunCall _ZN9Bluetooth4SendER10SusuStringILj40EE
+        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
+//   11     auto hum = std::get<1>(f) ;
+        ADD      R0,SP,#+176
           CFI FunCall _ZSt3getILj1EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         BL       _ZSt3getILj1EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         MOVS     R1,R0
-        ADD      R0,SP,#+92
+        ADD      R0,SP,#+88
         MOVS     R2,#+44
           CFI FunCall __aeabi_memcpy4
         BL       __aeabi_memcpy4
-//   14   auto f2 = std::get<2>(f);
-        ADD      R0,SP,#+180
+//   12     bluetooth.Send(hum) ;
+        ADD      R1,SP,#+88
+        LDR      R0,[R4, #+2140]
+          CFI FunCall _ZN9Bluetooth4SendER10SusuStringILj40EE
+        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
+//   13     auto temp = std::get<2>(f) ; 
+        ADD      R0,SP,#+176
           CFI FunCall _ZSt3getILj2EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         BL       _ZSt3getILj2EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         MOVS     R1,R0
-        ADD      R0,SP,#+48
+        ADD      R0,SP,#+44
         MOVS     R2,#+44
           CFI FunCall __aeabi_memcpy4
         BL       __aeabi_memcpy4
-//   15   auto f3 = std::get<3>(f);
-        ADD      R0,SP,#+180
+//   14     bluetooth.Send(temp) ;
+        ADD      R1,SP,#+44
+        LDR      R0,[R4, #+2140]
+          CFI FunCall _ZN9Bluetooth4SendER10SusuStringILj40EE
+        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
+//   15     auto dewp = std::get<3>(f) ; 
+        ADD      R0,SP,#+176
           CFI FunCall _ZSt3getILj3EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         BL       _ZSt3getILj3EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
         MOVS     R1,R0
-        ADD      R0,SP,#+4
+        MOV      R0,SP
         MOVS     R2,#+44
           CFI FunCall __aeabi_memcpy4
         BL       __aeabi_memcpy4
-//   16   myView.Update(f0,f1,f2,f3);
-        ADD      R0,SP,#+4
-        STR      R0,[SP, #+0]
-        ADD      R3,SP,#+48
-        ADD      R2,SP,#+92
-        ADD      R1,SP,#+136
+//   16     bluetooth.Send(dewp) ;
+        MOV      R1,SP
         LDR      R0,[R4, #+2140]
-        LDR      R5,[R4, #+2140]
-        LDR      R5,[R5, #+0]
-        LDR      R5,[R5, #+0]
-          CFI FunCall
-        BLX      R5
+          CFI FunCall _ZN9Bluetooth4SendER10SusuStringILj40EE
+        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
         LDR.N    R2,??DataTable3_2
         LDRD     R0,R1,[R2, #+0]
-//   17   Sleep(3000ms) ;
+//   17     Sleep(1000ms) ;
           CFI FunCall _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
         BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
         B.N      ??Execute_0
@@ -1591,7 +1591,7 @@ _ZN15DisplayDirector7ExecuteEv:
         DATA
 ??DataTable3_1:
         DATA32
-        DC32     _ZTV15DisplayDirector+0x8
+        DC32     _ZTV17BluetoothDirector+0x8
 
         SECTION `.text`:CODE:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -2140,12 +2140,32 @@ _ZN9OsWrapper6ThreadILj512EEC1Ev:
           CFI EndBlock cfiBlock65
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        SECTION_GROUP _ZN9Bluetooth4SendER10SusuStringILj40EE
           CFI Block cfiBlock66 Using cfiCommon0
-          CFI Function _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI Function _ZN9Bluetooth4SendER10SusuStringILj40EE
         THUMB
-// __interwork __vfp void Format::GetDisplayFormat(tFormatData const &)
-_ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
+// __interwork __vfp void Bluetooth::Send(SusuString<40U> &)
+_ZN9Bluetooth4SendER10SusuStringILj40EE:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R2,R0
+        LDR      R0,[R2, #+0]
+        LDR      R2,[R2, #+0]
+        LDR      R2,[R2, #+0]
+        LDR      R2,[R2, #+0]
+          CFI FunCall
+        BLX      R2
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock66
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI Block cfiBlock67 Using cfiCommon0
+          CFI Function _ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        THUMB
+// __interwork __vfp void Format::GetBlueToothFormat(tFormatData const &)
+_ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         PUSH     {R4,R5,LR}
           CFI R14 Frame(CFA, -4)
           CFI R5 Frame(CFA, -8)
@@ -2157,8 +2177,8 @@ _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         MOVS     R5,R1
         MOVS     R1,R5
         MOV      R0,SP
-          CFI FunCall _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        BL       _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI FunCall _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        BL       _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         ADD      R0,SP,#+44
         MOV      R1,SP
         MOVS     R2,#+44
@@ -2166,8 +2186,8 @@ _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         BL       __aeabi_memcpy4
         MOVS     R1,R5
         MOV      R0,SP
-          CFI FunCall _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        BL       _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI FunCall _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        BL       _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         ADD      R0,SP,#+88
         MOV      R1,SP
         MOVS     R2,#+44
@@ -2175,8 +2195,8 @@ _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         BL       __aeabi_memcpy4
         MOVS     R1,R5
         MOV      R0,SP
-          CFI FunCall _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        BL       _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI FunCall _ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        BL       _ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         ADD      R0,SP,#+132
         MOV      R1,SP
         MOVS     R2,#+44
@@ -2184,8 +2204,8 @@ _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         BL       __aeabi_memcpy4
         MOVS     R1,R5
         MOV      R0,SP
-          CFI FunCall _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-        BL       _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI FunCall _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        BL       _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         ADD      R0,SP,#+176
         MOV      R1,SP
         MOVS     R2,#+44
@@ -2202,15 +2222,15 @@ _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         ADD      SP,SP,#+220
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock66
+          CFI EndBlock cfiBlock67
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-          CFI Block cfiBlock67 Using cfiCommon0
-          CFI Function _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        SECTION_GROUP _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI Block cfiBlock68 Using cfiCommon0
+          CFI Function _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         THUMB
-// __interwork __vfp SusuString<40U> Format::GetDisplayPressureFormat(tFormatData const &)
-_ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
+// __interwork __vfp SusuString<40U> Format::GetBlueToothPressureFormat(tFormatData const &)
+_ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         PUSH     {R3-R6,LR}
           CFI R14 Frame(CFA, -4)
           CFI R6 Frame(CFA, -8)
@@ -2235,8 +2255,8 @@ _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_f
           CFI FunCall __aeabi_f2d
         BL       __aeabi_f2d
         STRD     R0,R1,[SP, #+0]
-        LDR.N    R2,??GetDisplayPressureFormat_0
-        LDR.N    R1,??GetDisplayPressureFormat_0+0x4
+        LDR.N    R2,??GetBlueToothPressureFormat_0
+        LDR.N    R1,??GetBlueToothPressureFormat_0+0x4
         ADD      R0,SP,#+44
           CFI FunCall sprintf
         BL       sprintf
@@ -2256,19 +2276,19 @@ _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_f
         POP      {R4-R6,PC}       ;; return
         Nop      
         DATA
-??GetDisplayPressureFormat_0:
+??GetBlueToothPressureFormat_0:
         DATA32
-        DC32     _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-        DC32     _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-          CFI EndBlock cfiBlock67
+        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+          CFI EndBlock cfiBlock68
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-          CFI Block cfiBlock68 Using cfiCommon0
-          CFI Function _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        SECTION_GROUP _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI Block cfiBlock69 Using cfiCommon0
+          CFI Function _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         THUMB
-// __interwork __vfp SusuString<40U> Format::GetDisplayHumidityFormat(tFormatData const &)
-_ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
+// __interwork __vfp SusuString<40U> Format::GetBlueToothHumidityFormat(tFormatData const &)
+_ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         PUSH     {R3-R6,LR}
           CFI R14 Frame(CFA, -4)
           CFI R6 Frame(CFA, -8)
@@ -2293,8 +2313,8 @@ _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_f
           CFI FunCall __aeabi_f2d
         BL       __aeabi_f2d
         STRD     R0,R1,[SP, #+0]
-        LDR.N    R2,??GetDisplayHumidityFormat_0
-        LDR.N    R1,??GetDisplayHumidityFormat_0+0x4
+        LDR.N    R2,??GetBlueToothHumidityFormat_0
+        LDR.N    R1,??GetBlueToothHumidityFormat_0+0x4
         ADD      R0,SP,#+44
           CFI FunCall sprintf
         BL       sprintf
@@ -2314,19 +2334,19 @@ _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_f
         POP      {R4-R6,PC}       ;; return
         Nop      
         DATA
-??GetDisplayHumidityFormat_0:
+??GetBlueToothHumidityFormat_0:
         DATA32
-        DC32     _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-        DC32     _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-          CFI EndBlock cfiBlock68
+        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+          CFI EndBlock cfiBlock69
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-          CFI Block cfiBlock69 Using cfiCommon0
-          CFI Function _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        SECTION_GROUP _ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI Block cfiBlock70 Using cfiCommon0
+          CFI Function _ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         THUMB
-// __interwork __vfp SusuString<40U> Format::GetDisplayTemperatureFormat(tFormatData const &)
-_ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
+// __interwork __vfp SusuString<40U> Format::GetBlueToothTemperatureFormat(tFormatData const &)
+_ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         PUSH     {R3-R6,LR}
           CFI R14 Frame(CFA, -4)
           CFI R6 Frame(CFA, -8)
@@ -2351,8 +2371,8 @@ _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS
           CFI FunCall __aeabi_f2d
         BL       __aeabi_f2d
         STRD     R0,R1,[SP, #+0]
-        LDR.N    R2,??GetDisplayTemperatureFormat_0
-        LDR.N    R1,??GetDisplayTemperatureFormat_0+0x4
+        LDR.N    R2,??GetBlueToothTemperatureFormat_0
+        LDR.N    R1,??GetBlueToothTemperatureFormat_0+0x4
         ADD      R0,SP,#+44
           CFI FunCall sprintf
         BL       sprintf
@@ -2372,19 +2392,19 @@ _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS
         POP      {R4-R6,PC}       ;; return
         Nop      
         DATA
-??GetDisplayTemperatureFormat_0:
+??GetBlueToothTemperatureFormat_0:
         DATA32
-        DC32     _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-        DC32     _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-          CFI EndBlock cfiBlock69
+        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+          CFI EndBlock cfiBlock70
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-          CFI Block cfiBlock70 Using cfiCommon0
-          CFI Function _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+        SECTION_GROUP _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+          CFI Block cfiBlock71 Using cfiCommon0
+          CFI Function _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
         THUMB
-// __interwork __vfp SusuString<40U> Format::GetDisplayDewPointFormat(tFormatData const &)
-_ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
+// __interwork __vfp SusuString<40U> Format::GetBlueToothDewPointFormat(tFormatData const &)
+_ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE:
         PUSH     {R3-R6,LR}
           CFI R14 Frame(CFA, -4)
           CFI R6 Frame(CFA, -8)
@@ -2409,8 +2429,8 @@ _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_f
           CFI FunCall __aeabi_f2d
         BL       __aeabi_f2d
         STRD     R0,R1,[SP, #+0]
-        LDR.N    R2,??GetDisplayDewPointFormat_0
-        LDR.N    R1,??GetDisplayDewPointFormat_0+0x4
+        LDR.N    R2,??GetBlueToothDewPointFormat_0
+        LDR.N    R1,??GetBlueToothDewPointFormat_0+0x4
         ADD      R0,SP,#+44
           CFI FunCall sprintf
         BL       sprintf
@@ -2430,15 +2450,15 @@ _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_f
         POP      {R4-R6,PC}       ;; return
         Nop      
         DATA
-??GetDisplayDewPointFormat_0:
+??GetBlueToothDewPointFormat_0:
         DATA32
-        DC32     _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-        DC32     _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-          CFI EndBlock cfiBlock70
+        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+          CFI EndBlock cfiBlock71
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN11ISubscriberC2Ev
-          CFI Block cfiBlock71 Using cfiCommon0
+          CFI Block cfiBlock72 Using cfiCommon0
           CFI Function _ZN11ISubscriberC2Ev
         THUMB
 // __code __interwork __vfp ISubscriber::subobject ISubscriber()
@@ -2449,22 +2469,22 @@ _ZN11ISubscriberC2Ev:
           CFI FunCall _ZN11ISubscriberC1Ev
         BL       _ZN11ISubscriberC1Ev
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock71
+          CFI EndBlock cfiBlock72
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN11ISubscriberC1Ev
-          CFI Block cfiBlock72 Using cfiCommon0
+          CFI Block cfiBlock73 Using cfiCommon0
           CFI Function _ZN11ISubscriberC1Ev
           CFI NoCalls
         THUMB
 // __code __interwork __vfp ISubscriber::ISubscriber()
 _ZN11ISubscriberC1Ev:
         BX       LR               ;; return
-          CFI EndBlock cfiBlock72
+          CFI EndBlock cfiBlock73
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9IVariableC2Ev
-          CFI Block cfiBlock73 Using cfiCommon0
+          CFI Block cfiBlock74 Using cfiCommon0
           CFI Function _ZN9IVariableC2Ev
         THUMB
 // __code __interwork __vfp IVariable::subobject IVariable()
@@ -2475,22 +2495,22 @@ _ZN9IVariableC2Ev:
           CFI FunCall _ZN9IVariableC1Ev
         BL       _ZN9IVariableC1Ev
         POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock73
+          CFI EndBlock cfiBlock74
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN9IVariableC1Ev
-          CFI Block cfiBlock74 Using cfiCommon0
+          CFI Block cfiBlock75 Using cfiCommon0
           CFI Function _ZN9IVariableC1Ev
           CFI NoCalls
         THUMB
 // __code __interwork __vfp IVariable::IVariable()
 _ZN9IVariableC1Ev:
         BX       LR               ;; return
-          CFI EndBlock cfiBlock74
+          CFI EndBlock cfiBlock75
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZNK6Kelvin14GetTemperatureEf
-          CFI Block cfiBlock75 Using cfiCommon0
+          CFI Block cfiBlock76 Using cfiCommon0
           CFI Function _ZNK6Kelvin14GetTemperatureEf
         THUMB
 // __interwork __vfp std::pair<SusuStringView, float> Kelvin::GetTemperature(float) const
@@ -2515,11 +2535,11 @@ _ZNK6Kelvin14GetTemperatureEf:
         DATA32
         DC32     0x43889333
         DC32     ?_1
-          CFI EndBlock cfiBlock75
+          CFI EndBlock cfiBlock76
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZNK10Fahrenheit14GetTemperatureEf
-          CFI Block cfiBlock76 Using cfiCommon0
+          CFI Block cfiBlock77 Using cfiCommon0
           CFI Function _ZNK10Fahrenheit14GetTemperatureEf
         THUMB
 // __interwork __vfp std::pair<SusuStringView, float> Fahrenheit::GetTemperature(float) const
@@ -2544,11 +2564,11 @@ _ZNK10Fahrenheit14GetTemperatureEf:
         DATA32
         DC32     0x42000000
         DC32     ?_3
-          CFI EndBlock cfiBlock76
+          CFI EndBlock cfiBlock77
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZNK7Celsius14GetTemperatureEf
-          CFI Block cfiBlock77 Using cfiCommon0
+          CFI Block cfiBlock78 Using cfiCommon0
           CFI Function _ZNK7Celsius14GetTemperatureEf
         THUMB
 // __interwork __vfp std::pair<SusuStringView, float> Celsius::GetTemperature(float) const
@@ -2570,11 +2590,11 @@ _ZNK7Celsius14GetTemperatureEf:
 ??GetTemperature_2:
         DATA32
         DC32     ?_5
-          CFI EndBlock cfiBlock77
+          CFI EndBlock cfiBlock78
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEEC1Ev
-          CFI Block cfiBlock78 Using cfiCommon0
+          CFI Block cfiBlock79 Using cfiCommon0
           CFI Function _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEEC1Ev
         THUMB
 // __code __interwork __vfp Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Temperature()
@@ -2604,11 +2624,11 @@ _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7cels
         DATA32
         DC32     _ZTV11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE+0x8
         DC32     ?_13
-          CFI EndBlock cfiBlock78
+          CFI EndBlock cfiBlock79
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
-          CFI Block cfiBlock79 Using cfiCommon0
+          CFI Block cfiBlock80 Using cfiCommon0
           CFI Function _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
         THUMB
 // __interwork __softfp vFormat Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Get(float, ...)
@@ -2656,11 +2676,11 @@ _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7cels
           CFI R4 SameValue
           CFI CFA R13+8
         LDR      PC,[SP], #+8     ;; return
-          CFI EndBlock cfiBlock79
+          CFI EndBlock cfiBlock80
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8PressureC1Ev
-          CFI Block cfiBlock80 Using cfiCommon0
+          CFI Block cfiBlock81 Using cfiCommon0
           CFI Function _ZN8PressureC1Ev
         THUMB
 // __code __interwork __vfp Pressure::Pressure()
@@ -2682,11 +2702,11 @@ _ZN8PressureC1Ev:
 ??Pressure_0:
         DATA32
         DC32     _ZTV8Pressure+0x8
-          CFI EndBlock cfiBlock80
+          CFI EndBlock cfiBlock81
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8Pressure3GetEfz
-          CFI Block cfiBlock81 Using cfiCommon0
+          CFI Block cfiBlock82 Using cfiCommon0
           CFI Function _ZN8Pressure3GetEfz
         THUMB
 // __interwork __softfp vFormat Pressure::Get(float, ...)
@@ -2712,11 +2732,11 @@ _ZN8Pressure3GetEfz:
 ??Get_0:
         DATA32
         DC32     ?_7
-          CFI EndBlock cfiBlock81
+          CFI EndBlock cfiBlock82
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8HumidityC1Ev
-          CFI Block cfiBlock82 Using cfiCommon0
+          CFI Block cfiBlock83 Using cfiCommon0
           CFI Function _ZN8HumidityC1Ev
         THUMB
 // __code __interwork __vfp Humidity::Humidity()
@@ -2738,11 +2758,11 @@ _ZN8HumidityC1Ev:
 ??Humidity_0:
         DATA32
         DC32     _ZTV8Humidity+0x8
-          CFI EndBlock cfiBlock82
+          CFI EndBlock cfiBlock83
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8Humidity3GetEfz
-          CFI Block cfiBlock83 Using cfiCommon0
+          CFI Block cfiBlock84 Using cfiCommon0
           CFI Function _ZN8Humidity3GetEfz
         THUMB
 // __interwork __softfp vFormat Humidity::Get(float, ...)
@@ -2768,11 +2788,11 @@ _ZN8Humidity3GetEfz:
 ??Get_1:
         DATA32
         DC32     ?_9
-          CFI EndBlock cfiBlock83
+          CFI EndBlock cfiBlock84
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8DewPointC1Ev
-          CFI Block cfiBlock84 Using cfiCommon0
+          CFI Block cfiBlock85 Using cfiCommon0
           CFI Function _ZN8DewPointC1Ev
         THUMB
 // __code __interwork __vfp DewPoint::DewPoint()
@@ -2794,11 +2814,11 @@ _ZN8DewPointC1Ev:
 ??DewPoint_0:
         DATA32
         DC32     _ZTV8DewPoint+0x8
-          CFI EndBlock cfiBlock84
+          CFI EndBlock cfiBlock85
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN8DewPoint3GetEfz
-          CFI Block cfiBlock85 Using cfiCommon0
+          CFI Block cfiBlock86 Using cfiCommon0
           CFI Function _ZN8DewPoint3GetEfz
         THUMB
 // __interwork __softfp vFormat DewPoint::Get(float, ...)
@@ -2866,11 +2886,11 @@ _ZN8DewPoint3GetEfz:
         DC32     0x436db333
         DC32     0x42c80000
         DC32     ?_11
-          CFI EndBlock cfiBlock85
+          CFI EndBlock cfiBlock86
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14SensorDirectorC1Ev
-          CFI Block cfiBlock86 Using cfiCommon0
+          CFI Block cfiBlock87 Using cfiCommon0
           CFI Function _ZN14SensorDirectorC1Ev
         THUMB
 // __code __interwork __vfp SensorDirector::SensorDirector()
@@ -2909,7 +2929,7 @@ _ZN14SensorDirectorC1Ev:
 ??SensorDirector_0:
         DATA32
         DC32     _ZTV14SensorDirector
-          CFI EndBlock cfiBlock86
+          CFI EndBlock cfiBlock87
 
         SECTION `.iar_vfe_vtableinfo_ZTV6Kelvin`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3044,21 +3064,21 @@ _ZN14SensorDirectorC1Ev:
         DC32    2
         DC32    0
 
-        SECTION `.iar_vfe_vtableinfo_ZTV15DisplayDirector`:DATA:NOALLOC:NOROOT(2)
+        SECTION `.iar_vfe_vtableinfo_ZTV17BluetoothDirector`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZTV15DisplayDirector
+        SECTION_GROUP _ZTV17BluetoothDirector
         DATA
-        DC32    _ZTV15DisplayDirector
+        DC32    _ZTV17BluetoothDirector
         DC32    3
         DC32    3
-        DC32    _ZTI15DisplayDirector
+        DC32    _ZTI17BluetoothDirector
         DC32    1
         DC32    2
         DC32    0
         DC32    _ZTIN9OsWrapper6ThreadILj512EEE
         DC32    0
         DC32    1
-        DC32    _ZTI15DisplayDirector
+        DC32    _ZTI17BluetoothDirector
         DC32    1
         DC32    2
         DC32    0
@@ -3068,7 +3088,7 @@ _ZN14SensorDirectorC1Ev:
         DC32    _ZTIN9OsWrapper6ThreadILj512EEE
         DC32    0
         DC32    1
-        DC32    _ZTI15DisplayDirector
+        DC32    _ZTI17BluetoothDirector
         DC32    1
         DC32    2
         DC32    0
@@ -3077,6 +3097,20 @@ _ZN14SensorDirectorC1Ev:
         SECTION_TYPE SHT_INIT_ARRAY, 0
         DATA
         DC32    RELOC_ARM_TARGET1 __sti__routine
+
+        SECTION `.iar_vfe_vcallinfo_ZN9Bluetooth4SendER10SusuStringILj40EE`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        SECTION_GROUP _ZN9Bluetooth4SendER10SusuStringILj40EE
+        DATA
+        DC32    _ZN9Bluetooth4SendER10SusuStringILj40EE
+        DC32    0
+        DC32    0
+        DC32    1
+        DC32    _ZTI16IBluetoothDriver
+        DC32    1
+        DC32    1
+        DC32    0
+        DC32    0
 
         SECTION `.iar_vfe_vcallinfo_ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -3092,35 +3126,21 @@ _ZN14SensorDirectorC1Ev:
         DC32    0
         DC32    0
 
-        SECTION `.iar_vfe_vcallinfo_ZN15DisplayDirector7ExecuteEv`:DATA:NOALLOC:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZN15DisplayDirector7ExecuteEv
-        DATA
-        DC32    _ZN15DisplayDirector7ExecuteEv
-        DC32    0
-        DC32    0
-        DC32    1
-        DC32    _ZTI12IDisplayView
-        DC32    1
-        DC32    1
-        DC32    0
-        DC32    0
-
         SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
         DC32 0
 
         END
-//   20 
+//   20   
 // 
 //    64 bytes in section .bss
 //     4 bytes in section .init_array
-//   745 bytes in section .rodata
-// 2'106 bytes in section .text
+//   749 bytes in section .rodata
+// 2'138 bytes in section .text
 // 
-// 228 bytes of CODE  memory (+ 1'882 bytes shared)
-//  82 bytes of CONST memory (+   663 bytes shared)
+// 244 bytes of CODE  memory (+ 1'898 bytes shared)
+//  82 bytes of CONST memory (+   667 bytes shared)
 //  64 bytes of DATA  memory
 //
 //Errors: none

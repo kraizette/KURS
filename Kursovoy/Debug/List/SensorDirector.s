@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        11/May/2020  11:31:43
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        12/May/2020  13:47:33
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EW46D4.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EWFBCB.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -84,6 +84,10 @@
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\
 //        -I
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Driver\Fonts\
+//        -I
+//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
+//        -I
+//        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\Driver\
 //        -Ol --c++ --no_exceptions --no_rtti)
 //    Locale       =  C
 //    List file    =
@@ -97,120 +101,119 @@
         RTMODEL "__dlib_file_descriptor", "0"
         RTMODEL "__dlib_full_locale_support", "0"
         RTMODEL "__dlib_version", "6"
+        RTMODEL "__iar_require _Printf", ""
         AAPCS BASE,INTERWORK,VFP
         PRESERVE8
         REQUIRE8
 
         #define SHT_PROGBITS 0x1
+        #define SHT_INIT_ARRAY 0xe
 
-        EXTERN _ZNSt8ios_base5clearENSt5_IosbIiE8_IostateEb
-        EXTERN _ZSt4cout
         EXTERN _ZTVN10__cxxabiv117__class_type_infoE
         EXTERN _ZTVN10__cxxabiv120__si_class_type_infoE
         EXTERN _ZTVN10__cxxabiv121__vmi_class_type_infoE
-        EXTERN _ZdlPvj
         EXTERN __aeabi_d2f
-        EXTERN __aeabi_dadd
         EXTERN __aeabi_f2d
-        EXTERN strlen
+        EXTERN __aeabi_ldivmod
+        EXTERN __aeabi_memmove
+        EXTERN logf
+        EXTERN sprintf
+        EXTERN vTaskDelay
 
-        PUBLIC _ZGVZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet
+        PUBLIC _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        PUBLIC _ZN10SusuStringILj5EEC1Ev
+        PUBLIC _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv
+        PUBLIC _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
         PUBLIC _ZN14SensorDirector10fahrenheitE
         PUBLIC _ZN14SensorDirector18HandleButtonPushedEv
         PUBLIC _ZN14SensorDirector6kelvinE
         PUBLIC _ZN14SensorDirector7ExecuteEv
+        PUBLIC _ZN14SensorDirector7GetDataEv
         PUBLIC _ZN14SensorDirector7celsiusE
+        PUBLIC _ZN8DewPoint3GetEfz
+        PUBLIC _ZN8Humidity3GetEfz
+        PUBLIC _ZN8Pressure3GetEfz
+        PUBLIC _ZN9OsWrapper11RtosWrapper6wSleepEj
+        PUBLIC _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
         PUBLIC _ZNK10Fahrenheit14GetTemperatureEf
         PUBLIC _ZNK6Kelvin14GetTemperatureEf
         PUBLIC _ZNK7Celsius14GetTemperatureEf
-        PUBLIC _ZNKSo13_Flush_sentrycvbEv
-        PUBLIC _ZNKSt15basic_streambufIcSt11char_traitsIcEE8_PnavailEv
-        PUBLIC _ZNKSt5ctypeIcE5widenEc
-        PUBLIC _ZNKSt8ios_base4goodEv
-        PUBLIC _ZNKSt8ios_base5flagsEv
-        PUBLIC _ZNKSt8ios_base5widthEv
-        PUBLIC _ZNKSt8ios_base7rdstateEv
-        PUBLIC _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-        PUBLIC _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-        PUBLIC _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        PUBLIC _ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc
-        PUBLIC _ZNSo12_Sentry_baseC1ERSo
-        PUBLIC _ZNSo12_Sentry_baseC2ERSo
-        PUBLIC _ZNSo12_Sentry_baseD1Ev
-        PUBLIC _ZNSo12_Sentry_baseD2Ev
-        PUBLIC _ZNSo13_Flush_sentryC1ERSo
-        PUBLIC _ZNSo13_Flush_sentryC2ERSo
-        PUBLIC _ZNSo13_Flush_sentryD1Ev
-        PUBLIC _ZNSo13_Flush_sentryD2Ev
-        PUBLIC _ZNSo3putEc
-        PUBLIC _ZNSo5_OsfxEv
-        PUBLIC _ZNSo5flushEv
-        PUBLIC _ZNSo6sentryC1ERSo
-        PUBLIC _ZNSo6sentryD1Ev
-        PUBLIC _ZNSolsEPFRSoS_E
-        PUBLIC _ZNSt11_Wrap_facetISt5ctypeIcEEC1Ev
-        PUBLIC _ZNSt11_Wrap_facetISt5ctypeIcEED0Ev
-        PUBLIC _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
-        PUBLIC _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-        PUBLIC _ZNSt11char_traitsIcE11to_int_typeERKc
-        PUBLIC _ZNSt11char_traitsIcE6lengthEPKc
-        PUBLIC _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        PUBLIC _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci
-        PUBLIC _ZNSt15basic_streambufIcSt11char_traitsIcEE6_PnincEv
-        PUBLIC _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
+        PUBLIC _ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv
+        PUBLIC _ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv
+        PUBLIC _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+        PUBLIC _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+        PUBLIC _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        PUBLIC _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        PUBLIC _ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc
+        PUBLIC _ZNSt15_Array_iteratorIcLj5EEC1EPcj
+        PUBLIC _ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc
+        PUBLIC _ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj
+        PUBLIC _ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj
         PUBLIC _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
-        PUBLIC _ZNSt5ctypeIcEC1Ev
-        PUBLIC _ZNSt5ctypeIcEC2Ev
-        PUBLIC _ZNSt5ctypeIcED0Ev
-        PUBLIC _ZNSt5ctypeIcED1Ev
+        PUBLIC _ZNSt4pairI14SusuStringViewfEaSEOS1_
+        PUBLIC _ZNSt5arrayIPK6IUnitsLj3EEixEj
+        PUBLIC _ZNSt5arrayIcLj5EE5beginEv
+        PUBLIC _ZNSt5tupleIJ10SusuStringILj5EEfEEC1IRS1_JRfEPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJ10SusuStringILj5EEfEEC2IRS1_JRfEPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC1IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC2IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC2IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_S4_S5_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJf10SusuStringILj5EEfEEC1IRfJRS1_S4_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJf10SusuStringILj5EEfEEC2IRfJRS1_S4_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC1IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC2IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC1IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC2IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJfEEC1IRfJEPPvEEOT_DpOT0_
+        PUBLIC _ZNSt5tupleIJfEEC2IRfJEPPvEEOT_DpOT0_
         PUBLIC _ZNSt6chrono12steady_clock9is_steadyE
         PUBLIC _ZNSt6chrono12system_clock12is_monotonicE
         PUBLIC _ZNSt6chrono12system_clock9is_steadyE
-        PUBLIC _ZNSt8ios_base5widthEi
-        PUBLIC _ZNSt9basic_iosIcSt11char_traitsIcEE5clearENSt5_IosbIiE8_IostateEb
-        PUBLIC _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        PUBLIC _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        PUBLIC _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+        PUBLIC _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+        PUBLIC _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE
+        PUBLIC _ZSt10_Copy_implIPKcPcET0_T_S4_S3_
+        PUBLIC _ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag
+        PUBLIC _ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
+        PUBLIC _ZSt10_UncheckedIPKcET_S2_
+        PUBLIC _ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_
+        PUBLIC _ZSt10make_tupleIJR10SusuStringILj5EERfS2_S3_S2_S3_S2_S3_EESt5tupleIJDpNSt10_UnrefwrapIT_E4typeEEEDpOS6_
+        PUBLIC _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_
+        PUBLIC _ZSt7forwardI14SusuStringViewEOT_RNSt16remove_referenceIS1_E4typeE
+        PUBLIC _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
         PUBLIC _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
         PUBLIC _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        PUBLIC _ZSt7forwardIfEOT_RNSt16remove_referenceIS0_E4typeE
+        PUBLIC _ZSt8_Ptr_catPKcPc
+        PUBLIC _ZSt9addressofIcEPT_RS0_
         PUBLIC _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        PUBLIC _ZSt9use_facetISt5ctypeIcEERKT_v
-        PUBLIC _ZStanNSt5_IosbIiE9_FmtflagsES1_
-        PUBLIC _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
-        PUBLIC _ZStoRRNSt5_IosbIiE8_IostateES1_
         PUBLIC _ZTI10Fahrenheit
         PUBLIC _ZTI11ISubscriber
         PUBLIC _ZTI14SensorDirector
         PUBLIC _ZTI6IUnits
         PUBLIC _ZTI6Kelvin
         PUBLIC _ZTI7Celsius
-        PUBLIC _ZTIN9OsWrapper6ThreadILj128EEE
+        PUBLIC _ZTIN9OsWrapper6ThreadILj256EEE
         PUBLIC _ZTIN9OsWrapper7IThreadE
         PUBLIC _ZTISt10ctype_base
-        PUBLIC _ZTISt11_Wrap_facetISt5ctypeIcEE
-        PUBLIC _ZTISt15basic_streambufIcSt11char_traitsIcEE
         PUBLIC _ZTISt5_IosbIiE
-        PUBLIC _ZTISt5ctypeIcE
         PUBLIC _ZTS10Fahrenheit
         PUBLIC _ZTS11ISubscriber
         PUBLIC _ZTS14SensorDirector
         PUBLIC _ZTS6IUnits
         PUBLIC _ZTS6Kelvin
         PUBLIC _ZTS7Celsius
-        PUBLIC _ZTSN9OsWrapper6ThreadILj128EEE
+        PUBLIC _ZTSN9OsWrapper6ThreadILj256EEE
         PUBLIC _ZTSN9OsWrapper7IThreadE
         PUBLIC _ZTSSt10ctype_base
-        PUBLIC _ZTSSt11_Wrap_facetISt5ctypeIcEE
-        PUBLIC _ZTSSt15basic_streambufIcSt11char_traitsIcEE
         PUBLIC _ZTSSt5_IosbIiE
-        PUBLIC _ZTSSt5ctypeIcE
         PUBLIC _ZTV10Fahrenheit
         PUBLIC _ZTV14SensorDirector
         PUBLIC _ZTV6Kelvin
         PUBLIC _ZTV7Celsius
-        PUBLIC _ZTVSt11_Wrap_facetISt5ctypeIcEE
-        PUBLIC _ZTVSt5ctypeIcE
-        PUBLIC _ZThn604_N14SensorDirector18HandleButtonPushedEv
-        PUBLIC _ZZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet
+        PUBLIC _ZThn1116_N14SensorDirector18HandleButtonPushedEv
         
           CFI Names cfiNames0
           CFI StackFrame CFA R13 DATA
@@ -258,1460 +261,6 @@
           CFI D15 SameValue
           CFI EndCommon cfiCommon0
         
-// D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
-//    1 //SensorDirector.cpp
-//    2 
-//    3 #include "SensorDirector.hpp" 
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
-          CFI Block cfiBlock0 Using cfiCommon0
-          CFI Function _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
-          CFI NoCalls
-        THUMB
-// __interwork __vfp SusuStringView &std::forward<SusuStringView &>(SusuStringView &)
-_ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE:
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock0
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
-          CFI Block cfiBlock1 Using cfiCommon0
-          CFI Function _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
-          CFI NoCalls
-        THUMB
-// __interwork __vfp float &std::forward<float &>(float &)
-_ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE:
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock1
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt11char_traitsIcE6lengthEPKc
-          CFI Block cfiBlock2 Using cfiCommon0
-          CFI Function _ZNSt11char_traitsIcE6lengthEPKc
-        THUMB
-// __interwork __vfp size_t std::char_traits<char>::length(char const *)
-_ZNSt11char_traitsIcE6lengthEPKc:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        LDRB     R1,[R0, #+0]
-        CMP      R1,#+0
-        BNE.N    ??length_0
-        MOVS     R0,#+0
-        B.N      ??length_1
-??length_0:
-          CFI FunCall strlen
-        BL       strlen
-??length_1:
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock2
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt11char_traitsIcE11to_int_typeERKc
-          CFI Block cfiBlock3 Using cfiCommon0
-          CFI Function _ZNSt11char_traitsIcE11to_int_typeERKc
-          CFI NoCalls
-        THUMB
-// __interwork __vfp int std::char_traits<char>::to_int_type(char const &)
-_ZNSt11char_traitsIcE11to_int_typeERKc:
-        LDRB     R0,[R0, #+0]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock3
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-          CFI Block cfiBlock4 Using cfiCommon0
-          CFI Function _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-          CFI NoCalls
-        THUMB
-// __interwork __vfp bool std::char_traits<char>::eq_int_type(int const &, int const &)
-_ZNSt11char_traitsIcE11eq_int_typeERKiS2_:
-        LDR      R0,[R0, #+0]
-        LDR      R1,[R1, #+0]
-        CMP      R0,R1
-        BNE.N    ??eq_int_type_0
-        MOVS     R0,#+1
-        B.N      ??eq_int_type_1
-??eq_int_type_0:
-        MOVS     R0,#+0
-??eq_int_type_1:
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock4
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
-          CFI Block cfiBlock5 Using cfiCommon0
-          CFI Function _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
-        THUMB
-// __code __interwork __vfp std::pair<SusuStringView, float>::pair<SusuStringView &, float &, void>(SusuStringView &, float &)
-_ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_:
-        PUSH     {R3-R5,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+16
-        MOVS     R4,R0
-        MOVS     R0,R1
-        MOVS     R5,R2
-          CFI FunCall _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
-        BL       _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
-        LDRD     R2,R3,[R0, #+0]
-        STRD     R2,R3,[R4, #+0]
-        MOVS     R0,R5
-          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
-        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
-        LDR      R0,[R0, #+0]
-        STR      R0,[R4, #+8]
-        MOVS     R0,R4
-        POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock5
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-          CFI Block cfiBlock6 Using cfiCommon0
-          CFI Function _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        THUMB
-// __interwork __vfp std::pair<SusuStringView, float> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-_ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_:
-        PUSH     {R0-R6,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R6 Frame(CFA, -8)
-          CFI R5 Frame(CFA, -12)
-          CFI R4 Frame(CFA, -16)
-          CFI CFA R13+32
-        MOVS     R4,R0
-        MOVS     R5,R1
-        MOVS     R0,R2
-          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
-        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
-        MOVS     R6,R0
-        MOVS     R0,R5
-          CFI FunCall _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
-        BL       _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
-        MOVS     R2,R6
-        MOVS     R1,R0
-        MOV      R0,SP
-          CFI FunCall _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
-        BL       _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
-        LDM      R0,{R1-R3}
-        STM      R4,{R1-R3}
-        POP      {R0-R6,PC}       ;; return
-          CFI EndBlock cfiBlock6
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt11_Wrap_facetISt5ctypeIcEED0Ev
-          CFI Block cfiBlock7 Using cfiCommon0
-          CFI Function _ZNSt11_Wrap_facetISt5ctypeIcEED0Ev
-        THUMB
-// __code __interwork __vfp std::_Wrap_facet<std::ios::_Ctype>::deleter ~_Wrap_facet()
-_ZNSt11_Wrap_facetISt5ctypeIcEED0Ev:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        MOVS     R0,R4
-          CFI FunCall _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
-        BL       _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
-        MOVS     R1,#+4
-        MOVS     R0,R4
-          CFI FunCall _ZdlPvj
-        BL       _ZdlPvj
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock7
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
-          CFI Block cfiBlock8 Using cfiCommon0
-          CFI Function _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
-          CFI NoCalls
-        THUMB
-// __code __interwork __vfp std::_Wrap_facet<std::ios::_Ctype>::~_Wrap_facet()
-_ZNSt11_Wrap_facetISt5ctypeIcEED1Ev:
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock8
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZNSt11_Wrap_facetISt5ctypeIcEEC1Ev
-          CFI Block cfiBlock9 Using cfiCommon0
-          CFI Function _ZNSt11_Wrap_facetISt5ctypeIcEEC1Ev
-        THUMB
-// __code __interwork __vfp std::_Wrap_facet<std::ios::_Ctype>::_Wrap_facet()
-_ZNSt11_Wrap_facetISt5ctypeIcEEC1Ev:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        MOVS     R0,R4
-          CFI FunCall _ZNSt5ctypeIcEC2Ev
-        BL       _ZNSt5ctypeIcEC2Ev
-        LDR.N    R0,??_Wrap_facet_0
-        STR      R0,[R4, #+0]
-        MOVS     R0,R4
-        POP      {R4,PC}          ;; return
-        Nop      
-        DATA
-??_Wrap_facet_0:
-        DATA32
-        DC32     _ZTVSt11_Wrap_facetISt5ctypeIcEE+0x8
-          CFI EndBlock cfiBlock9
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZSt9use_facetISt5ctypeIcEERKT_v
-          CFI Block cfiBlock10 Using cfiCommon0
-          CFI Function _ZSt9use_facetISt5ctypeIcEERKT_v
-        THUMB
-// __interwork __vfp std::ios::_Ctype const &std::use_facet<std::ios::_Ctype>()
-_ZSt9use_facetISt5ctypeIcEERKT_v:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        LDR.N    R1,??use_facet_0
-        LDRB     R0,[R1, #+0]
-        CMP      R0,#+0
-        BNE.N    ??use_facet_1
-        MOVS     R0,#+1
-        STRB     R0,[R1, #+0]
-        LDR.N    R0,??use_facet_0+0x4
-          CFI FunCall _ZNSt11_Wrap_facetISt5ctypeIcEEC1Ev
-        BL       _ZNSt11_Wrap_facetISt5ctypeIcEEC1Ev
-??use_facet_1:
-        LDR.N    R0,??use_facet_0+0x4
-        POP      {R1,PC}          ;; return
-        DATA
-??use_facet_0:
-        DATA32
-        DC32     _ZGVZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet
-        DC32     _ZZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet
-          CFI EndBlock cfiBlock10
-
-        SECTION `.bss`:DATA:REORDER:NOROOT(0)
-        SECTION_GROUP _ZGVZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet
-        DATA
-// __absolute unsigned char static guard for _MyFacet
-_ZGVZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet:
-        DS8 1
-
-        SECTION `.bss`:DATA:REORDER:NOROOT(2)
-        SECTION_GROUP _ZZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet
-        DATA
-// __absolute std::_Wrap_facet<std::ios::_Ctype> _MyFacet
-_ZZSt9use_facetISt5ctypeIcEERKT_vE8_MyFacet:
-        DS8 4
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt5ctypeIcE5widenEc
-          CFI Block cfiBlock11 Using cfiCommon0
-          CFI Function _ZNKSt5ctypeIcE5widenEc
-          CFI NoCalls
-        THUMB
-// __interwork __vfp char std::ctype<char>::widen(char) const
-_ZNKSt5ctypeIcE5widenEc:
-        MOVS     R0,R1
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock11
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt5ctypeIcEC2Ev
-          CFI Block cfiBlock12 Using cfiCommon0
-          CFI Function _ZNSt5ctypeIcEC2Ev
-        THUMB
-// __code __interwork __vfp std::ctype<char>::subobject ctype()
-_ZNSt5ctypeIcEC2Ev:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZNSt5ctypeIcEC1Ev
-        BL       _ZNSt5ctypeIcEC1Ev
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock12
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZNSt5ctypeIcEC1Ev
-          CFI Block cfiBlock13 Using cfiCommon0
-          CFI Function _ZNSt5ctypeIcEC1Ev
-          CFI NoCalls
-        THUMB
-// __code __interwork __vfp std::ctype<char>::ctype()
-_ZNSt5ctypeIcEC1Ev:
-        LDR.N    R1,??ctype_0
-        STR      R1,[R0, #+0]
-        BX       LR               ;; return
-        Nop      
-        DATA
-??ctype_0:
-        DATA32
-        DC32     _ZTVSt5ctypeIcE+0x8
-          CFI EndBlock cfiBlock13
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt5ctypeIcED1Ev
-          CFI Block cfiBlock14 Using cfiCommon0
-          CFI Function _ZNSt5ctypeIcED1Ev
-          CFI NoCalls
-        THUMB
-// __code __interwork __vfp std::ctype<char>::~ctype()
-_ZNSt5ctypeIcED1Ev:
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock14
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt5ctypeIcED0Ev
-          CFI Block cfiBlock15 Using cfiCommon0
-          CFI Function _ZNSt5ctypeIcED0Ev
-        THUMB
-// __code __interwork __vfp std::ctype<char>::deleter ~ctype()
-_ZNSt5ctypeIcED0Ev:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        MOVS     R0,R4
-          CFI FunCall _ZNSt5ctypeIcED1Ev
-        BL       _ZNSt5ctypeIcED1Ev
-        MOVS     R1,#+4
-        MOVS     R0,R4
-          CFI FunCall _ZdlPvj
-        BL       _ZdlPvj
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock15
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt8ios_base7rdstateEv
-          CFI Block cfiBlock16 Using cfiCommon0
-          CFI Function _ZNKSt8ios_base7rdstateEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp std::ios_base::iostate std::ios_base::rdstate() const
-_ZNKSt8ios_base7rdstateEv:
-        LDRB     R0,[R0, #+8]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock16
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt8ios_base4goodEv
-          CFI Block cfiBlock17 Using cfiCommon0
-          CFI Function _ZNKSt8ios_base4goodEv
-        THUMB
-// __interwork __vfp bool std::ios_base::good() const
-_ZNKSt8ios_base4goodEv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZNKSt8ios_base7rdstateEv
-        BL       _ZNKSt8ios_base7rdstateEv
-        CMP      R0,#+0
-        BNE.N    ??good_0
-        MOVS     R0,#+1
-        B.N      ??good_1
-??good_0:
-        MOVS     R0,#+0
-??good_1:
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock17
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt8ios_base5flagsEv
-          CFI Block cfiBlock18 Using cfiCommon0
-          CFI Function _ZNKSt8ios_base5flagsEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp std::ios_base::fmtflags std::ios_base::flags() const
-_ZNKSt8ios_base5flagsEv:
-        LDRH     R0,[R0, #+10]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock18
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt8ios_base5widthEv
-          CFI Block cfiBlock19 Using cfiCommon0
-          CFI Function _ZNKSt8ios_base5widthEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp int std::ios_base::width() const
-_ZNKSt8ios_base5widthEv:
-        LDR      R0,[R0, #+16]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock19
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt8ios_base5widthEi
-          CFI Block cfiBlock20 Using cfiCommon0
-          CFI Function _ZNSt8ios_base5widthEi
-          CFI NoCalls
-        THUMB
-// __interwork __vfp int std::ios_base::width(int)
-_ZNSt8ios_base5widthEi:
-        MOVS     R2,R0
-        LDR      R0,[R2, #+16]
-        STR      R1,[R2, #+16]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock20
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZStanNSt5_IosbIiE9_FmtflagsES1_
-          CFI Block cfiBlock21 Using cfiCommon0
-          CFI Function _ZStanNSt5_IosbIiE9_FmtflagsES1_
-          CFI NoCalls
-        THUMB
-// __interwork __vfp std::ios_base::fmtflags std::operator&(std::ios_base::fmtflags, std::ios_base::fmtflags)
-_ZStanNSt5_IosbIiE9_FmtflagsES1_:
-        ANDS     R0,R1,R0
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock21
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZStoRRNSt5_IosbIiE8_IostateES1_
-          CFI Block cfiBlock22 Using cfiCommon0
-          CFI Function _ZStoRRNSt5_IosbIiE8_IostateES1_
-          CFI NoCalls
-        THUMB
-// __interwork __vfp std::ios_base::iostate &std::operator|=(std::ios_base::iostate &, std::ios_base::iostate)
-_ZStoRRNSt5_IosbIiE8_IostateES1_:
-        LDRB     R2,[R0, #+0]
-        ORRS     R1,R1,R2
-        STRB     R1,[R0, #+0]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock22
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
-          CFI Block cfiBlock23 Using cfiCommon0
-          CFI Function _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
-        THUMB
-// __interwork __vfp int std::streambuf::pubsync()
-_ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        LDR      R1,[R0, #+0]
-        LDR      R1,[R1, #+56]
-          CFI FunCall
-        BLX      R1
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock23
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-          CFI Block cfiBlock24 Using cfiCommon0
-          CFI Function _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        THUMB
-// __interwork __vfp int std::streambuf::sputc(char)
-_ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc:
-        PUSH     {R0,R1,R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+16
-        MOVS     R4,R0
-        MOVS     R0,R4
-          CFI FunCall _ZNKSt15basic_streambufIcSt11char_traitsIcEE8_PnavailEv
-        BL       _ZNKSt15basic_streambufIcSt11char_traitsIcEE8_PnavailEv
-        CMP      R0,#+1
-        BLT.N    ??sputc_0
-        MOVS     R0,R4
-          CFI FunCall _ZNSt15basic_streambufIcSt11char_traitsIcEE6_PnincEv
-        BL       _ZNSt15basic_streambufIcSt11char_traitsIcEE6_PnincEv
-        LDRB     R1,[SP, #+4]
-        STRB     R1,[R0, #+0]
-          CFI FunCall _ZNSt11char_traitsIcE11to_int_typeERKc
-        BL       _ZNSt11char_traitsIcE11to_int_typeERKc
-        B.N      ??sputc_1
-??sputc_0:
-        ADD      R0,SP,#+4
-          CFI FunCall _ZNSt11char_traitsIcE11to_int_typeERKc
-        BL       _ZNSt11char_traitsIcE11to_int_typeERKc
-        MOVS     R1,R0
-        MOVS     R0,R4
-        LDR      R2,[R4, #+0]
-        LDR      R2,[R2, #+16]
-          CFI FunCall
-        BLX      R2
-??sputc_1:
-        POP      {R1,R2,R4,PC}    ;; return
-          CFI EndBlock cfiBlock24
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci
-          CFI Block cfiBlock25 Using cfiCommon0
-          CFI Function _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci
-        THUMB
-// __interwork __vfp int std::streambuf::sputn(char const *, int)
-_ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        LDR      R3,[R0, #+0]
-        LDR      R3,[R3, #+40]
-          CFI FunCall
-        BLX      R3
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock25
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt15basic_streambufIcSt11char_traitsIcEE6_PnincEv
-          CFI Block cfiBlock26 Using cfiCommon0
-          CFI Function _ZNSt15basic_streambufIcSt11char_traitsIcEE6_PnincEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp char *std::streambuf::_Pninc()
-_ZNSt15basic_streambufIcSt11char_traitsIcEE6_PnincEv:
-        MOVS     R1,R0
-        LDR      R0,[R1, #+32]
-        LDR      R0,[R0, #+0]
-        ADDS     R2,R0,#+1
-        LDR      R1,[R1, #+32]
-        STR      R2,[R1, #+0]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock26
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt15basic_streambufIcSt11char_traitsIcEE8_PnavailEv
-          CFI Block cfiBlock27 Using cfiCommon0
-          CFI Function _ZNKSt15basic_streambufIcSt11char_traitsIcEE8_PnavailEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp int std::streambuf::_Pnavail() const
-_ZNKSt15basic_streambufIcSt11char_traitsIcEE8_PnavailEv:
-        LDR      R1,[R0, #+32]
-        LDR      R1,[R1, #+0]
-        CMP      R1,#+0
-        BEQ.N    ??_Pnavail_0
-        LDR      R1,[R0, #+48]
-        LDR      R1,[R1, #+0]
-        LDR      R0,[R0, #+32]
-        LDR      R0,[R0, #+0]
-        SUBS     R0,R1,R0
-        B.N      ??_Pnavail_1
-??_Pnavail_0:
-        MOVS     R0,#+0
-??_Pnavail_1:
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock27
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt9basic_iosIcSt11char_traitsIcEE5clearENSt5_IosbIiE8_IostateEb
-          CFI Block cfiBlock28 Using cfiCommon0
-          CFI Function _ZNSt9basic_iosIcSt11char_traitsIcEE5clearENSt5_IosbIiE8_IostateEb
-        THUMB
-// __interwork __vfp void std::ios::clear(std::ios_base::iostate, bool)
-_ZNSt9basic_iosIcSt11char_traitsIcEE5clearENSt5_IosbIiE8_IostateEb:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-        LDR      R3,[R0, #+28]
-        CMP      R3,#+0
-        BNE.N    ??clear_0
-        ORRS     R1,R1,#0x4
-        B.N      ??clear_1
-??clear_0:
-??clear_1:
-        UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-          CFI FunCall _ZNSt8ios_base5clearENSt5_IosbIiE8_IostateEb
-        BL       _ZNSt8ios_base5clearENSt5_IosbIiE8_IostateEb
-        POP      {R0,PC}          ;; return
-          CFI EndBlock cfiBlock28
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-          CFI Block cfiBlock29 Using cfiCommon0
-          CFI Function _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        THUMB
-// __interwork __vfp void std::ios::setstate(std::ios_base::iostate, bool)
-_ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb:
-        PUSH     {R4-R6,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R6 Frame(CFA, -8)
-          CFI R5 Frame(CFA, -12)
-          CFI R4 Frame(CFA, -16)
-          CFI CFA R13+16
-        MOVS     R4,R0
-        MOVS     R5,R1
-        MOVS     R6,R2
-        MOVS     R0,R5
-        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
-        CMP      R0,#+0
-        BEQ.N    ??setstate_0
-        MOVS     R0,R4
-          CFI FunCall _ZNKSt8ios_base7rdstateEv
-        BL       _ZNKSt8ios_base7rdstateEv
-        MOVS     R2,R6
-        UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
-        ORRS     R5,R5,R0
-        MOVS     R1,R5
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        MOVS     R0,R4
-          CFI FunCall _ZNSt9basic_iosIcSt11char_traitsIcEE5clearENSt5_IosbIiE8_IostateEb
-        BL       _ZNSt9basic_iosIcSt11char_traitsIcEE5clearENSt5_IosbIiE8_IostateEb
-??setstate_0:
-        POP      {R4-R6,PC}       ;; return
-          CFI EndBlock cfiBlock29
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-          CFI Block cfiBlock30 Using cfiCommon0
-          CFI Function _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp std::ostream *std::ios::tie() const
-_ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv:
-        LDR      R0,[R0, #+32]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock30
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-          CFI Block cfiBlock31 Using cfiCommon0
-          CFI Function _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp std::streambuf *std::ios::rdbuf() const
-_ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv:
-        LDR      R0,[R0, #+28]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock31
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-          CFI Block cfiBlock32 Using cfiCommon0
-          CFI Function _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-          CFI NoCalls
-        THUMB
-// __interwork __vfp char std::ios::fill() const
-_ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv:
-        LDRB     R0,[R0, #+36]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock32
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc
-          CFI Block cfiBlock33 Using cfiCommon0
-          CFI Function _ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc
-        THUMB
-// __interwork __vfp char std::ios::widen(char) const
-_ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R1
-          CFI FunCall _ZSt9use_facetISt5ctypeIcEERKT_v
-        BL       _ZSt9use_facetISt5ctypeIcEERKT_v
-        MOVS     R1,R4
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-          CFI FunCall _ZNKSt5ctypeIcE5widenEc
-        BL       _ZNKSt5ctypeIcE5widenEc
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock33
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo12_Sentry_baseC2ERSo
-          CFI Block cfiBlock34 Using cfiCommon0
-          CFI Function _ZNSo12_Sentry_baseC2ERSo
-        THUMB
-// __code __interwork __vfp std::ostream::_Sentry_base::subobject _Sentry_base(std::ostream &)
-_ZNSo12_Sentry_baseC2ERSo:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZNSo12_Sentry_baseC1ERSo
-        BL       _ZNSo12_Sentry_baseC1ERSo
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock34
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo12_Sentry_baseC1ERSo
-          CFI Block cfiBlock35 Using cfiCommon0
-          CFI Function _ZNSo12_Sentry_baseC1ERSo
-        THUMB
-// __code __interwork __vfp std::ostream::_Sentry_base::_Sentry_base(std::ostream &)
-_ZNSo12_Sentry_baseC1ERSo:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        STR      R1,[R4, #+0]
-        LDR      R0,[R4, #+0]
-        CMP      R0,#+0
-        BEQ.N    ??_Sentry_base_0
-        LDR      R0,[R4, #+0]
-        LDR      R1,[R4, #+0]
-        LDR      R1,[R1, #+0]
-        LDR      R1,[R1, #-12]
-        ADD      R0,R0,R1
-        B.N      ??_Sentry_base_1
-??_Sentry_base_0:
-        MOVS     R0,#+0
-??_Sentry_base_1:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        CMP      R0,#+0
-        BEQ.N    ??_Sentry_base_2
-        LDR      R0,[R4, #+0]
-        CMP      R0,#+0
-        BEQ.N    ??_Sentry_base_3
-        LDR      R0,[R4, #+0]
-        LDR      R1,[R4, #+0]
-        LDR      R1,[R1, #+0]
-        LDR      R1,[R1, #-12]
-        ADD      R0,R0,R1
-        B.N      ??_Sentry_base_4
-??_Sentry_base_3:
-        MOVS     R0,#+0
-??_Sentry_base_4:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        LDR      R1,[R0, #+0]
-        LDR      R1,[R1, #+8]
-          CFI FunCall
-        BLX      R1
-??_Sentry_base_2:
-        MOVS     R0,R4
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock35
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo12_Sentry_baseD2Ev
-          CFI Block cfiBlock36 Using cfiCommon0
-          CFI Function _ZNSo12_Sentry_baseD2Ev
-        THUMB
-// __code __interwork __vfp std::ostream::_Sentry_base::subobject ~_Sentry_base()
-_ZNSo12_Sentry_baseD2Ev:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZNSo12_Sentry_baseD1Ev
-        BL       _ZNSo12_Sentry_baseD1Ev
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock36
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo12_Sentry_baseD1Ev
-          CFI Block cfiBlock37 Using cfiCommon0
-          CFI Function _ZNSo12_Sentry_baseD1Ev
-        THUMB
-// __code __interwork __vfp std::ostream::_Sentry_base::~_Sentry_base()
-_ZNSo12_Sentry_baseD1Ev:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        LDR      R0,[R4, #+0]
-        CMP      R0,#+0
-        BEQ.N    `?~_Sentry_base_0`
-        LDR      R0,[R4, #+0]
-        LDR      R1,[R4, #+0]
-        LDR      R1,[R1, #+0]
-        LDR      R1,[R1, #-12]
-        ADD      R0,R0,R1
-        B.N      `?~_Sentry_base_1`
-`?~_Sentry_base_0`:
-        MOVS     R0,#+0
-`?~_Sentry_base_1`:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        CMP      R0,#+0
-        BEQ.N    `?~_Sentry_base_2`
-        LDR      R0,[R4, #+0]
-        CMP      R0,#+0
-        BEQ.N    `?~_Sentry_base_3`
-        LDR      R0,[R4, #+0]
-        LDR      R1,[R4, #+0]
-        LDR      R1,[R1, #+0]
-        LDR      R1,[R1, #-12]
-        ADD      R0,R0,R1
-        B.N      `?~_Sentry_base_4`
-`?~_Sentry_base_3`:
-        MOVS     R0,#+0
-`?~_Sentry_base_4`:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        LDR      R1,[R0, #+0]
-        LDR      R1,[R1, #+12]
-          CFI FunCall
-        BLX      R1
-`?~_Sentry_base_2`:
-        MOVS     R0,R4
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock37
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo13_Flush_sentryC2ERSo
-          CFI Block cfiBlock38 Using cfiCommon0
-          CFI Function _ZNSo13_Flush_sentryC2ERSo
-        THUMB
-// __code __interwork __vfp std::ostream::_Flush_sentry::subobject _Flush_sentry(std::ostream &)
-_ZNSo13_Flush_sentryC2ERSo:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZNSo13_Flush_sentryC1ERSo
-        BL       _ZNSo13_Flush_sentryC1ERSo
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock38
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo13_Flush_sentryC1ERSo
-          CFI Block cfiBlock39 Using cfiCommon0
-          CFI Function _ZNSo13_Flush_sentryC1ERSo
-        THUMB
-// __code __interwork __vfp std::ostream::_Flush_sentry::_Flush_sentry(std::ostream &)
-_ZNSo13_Flush_sentryC1ERSo:
-        PUSH     {R3-R5,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+16
-        MOVS     R5,R0
-        MOVS     R4,R1
-        MOVS     R1,R4
-        MOVS     R0,R5
-          CFI FunCall _ZNSo12_Sentry_baseC2ERSo
-        BL       _ZNSo12_Sentry_baseC2ERSo
-        CMP      R4,#+0
-        BEQ.N    ??_Flush_sentry_0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      ??_Flush_sentry_1
-??_Flush_sentry_0:
-        MOVS     R0,#+0
-??_Flush_sentry_1:
-          CFI FunCall _ZNKSt8ios_base4goodEv
-        BL       _ZNKSt8ios_base4goodEv
-        STRB     R0,[R5, #+4]
-        MOVS     R0,R5
-        POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock39
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo13_Flush_sentryD2Ev
-          CFI Block cfiBlock40 Using cfiCommon0
-          CFI Function _ZNSo13_Flush_sentryD2Ev
-        THUMB
-// __code __interwork __vfp std::ostream::_Flush_sentry::subobject ~_Flush_sentry()
-_ZNSo13_Flush_sentryD2Ev:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall _ZNSo13_Flush_sentryD1Ev
-        BL       _ZNSo13_Flush_sentryD1Ev
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock40
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo13_Flush_sentryD1Ev
-          CFI Block cfiBlock41 Using cfiCommon0
-          CFI Function _ZNSo13_Flush_sentryD1Ev
-        THUMB
-// __code __interwork __vfp std::ostream::_Flush_sentry::~_Flush_sentry()
-_ZNSo13_Flush_sentryD1Ev:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        LDR      R0,[R4, #+0]
-          CFI FunCall _ZNSo5_OsfxEv
-        BL       _ZNSo5_OsfxEv
-        MOVS     R0,R4
-          CFI FunCall _ZNSo12_Sentry_baseD2Ev
-        BL       _ZNSo12_Sentry_baseD2Ev
-        MOVS     R0,R4
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock41
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNKSo13_Flush_sentrycvbEv
-          CFI Block cfiBlock42 Using cfiCommon0
-          CFI Function _ZNKSo13_Flush_sentrycvbEv
-          CFI NoCalls
-        THUMB
-// __code __interwork __vfp std::ostream::_Flush_sentry::operator bool() const
-_ZNKSo13_Flush_sentrycvbEv:
-        LDRB     R0,[R0, #+4]
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock42
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo6sentryD1Ev
-          CFI Block cfiBlock43 Using cfiCommon0
-          CFI Function _ZNSo6sentryD1Ev
-        THUMB
-// __code __interwork __vfp std::ostream::sentry::~sentry()
-_ZNSo6sentryD1Ev:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        MOVS     R0,R4
-          CFI FunCall _ZNSo13_Flush_sentryD2Ev
-        BL       _ZNSo13_Flush_sentryD2Ev
-        MOVS     R0,R4
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock43
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo6sentryC1ERSo
-          CFI Block cfiBlock44 Using cfiCommon0
-          CFI Function _ZNSo6sentryC1ERSo
-        THUMB
-// __code __interwork __vfp std::ostream::sentry::sentry(std::ostream &)
-_ZNSo6sentryC1ERSo:
-        PUSH     {R3-R5,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+16
-        MOVS     R5,R0
-        MOVS     R4,R1
-        MOVS     R1,R4
-        MOVS     R0,R5
-          CFI FunCall _ZNSo13_Flush_sentryC2ERSo
-        BL       _ZNSo13_Flush_sentryC2ERSo
-        CMP      R4,#+0
-        BEQ.N    ??sentry_0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      ??sentry_1
-??sentry_0:
-        MOVS     R0,#+0
-??sentry_1:
-          CFI FunCall _ZNKSt8ios_base4goodEv
-        BL       _ZNKSt8ios_base4goodEv
-        CMP      R0,#+0
-        BEQ.N    ??sentry_2
-        CMP      R4,#+0
-        BEQ.N    ??sentry_3
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      ??sentry_4
-??sentry_3:
-        MOVS     R0,#+0
-??sentry_4:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-        CMP      R0,#+0
-        BEQ.N    ??sentry_2
-        CMP      R4,#+0
-        BEQ.N    ??sentry_5
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      ??sentry_6
-??sentry_5:
-        MOVS     R0,#+0
-??sentry_6:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-        CMP      R0,R4
-        BEQ.N    ??sentry_2
-        CMP      R4,#+0
-        BEQ.N    ??sentry_7
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      ??sentry_8
-??sentry_7:
-        MOVS     R0,#+0
-??sentry_8:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE3tieEv
-          CFI FunCall _ZNSo5flushEv
-        BL       _ZNSo5flushEv
-??sentry_2:
-        MOVS     R0,R5
-        POP      {R1,R4,R5,PC}    ;; return
-          CFI EndBlock cfiBlock44
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo5_OsfxEv
-          CFI Block cfiBlock45 Using cfiCommon0
-          CFI Function _ZNSo5_OsfxEv
-        THUMB
-// __interwork __vfp void std::ostream::_Osfx()
-_ZNSo5_OsfxEv:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNKSt8ios_base4goodEv
-        BL       _ZNKSt8ios_base4goodEv
-        CMP      R0,#+0
-        BEQ.N    ??_Osfx_0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNKSt8ios_base5flagsEv
-        BL       _ZNKSt8ios_base5flagsEv
-        MOVS     R1,#+2
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-          CFI FunCall _ZStanNSt5_IosbIiE9_FmtflagsES1_
-        BL       _ZStanNSt5_IosbIiE9_FmtflagsES1_
-        CMP      R0,#+0
-        BEQ.N    ??_Osfx_0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-          CFI FunCall _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
-        BL       _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
-        CMN      R0,#+1
-        BNE.N    ??_Osfx_0
-        MOVS     R2,#+0
-        MOVS     R1,#+4
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        BL       _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-??_Osfx_0:
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock45
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSolsEPFRSoS_E
-          CFI Block cfiBlock46 Using cfiCommon0
-          CFI Function _ZNSolsEPFRSoS_E
-        THUMB
-// __interwork __vfp std::ostream &std::ostream::operator<<(std::ostream &(*)(std::ostream &))
-_ZNSolsEPFRSoS_E:
-        PUSH     {R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+8
-          CFI FunCall
-        BLX      R1
-        POP      {R1,PC}          ;; return
-          CFI EndBlock cfiBlock46
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo3putEc
-          CFI Block cfiBlock47 Using cfiCommon0
-          CFI Function _ZNSo3putEc
-        THUMB
-// __interwork __vfp std::ostream &std::ostream::put(char)
-_ZNSo3putEc:
-        PUSH     {R4,R5,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R5 Frame(CFA, -8)
-          CFI R4 Frame(CFA, -12)
-          CFI CFA R13+12
-        SUB      SP,SP,#+20
-          CFI CFA R13+32
-        MOVS     R4,R0
-        MOVS     R5,R1
-        MOVS     R0,#+0
-        STRB     R0,[SP, #+0]
-        MOVS     R1,R4
-        ADD      R0,SP,#+12
-          CFI FunCall _ZNSo6sentryC1ERSo
-        BL       _ZNSo6sentryC1ERSo
-          CFI FunCall _ZNKSo13_Flush_sentrycvbEv
-        BL       _ZNKSo13_Flush_sentrycvbEv
-        CMP      R0,#+0
-        BNE.N    ??put_0
-        MOVS     R1,#+4
-        MOV      R0,SP
-          CFI FunCall _ZStoRRNSt5_IosbIiE8_IostateES1_
-        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
-        B.N      ??put_1
-??put_0:
-        MOVS     R0,#-1
-        STR      R0,[SP, #+8]
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        MOVS     R1,R5
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-          CFI FunCall _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        BL       _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        STR      R0,[SP, #+4]
-        ADD      R1,SP,#+4
-        ADD      R0,SP,#+8
-          CFI FunCall _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-        BL       _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-        CMP      R0,#+0
-        BEQ.N    ??put_1
-        MOVS     R1,#+4
-        MOV      R0,SP
-          CFI FunCall _ZStoRRNSt5_IosbIiE8_IostateES1_
-        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
-??put_1:
-        MOVS     R2,#+0
-        LDRB     R1,[SP, #+0]
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        BL       _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        ADD      R0,SP,#+12
-          CFI FunCall _ZNSo6sentryD1Ev
-        BL       _ZNSo6sentryD1Ev
-        MOVS     R0,R4
-        ADD      SP,SP,#+20
-          CFI CFA R13+12
-        POP      {R4,R5,PC}       ;; return
-          CFI EndBlock cfiBlock47
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZNSo5flushEv
-          CFI Block cfiBlock48 Using cfiCommon0
-          CFI Function _ZNSo5flushEv
-        THUMB
-// __interwork __vfp std::ostream &std::ostream::flush()
-_ZNSo5flushEv:
-        PUSH     {R2-R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+16
-        MOVS     R4,R0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        CMP      R0,#+0
-        BEQ.N    ??flush_0
-        MOVS     R1,R4
-        MOV      R0,SP
-          CFI FunCall _ZNSo13_Flush_sentryC1ERSo
-        BL       _ZNSo13_Flush_sentryC1ERSo
-          CFI FunCall _ZNKSo13_Flush_sentrycvbEv
-        BL       _ZNKSo13_Flush_sentrycvbEv
-        CMP      R0,#+0
-        BEQ.N    ??flush_1
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-          CFI FunCall _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
-        BL       _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
-        CMN      R0,#+1
-        BNE.N    ??flush_1
-        MOVS     R2,#+0
-        MOVS     R1,#+4
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        BL       _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-??flush_1:
-        MOV      R0,SP
-          CFI FunCall _ZNSo13_Flush_sentryD1Ev
-        BL       _ZNSo13_Flush_sentryD1Ev
-??flush_0:
-        MOVS     R0,R4
-        POP      {R1,R2,R4,PC}    ;; return
-          CFI EndBlock cfiBlock48
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
-          CFI Block cfiBlock49 Using cfiCommon0
-          CFI Function _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
-        THUMB
-// __interwork __vfp std::ostream &std::operator<<<std::char_traits<char>>(std::ostream &, char const *)
-_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc:
-        PUSH     {R3-R8,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R8 Frame(CFA, -8)
-          CFI R7 Frame(CFA, -12)
-          CFI R6 Frame(CFA, -16)
-          CFI R5 Frame(CFA, -20)
-          CFI R4 Frame(CFA, -24)
-          CFI CFA R13+28
-        SUB      SP,SP,#+28
-          CFI CFA R13+56
-        MOVS     R4,R0
-        MOVS     R6,R1
-        MOVS     R0,#+0
-        STRB     R0,[SP, #+0]
-        MOVS     R0,R6
-          CFI FunCall _ZNSt11char_traitsIcE6lengthEPKc
-        BL       _ZNSt11char_traitsIcE6lengthEPKc
-        MOVS     R7,R0
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_0`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_1`
-`??operator<<_0`:
-        MOVS     R0,#+0
-`??operator<<_1`:
-          CFI FunCall _ZNKSt8ios_base5widthEv
-        BL       _ZNKSt8ios_base5widthEv
-        CMP      R0,#+1
-        BLT.N    `??operator<<_2`
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_3`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_4`
-`??operator<<_3`:
-        MOVS     R0,#+0
-`??operator<<_4`:
-          CFI FunCall _ZNKSt8ios_base5widthEv
-        BL       _ZNKSt8ios_base5widthEv
-        CMP      R7,R0
-        BLT.N    `??operator<<_5`
-`??operator<<_2`:
-        MOVS     R5,#+0
-        B.N      `??operator<<_6`
-`??operator<<_5`:
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_7`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_8`
-`??operator<<_7`:
-        MOVS     R0,#+0
-`??operator<<_8`:
-          CFI FunCall _ZNKSt8ios_base5widthEv
-        BL       _ZNKSt8ios_base5widthEv
-        MOVS     R5,R0
-        SUBS     R5,R5,R7
-`??operator<<_6`:
-        MOVS     R1,R4
-        ADD      R0,SP,#+20
-          CFI FunCall _ZNSo6sentryC1ERSo
-        BL       _ZNSo6sentryC1ERSo
-          CFI FunCall _ZNKSo13_Flush_sentrycvbEv
-        BL       _ZNKSo13_Flush_sentrycvbEv
-        CMP      R0,#+0
-        BNE.N    `??operator<<_9`
-        MOVS     R1,#+4
-        MOV      R0,SP
-          CFI FunCall _ZStoRRNSt5_IosbIiE8_IostateES1_
-        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
-        B.N      `??operator<<_10`
-`??operator<<_9`:
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_11`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_12`
-`??operator<<_11`:
-        MOVS     R0,#+0
-`??operator<<_12`:
-          CFI FunCall _ZNKSt8ios_base5flagsEv
-        BL       _ZNKSt8ios_base5flagsEv
-        MOV      R1,#+448
-        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
-          CFI FunCall _ZStanNSt5_IosbIiE9_FmtflagsES1_
-        BL       _ZStanNSt5_IosbIiE9_FmtflagsES1_
-        CMP      R0,#+64
-        BNE.N    `??operator<<_13`
-        B.N      `??operator<<_14`
-`??operator<<_15`:
-        SUBS     R5,R5,#+1
-`??operator<<_13`:
-        CMP      R5,#+1
-        BLT.N    `??operator<<_14`
-        MOVS     R0,#-1
-        STR      R0,[SP, #+16]
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_16`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_17`
-`??operator<<_16`:
-        MOVS     R0,#+0
-`??operator<<_17`:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-        MOV      R8,R0
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_18`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_19`
-`??operator<<_18`:
-        MOVS     R0,#+0
-`??operator<<_19`:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        MOV      R1,R8
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-          CFI FunCall _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        BL       _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        STR      R0,[SP, #+12]
-        ADD      R1,SP,#+12
-        ADD      R0,SP,#+16
-          CFI FunCall _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-        BL       _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-        CMP      R0,#+0
-        BEQ.N    `??operator<<_15`
-        MOVS     R1,#+4
-        MOV      R0,SP
-          CFI FunCall _ZStoRRNSt5_IosbIiE8_IostateES1_
-        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
-`??operator<<_14`:
-        LDRB     R0,[SP, #+0]
-        CMP      R0,#+0
-        BNE.N    `??operator<<_20`
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_21`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_22`
-`??operator<<_21`:
-        MOVS     R0,#+0
-`??operator<<_22`:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        MOVS     R2,R7
-        MOVS     R1,R6
-          CFI FunCall _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci
-        BL       _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci
-        CMP      R0,R7
-        BEQ.N    `??operator<<_20`
-        MOVS     R1,#+4
-        MOV      R0,SP
-          CFI FunCall _ZStoRRNSt5_IosbIiE8_IostateES1_
-        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
-`??operator<<_20`:
-        LDRB     R0,[SP, #+0]
-        CMP      R0,#+0
-        BNE.N    `??operator<<_23`
-        B.N      `??operator<<_24`
-`??operator<<_25`:
-        SUBS     R5,R5,#+1
-`??operator<<_24`:
-        CMP      R5,#+1
-        BLT.N    `??operator<<_23`
-        MOVS     R0,#-1
-        STR      R0,[SP, #+8]
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_26`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_27`
-`??operator<<_26`:
-        MOVS     R0,#+0
-`??operator<<_27`:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE4fillEv
-        MOVS     R6,R0
-        CMP      R4,#+0
-        BEQ.N    `??operator<<_28`
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      `??operator<<_29`
-`??operator<<_28`:
-        MOVS     R0,#+0
-`??operator<<_29`:
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5rdbufEv
-        MOVS     R1,R6
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-          CFI FunCall _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        BL       _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        STR      R0,[SP, #+4]
-        ADD      R1,SP,#+4
-        ADD      R0,SP,#+8
-          CFI FunCall _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-        BL       _ZNSt11char_traitsIcE11eq_int_typeERKiS2_
-        CMP      R0,#+0
-        BEQ.N    `??operator<<_25`
-        MOVS     R1,#+4
-        MOV      R0,SP
-          CFI FunCall _ZStoRRNSt5_IosbIiE8_IostateES1_
-        BL       _ZStoRRNSt5_IosbIiE8_IostateES1_
-`??operator<<_23`:
-        MOVS     R1,#+0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNSt8ios_base5widthEi
-        BL       _ZNSt8ios_base5widthEi
-`??operator<<_10`:
-        MOVS     R2,#+0
-        LDRB     R1,[SP, #+0]
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-          CFI FunCall _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        BL       _ZNSt9basic_iosIcSt11char_traitsIcEE8setstateENSt5_IosbIiE8_IostateEb
-        ADD      R0,SP,#+20
-          CFI FunCall _ZNSo6sentryD1Ev
-        BL       _ZNSo6sentryD1Ev
-        MOVS     R0,R4
-        ADD      SP,SP,#+32
-          CFI CFA R13+24
-        POP      {R4-R8,PC}       ;; return
-          CFI EndBlock cfiBlock49
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
-          CFI Block cfiBlock50 Using cfiCommon0
-          CFI Function _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
-        THUMB
-// __interwork __vfp std::ostream &std::endl<char, std::char_traits<char>>(std::ostream &)
-_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_:
-        PUSH     {R4,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI R4 Frame(CFA, -8)
-          CFI CFA R13+8
-        MOVS     R4,R0
-        CMP      R4,#+0
-        BEQ.N    ??endl_0
-        LDR      R0,[R4, #+0]
-        LDR      R0,[R0, #-12]
-        ADD      R0,R4,R0
-        B.N      ??endl_1
-??endl_0:
-        MOVS     R0,#+0
-??endl_1:
-        MOVS     R1,#+10
-          CFI FunCall _ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc
-        BL       _ZNKSt9basic_iosIcSt11char_traitsIcEE5widenEc
-        MOVS     R1,R0
-        UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
-        MOVS     R0,R4
-          CFI FunCall _ZNSo3putEc
-        BL       _ZNSo3putEc
-        MOVS     R0,R4
-          CFI FunCall _ZNSo5flushEv
-        BL       _ZNSo5flushEv
-        MOVS     R0,R4
-        POP      {R4,PC}          ;; return
-          CFI EndBlock cfiBlock50
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTVSt5ctypeIcE
-        DATA
-// __absolute void (*const std::ctype<char>::__vtbl[4])()
-_ZTVSt5ctypeIcE:
-        DATA32
-        DC32 0x0, _ZTISt5ctypeIcE, _ZNSt5ctypeIcED1Ev, _ZNSt5ctypeIcED0Ev
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTIN9OsWrapper7IThreadE
@@ -1747,34 +296,23 @@ _ZTV7Celsius:
         DC32 0x0, _ZTI7Celsius, _ZNK7Celsius14GetTemperatureEf
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZTI6IUnits
+        DATA
+// __absolute __class_type_info const <Typeinfo for IUnits>
+_ZTI6IUnits:
+        DATA32
+        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTS6IUnits
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV14SensorDirector
         DATA
 // __absolute void (*const SensorDirector::__vtbl[7])()
 _ZTV14SensorDirector:
         DATA32
         DC32 0x0, _ZTI14SensorDirector, _ZN14SensorDirector7ExecuteEv
-        DC32 _ZN14SensorDirector18HandleButtonPushedEv, 0xffff'fda4
+        DC32 _ZN14SensorDirector18HandleButtonPushedEv, 0xffff'fba4
         DC32 _ZTI14SensorDirector
-        DC32 _ZThn604_N14SensorDirector18HandleButtonPushedEv
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTISt15basic_streambufIcSt11char_traitsIcEE
-        DATA
-// __absolute __class_type_info const <Typeinfo for std::basic_streambuf<char, std::char_traits<char>>>
-_ZTISt15basic_streambufIcSt11char_traitsIcEE:
-        DATA32
-        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8
-        DC32 _ZTSSt15basic_streambufIcSt11char_traitsIcEE
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTVSt11_Wrap_facetISt5ctypeIcEE
-        DATA
-// __absolute void (*const std::_Wrap_facet<std::ios::_Ctype>::__vtbl[4])()
-_ZTVSt11_Wrap_facetISt5ctypeIcEE:
-        DATA32
-        DC32 0x0, _ZTISt11_Wrap_facetISt5ctypeIcEE
-        DC32 _ZNSt11_Wrap_facetISt5ctypeIcEED1Ev
-        DC32 _ZNSt11_Wrap_facetISt5ctypeIcEED0Ev
+        DC32 _ZThn1116_N14SensorDirector18HandleButtonPushedEv
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI11ISubscriber
@@ -1783,14 +321,6 @@ _ZTVSt11_Wrap_facetISt5ctypeIcEE:
 _ZTI11ISubscriber:
         DATA32
         DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTS11ISubscriber
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTI6IUnits
-        DATA
-// __absolute __class_type_info const <Typeinfo for IUnits>
-_ZTI6IUnits:
-        DATA32
-        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTS6IUnits
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTI6Kelvin
@@ -1826,35 +356,17 @@ _ZTI7Celsius:
 _ZTI14SensorDirector:
         DATA32
         DC32 _ZTVN10__cxxabiv121__vmi_class_type_infoE + 0x8
-        DC32 _ZTS14SensorDirector, 0, 2, _ZTIN9OsWrapper6ThreadILj128EEE, 2
-        DC32 _ZTI11ISubscriber, 154'626
+        DC32 _ZTS14SensorDirector, 0, 2, _ZTIN9OsWrapper6ThreadILj256EEE, 2
+        DC32 _ZTI11ISubscriber, 285'698
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTIN9OsWrapper6ThreadILj128EEE
+        SECTION_GROUP _ZTIN9OsWrapper6ThreadILj256EEE
         DATA
-// __absolute __si_class_type_info const <Typeinfo for OsWrapper::Thread<(unsigned int)128>>
-_ZTIN9OsWrapper6ThreadILj128EEE:
+// __absolute __si_class_type_info const <Typeinfo for OsWrapper::Thread<(unsigned int)256>>
+_ZTIN9OsWrapper6ThreadILj256EEE:
         DATA32
         DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 0x8
-        DC32 _ZTSN9OsWrapper6ThreadILj128EEE, _ZTIN9OsWrapper7IThreadE
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTISt5ctypeIcE
-        DATA
-// __absolute __si_class_type_info const <Typeinfo for std::ctype<char>>
-_ZTISt5ctypeIcE:
-        DATA32
-        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 0x8, _ZTSSt5ctypeIcE
-        DC32 _ZTISt10ctype_base
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTISt11_Wrap_facetISt5ctypeIcEE
-        DATA
-// __absolute __si_class_type_info const <Typeinfo for std::_Wrap_facet<std::ctype<char>>>
-_ZTISt11_Wrap_facetISt5ctypeIcEE:
-        DATA32
-        DC32 _ZTVN10__cxxabiv120__si_class_type_infoE + 0x8
-        DC32 _ZTSSt11_Wrap_facetISt5ctypeIcEE, _ZTISt5ctypeIcE
+        DC32 _ZTSN9OsWrapper6ThreadILj256EEE, _ZTIN9OsWrapper7IThreadE
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTS11ISubscriber
@@ -1913,12 +425,12 @@ _ZTSN9OsWrapper7IThreadE:
         DC8 0, 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSN9OsWrapper6ThreadILj128EEE
+        SECTION_GROUP _ZTSN9OsWrapper6ThreadILj256EEE
         DATA
-// __absolute char const <Typeinfo name for OsWrapper::Thread<(unsigned int)128>>[28]
-_ZTSN9OsWrapper6ThreadILj128EEE:
+// __absolute char const <Typeinfo name for OsWrapper::Thread<(unsigned int)256>>[28]
+_ZTSN9OsWrapper6ThreadILj256EEE:
         DATA8
-        DC8 "N9OsWrapper6ThreadILj128EEE"
+        DC8 "N9OsWrapper6ThreadILj256EEE"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTS14SensorDirector
@@ -1948,14 +460,6 @@ _ZTSSt10ctype_base:
         DC8 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSSt5ctypeIcE
-        DATA
-// __absolute char const <Typeinfo name for std::ctype<char>>[12]
-_ZTSSt5ctypeIcE:
-        DATA8
-        DC8 "St5ctypeIcE"
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTISt5_IosbIiE
         DATA
 // __absolute __class_type_info const <Typeinfo for std::_Iosb<int>>
@@ -1970,26 +474,6 @@ _ZTISt5_IosbIiE:
 _ZTSSt5_IosbIiE:
         DATA8
         DC8 "St5_IosbIiE"
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSSt15basic_streambufIcSt11char_traitsIcEE
-        DATA
-// __absolute char const <Typeinfo name for std::basic_streambuf<char, std::char_traits<char>>>[41]
-_ZTSSt15basic_streambufIcSt11char_traitsIcEE:
-        DATA8
-        DC8 "St15basic_streambufIcSt11char_traitsIcEE"
-        DATA
-        DC8 0, 0, 0
-
-        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
-        SECTION_GROUP _ZTSSt11_Wrap_facetISt5ctypeIcEE
-        DATA
-// __absolute char const <Typeinfo name for std::_Wrap_facet<std::ctype<char>>>[29]
-_ZTSSt11_Wrap_facetISt5ctypeIcEE:
-        DATA8
-        DC8 "St11_Wrap_facetISt5ctypeIcEE"
-        DATA
-        DC8 0, 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(1)
         DATA
@@ -2031,8 +515,54 @@ _ZTSSt11_Wrap_facetISt5ctypeIcEE:
         DATA
 ?_6:
         DATA8
-        DC8 "\012Temperature: "
+        DC8 "Pa"
         DC8 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+?_7:
+        DATA32
+        DC32 ?_6, 2
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(1)
+        DATA
+?_8:
+        DATA8
+        DC8 "%"
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+?_9:
+        DATA32
+        DC32 ?_8, 1
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(1)
+        DATA
+?_10:
+        DATA8
+        DC8 "C"
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+?_11:
+        DATA32
+        DC32 ?_10, 1
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        DATA
+        DATA8
+        DC8 "%s"
+        DC8 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(3)
+        DATA
+?_13:
+        DATA64
+        DC64 100
+// D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
+//    1 //SensorDirector.cpp
+//    2 
+//    3 #include "SensorDirector.hpp" 
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(0)
         SECTION_GROUP _ZNSt6chrono12system_clock9is_steadyE
@@ -2058,103 +588,53 @@ _ZNSt6chrono12steady_clock9is_steadyE:
         DATA8
         DC8 1
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZNK6Kelvin14GetTemperatureEf
-          CFI Block cfiBlock51 Using cfiCommon0
-          CFI Function _ZNK6Kelvin14GetTemperatureEf
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function __sti__routine
         THUMB
-// __interwork __vfp std::pair<SusuStringView, float> Kelvin::GetTemperature(float) const
-_ZNK6Kelvin14GetTemperatureEf:
-        PUSH     {R0-R4,LR}
+// static __intrinsic __interwork __vfp void __sti__routine()
+__sti__routine:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        LDR.N    R0,??DataTable2_4
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_de8169a7Ut_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_de8169a7Ut_C1Ev
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock0
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_de8169a7Ut_C1Ev
+        THUMB
+// static __code __interwork __vfp <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_de8169a7Ut_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_de8169a7Ut_C1Ev:
+        PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
-          CFI CFA R13+24
+          CFI CFA R13+8
         MOVS     R4,R0
-        VMOV     R0,S0
-          CFI FunCall __aeabi_f2d
-        BL       __aeabi_f2d
-        MOVS     R2,#+1717986918
-        LDR.N    R3,??GetTemperature_0  ;; 0x40711266
-          CFI FunCall __aeabi_dadd
-        BL       __aeabi_dadd
-          CFI FunCall __aeabi_d2f
-        BL       __aeabi_d2f
-        STR      R0,[SP, #+0]
-        LDR.N    R0,??GetTemperature_0+0x4
-        LDRD     R2,R3,[R0, #+0]
-        STRD     R2,R3,[SP, #+4]
-        MOV      R2,SP
-        ADD      R1,SP,#+4
         MOVS     R0,R4
-          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        POP      {R0-R4,PC}       ;; return
-        Nop      
-        DATA
-??GetTemperature_0:
-        DATA32
-        DC32     0x40711266
-        DC32     ?_1
-          CFI EndBlock cfiBlock51
+          CFI FunCall _ZN10SusuStringILj5EEC1Ev
+        BL       _ZN10SusuStringILj5EEC1Ev
+        ADDS     R0,R4,#+16
+          CFI FunCall _ZN10SusuStringILj5EEC1Ev
+        BL       _ZN10SusuStringILj5EEC1Ev
+        ADDS     R0,R4,#+32
+          CFI FunCall _ZN10SusuStringILj5EEC1Ev
+        BL       _ZN10SusuStringILj5EEC1Ev
+        ADDS     R0,R4,#+48
+          CFI FunCall _ZN10SusuStringILj5EEC1Ev
+        BL       _ZN10SusuStringILj5EEC1Ev
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock1
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZNK10Fahrenheit14GetTemperatureEf
-          CFI Block cfiBlock52 Using cfiCommon0
-          CFI Function _ZNK10Fahrenheit14GetTemperatureEf
-        THUMB
-// __interwork __vfp std::pair<SusuStringView, float> Fahrenheit::GetTemperature(float) const
-_ZNK10Fahrenheit14GetTemperatureEf:
-        PUSH     {R5-R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+16
-        VMOV.F32 S1,#9.0
-        VMUL.F32 S0,S0,S1
-        VMOV.F32 S1,#5.0
-        VDIV.F32 S0,S0,S1
-        VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
-        VADD.F32 S0,S0,S1
-        VSTR     S0,[SP, #+0]
-        LDR.N    R1,??GetTemperature_1+0x4
-        LDRD     R2,R3,[R1, #+0]
-        STRD     R2,R3,[SP, #+4]
-        MOV      R2,SP
-        ADD      R1,SP,#+4
-          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        POP      {R0-R2,PC}       ;; return
-        Nop      
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
         DATA
-??GetTemperature_1:
-        DATA32
-        DC32     0x42000000
-        DC32     ?_3
-          CFI EndBlock cfiBlock52
-
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
-        SECTION_GROUP _ZNK7Celsius14GetTemperatureEf
-          CFI Block cfiBlock53 Using cfiCommon0
-          CFI Function _ZNK7Celsius14GetTemperatureEf
-        THUMB
-// __interwork __vfp std::pair<SusuStringView, float> Celsius::GetTemperature(float) const
-_ZNK7Celsius14GetTemperatureEf:
-        PUSH     {R5-R7,LR}
-          CFI R14 Frame(CFA, -4)
-          CFI CFA R13+16
-        VSTR     S0,[SP, #+0]
-        LDR.N    R1,??GetTemperature_2
-        LDRD     R2,R3,[R1, #+0]
-        STRD     R2,R3,[SP, #+4]
-        MOV      R2,SP
-        ADD      R1,SP,#+4
-          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-        POP      {R0-R2,PC}       ;; return
-        Nop      
-        DATA
-??GetTemperature_2:
-        DATA32
-        DC32     ?_5
-          CFI EndBlock cfiBlock53
+// static __absolute struct <unnamed> SensorData
+SensorData:
+        DS8 64
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZN14SensorDirector10fahrenheitE
@@ -2180,86 +660,1804 @@ _ZN14SensorDirector7celsiusE:
         DATA32
         DC32 _ZTV7Celsius + 0x8
 //    4 #include <iostream>
-//    5 //#include "Temperature.hpp"
-//    6 
+//    5 
 
-        SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock54 Using cfiCommon0
+        SECTION `.text`:CODE:NOROOT(2)
+          CFI Block cfiBlock2 Using cfiCommon0
           CFI Function _ZN14SensorDirector7ExecuteEv
-          CFI NoCalls
         THUMB
-//    7 void SensorDirector::Execute() {
-//    8 }
+//    6 void SensorDirector::Execute() {
 _ZN14SensorDirector7ExecuteEv:
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock54
+        PUSH     {R3-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R7 Frame(CFA, -8)
+          CFI R6 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -16)
+          CFI R4 Frame(CFA, -20)
+          CFI CFA R13+24
+        VPUSH    {D8-D9}
+          CFI D9 Frame(CFA, -32)
+          CFI D8 Frame(CFA, -40)
+          CFI CFA R13+40
+        SUB      SP,SP,#+80
+          CFI CFA R13+120
+        MOVS     R4,R0
+//    7   for(;;) {
+//    8   float T = 1.1;
+??Execute_0:
+        VLDR.W   S16,??DataTable2  ;; 0x3f8ccccd
+//    9   float H = 2.2;
+        VLDR.W   S17,??DataTable2_1  ;; 0x400ccccd
+//   10   float P = 3.3;
+        VLDR.W   S18,??DataTable2_2  ;; 0x40533333
+        VMOV     R2,S16
+        ADDS     R1,R4,#+1120
+        ADD      R0,SP,#+28
+          CFI FunCall _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
+        BL       _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
+//   11   char str[5] ;
+//   12   //temperature 
+//   13   std::pair<SusuStringView, float> Data = temperature.Get(T) ;
+        ADD      R0,SP,#+16
+        ADD      R1,SP,#+28
+        LDM      R1,{R2,R3,R5}
+        STM      R0,{R2,R3,R5}
+//   14   SensorData.t = Data.second ;
+        LDR.N    R5,??DataTable2_4
+        LDR      R0,[SP, #+24]
+        STR      R0,[R5, #+44]
+//   15   sprintf(str, "%s", (Data.first).str) ;
+        ADR.N    R6,??DataTable2_3  ;; 0x25, 0x73, 0x00, 0x00
+        LDR      R2,[SP, #+16]
+        MOVS     R1,R6
+        ADD      R0,SP,#+8
+          CFI FunCall sprintf
+        BL       sprintf
+//   16   SensorData.tname.Set(str) ;  
+        ADD      R1,SP,#+8
+        ADDS     R0,R5,#+32
+          CFI FunCall _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        BL       _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        VMOV     R2,S18
+        ADDW     R1,R4,#+1140
+        ADD      R0,SP,#+28
+          CFI FunCall _ZN8Pressure3GetEfz
+        BL       _ZN8Pressure3GetEfz
+//   17   //pressure
+//   18   Data = pressure.Get(P) ;
+        ADD      R0,SP,#+52
+        ADD      R1,SP,#+28
+        LDM      R1,{R2,R3,R7}
+        STM      R0,{R2,R3,R7}
+        ADD      R1,SP,#+52
+        ADD      R0,SP,#+16
+          CFI FunCall _ZNSt4pairI14SusuStringViewfEaSEOS1_
+        BL       _ZNSt4pairI14SusuStringViewfEaSEOS1_
+//   19   SensorData.p = Data.second ;
+        LDR      R0,[SP, #+24]
+        STR      R0,[R5, #+12]
+//   20   sprintf(str, "%s", (Data.first).str) ;
+        LDR      R2,[SP, #+16]
+        MOVS     R1,R6
+        ADD      R0,SP,#+8
+          CFI FunCall sprintf
+        BL       sprintf
+//   21   SensorData.pname.Set(str) ;
+        ADD      R1,SP,#+8
+        MOVS     R0,R5
+          CFI FunCall _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        BL       _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        VMOV     R2,S17
+        ADDS     R1,R4,#+1144
+        ADD      R0,SP,#+28
+          CFI FunCall _ZN8Humidity3GetEfz
+        BL       _ZN8Humidity3GetEfz
+//   22   //humidity
+//   23   Data = humidity.Get(H) ;
+        ADD      R0,SP,#+40
+        ADD      R1,SP,#+28
+        LDM      R1,{R2,R3,R7}
+        STM      R0,{R2,R3,R7}
+        ADD      R1,SP,#+40
+        ADD      R0,SP,#+16
+          CFI FunCall _ZNSt4pairI14SusuStringViewfEaSEOS1_
+        BL       _ZNSt4pairI14SusuStringViewfEaSEOS1_
+//   24   SensorData.h = Data.second ;
+        LDR      R0,[SP, #+24]
+        STR      R0,[R5, #+28]
+//   25   sprintf(str, "%s", (Data.first).str) ;
+        LDR      R2,[SP, #+16]
+        MOVS     R1,R6
+        ADD      R0,SP,#+8
+          CFI FunCall sprintf
+        BL       sprintf
+//   26   SensorData.hname.Set(str) ;
+        ADD      R1,SP,#+8
+        ADDS     R0,R5,#+16
+          CFI FunCall _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        BL       _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        VMOV     R0,S17
+          CFI FunCall __aeabi_f2d
+        BL       __aeabi_f2d
+        STRD     R0,R1,[SP, #+0]
+        VMOV     R2,S16
+        ADDW     R1,R4,#+1148
+        ADD      R0,SP,#+64
+          CFI FunCall _ZN8DewPoint3GetEfz
+        BL       _ZN8DewPoint3GetEfz
+//   27   //DewPOint
+//   28   Data = dewpoint.Get(T,H) ; //first temperature, second humidity
+        ADD      R0,SP,#+28
+        ADD      R1,SP,#+64
+        LDM      R1,{R2,R3,R7}
+        STM      R0,{R2,R3,R7}
+        ADD      R1,SP,#+28
+        ADD      R0,SP,#+16
+          CFI FunCall _ZNSt4pairI14SusuStringViewfEaSEOS1_
+        BL       _ZNSt4pairI14SusuStringViewfEaSEOS1_
+//   29   SensorData.dp = Data.second ;
+        LDR      R0,[SP, #+24]
+        STR      R0,[R5, #+60]
+//   30   sprintf(str, "%s", (Data.first).str) ;
+        LDR      R2,[SP, #+16]
+        MOVS     R1,R6
+        ADD      R0,SP,#+8
+          CFI FunCall sprintf
+        BL       sprintf
+//   31   SensorData.dpname.Set(str) ;
+        ADD      R1,SP,#+8
+        ADDS     R0,R5,#+48
+          CFI FunCall _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        BL       _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        LDR.N    R2,??DataTable2_5
+        LDRD     R0,R1,[R2, #+0]
+//   32   Sleep(100ms) ;
+          CFI FunCall _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+        B.N      ??Execute_0
+//   33   }
+//   34 }
+          CFI EndBlock cfiBlock2
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock55 Using cfiCommon0
-          CFI Function _ZThn604_N14SensorDirector18HandleButtonPushedEv
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function _ZThn1116_N14SensorDirector18HandleButtonPushedEv
           CFI TailCall _ZN14SensorDirector18HandleButtonPushedEv
         THUMB
-// __interwork __vfp void SensorDirector::HandleButtonPushed for ISubscriber/-604/()
-_ZThn604_N14SensorDirector18HandleButtonPushedEv:
-        SUBS     R0,R0,#+604
-          CFI EndBlock cfiBlock55
+// __interwork __vfp void SensorDirector::HandleButtonPushed for ISubscriber/-1116/()
+_ZThn1116_N14SensorDirector18HandleButtonPushedEv:
+        SUBW     R0,R0,#+1116
+          CFI EndBlock cfiBlock3
         REQUIRE _ZN14SensorDirector18HandleButtonPushedEv
         ;; // Fall through to label SensorDirector::HandleButtonPushed()
-//    9 
+//   35 
 
         SECTION `.text`:CODE:NOROOT(1)
-          CFI Block cfiBlock56 Using cfiCommon0
+          CFI Block cfiBlock4 Using cfiCommon0
           CFI Function _ZN14SensorDirector18HandleButtonPushedEv
         THUMB
-//   10 void SensorDirector::HandleButtonPushed() {
+//   36 void SensorDirector::HandleButtonPushed() {
 _ZN14SensorDirector18HandleButtonPushedEv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//   11   std::cout << "\nTemperature: " << std::endl ;
-        LDR.N    R1,??DataTable1
-        LDR.N    R0,??DataTable1_1
-          CFI FunCall _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
-        BL       _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
-        LDR.N    R1,??DataTable1_2
-          CFI FunCall _ZNSolsEPFRSoS_E
-        BL       _ZNSolsEPFRSoS_E
-//   12 }
+//   37    temperature.SetNextUnits();
+        ADDS     R0,R0,#+1120
+          CFI FunCall _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv
+        BL       _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv
+//   38 }
+        POP      {R0,PC}          ;; return
+          CFI EndBlock cfiBlock4
+//   39 
+
+        SECTION `.text`:CODE:NOROOT(1)
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function _ZN14SensorDirector7GetDataEv
+        THUMB
+//   40 tFormatData SensorDirector::GetData() {
+_ZN14SensorDirector7GetDataEv:
+        PUSH     {LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+4
+        SUB      SP,SP,#+20
+          CFI CFA R13+24
+//   41   return std::make_tuple(SensorData.pname,SensorData.p,SensorData.hname,SensorData.h,
+//   42                          SensorData.tname,SensorData.t,SensorData.dpname,SensorData.dp);
+        LDR.N    R1,??DataTable2_4
+        ADDS     R2,R1,#+60
+        STR      R2,[SP, #+16]
+        ADDS     R2,R1,#+48
+        STR      R2,[SP, #+12]
+        ADDS     R2,R1,#+44
+        STR      R2,[SP, #+8]
+        ADDS     R2,R1,#+32
+        STR      R2,[SP, #+4]
+        ADDS     R2,R1,#+28
+        STR      R2,[SP, #+0]
+        ADDS     R3,R1,#+16
+        ADDS     R2,R1,#+12
+          CFI FunCall _ZSt10make_tupleIJR10SusuStringILj5EERfS2_S3_S2_S3_S2_S3_EESt5tupleIJDpNSt10_UnrefwrapIT_E4typeEEEDpOS6_
+        BL       _ZSt10make_tupleIJR10SusuStringILj5EERfS2_S3_S2_S3_S2_S3_EESt5tupleIJDpNSt10_UnrefwrapIT_E4typeEEEDpOS6_
+        ADD      SP,SP,#+20
+          CFI CFA R13+4
+        POP      {PC}             ;; return
+//   43 }
+          CFI EndBlock cfiBlock5
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2:
+        DATA32
+        DC32     0x3f8ccccd
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2_1:
+        DATA32
+        DC32     0x400ccccd
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2_2:
+        DATA32
+        DC32     0x40533333
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2_3:
+        DATA8
+        DC8      0x25, 0x73, 0x00, 0x00
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2_4:
+        DATA32
+        DC32     SensorData
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2_5:
+        DATA32
+        DC32     ?_13
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE
+          CFI NoCalls
+        THUMB
+// __interwork __vfp char *std::_Addressof<char>(char &, std::false_type)
+_ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock6
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt9addressofIcEPT_RS0_
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function _ZSt9addressofIcEPT_RS0_
+        THUMB
+// __interwork __vfp char *std::addressof<char>(char &)
+_ZSt9addressofIcEPT_RS0_:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE
+        BL       _ZSt10_AddressofIcEPT_RS0_St17integral_constantIbLb0EE
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock7
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
+          CFI NoCalls
+        THUMB
+// __interwork __vfp SusuStringView &std::forward<SusuStringView &>(SusuStringView &)
+_ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock8
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+          CFI Block cfiBlock9 Using cfiCommon0
+          CFI Function _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+          CFI NoCalls
+        THUMB
+// __interwork __vfp float &std::forward<float &>(float &)
+_ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock9
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt7forwardI14SusuStringViewEOT_RNSt16remove_referenceIS1_E4typeE
+          CFI Block cfiBlock10 Using cfiCommon0
+          CFI Function _ZSt7forwardI14SusuStringViewEOT_RNSt16remove_referenceIS1_E4typeE
+          CFI NoCalls
+        THUMB
+// __interwork __vfp SusuStringView &&std::forward<SusuStringView>(SusuStringView &)
+_ZSt7forwardI14SusuStringViewEOT_RNSt16remove_referenceIS1_E4typeE:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock10
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt7forwardIfEOT_RNSt16remove_referenceIS0_E4typeE
+          CFI Block cfiBlock11 Using cfiCommon0
+          CFI Function _ZSt7forwardIfEOT_RNSt16remove_referenceIS0_E4typeE
+          CFI NoCalls
+        THUMB
+// __interwork __vfp float &&std::forward<float>(float &)
+_ZSt7forwardIfEOT_RNSt16remove_referenceIS0_E4typeE:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock11
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+          CFI Block cfiBlock12 Using cfiCommon0
+          CFI Function _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+          CFI NoCalls
+        THUMB
+// __interwork __vfp SusuString<5U> &std::forward<SusuString<5U> &>(SusuString<5U> &)
+_ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock12
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
+          CFI Block cfiBlock13 Using cfiCommon0
+          CFI Function _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
+        THUMB
+// __code __interwork __vfp std::pair<SusuStringView, float>::pair<SusuStringView &, float &, void>(SusuStringView &, float &)
+_ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        MOVS     R4,R0
+        MOVS     R0,R1
+        MOVS     R5,R2
+          CFI FunCall _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
+        BL       _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
+        LDRD     R2,R3,[R0, #+0]
+        STRD     R2,R3,[R4, #+0]
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        LDR      R0,[R0, #+0]
+        STR      R0,[R4, #+8]
+        MOVS     R0,R4
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock13
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt4pairI14SusuStringViewfEaSEOS1_
+          CFI Block cfiBlock14 Using cfiCommon0
+          CFI Function _ZNSt4pairI14SusuStringViewfEaSEOS1_
+        THUMB
+// __interwork __vfp std::pair<SusuStringView, float> &std::pair<SusuStringView, float>::operator=(std::pair<SusuStringView, float> &&)
+_ZNSt4pairI14SusuStringViewfEaSEOS1_:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardI14SusuStringViewEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardI14SusuStringViewEOT_RNSt16remove_referenceIS1_E4typeE
+        LDRD     R2,R3,[R0, #+0]
+        STRD     R2,R3,[R4, #+0]
+        ADDS     R0,R5,#+8
+          CFI FunCall _ZSt7forwardIfEOT_RNSt16remove_referenceIS0_E4typeE
+        BL       _ZSt7forwardIfEOT_RNSt16remove_referenceIS0_E4typeE
+        LDR      R0,[R0, #+0]
+        STR      R0,[R4, #+8]
+        MOVS     R0,R4
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock14
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+          CFI Block cfiBlock15 Using cfiCommon0
+          CFI Function _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        THUMB
+// __interwork __vfp std::pair<SusuStringView, float> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
+_ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_:
+        PUSH     {R0-R6,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R6 Frame(CFA, -8)
+          CFI R5 Frame(CFA, -12)
+          CFI R4 Frame(CFA, -16)
+          CFI CFA R13+32
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R0,R2
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R6,R0
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
+        BL       _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
+        MOVS     R2,R6
+        MOVS     R1,R0
+        MOV      R0,SP
+          CFI FunCall _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
+        BL       _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
+        LDM      R0,{R1-R3}
+        STM      R4,{R1-R3}
+        POP      {R0-R6,PC}       ;; return
+          CFI EndBlock cfiBlock15
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt10_UncheckedIPKcET_S2_
+          CFI Block cfiBlock16 Using cfiCommon0
+          CFI Function _ZSt10_UncheckedIPKcET_S2_
+          CFI NoCalls
+        THUMB
+// __interwork __vfp char const *std::_Unchecked<char const *>(char const *)
+_ZSt10_UncheckedIPKcET_S2_:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock16
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt8_Ptr_catPKcPc
+          CFI Block cfiBlock17 Using cfiCommon0
+          CFI Function _ZSt8_Ptr_catPKcPc
+          CFI NoCalls
+        THUMB
+// __interwork __vfp std::_Scalar_ptr_iterator_tag std::_Ptr_cat(char const *, char *)
+_ZSt8_Ptr_catPKcPc:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock17
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj
+          CFI Block cfiBlock18 Using cfiCommon0
+          CFI Function _ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj
+          CFI NoCalls
+        THUMB
+// __code __interwork __vfp std::_Array_const_iterator<char, 5U>::_Array_const_iterator(char const *, size_t)
+_ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj:
+        ADD      R1,R1,R2
+        STR      R1,[R0, #+0]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock18
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj
+          CFI Block cfiBlock19 Using cfiCommon0
+          CFI Function _ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj
+        THUMB
+// __code __interwork __vfp std::_Array_const_iterator<char, 5U>::subobject _Array_const_iterator(char const *, size_t)
+_ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj
+        BL       _ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock19
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc
+          CFI Block cfiBlock20 Using cfiCommon0
+          CFI Function _ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc
+          CFI NoCalls
+        THUMB
+// __interwork __vfp std::_Array_const_iterator<char, 5U> &std::_Array_const_iterator<char, 5U>::_Rechecked(char const *)
+_ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc:
+        STR      R1,[R0, #+0]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock20
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv
+          CFI Block cfiBlock21 Using cfiCommon0
+          CFI Function _ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp char const * std::_Array_const_iterator<char, 5U>::_Unchecked() const
+_ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv:
+        LDR      R0,[R0, #+0]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock21
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt15_Array_iteratorIcLj5EEC1EPcj
+          CFI Block cfiBlock22 Using cfiCommon0
+          CFI Function _ZNSt15_Array_iteratorIcLj5EEC1EPcj
+        THUMB
+// __code __interwork __vfp std::_Array_iterator<char, 5U>::_Array_iterator(char *, size_t)
+_ZNSt15_Array_iteratorIcLj5EEC1EPcj:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj
+        BL       _ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock22
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc
+          CFI Block cfiBlock23 Using cfiCommon0
+          CFI Function _ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc
+        THUMB
+// __interwork __vfp std::_Array_iterator<char, 5U> &std::_Array_iterator<char, 5U>::_Rechecked(char *)
+_ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc
+        BL       _ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock23
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv
+          CFI Block cfiBlock24 Using cfiCommon0
+          CFI Function _ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv
+        THUMB
+// __interwork __vfp char * std::_Array_iterator<char, 5U>::_Unchecked() const
+_ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv
+        BL       _ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock24
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_
+          CFI Block cfiBlock25 Using cfiCommon0
+          CFI Function _ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_
+        THUMB
+// __interwork __vfp char * std::_Unchecked<char, 5U>(std::_Array_iterator<char, 5U>)
+_ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_:
+        PUSH     {R0,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOV      R0,SP
+          CFI FunCall _ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv
+        BL       _ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock25
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
+          CFI Block cfiBlock26 Using cfiCommon0
+          CFI Function _ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
+        THUMB
+// __interwork __vfp std::_Array_iterator<char, 5U> &std::_Rechecked<char, 5U>(std::_Array_iterator<char, 5U> &, char *)
+_ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc
+        BL       _ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock26
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag
+          CFI Block cfiBlock27 Using cfiCommon0
+          CFI Function _ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag
+        THUMB
+// __interwork __vfp char *std::_Copy_impl<char const *, char *>(char const *, char const *, char *, std::_Scalar_ptr_iterator_tag)
+_ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag:
+        PUSH     {R4-R6,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R6 Frame(CFA, -8)
+          CFI R5 Frame(CFA, -12)
+          CFI R4 Frame(CFA, -16)
+          CFI CFA R13+16
+        MOVS     R4,R1
+        MOVS     R5,R2
+        SUBS     R4,R4,R0
+        MOVS     R2,R4
+        MOVS     R6,R5
+        MOVS     R1,R0
+        MOVS     R0,R6
+          CFI FunCall __aeabi_memmove
+        BL       __aeabi_memmove
+        ADD      R0,R5,R4
+        POP      {R4-R6,PC}       ;; return
+          CFI EndBlock cfiBlock27
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt10_Copy_implIPKcPcET0_T_S4_S3_
+          CFI Block cfiBlock28 Using cfiCommon0
+          CFI Function _ZSt10_Copy_implIPKcPcET0_T_S4_S3_
+        THUMB
+// __interwork __vfp char * std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
+_ZSt10_Copy_implIPKcPcET0_T_S4_S3_:
+        PUSH     {R4-R6,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R6 Frame(CFA, -8)
+          CFI R5 Frame(CFA, -12)
+          CFI R4 Frame(CFA, -16)
+          CFI CFA R13+16
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R1,R6
+        MOVS     R0,R4
+          CFI FunCall _ZSt8_Ptr_catPKcPc
+        BL       _ZSt8_Ptr_catPKcPc
+        MOVS     R3,R0
+        MOVS     R2,R6
+        MOVS     R1,R5
+        MOVS     R0,R4
+          CFI FunCall _ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag
+        BL       _ZSt10_Copy_implIPKcPcET0_T_S4_S3_St24_Scalar_ptr_iterator_tag
+        POP      {R4-R6,PC}       ;; return
+          CFI EndBlock cfiBlock28
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_
+          CFI Block cfiBlock29 Using cfiCommon0
+          CFI Function _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_
+        THUMB
+// __interwork __vfp std::array<char, 5U>::iterator std::copy<char const *, std::array<char, 5U>::iterator>(char const *, char const *, std::array<char, 5U>::iterator)
+_ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_:
+        PUSH     {R1,R2,R4-R6,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R6 Frame(CFA, -8)
+          CFI R5 Frame(CFA, -12)
+          CFI R4 Frame(CFA, -16)
+          CFI CFA R13+24
+        MOVS     R4,R0
+        MOVS     R5,R1
+        LDR      R0,[SP, #+4]
+          CFI FunCall _ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_
+        BL       _ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_
+        MOVS     R6,R0
+        MOVS     R0,R5
+          CFI FunCall _ZSt10_UncheckedIPKcET_S2_
+        BL       _ZSt10_UncheckedIPKcET_S2_
+        MOVS     R5,R0
+        MOVS     R0,R4
+          CFI FunCall _ZSt10_UncheckedIPKcET_S2_
+        BL       _ZSt10_UncheckedIPKcET_S2_
+        MOVS     R2,R6
+        MOVS     R1,R5
+          CFI FunCall _ZSt10_Copy_implIPKcPcET0_T_S4_S3_
+        BL       _ZSt10_Copy_implIPKcPcET0_T_S4_S3_
+        MOVS     R1,R0
+        ADD      R0,SP,#+4
+          CFI FunCall _ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
+        BL       _ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
+        LDR      R0,[R0, #+0]
+        POP      {R1,R2,R4-R6,PC}  ;; return
+          CFI EndBlock cfiBlock29
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt10_Tuple_valIfEC1IRfEEOT_
+          CFI Block cfiBlock30 Using cfiCommon0
+          CFI Function _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        THUMB
+// __code __interwork __vfp std::_Tuple_val<float>::_Tuple_val<float &>(float &)
+_ZNSt10_Tuple_valIfEC1IRfEEOT_:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        MOVS     R0,R1
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        LDR      R0,[R0, #+0]
+        STR      R0,[R4, #+0]
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock30
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+          CFI Block cfiBlock31 Using cfiCommon0
+          CFI Function _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        THUMB
+// __code __interwork __vfp std::_Tuple_val<SusuString<5U>>::_Tuple_val<SusuString<5U> &>(SusuString<5U> &)
+_ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        MOVS     R0,R1
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        LDM      R0,{R1-R3}
+        STM      R4,{R1-R3}
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock31
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJfEEC1IRfJEPPvEEOT_DpOT0_
+          CFI Block cfiBlock32 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJfEEC1IRfJEPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float>::tuple<float &, void **>(float &)
+_ZNSt5tupleIJfEEC1IRfJEPPvEEOT_DpOT0_:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R0
+        MOVS     R0,R1
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        BL       _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        MOVS     R0,R4
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock32
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJ10SusuStringILj5EEfEEC1IRS1_JRfEPPvEEOT_DpOT0_
+          CFI Block cfiBlock33 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJ10SusuStringILj5EEfEEC1IRS1_JRfEPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<SusuString<5U>, float>::tuple<SusuString<5U> &, float &, void **>(SusuString<5U> &, float &)
+_ZNSt5tupleIJ10SusuStringILj5EEfEEC1IRS1_JRfEPPvEEOT_DpOT0_:
+        PUSH     {R3-R5,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R5 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R0,R2
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt5tupleIJfEEC2IRfJEPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJfEEC2IRfJEPPvEEOT_DpOT0_
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R1,R0
+        ADDS     R0,R4,#+4
+          CFI FunCall _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        BL       _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        MOVS     R0,R4
+        POP      {R1,R4,R5,PC}    ;; return
+          CFI EndBlock cfiBlock33
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJf10SusuStringILj5EEfEEC1IRfJRS1_S4_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock34 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJf10SusuStringILj5EEfEEC1IRfJRS1_S4_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float, SusuString<5U>, float>::tuple<float &, SusuString<5U> &, float &, void **>(float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJf10SusuStringILj5EEfEEC1IRfJRS1_S4_EPPvEEOT_DpOT0_:
+        PUSH     {R3-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R7 Frame(CFA, -8)
+          CFI R6 Frame(CFA, -12)
+          CFI R5 Frame(CFA, -16)
+          CFI R4 Frame(CFA, -20)
+          CFI CFA R13+24
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R0,R3
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R7,R0
+        MOVS     R0,R6
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R2,R7
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt5tupleIJ10SusuStringILj5EEfEEC2IRS1_JRfEPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJ10SusuStringILj5EEfEEC2IRS1_JRfEPPvEEOT_DpOT0_
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R1,R0
+        ADDS     R0,R4,#+16
+          CFI FunCall _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        BL       _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        MOVS     R0,R4
+        POP      {R1,R4-R7,PC}    ;; return
+          CFI EndBlock cfiBlock34
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC1IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock35 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC1IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<SusuString<5U>, float, SusuString<5U>, float>::tuple<SusuString<5U> &, float &, SusuString<5U> &, float &, void **>(SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC1IRS1_JRfS4_S5_EPPvEEOT_DpOT0_:
+        PUSH     {R4-R8,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R8 Frame(CFA, -8)
+          CFI R7 Frame(CFA, -12)
+          CFI R6 Frame(CFA, -16)
+          CFI R5 Frame(CFA, -20)
+          CFI R4 Frame(CFA, -24)
+          CFI CFA R13+24
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+        LDR      R0,[SP, #+24]
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R8,R0
+        MOVS     R0,R7
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R7,R0
+        MOVS     R0,R6
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R3,R8
+        MOVS     R2,R7
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt5tupleIJf10SusuStringILj5EEfEEC2IRfJRS1_S4_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJf10SusuStringILj5EEfEEC2IRfJRS1_S4_EPPvEEOT_DpOT0_
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R1,R0
+        ADDS     R0,R4,#+20
+          CFI FunCall _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        BL       _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        MOVS     R0,R4
+        POP      {R4-R8,PC}       ;; return
+          CFI EndBlock cfiBlock35
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC1IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock36 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC1IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float, SusuString<5U>, float, SusuString<5U>, float>::tuple<float &, SusuString<5U> &, float &, SusuString<5U> &, float &, void **>(float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC1IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_:
+        PUSH     {R3-R9,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R9 Frame(CFA, -8)
+          CFI R8 Frame(CFA, -12)
+          CFI R7 Frame(CFA, -16)
+          CFI R6 Frame(CFA, -20)
+          CFI R5 Frame(CFA, -24)
+          CFI R4 Frame(CFA, -28)
+          CFI CFA R13+32
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOV      R8,R3
+        LDR      R9,[SP, #+32]
+        LDR      R0,[SP, #+36]
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R7,R0
+        MOV      R0,R9
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOV      R9,R0
+        MOV      R0,R8
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R8,R0
+        MOVS     R0,R6
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        STR      R7,[SP, #+0]
+        MOV      R3,R9
+        MOV      R2,R8
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC2IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC2IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R1,R0
+        ADDS     R0,R4,#+32
+          CFI FunCall _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        BL       _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        MOVS     R0,R4
+        POP      {R1,R4-R9,PC}    ;; return
+          CFI EndBlock cfiBlock36
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock37 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>::tuple<SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &, void **>(SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_:
+        PUSH     {R2-R10,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R10 Frame(CFA, -8)
+          CFI R9 Frame(CFA, -12)
+          CFI R8 Frame(CFA, -16)
+          CFI R7 Frame(CFA, -20)
+          CFI R6 Frame(CFA, -24)
+          CFI R5 Frame(CFA, -28)
+          CFI R4 Frame(CFA, -32)
+          CFI CFA R13+40
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+        LDR      R10,[SP, #+40]
+        LDR      R9,[SP, #+44]
+        LDR      R0,[SP, #+48]
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R8,R0
+        MOV      R0,R9
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOV      R9,R0
+        MOV      R0,R10
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R10,R0
+        MOVS     R0,R7
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R7,R0
+        MOVS     R0,R6
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        STR      R8,[SP, #+4]
+        STR      R9,[SP, #+0]
+        MOV      R3,R10
+        MOVS     R2,R7
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC2IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC2IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R1,R0
+        ADDS     R0,R4,#+36
+          CFI FunCall _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        BL       _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        MOVS     R0,R4
+        POP      {R1,R2,R4-R10,PC}  ;; return
+          CFI EndBlock cfiBlock37
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC1IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock38 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC1IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>::tuple<float &, SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &, void **>(float &, SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC1IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_:
+        PUSH     {R1-R11,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R11 Frame(CFA, -8)
+          CFI R10 Frame(CFA, -12)
+          CFI R9 Frame(CFA, -16)
+          CFI R8 Frame(CFA, -20)
+          CFI R7 Frame(CFA, -24)
+          CFI R6 Frame(CFA, -28)
+          CFI R5 Frame(CFA, -32)
+          CFI R4 Frame(CFA, -36)
+          CFI CFA R13+48
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOV      R11,R2
+        MOV      R10,R3
+        LDR      R9,[SP, #+48]
+        LDR      R8,[SP, #+52]
+        LDR      R7,[SP, #+56]
+        LDR      R0,[SP, #+60]
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R6,R0
+        MOVS     R0,R7
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R7,R0
+        MOV      R0,R8
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R8,R0
+        MOV      R0,R9
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOV      R9,R0
+        MOV      R0,R10
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R10,R0
+        MOV      R0,R11
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        STR      R6,[SP, #+8]
+        STR      R7,[SP, #+4]
+        STR      R8,[SP, #+0]
+        MOV      R3,R9
+        MOV      R2,R10
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC2IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC2IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R1,R0
+        ADDS     R0,R4,#+48
+          CFI FunCall _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        BL       _ZNSt10_Tuple_valIfEC1IRfEEOT_
+        MOVS     R0,R4
+        POP      {R1-R11,PC}      ;; return
+          CFI EndBlock cfiBlock38
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_S4_S5_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock39 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_S4_S5_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>::tuple<SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &, void **>(SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_S4_S5_EPPvEEOT_DpOT0_:
+        PUSH     {R1,R4-R11,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R11 Frame(CFA, -8)
+          CFI R10 Frame(CFA, -12)
+          CFI R9 Frame(CFA, -16)
+          CFI R8 Frame(CFA, -20)
+          CFI R7 Frame(CFA, -24)
+          CFI R6 Frame(CFA, -28)
+          CFI R5 Frame(CFA, -32)
+          CFI R4 Frame(CFA, -36)
+          CFI CFA R13+40
+        SUB      SP,SP,#+16
+          CFI CFA R13+56
+        MOVS     R4,R0
+        MOV      R11,R2
+        MOV      R10,R3
+        LDR      R9,[SP, #+56]
+        LDR      R8,[SP, #+60]
+        LDR      R7,[SP, #+64]
+        LDR      R6,[SP, #+68]
+        LDR      R0,[SP, #+72]
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R5,R0
+        MOVS     R0,R6
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R6,R0
+        MOVS     R0,R7
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R7,R0
+        MOV      R0,R8
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOV      R8,R0
+        MOV      R0,R9
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R9,R0
+        MOV      R0,R10
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOV      R10,R0
+        MOV      R0,R11
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        STR      R5,[SP, #+12]
+        STR      R6,[SP, #+8]
+        STR      R7,[SP, #+4]
+        STR      R8,[SP, #+0]
+        MOV      R3,R9
+        MOV      R2,R10
+        MOVS     R1,R0
+        MOVS     R0,R4
+          CFI FunCall _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC2IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC2IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        LDR      R0,[SP, #+16]
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R1,R0
+        ADDS     R0,R4,#+52
+          CFI FunCall _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        BL       _ZNSt10_Tuple_valI10SusuStringILj5EEEC1IRS1_EEOT_
+        MOVS     R0,R4
+        ADD      SP,SP,#+20
+          CFI CFA R13+36
+        POP      {R4-R11,PC}      ;; return
+          CFI EndBlock cfiBlock39
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJfEEC2IRfJEPPvEEOT_DpOT0_
+          CFI Block cfiBlock40 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJfEEC2IRfJEPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float>::subobject tuple(float &)
+_ZNSt5tupleIJfEEC2IRfJEPPvEEOT_DpOT0_:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZNSt5tupleIJfEEC1IRfJEPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJfEEC1IRfJEPPvEEOT_DpOT0_
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock40
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJ10SusuStringILj5EEfEEC2IRS1_JRfEPPvEEOT_DpOT0_
+          CFI Block cfiBlock41 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJ10SusuStringILj5EEfEEC2IRS1_JRfEPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<SusuString<5U>, float>::subobject tuple(SusuString<5U> &, float &)
+_ZNSt5tupleIJ10SusuStringILj5EEfEEC2IRS1_JRfEPPvEEOT_DpOT0_:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZNSt5tupleIJ10SusuStringILj5EEfEEC1IRS1_JRfEPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJ10SusuStringILj5EEfEEC1IRS1_JRfEPPvEEOT_DpOT0_
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock41
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJf10SusuStringILj5EEfEEC2IRfJRS1_S4_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock42 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJf10SusuStringILj5EEfEEC2IRfJRS1_S4_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float, SusuString<5U>, float>::subobject tuple(float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJf10SusuStringILj5EEfEEC2IRfJRS1_S4_EPPvEEOT_DpOT0_:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZNSt5tupleIJf10SusuStringILj5EEfEEC1IRfJRS1_S4_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJf10SusuStringILj5EEfEEC1IRfJRS1_S4_EPPvEEOT_DpOT0_
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock42
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC2IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock43 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC2IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<SusuString<5U>, float, SusuString<5U>, float>::subobject tuple(SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC2IRS1_JRfS4_S5_EPPvEEOT_DpOT0_:
+        PUSH     {R2-R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+16
+        LDR      R4,[SP, #+16]
+        STR      R4,[SP, #+0]
+          CFI FunCall _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC1IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJ10SusuStringILj5EEfS1_fEEC1IRS1_JRfS4_S5_EPPvEEOT_DpOT0_
+        POP      {R1,R2,R4,PC}    ;; return
+          CFI EndBlock cfiBlock43
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC2IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock44 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC2IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float, SusuString<5U>, float, SusuString<5U>, float>::subobject tuple(float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC2IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_:
+        PUSH     {R2-R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+16
+        LDR      R4,[SP, #+20]
+        STR      R4,[SP, #+4]
+        LDR      R4,[SP, #+16]
+        STR      R4,[SP, #+0]
+          CFI FunCall _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC1IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJf10SusuStringILj5EEfS1_fEEC1IRfJRS1_S4_S5_S4_EPPvEEOT_DpOT0_
+        POP      {R1,R2,R4,PC}    ;; return
+          CFI EndBlock cfiBlock44
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC2IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock45 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC2IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>::subobject tuple(SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC2IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_:
+        PUSH     {R0-R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+24
+        LDR      R4,[SP, #+32]
+        STR      R4,[SP, #+8]
+        LDR      R4,[SP, #+28]
+        STR      R4,[SP, #+4]
+        LDR      R4,[SP, #+24]
+        STR      R4,[SP, #+0]
+          CFI FunCall _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_EPPvEEOT_DpOT0_
+        ADD      SP,SP,#+16
+          CFI CFA R13+8
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock45
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC2IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+          CFI Block cfiBlock46 Using cfiCommon0
+          CFI Function _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC2IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        THUMB
+// __code __interwork __vfp std::tuple<float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>::subobject tuple(float &, SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC2IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_:
+        PUSH     {R0-R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+24
+        LDR      R4,[SP, #+36]
+        STR      R4,[SP, #+12]
+        LDR      R4,[SP, #+32]
+        STR      R4,[SP, #+8]
+        LDR      R4,[SP, #+28]
+        STR      R4,[SP, #+4]
+        LDR      R4,[SP, #+24]
+        STR      R4,[SP, #+0]
+          CFI FunCall _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC1IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJf10SusuStringILj5EEfS1_fS1_fEEC1IRfJRS1_S4_S5_S4_S5_S4_EPPvEEOT_DpOT0_
+        ADD      SP,SP,#+16
+          CFI CFA R13+8
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock46
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt10make_tupleIJR10SusuStringILj5EERfS2_S3_S2_S3_S2_S3_EESt5tupleIJDpNSt10_UnrefwrapIT_E4typeEEEDpOS6_
+          CFI Block cfiBlock47 Using cfiCommon0
+          CFI Function _ZSt10make_tupleIJR10SusuStringILj5EERfS2_S3_S2_S3_S2_S3_EESt5tupleIJDpNSt10_UnrefwrapIT_E4typeEEEDpOS6_
+        THUMB
+// __interwork __vfp void std::make_tuple<SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &>(SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &, SusuString<5U> &, float &)
+_ZSt10make_tupleIJR10SusuStringILj5EERfS2_S3_S2_S3_S2_S3_EESt5tupleIJDpNSt10_UnrefwrapIT_E4typeEEEDpOS6_:
+        PUSH     {R0,R4-R11,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R11 Frame(CFA, -8)
+          CFI R10 Frame(CFA, -12)
+          CFI R9 Frame(CFA, -16)
+          CFI R8 Frame(CFA, -20)
+          CFI R7 Frame(CFA, -24)
+          CFI R6 Frame(CFA, -28)
+          CFI R5 Frame(CFA, -32)
+          CFI R4 Frame(CFA, -36)
+          CFI CFA R13+40
+        SUB      SP,SP,#+24
+          CFI CFA R13+64
+        MOV      R11,R1
+        MOV      R10,R2
+        MOV      R9,R3
+        LDR      R8,[SP, #+64]
+        LDR      R7,[SP, #+68]
+        LDR      R6,[SP, #+72]
+        LDR      R5,[SP, #+76]
+        LDR      R0,[SP, #+80]
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R4,R0
+        MOVS     R0,R5
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R5,R0
+        MOVS     R0,R6
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOVS     R6,R0
+        MOVS     R0,R7
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOVS     R7,R0
+        MOV      R0,R8
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R8,R0
+        MOV      R0,R9
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        MOV      R9,R0
+        MOV      R0,R10
+          CFI FunCall _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
+        MOV      R10,R0
+        MOV      R0,R11
+          CFI FunCall _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+        STR      R4,[SP, #+16]
+        STR      R5,[SP, #+12]
+        STR      R6,[SP, #+8]
+        STR      R7,[SP, #+4]
+        STR      R8,[SP, #+0]
+        MOV      R3,R9
+        MOV      R2,R10
+        MOVS     R1,R0
+        LDR      R0,[SP, #+24]
+          CFI FunCall _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_S4_S5_EPPvEEOT_DpOT0_
+        BL       _ZNSt5tupleIJ10SusuStringILj5EEfS1_fS1_fS1_fEEC1IRS1_JRfS4_S5_S4_S5_S4_S5_EPPvEEOT_DpOT0_
+        ADD      SP,SP,#+28
+          CFI CFA R13+36
+        POP      {R4-R11,PC}      ;; return
+          CFI EndBlock cfiBlock47
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5arrayIcLj5EE5beginEv
+          CFI Block cfiBlock48 Using cfiCommon0
+          CFI Function _ZNSt5arrayIcLj5EE5beginEv
+        THUMB
+// __interwork __vfp std::array<char, 5U>::iterator std::array<char, 5U>::begin()
+_ZNSt5arrayIcLj5EE5beginEv:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall _ZSt9addressofIcEPT_RS0_
+        BL       _ZSt9addressofIcEPT_RS0_
+        MOVS     R2,#+0
+        MOVS     R1,R0
+        MOV      R0,SP
+          CFI FunCall _ZNSt15_Array_iteratorIcLj5EEC1EPcj
+        BL       _ZNSt15_Array_iteratorIcLj5EEC1EPcj
+        LDR      R0,[R0, #+0]
+        POP      {R1,PC}          ;; return
+          CFI EndBlock cfiBlock48
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt5arrayIPK6IUnitsLj3EEixEj
+          CFI Block cfiBlock49 Using cfiCommon0
+          CFI Function _ZNSt5arrayIPK6IUnitsLj3EEixEj
+          CFI NoCalls
+        THUMB
+// __interwork __vfp IUnits const *& std::array<IUnits const *, 3U>::operator[](size_t)
+_ZNSt5arrayIPK6IUnitsLj3EEixEj:
+        ADD      R0,R0,R1, LSL #+2
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock49
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN10SusuStringILj5EEC1Ev
+          CFI Block cfiBlock50 Using cfiCommon0
+          CFI Function _ZN10SusuStringILj5EEC1Ev
+          CFI NoCalls
+        THUMB
+// __code __interwork __vfp SusuString<5U>::SusuString()
+_ZN10SusuStringILj5EEC1Ev:
+        MOVS     R1,#+5
+        STR      R1,[R0, #+8]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock50
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+          CFI Block cfiBlock51 Using cfiCommon0
+          CFI Function _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+        THUMB
+// __interwork __vfp void SusuString<5U>::Set<5U>(char const (&)[5])
+_ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc:
+        PUSH     {R4,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI R4 Frame(CFA, -8)
+          CFI CFA R13+8
+        MOVS     R4,R1
+          CFI FunCall _ZNSt5arrayIcLj5EE5beginEv
+        BL       _ZNSt5arrayIcLj5EE5beginEv
+        MOVS     R2,R0
+        ADDS     R1,R4,#+4
+        MOVS     R0,R4
+          CFI FunCall _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_
+        BL       _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_
+        POP      {R4,PC}          ;; return
+          CFI EndBlock cfiBlock51
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+          CFI Block cfiBlock52 Using cfiCommon0
+          CFI Function _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+        THUMB
+// __interwork __vfp OsWrapper::TicksPerSecond std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+_ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE:
+        PUSH     {R5-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+          CFI FunCall _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+        BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+        MOVS     R2,#+10
+        MOVS     R3,#+0
+          CFI FunCall __aeabi_ldivmod
+        BL       __aeabi_ldivmod
+        STR      R0,[SP, #+4]
+        ADD      R1,SP,#+4
+        MOV      R0,SP
+          CFI FunCall _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+        BL       _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+        LDR      R0,[SP, #+0]
+        POP      {R1-R3,PC}       ;; return
+          CFI EndBlock cfiBlock52
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+          CFI Block cfiBlock53 Using cfiCommon0
+          CFI Function _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+          CFI NoCalls
+        THUMB
+// __code __interwork __vfp std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::duration<uint32_t, void>(uint32_t const &)
+_ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_:
+        LDR      R1,[R1, #+0]
+        STR      R1,[R0, #+0]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock53
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+          CFI Block cfiBlock54 Using cfiCommon0
+          CFI Function _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp __int64_t std::chrono::duration<__int64_t, std::milli>::count() const
+_ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv:
+        LDRD     R0,R1,[R0, #+0]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock54
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+          CFI Block cfiBlock55 Using cfiCommon0
+          CFI Function _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp uint32_t std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
+_ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv:
+        LDR      R0,[R0, #+0]
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock55
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9OsWrapper11RtosWrapper6wSleepEj
+          CFI Block cfiBlock56 Using cfiCommon0
+          CFI Function _ZN9OsWrapper11RtosWrapper6wSleepEj
+        THUMB
+// __interwork __vfp void OsWrapper::RtosWrapper::wSleep(uint32_t)
+_ZN9OsWrapper11RtosWrapper6wSleepEj:
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+          CFI FunCall vTaskDelay
+        BL       vTaskDelay
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock56
 
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        DATA
-??DataTable1:
-        DATA32
-        DC32     ?_6
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+          CFI Block cfiBlock57 Using cfiCommon0
+          CFI Function _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+        THUMB
+// __interwork __vfp void OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+_ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE:
+        PUSH     {R0,R1,R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+        SUB      SP,SP,#+8
+          CFI CFA R13+24
+        ADD      R0,SP,#+8
+          CFI FunCall _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+        BL       _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+        STR      R0,[SP, #+0]
+        MOV      R0,SP
+          CFI FunCall _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+        BL       _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+          CFI FunCall _ZN9OsWrapper11RtosWrapper6wSleepEj
+        BL       _ZN9OsWrapper11RtosWrapper6wSleepEj
+        ADD      SP,SP,#+20
+          CFI CFA R13+4
+        POP      {PC}             ;; return
+          CFI EndBlock cfiBlock57
 
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZNK6Kelvin14GetTemperatureEf
+          CFI Block cfiBlock58 Using cfiCommon0
+          CFI Function _ZNK6Kelvin14GetTemperatureEf
+        THUMB
+// __interwork __vfp std::pair<SusuStringView, float> Kelvin::GetTemperature(float) const
+_ZNK6Kelvin14GetTemperatureEf:
+        PUSH     {R5-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+        VLDR.W   S1,??GetTemperature_0  ;; 0x43889333
+        VADD.F32 S0,S0,S1
+        VSTR     S0,[SP, #+0]
+        LDR.N    R1,??GetTemperature_0+0x4
+        LDRD     R2,R3,[R1, #+0]
+        STRD     R2,R3,[SP, #+4]
+        MOV      R2,SP
+        ADD      R1,SP,#+4
+          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        POP      {R0-R2,PC}       ;; return
+        Nop      
         DATA
-??DataTable1_1:
+??GetTemperature_0:
         DATA32
-        DC32     _ZSt4cout
+        DC32     0x43889333
+        DC32     ?_1
+          CFI EndBlock cfiBlock58
 
-        SECTION `.text`:CODE:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZNK10Fahrenheit14GetTemperatureEf
+          CFI Block cfiBlock59 Using cfiCommon0
+          CFI Function _ZNK10Fahrenheit14GetTemperatureEf
+        THUMB
+// __interwork __vfp std::pair<SusuStringView, float> Fahrenheit::GetTemperature(float) const
+_ZNK10Fahrenheit14GetTemperatureEf:
+        PUSH     {R5-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+        VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
+        VADD.F32 S0,S0,S1
+        VSTR     S0,[SP, #+0]
+        LDR.N    R1,??GetTemperature_1+0x4
+        LDRD     R2,R3,[R1, #+0]
+        STRD     R2,R3,[SP, #+4]
+        MOV      R2,SP
+        ADD      R1,SP,#+4
+          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        POP      {R0-R2,PC}       ;; return
+        Nop      
         DATA
-??DataTable1_2:
+??GetTemperature_1:
         DATA32
-        DC32     _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        DC32     0x42000000
+        DC32     ?_3
+          CFI EndBlock cfiBlock59
 
-        SECTION `.iar_vfe_vtableinfo_ZTVSt5ctypeIcE`:DATA:NOALLOC:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZTVSt5ctypeIcE
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZNK7Celsius14GetTemperatureEf
+          CFI Block cfiBlock60 Using cfiCommon0
+          CFI Function _ZNK7Celsius14GetTemperatureEf
+        THUMB
+// __interwork __vfp std::pair<SusuStringView, float> Celsius::GetTemperature(float) const
+_ZNK7Celsius14GetTemperatureEf:
+        PUSH     {R5-R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+16
+        VSTR     S0,[SP, #+0]
+        LDR.N    R1,??GetTemperature_2
+        LDRD     R2,R3,[R1, #+0]
+        STRD     R2,R3,[SP, #+4]
+        MOV      R2,SP
+        ADD      R1,SP,#+4
+          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        POP      {R0-R2,PC}       ;; return
+        Nop      
         DATA
-        DC32    _ZTVSt5ctypeIcE
-        DC32    4
-        DC32    1
-        DC32    _ZTISt5ctypeIcE
-        DC32    1
-        DC32    2
-        DC32    0
+??GetTemperature_2:
+        DATA32
+        DC32     ?_5
+          CFI EndBlock cfiBlock60
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv
+          CFI Block cfiBlock61 Using cfiCommon0
+          CFI Function _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv
+          CFI NoCalls
+        THUMB
+// __interwork __vfp void Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::SetNextUnits()
+_ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv:
+        LDR      R1,[R0, #+16]
+        CMP      R1,#+3
+        BCS.N    ??SetNextUnits_0
+        LDR      R1,[R0, #+16]
+        ADDS     R2,R1,#+1
+        STR      R2,[R0, #+16]
+        B.N      ??SetNextUnits_1
+??SetNextUnits_0:
+        MOVS     R1,#+0
+        STR      R1,[R0, #+16]
+        LDR      R0,[R0, #+16]
+??SetNextUnits_1:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock61
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
+          CFI Block cfiBlock62 Using cfiCommon0
+          CFI Function _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
+        THUMB
+// __interwork __softfp vFormat Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Get(float, ...)
+_ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz:
+        PUSH     {R3}
+          CFI CFA R13+4
+        PUSH     {R3,R4,LR}
+          CFI R14 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        VPUSH    {D8}
+          CFI D8 Frame(CFA, -24)
+          CFI CFA R13+24
+        SUB      SP,SP,#+24
+          CFI CFA R13+48
+        MOVS     R4,R0
+        MOVS     R0,R1
+        VMOV     S16,R2
+        LDR      R1,[R0, #+16]
+        ADDS     R0,R0,#+4
+          CFI FunCall _ZNSt5arrayIPK6IUnitsLj3EEixEj
+        BL       _ZNSt5arrayIPK6IUnitsLj3EEixEj
+        LDR      R1,[R0, #+0]
+        VMOV.F32 S0,S16
+        ADD      R0,SP,#+12
+        LDR      R2,[R1, #+0]
+        LDR      R2,[R2, #+0]
+          CFI FunCall
+        BLX      R2
+        LDRD     R0,R1,[SP, #+12]
+        STRD     R0,R1,[SP, #+4]
+        LDR      R0,[SP, #+20]
+        STR      R0,[SP, #+0]
+        MOV      R2,SP
+        ADD      R1,SP,#+4
+        MOVS     R0,R4
+          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        ADD      SP,SP,#+24
+          CFI CFA R13+24
+        VPOP     {D8}
+          CFI D8 SameValue
+          CFI CFA R13+16
+        POP      {R0,R4}
+          CFI R4 SameValue
+          CFI CFA R13+8
+        LDR      PC,[SP], #+8     ;; return
+          CFI EndBlock cfiBlock62
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN8Pressure3GetEfz
+          CFI Block cfiBlock63 Using cfiCommon0
+          CFI Function _ZN8Pressure3GetEfz
+        THUMB
+// __interwork __softfp vFormat Pressure::Get(float, ...)
+_ZN8Pressure3GetEfz:
+        PUSH     {R3}
+          CFI CFA R13+4
+        PUSH     {R4-R7,LR}
+          CFI R14 Frame(CFA, -8)
+          CFI CFA R13+24
+        VMOV     S0,R2
+        LDR.N    R1,??Get_0
+        LDRD     R2,R3,[R1, #+0]
+        STRD     R2,R3,[SP, #+4]
+        VSTR     S0,[SP, #+0]
+        MOV      R2,SP
+        ADD      R1,SP,#+4
+          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        POP      {R0-R3}
+          CFI CFA R13+8
+        LDR      PC,[SP], #+8     ;; return
+        DATA
+??Get_0:
+        DATA32
+        DC32     ?_7
+          CFI EndBlock cfiBlock63
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN8Humidity3GetEfz
+          CFI Block cfiBlock64 Using cfiCommon0
+          CFI Function _ZN8Humidity3GetEfz
+        THUMB
+// __interwork __softfp vFormat Humidity::Get(float, ...)
+_ZN8Humidity3GetEfz:
+        PUSH     {R3}
+          CFI CFA R13+4
+        PUSH     {R4-R7,LR}
+          CFI R14 Frame(CFA, -8)
+          CFI CFA R13+24
+        VMOV     S0,R2
+        LDR.N    R1,??Get_1
+        LDRD     R2,R3,[R1, #+0]
+        STRD     R2,R3,[SP, #+4]
+        VSTR     S0,[SP, #+0]
+        MOV      R2,SP
+        ADD      R1,SP,#+4
+          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        POP      {R0-R3}
+          CFI CFA R13+8
+        LDR      PC,[SP], #+8     ;; return
+        DATA
+??Get_1:
+        DATA32
+        DC32     ?_9
+          CFI EndBlock cfiBlock64
+
+        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION_GROUP _ZN8DewPoint3GetEfz
+          CFI Block cfiBlock65 Using cfiCommon0
+          CFI Function _ZN8DewPoint3GetEfz
+        THUMB
+// __interwork __softfp vFormat DewPoint::Get(float, ...)
+_ZN8DewPoint3GetEfz:
+        PUSH     {R3}
+          CFI CFA R13+4
+        PUSH     {R3,R4,LR}
+          CFI R14 Frame(CFA, -8)
+          CFI R4 Frame(CFA, -12)
+          CFI CFA R13+16
+        VPUSH    {D8-D9}
+          CFI D9 Frame(CFA, -24)
+          CFI D8 Frame(CFA, -32)
+          CFI CFA R13+32
+        SUB      SP,SP,#+16
+          CFI CFA R13+48
+        MOVS     R4,R0
+        VMOV     S16,R2
+        ADD      R0,SP,#+44
+        ADDS     R0,R0,#+7
+        BICS     R0,R0,#0x7
+        VLDR     D0,[R0, #0]
+        ADDS     R0,R0,#+8
+        VMOV     R0,R1,D0
+          CFI FunCall __aeabi_d2f
+        BL       __aeabi_d2f
+        VMOV     S0,R0
+        VLDR.W   S17,??Get_2      ;; 0x418a28f6
+        VLDR.W   S18,??Get_2+0x4  ;; 0x436db333
+        VLDR.W   S1,??Get_2+0x8   ;; 0x42c80000
+        VDIV.F32 S0,S0,S1
+          CFI FunCall logf
+        BL       logf
+        VMUL.F32 S1,S17,S16
+        VADD.F32 S2,S18,S16
+        VDIV.F32 S1,S1,S2
+        VADD.F32 S0,S1,S0
+        VMUL.F32 S1,S18,S0
+        VSUB.F32 S0,S17,S0
+        VDIV.F32 S0,S1,S0
+        VSTR     S0,[SP, #+0]
+        LDR.N    R0,??Get_2+0xC
+        LDRD     R2,R3,[R0, #+0]
+        STRD     R2,R3,[SP, #+4]
+        MOV      R2,SP
+        ADD      R1,SP,#+4
+        MOVS     R0,R4
+          CFI FunCall _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
+        ADD      SP,SP,#+16
+          CFI CFA R13+32
+        VPOP     {D8-D9}
+          CFI D8 SameValue
+          CFI D9 SameValue
+          CFI CFA R13+16
+        POP      {R0,R4}
+          CFI R4 SameValue
+          CFI CFA R13+8
+        LDR      PC,[SP], #+8     ;; return
+        Nop      
+        DATA
+??Get_2:
+        DATA32
+        DC32     0x418a28f6
+        DC32     0x436db333
+        DC32     0x42c80000
+        DC32     ?_11
+          CFI EndBlock cfiBlock65
 
         SECTION `.iar_vfe_vtableinfo_ZTV6Kelvin`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
@@ -2336,7 +2534,7 @@ _ZN14SensorDirector18HandleButtonPushedEv:
         DC32    1
         DC32    2
         DC32    0
-        DC32    _ZTIN9OsWrapper6ThreadILj128EEE
+        DC32    _ZTIN9OsWrapper6ThreadILj256EEE
         DC32    0
         DC32    1
         DC32    _ZTI14SensorDirector
@@ -2346,7 +2544,7 @@ _ZN14SensorDirector18HandleButtonPushedEv:
         DC32    _ZTIN9OsWrapper7IThreadE
         DC32    0
         DC32    1
-        DC32    _ZTIN9OsWrapper6ThreadILj128EEE
+        DC32    _ZTIN9OsWrapper6ThreadILj256EEE
         DC32    0
         DC32    1
         DC32    _ZTI14SensorDirector
@@ -2354,92 +2552,22 @@ _ZN14SensorDirector18HandleButtonPushedEv:
         DC32    2
         DC32    0
 
-        SECTION `.iar_vfe_vtableinfo_ZTVSt11_Wrap_facetISt5ctypeIcEE`:DATA:NOALLOC:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZTVSt11_Wrap_facetISt5ctypeIcEE
+        SECTION `.init_array`:CODE:ROOT(2)
+        SECTION_TYPE SHT_INIT_ARRAY, 0
         DATA
-        DC32    _ZTVSt11_Wrap_facetISt5ctypeIcEE
-        DC32    4
-        DC32    2
-        DC32    _ZTISt11_Wrap_facetISt5ctypeIcEE
-        DC32    1
-        DC32    2
-        DC32    0
-        DC32    _ZTISt5ctypeIcE
-        DC32    0
-        DC32    1
-        DC32    _ZTISt11_Wrap_facetISt5ctypeIcEE
-        DC32    1
-        DC32    2
-        DC32    0
+        DC32    RELOC_ARM_TARGET1 __sti__routine
 
-        SECTION `.iar_vfe_vcallinfo_ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv`:DATA:NOALLOC:NOROOT(2)
+        SECTION `.iar_vfe_vcallinfo_ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
+        SECTION_GROUP _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
         DATA
-        DC32    _ZNSt15basic_streambufIcSt11char_traitsIcEE7pubsyncEv
+        DC32    _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz
         DC32    0
         DC32    0
         DC32    1
-        DC32    _ZTISt15basic_streambufIcSt11char_traitsIcEE
+        DC32    _ZTI6IUnits
         DC32    1
-        DC32    16384
-        DC32    0
-        DC32    0
-
-        SECTION `.iar_vfe_vcallinfo_ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc`:DATA:NOALLOC:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        DATA
-        DC32    _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc
-        DC32    0
-        DC32    0
         DC32    1
-        DC32    _ZTISt15basic_streambufIcSt11char_traitsIcEE
-        DC32    1
-        DC32    16
-        DC32    0
-        DC32    0
-
-        SECTION `.iar_vfe_vcallinfo_ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci`:DATA:NOALLOC:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci
-        DATA
-        DC32    _ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci
-        DC32    0
-        DC32    0
-        DC32    1
-        DC32    _ZTISt15basic_streambufIcSt11char_traitsIcEE
-        DC32    1
-        DC32    1024
-        DC32    0
-        DC32    0
-
-        SECTION `.iar_vfe_vcallinfo_ZNSo12_Sentry_baseC1ERSo`:DATA:NOALLOC:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZNSo12_Sentry_baseC1ERSo
-        DATA
-        DC32    _ZNSo12_Sentry_baseC1ERSo
-        DC32    0
-        DC32    0
-        DC32    1
-        DC32    _ZTISt15basic_streambufIcSt11char_traitsIcEE
-        DC32    1
-        DC32    4
-        DC32    0
-        DC32    0
-
-        SECTION `.iar_vfe_vcallinfo_ZNSo12_Sentry_baseD1Ev`:DATA:NOALLOC:NOROOT(2)
-        SECTION_TYPE SHT_PROGBITS, 0
-        SECTION_GROUP _ZNSo12_Sentry_baseD1Ev
-        DATA
-        DC32    _ZNSo12_Sentry_baseD1Ev
-        DC32    0
-        DC32    0
-        DC32    1
-        DC32    _ZTISt15basic_streambufIcSt11char_traitsIcEE
-        DC32    1
-        DC32    8
         DC32    0
         DC32    0
 
@@ -2449,14 +2577,17 @@ _ZN14SensorDirector18HandleButtonPushedEv:
         DC32 0
 
         END
+//   44 
+//   45 
 // 
-//     5 bytes in section .bss
-//   557 bytes in section .rodata
-// 1'828 bytes in section .text
+//    64 bytes in section .bss
+//     4 bytes in section .init_array
+//   433 bytes in section .rodata
+// 2'146 bytes in section .text
 // 
-// 36 bytes of CODE  memory (+ 1'792 bytes shared)
-// 46 bytes of CONST memory (+   511 bytes shared)
-//  0 bytes of DATA  memory (+     5 bytes shared)
+// 416 bytes of CODE  memory (+ 1'734 bytes shared)
+//  74 bytes of CONST memory (+   359 bytes shared)
+//  64 bytes of DATA  memory
 //
 //Errors: none
-//Warnings: none
+//Warnings: 3

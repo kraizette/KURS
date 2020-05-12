@@ -20,18 +20,18 @@ public:
   
 private:
   void DrawFirstString(SusuString<40>& String) {
-    myDisplay.DrawString(20, 35, String, &Font24);
+    myDisplay.DrawString(10, 35, String, &Font24);
   }
   
   void DrawSecondString(SusuString<40>& String) {
-    myDisplay.DrawString(20, 100, String, &Font24);
+    myDisplay.DrawString(10, 100, String, &Font24);
   }
   
   void DrawThirdString(SusuString<40>& String) {
-    myDisplay.DrawString(20, 165, String, &Font24);
+    myDisplay.DrawString(10, 165, String, &Font24);
   }
   
   void DrawFourthString(SusuString<40>& String) {
-    myDisplay.DrawString(20, 230, String, &Font24);
+    myDisplay.DrawString(10, 230, String, &Font24);
   }
 };

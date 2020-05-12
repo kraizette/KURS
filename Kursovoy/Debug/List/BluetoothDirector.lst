@@ -6,10 +6,10 @@
 #    Cpu mode     =  
 #    Endian       =  little
 #    Source file  =
-#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWF6B9.tmp
-#        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
+#        -f C:\Users\User\AppData\Local\Temp\EWF6B8.tmp
+#        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\Obj --no_cse
@@ -89,16 +89,14 @@
 #        -Ol --c++ --no_exceptions --no_rtti)
 #    Locale       =  C
 #    List file    =
-#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List\DisplayDirector.lst
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List\BluetoothDirector.lst
 #    Object file  =
-#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\Obj\DisplayDirector.o
+#        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\Obj\BluetoothDirector.o
 #
 ###############################################################################
 
-D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
-      1          //DisplayDirector.cpp
-      2          
-      3          #include "DisplayDirector.hpp" 
+D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
+      1          #include "BluetoothDirector.hpp" 
 
    \                                 In section .text, align 2
    \   __interwork __vfp char *std::_Addressof<char>(char &, std::false_type)
@@ -690,36 +688,48 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0xC   0xBD10             POP      {R4,PC}          ;; return
 
    \                                 In section .text, align 2
-   \   __interwork __vfp void Format::GetDisplayFormat(tFormatData const &)
-   \                     _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
+   \   __interwork __vfp void Bluetooth::Send(SusuString<40U> &)
+   \                     _ZN9Bluetooth4SendER10SusuStringILj40EE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0002             MOVS     R2,R0
+   \        0x4   0x6810             LDR      R0,[R2, #+0]
+   \        0x6   0x6812             LDR      R2,[R2, #+0]
+   \        0x8   0x6812             LDR      R2,[R2, #+0]
+   \        0xA   0x6812             LDR      R2,[R2, #+0]
+   \        0xC   0x4790             BLX      R2
+   \        0xE   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void Format::GetBlueToothFormat(tFormatData const &)
+   \                     _ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
    \        0x0   0xB530             PUSH     {R4,R5,LR}
    \        0x2   0xB0B7             SUB      SP,SP,#+220
    \        0x4   0x0004             MOVS     R4,R0
    \        0x6   0x000D             MOVS     R5,R1
    \        0x8   0x0029             MOVS     R1,R5
    \        0xA   0x4668             MOV      R0,SP
-   \        0xC   0x....'....        BL       _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+   \        0xC   0x....'....        BL       _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
    \       0x10   0xA80B             ADD      R0,SP,#+44
    \       0x12   0x4669             MOV      R1,SP
    \       0x14   0x222C             MOVS     R2,#+44
    \       0x16   0x....'....        BL       __aeabi_memcpy4
    \       0x1A   0x0029             MOVS     R1,R5
    \       0x1C   0x4668             MOV      R0,SP
-   \       0x1E   0x....'....        BL       _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+   \       0x1E   0x....'....        BL       _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
    \       0x22   0xA816             ADD      R0,SP,#+88
    \       0x24   0x4669             MOV      R1,SP
    \       0x26   0x222C             MOVS     R2,#+44
    \       0x28   0x....'....        BL       __aeabi_memcpy4
    \       0x2C   0x0029             MOVS     R1,R5
    \       0x2E   0x4668             MOV      R0,SP
-   \       0x30   0x....'....        BL       _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+   \       0x30   0x....'....        BL       _ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
    \       0x34   0xA821             ADD      R0,SP,#+132
    \       0x36   0x4669             MOV      R1,SP
    \       0x38   0x222C             MOVS     R2,#+44
    \       0x3A   0x....'....        BL       __aeabi_memcpy4
    \       0x3E   0x0029             MOVS     R1,R5
    \       0x40   0x4668             MOV      R0,SP
-   \       0x42   0x....'....        BL       _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+   \       0x42   0x....'....        BL       _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
    \       0x46   0xA82C             ADD      R0,SP,#+176
    \       0x48   0x4669             MOV      R1,SP
    \       0x4A   0x222C             MOVS     R2,#+44
@@ -734,14 +744,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x60   0xB037             ADD      SP,SP,#+220
    \       0x62   0xBD30             POP      {R4,R5,PC}       ;; return
 
-      sprintf(str, "\%s%.3f %s\n", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
-                    ^
-"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",36  Warning[Pe192]: 
-          unrecognized character escape sequence
-
    \                                 In section .text, align 4
-   \   __interwork __vfp SusuString<40U> Format::GetDisplayPressureFormat(tFormatData const &)
-   \                     _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
+   \   __interwork __vfp SusuString<40U> Format::GetBlueToothPressureFormat(tFormatData const &)
+   \                     _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
    \        0x0   0xB578             PUSH     {R3-R6,LR}
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
@@ -756,8 +761,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x1C   0x6800             LDR      R0,[R0, #+0]
    \       0x1E   0x....'....        BL       __aeabi_f2d
    \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetDisplayPressureFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetDisplayPressureFormat_0+0x4
+   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothPressureFormat_0
+   \       0x28   0x4909             LDR.N    R1,??GetBlueToothPressureFormat_0+0x4
    \       0x2A   0xA80B             ADD      R0,SP,#+44
    \       0x2C   0x....'....        BL       sprintf
    \       0x30   0x4668             MOV      R0,SP
@@ -771,13 +776,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x46   0xB016             ADD      SP,SP,#+88
    \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
    \       0x4A   0xBF00             Nop      
-   \                     ??GetDisplayPressureFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \                     ??GetBlueToothPressureFormat_0:
+   \       0x4C   0x....'....        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x50   0x....'....        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
    \                                 In section .text, align 4
-   \   __interwork __vfp SusuString<40U> Format::GetDisplayHumidityFormat(tFormatData const &)
-   \                     _ZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
+   \   __interwork __vfp SusuString<40U> Format::GetBlueToothHumidityFormat(tFormatData const &)
+   \                     _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
    \        0x0   0xB578             PUSH     {R3-R6,LR}
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
@@ -792,8 +797,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x1C   0x6800             LDR      R0,[R0, #+0]
    \       0x1E   0x....'....        BL       __aeabi_f2d
    \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetDisplayHumidityFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetDisplayHumidityFormat_0+0x4
+   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothHumidityFormat_0
+   \       0x28   0x4909             LDR.N    R1,??GetBlueToothHumidityFormat_0+0x4
    \       0x2A   0xA80B             ADD      R0,SP,#+44
    \       0x2C   0x....'....        BL       sprintf
    \       0x30   0x4668             MOV      R0,SP
@@ -807,21 +812,21 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x46   0xB016             ADD      SP,SP,#+88
    \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
    \       0x4A   0xBF00             Nop      
-   \                     ??GetDisplayHumidityFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format24GetDisplayHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \                     ??GetBlueToothHumidityFormat_0:
+   \       0x4C   0x....'....        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x50   0x....'....        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
    \                                 In section .text, align 4
-   \   __interwork __vfp SusuString<40U> Format::GetDisplayTemperatureFormat(tFormatData const &)
-   \                     _ZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
+   \   __interwork __vfp SusuString<40U> Format::GetBlueToothTemperatureFormat(tFormatData const &)
+   \                     _ZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
    \        0x0   0xB578             PUSH     {R3-R6,LR}
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
    \        0x6   0x000D             MOVS     R5,R1
 
-      sprintf(str, "\%s%.3f %s", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
+      sprintf(str, "\%s%.3f %s\n", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
                     ^
-"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",67  Warning[Pe192]: 
+"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",36  Warning[Pe192]: 
           unrecognized character escape sequence
    \        0x8   0x0028             MOVS     R0,R5
    \        0xA   0x....'....        BL       _ZSt3getILj4EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
@@ -833,8 +838,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x1C   0x6800             LDR      R0,[R0, #+0]
    \       0x1E   0x....'....        BL       __aeabi_f2d
    \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetDisplayTemperatureFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetDisplayTemperatureFormat_0+0x4
+   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothTemperatureFormat_0
+   \       0x28   0x4909             LDR.N    R1,??GetBlueToothTemperatureFormat_0+0x4
    \       0x2A   0xA80B             ADD      R0,SP,#+44
    \       0x2C   0x....'....        BL       sprintf
    \       0x30   0x4668             MOV      R0,SP
@@ -848,13 +853,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x46   0xB016             ADD      SP,SP,#+88
    \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
    \       0x4A   0xBF00             Nop      
-   \                     ??GetDisplayTemperatureFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format27GetDisplayTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \                     ??GetBlueToothTemperatureFormat_0:
+   \       0x4C   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x50   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
    \                                 In section .text, align 4
-   \   __interwork __vfp SusuString<40U> Format::GetDisplayDewPointFormat(tFormatData const &)
-   \                     _ZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
+   \   __interwork __vfp SusuString<40U> Format::GetBlueToothDewPointFormat(tFormatData const &)
+   \                     _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
    \        0x0   0xB578             PUSH     {R3-R6,LR}
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
@@ -869,8 +874,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x1C   0x6800             LDR      R0,[R0, #+0]
    \       0x1E   0x....'....        BL       __aeabi_f2d
    \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetDisplayDewPointFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetDisplayDewPointFormat_0+0x4
+   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothDewPointFormat_0
+   \       0x28   0x4909             LDR.N    R1,??GetBlueToothDewPointFormat_0+0x4
    \       0x2A   0xA80B             ADD      R0,SP,#+44
    \       0x2C   0x....'....        BL       sprintf
    \       0x30   0x4668             MOV      R0,SP
@@ -884,9 +889,14 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x46   0xB016             ADD      SP,SP,#+88
    \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
    \       0x4A   0xBF00             Nop      
-   \                     ??GetDisplayDewPointFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \                     ??GetBlueToothDewPointFormat_0:
+   \       0x4C   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x50   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+
+      sprintf(str, "\%s%.3f %s", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
+                    ^
+"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",67  Warning[Pe192]: 
+          unrecognized character escape sequence
 
    \                                 In section .text, align 2
    \   __code __interwork __vfp ISubscriber::subobject ISubscriber()
@@ -1156,8 +1166,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x8C   0x....'....        DC32     ?_11
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
-   \                     _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev>()
+   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1176,7 +1186,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \                     __sti__routine: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x....             LDR.N    R0,??DataTable3
-   \        0x4   0x....'....        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev
+   \        0x4   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev
    \        0x8   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .bss, align 4
@@ -1225,19 +1235,18 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \   __absolute Celsius const SensorDirector::celsius
    \                     _ZN14SensorDirector7celsiusE:
    \        0x0   0x....'....        DC32 _ZTV7Celsius + 0x8
-      4          #include <iostream>
-      5          
+      2          
 
    \                                 In section .text, align 2, keep-with-next
-   \   __code __interwork __vfp DisplayDirector::subobject DisplayDirector(IDisplayView &)
-   \                     _ZN15DisplayDirectorC2ER12IDisplayView: (+1)
+   \   __code __interwork __vfp BluetoothDirector::subobject BluetoothDirector(Bluetooth &)
+   \                     _ZN17BluetoothDirectorC2ER9Bluetooth: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-   \        0x2   0x....'....        BL       _ZN15DisplayDirectorC1ER12IDisplayView
+   \        0x2   0x....'....        BL       _ZN17BluetoothDirectorC1ER9Bluetooth
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2, keep-with-next
-      6          DisplayDirector::DisplayDirector(IDisplayView& view): myView(view) { };
-   \                     _ZN15DisplayDirectorC1ER12IDisplayView: (+1)
+      3          BluetoothDirector::BluetoothDirector(Bluetooth& mybluetooth): bluetooth(mybluetooth) {}; 
+   \                     _ZN17BluetoothDirectorC1ER9Bluetooth: (+1)
    \        0x0   0xB538             PUSH     {R3-R5,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x000D             MOVS     R5,R1
@@ -1246,72 +1255,77 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0xC   0x....             LDR.N    R0,??DataTable3_1
    \        0xE   0x6020             STR      R0,[R4, #+0]
    \       0x10   0xF8C4 0x585C      STR      R5,[R4, #+2140]
-   \       0x14   0xF514 0x6006      ADDS     R0,R4,#+2144
+   \       0x14   0xF604 0x0064      ADDW     R0,R4,#+2148
    \       0x18   0x....'....        BL       _ZN14SensorDirectorC1Ev
    \       0x1C   0x0020             MOVS     R0,R4
    \       0x1E   0xBD32             POP      {R1,R4,R5,PC}    ;; return
-      7          
+      4          
 
    \                                 In section .text, align 2, keep-with-next
-      8          void DisplayDirector::Execute() {
-   \                     _ZN15DisplayDirector7ExecuteEv: (+1)
-   \        0x0   0xB530             PUSH     {R4,R5,LR}
-   \        0x2   0xB0E9             SUB      SP,SP,#+420
+      5          void BluetoothDirector::Execute() { 
+   \                     _ZN17BluetoothDirector7ExecuteEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0xB0E8             SUB      SP,SP,#+416
    \        0x4   0x0004             MOVS     R4,R0
-      9            for(;;){
-     10            tFormatData x = sensordirector.GetData();
+      6            for (;;) {
+      7              tFormatData x = sensordirector.GetData();
    \                     ??Execute_0: (+1)
-   \        0x6   0xF514 0x6106      ADDS     R1,R4,#+2144
-   \        0xA   0xA859             ADD      R0,SP,#+356
+   \        0x6   0xF604 0x0164      ADDW     R1,R4,#+2148
+   \        0xA   0xA858             ADD      R0,SP,#+352
    \        0xC   0x....'....        BL       _ZN14SensorDirector7GetDataEv
-     11            auto f = Format::GetDisplayFormat(x); 
-   \       0x10   0xA959             ADD      R1,SP,#+356
-   \       0x12   0xA82D             ADD      R0,SP,#+180
-   \       0x14   0x....'....        BL       _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-     12            auto f0 = std::get<0>(f); 
-   \       0x18   0xA82D             ADD      R0,SP,#+180
+      8              auto f = Format::GetBlueToothFormat(x);
+   \       0x10   0xA958             ADD      R1,SP,#+352
+   \       0x12   0xA82C             ADD      R0,SP,#+176
+   \       0x14   0x....'....        BL       _ZN6Format18GetBlueToothFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+      9              auto pres = std::get<0>(f) ;
+   \       0x18   0xA82C             ADD      R0,SP,#+176
    \       0x1A   0x....'....        BL       _ZSt3getILj0EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
    \       0x1E   0x0001             MOVS     R1,R0
-   \       0x20   0xA822             ADD      R0,SP,#+136
+   \       0x20   0xA821             ADD      R0,SP,#+132
    \       0x22   0x222C             MOVS     R2,#+44
    \       0x24   0x....'....        BL       __aeabi_memcpy4
-     13            auto f1 = std::get<1>(f);
-   \       0x28   0xA82D             ADD      R0,SP,#+180
-   \       0x2A   0x....'....        BL       _ZSt3getILj1EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
-   \       0x2E   0x0001             MOVS     R1,R0
-   \       0x30   0xA817             ADD      R0,SP,#+92
-   \       0x32   0x222C             MOVS     R2,#+44
-   \       0x34   0x....'....        BL       __aeabi_memcpy4
-     14            auto f2 = std::get<2>(f);
-   \       0x38   0xA82D             ADD      R0,SP,#+180
-   \       0x3A   0x....'....        BL       _ZSt3getILj2EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
-   \       0x3E   0x0001             MOVS     R1,R0
-   \       0x40   0xA80C             ADD      R0,SP,#+48
-   \       0x42   0x222C             MOVS     R2,#+44
-   \       0x44   0x....'....        BL       __aeabi_memcpy4
-     15            auto f3 = std::get<3>(f);
-   \       0x48   0xA82D             ADD      R0,SP,#+180
-   \       0x4A   0x....'....        BL       _ZSt3getILj3EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
-   \       0x4E   0x0001             MOVS     R1,R0
-   \       0x50   0xA801             ADD      R0,SP,#+4
-   \       0x52   0x222C             MOVS     R2,#+44
-   \       0x54   0x....'....        BL       __aeabi_memcpy4
-     16            myView.Update(f0,f1,f2,f3);
-   \       0x58   0xA801             ADD      R0,SP,#+4
-   \       0x5A   0x9000             STR      R0,[SP, #+0]
-   \       0x5C   0xAB0C             ADD      R3,SP,#+48
-   \       0x5E   0xAA17             ADD      R2,SP,#+92
-   \       0x60   0xA922             ADD      R1,SP,#+136
-   \       0x62   0xF8D4 0x085C      LDR      R0,[R4, #+2140]
-   \       0x66   0xF8D4 0x585C      LDR      R5,[R4, #+2140]
-   \       0x6A   0x682D             LDR      R5,[R5, #+0]
-   \       0x6C   0x682D             LDR      R5,[R5, #+0]
-   \       0x6E   0x47A8             BLX      R5
-   \       0x70   0x....             LDR.N    R2,??DataTable3_2
-   \       0x72   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
-     17            Sleep(3000ms) ;
-   \       0x76   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-   \       0x7A   0xE7C4             B.N      ??Execute_0
+     10              bluetooth.Send(pres) ;
+   \       0x28   0xA921             ADD      R1,SP,#+132
+   \       0x2A   0xF8D4 0x085C      LDR      R0,[R4, #+2140]
+   \       0x2E   0x....'....        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
+     11              auto hum = std::get<1>(f) ;
+   \       0x32   0xA82C             ADD      R0,SP,#+176
+   \       0x34   0x....'....        BL       _ZSt3getILj1EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
+   \       0x38   0x0001             MOVS     R1,R0
+   \       0x3A   0xA816             ADD      R0,SP,#+88
+   \       0x3C   0x222C             MOVS     R2,#+44
+   \       0x3E   0x....'....        BL       __aeabi_memcpy4
+     12              bluetooth.Send(hum) ;
+   \       0x42   0xA916             ADD      R1,SP,#+88
+   \       0x44   0xF8D4 0x085C      LDR      R0,[R4, #+2140]
+   \       0x48   0x....'....        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
+     13              auto temp = std::get<2>(f) ; 
+   \       0x4C   0xA82C             ADD      R0,SP,#+176
+   \       0x4E   0x....'....        BL       _ZSt3getILj2EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
+   \       0x52   0x0001             MOVS     R1,R0
+   \       0x54   0xA80B             ADD      R0,SP,#+44
+   \       0x56   0x222C             MOVS     R2,#+44
+   \       0x58   0x....'....        BL       __aeabi_memcpy4
+     14              bluetooth.Send(temp) ;
+   \       0x5C   0xA90B             ADD      R1,SP,#+44
+   \       0x5E   0xF8D4 0x085C      LDR      R0,[R4, #+2140]
+   \       0x62   0x....'....        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
+     15              auto dewp = std::get<3>(f) ; 
+   \       0x66   0xA82C             ADD      R0,SP,#+176
+   \       0x68   0x....'....        BL       _ZSt3getILj3EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
+   \       0x6C   0x0001             MOVS     R1,R0
+   \       0x6E   0x4668             MOV      R0,SP
+   \       0x70   0x222C             MOVS     R2,#+44
+   \       0x72   0x....'....        BL       __aeabi_memcpy4
+     16              bluetooth.Send(dewp) ;
+   \       0x76   0x4669             MOV      R1,SP
+   \       0x78   0xF8D4 0x085C      LDR      R0,[R4, #+2140]
+   \       0x7C   0x....'....        BL       _ZN9Bluetooth4SendER10SusuStringILj40EE
+   \       0x80   0x....             LDR.N    R2,??DataTable3_2
+   \       0x82   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+     17              Sleep(1000ms) ;
+   \       0x86   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x8A   0xE7BC             B.N      ??Execute_0
      18            }
      19          }
 
@@ -1321,7 +1335,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3_1:
-   \        0x0   0x....'....        DC32     _ZTV15DisplayDirector+0x8
+   \        0x0   0x....'....        DC32     _ZTV17BluetoothDirector+0x8
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3_2:
@@ -1385,16 +1399,33 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
 
    \                                 In section .rodata, align 8
    \                     ?_12:
-   \        0x0   0x0000'0000'0      DC64 3'000
-   \              000'0BB8     
-     20          
+   \        0x0   0x0000'0000'0      DC64 1'000
+   \              000'03E8     
+     20            
 
    Maximum stack usage in bytes:
 
    .cstack Function
    ------- --------
-       8   <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
+       8   <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev>()
          8   -> SusuString<5U>::SusuString()
+       8   Bluetooth::Send(SusuString<40U> &)
+         8   -- Indirect call
+      16   BluetoothDirector::BluetoothDirector(Bluetooth &)
+        16   -> OsWrapper::Thread<512U>::subobject Thread()
+        16   -> SensorDirector::SensorDirector()
+     424   BluetoothDirector::Execute()
+       424   -> Bluetooth::Send(SusuString<40U> &)
+       424   -> Format::GetBlueToothFormat(tFormatData const &)
+       424   -> OsWrapper::IThread::Sleep(std::chrono::milliseconds)
+       424   -> SensorDirector::GetData()
+       424   -> __aeabi_memcpy4
+       424   -> std::get<0U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
+       424   -> std::get<1U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
+       424   -> std::get<2U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
+       424   -> std::get<3U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
+       8   BluetoothDirector::subobject BluetoothDirector(Bluetooth &)
+         8   -> BluetoothDirector::BluetoothDirector(Bluetooth &)
       16   Celsius::GetTemperature(float) const
         16   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
        8   DewPoint::DewPoint()
@@ -1403,24 +1434,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
         48   -> __aeabi_d2f
         48   -> logf
         48   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-      16   DisplayDirector::DisplayDirector(IDisplayView &)
-        16   -> OsWrapper::Thread<512U>::subobject Thread()
-        16   -> SensorDirector::SensorDirector()
-     432   DisplayDirector::Execute()
-       432   -- Indirect call
-       432   -> Format::GetDisplayFormat(tFormatData const &)
-       432   -> OsWrapper::IThread::Sleep(std::chrono::milliseconds)
-       432   -> SensorDirector::GetData()
-       432   -> __aeabi_memcpy4
-       432   -> std::get<0U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       432   -> std::get<1U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       432   -> std::get<2U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       432   -> std::get<3U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       8   DisplayDirector::subobject DisplayDirector(IDisplayView &)
-         8   -> DisplayDirector::DisplayDirector(IDisplayView &)
       16   Fahrenheit::GetTemperature(float) const
         16   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-     104   Format::GetDisplayDewPointFormat(tFormatData const &)
+     104   Format::GetBlueToothDewPointFormat(tFormatData const &)
        104   -> SusuString<40U>::Set<40U>(char const (&)[40])
        104   -> SusuString<40U>::SusuString()
        104   -> SusuString<5U>::GetString() const
@@ -1429,14 +1445,14 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        104   -> sprintf
        104   -> std::get<6U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        104   -> std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-     232   Format::GetDisplayFormat(tFormatData const &)
-       232   -> Format::GetDisplayDewPointFormat(tFormatData const &)
-       232   -> Format::GetDisplayHumidityFormat(tFormatData const &)
-       232   -> Format::GetDisplayPressureFormat(tFormatData const &)
-       232   -> Format::GetDisplayTemperatureFormat(tFormatData const &)
+     232   Format::GetBlueToothFormat(tFormatData const &)
+       232   -> Format::GetBlueToothDewPointFormat(tFormatData const &)
+       232   -> Format::GetBlueToothHumidityFormat(tFormatData const &)
+       232   -> Format::GetBlueToothPressureFormat(tFormatData const &)
+       232   -> Format::GetBlueToothTemperatureFormat(tFormatData const &)
        232   -> __aeabi_memcpy4
        232   -> std::make_tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
-     104   Format::GetDisplayHumidityFormat(tFormatData const &)
+     104   Format::GetBlueToothHumidityFormat(tFormatData const &)
        104   -> SusuString<40U>::Set<40U>(char const (&)[40])
        104   -> SusuString<40U>::SusuString()
        104   -> SusuString<5U>::GetString() const
@@ -1445,7 +1461,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        104   -> sprintf
        104   -> std::get<2U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        104   -> std::get<3U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-     104   Format::GetDisplayPressureFormat(tFormatData const &)
+     104   Format::GetBlueToothPressureFormat(tFormatData const &)
        104   -> SusuString<40U>::Set<40U>(char const (&)[40])
        104   -> SusuString<40U>::SusuString()
        104   -> SusuString<5U>::GetString() const
@@ -1454,7 +1470,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        104   -> sprintf
        104   -> std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        104   -> std::get<1U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-     104   Format::GetDisplayTemperatureFormat(tFormatData const &)
+     104   Format::GetBlueToothTemperatureFormat(tFormatData const &)
        104   -> SusuString<40U>::Set<40U>(char const (&)[40])
        104   -> SusuString<40U>::SusuString()
        104   -> SusuString<5U>::GetString() const
@@ -1517,7 +1533,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
       16   Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Temperature()
         16   -> IVariable::subobject IVariable()
        8   __sti__routine()
-         8   -> <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
+         8   -> <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev>()
        0   std::_Addressof<char>(char &, std::false_type)
        0   std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
        0   std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
@@ -1615,7 +1631,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
 
    Bytes  Function/Label
    -----  --------------
-      38  <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
+      38  <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_9dbfdf62Ut_C1Ev>()
        4  ??DataTable3
        4  ??DataTable3_1
        4  ??DataTable3_2
@@ -1632,18 +1648,19 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        8  ?_7
        2  ?_8
        8  ?_9
+      16  Bluetooth::Send(SusuString<40U> &)
+      32  BluetoothDirector::BluetoothDirector(Bluetooth &)
+     140  BluetoothDirector::Execute()
+       8  BluetoothDirector::subobject BluetoothDirector(Bluetooth &)
       32  Celsius::GetTemperature(float) const
       24  DewPoint::DewPoint()
      144  DewPoint::Get(float, ...)
-      32  DisplayDirector::DisplayDirector(IDisplayView &)
-     124  DisplayDirector::Execute()
-       8  DisplayDirector::subobject DisplayDirector(IDisplayView &)
       44  Fahrenheit::GetTemperature(float) const
-      84  Format::GetDisplayDewPointFormat(tFormatData const &)
-     100  Format::GetDisplayFormat(tFormatData const &)
-      84  Format::GetDisplayHumidityFormat(tFormatData const &)
-      84  Format::GetDisplayPressureFormat(tFormatData const &)
-      84  Format::GetDisplayTemperatureFormat(tFormatData const &)
+      84  Format::GetBlueToothDewPointFormat(tFormatData const &)
+     100  Format::GetBlueToothFormat(tFormatData const &)
+      84  Format::GetBlueToothHumidityFormat(tFormatData const &)
+      84  Format::GetBlueToothPressureFormat(tFormatData const &)
+      84  Format::GetBlueToothTemperatureFormat(tFormatData const &)
       40  Humidity::Get(float, ...)
       24  Humidity::Humidity()
        2  ISubscriber::ISubscriber()
@@ -1725,16 +1742,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
       40  std::tuple<SusuString<40U>, SusuString<40U>>::tuple<SusuString<40U>, SusuString<40U>, void **>(SusuString<40U> &&, SusuString<40U> &&)
        8  std::tuple<SusuString<40U>>::subobject tuple(SusuString<40U> &&)
       22  std::tuple<SusuString<40U>>::tuple<SusuString<40U>, void **>(SusuString<40U> &&)
-     664  -- Other
+     668  -- Other
 
  
     64 bytes in section .bss
      4 bytes in section .init_array
-   745 bytes in section .rodata
- 2'106 bytes in section .text
+   749 bytes in section .rodata
+ 2'138 bytes in section .text
  
- 228 bytes of CODE  memory (+ 1'882 bytes shared)
-  82 bytes of CONST memory (+   663 bytes shared)
+ 244 bytes of CODE  memory (+ 1'898 bytes shared)
+  82 bytes of CONST memory (+   667 bytes shared)
   64 bytes of DATA  memory
 
 Errors: none

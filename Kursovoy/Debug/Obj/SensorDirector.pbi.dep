@@ -111,4 +111,10 @@ SensorDirector.pbi: \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Celsius.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Temperature.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables/IVariable.hpp \
-  C:\Programs\IAR\ Arm\arm\inc\cpp\iostream
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Pressure.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Humidity.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\DewPoint.hpp \
+  C:\Programs\IAR\ Arm\arm\inc\cpp\iostream \
+  C:\Programs\IAR\ Arm\arm\inc\c\stdarg.h \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp \
+  C:\Programs\IAR\ Arm\arm\inc\cpp\string

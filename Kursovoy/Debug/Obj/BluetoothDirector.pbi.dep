@@ -1,7 +1,7 @@
-DisplayDirector.pbi: \
-  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp \
-  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display/DisplayDirector.hpp \
-  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\thread.hpp \
+BluetoothDirector.pbi: \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth/BluetoothDirector.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\Thread.hpp \
   C:\Programs\IAR\ Arm\arm\inc\cpp\array \
   C:\Programs\IAR\ Arm\arm\inc\cpp\algorithm \
   C:\Programs\IAR\ Arm\arm\inc\cpp\xmemory \
@@ -102,11 +102,13 @@ DisplayDirector.pbi: \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\FreeRtos\rtoswrapper.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\FreeRtos/rtosdefs.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\eventmode.hpp \
-  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display/IDisplayView.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth/Bluetooth.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\Driver\IBluetoothDriver.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp \
   C:\Programs\IAR\ Arm\arm\inc\cpp\iostream \
   C:\Programs\IAR\ Arm\arm\inc\cpp\string \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Rtos\wrapper\thread.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\ISubscriber.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\IVariable.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\IUnits.hpp \

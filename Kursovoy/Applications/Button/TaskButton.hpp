@@ -9,7 +9,7 @@
 #include "gpiocregisters.hpp" //for gpiocregisters
 
 
-class TaskButton : public OsWrapper::Thread<128> { 
+class TaskButton : public OsWrapper::Thread<256> { 
 public:
   TaskButton(ISubscriber& buttonsubscriber) ;
   void Execute() override ;

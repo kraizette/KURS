@@ -16,9 +16,9 @@ public:
   void SetNextUnits() {
     (index < UnitsCounts) ? index++ : index = 0U ;
   }
-  std::pair<SusuStringView, float> Get(float code) override {
+  vFormat Get(float data, ...) override {
     auto const& currentUnits = *unitsList[index] ;
-    std::pair<SusuStringView, float> temperature = currentUnits.GetTemperature(code) ;
+    vFormat temperature = currentUnits.GetTemperature(data) ;
     auto name = temperature.first;
     auto value = temperature.second;
     return std::make_pair(name,value);

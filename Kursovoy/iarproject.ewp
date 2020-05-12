@@ -385,6 +385,8 @@
                     <state>$PROJ_DIR$\Applications\Output\Display\Driver</state>
                     <state>$PROJ_DIR$\Applications\Output\Format</state>
                     <state>$PROJ_DIR$\Applications\Output\Display\Driver\Fonts</state>
+                    <state>$PROJ_DIR$\Applications\Output\BlueTooth</state>
+                    <state>$PROJ_DIR$\Applications\Output\BlueTooth\Driver</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2513,7 +2515,22 @@
                 <name>BlueTooth</name>
                 <group>
                     <name>Driver</name>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Output\BlueTooth\Driver\BluetoothDriver.hpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\Applications\Output\BlueTooth\Driver\IBluetoothDriver.hpp</name>
+                    </file>
                 </group>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\BlueTooth\Bluetooth.hpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\BlueTooth\BluetoothDirector.cpp</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\Applications\Output\BlueTooth\BluetoothDirector.hpp</name>
+                </file>
             </group>
             <group>
                 <name>Display</name>
@@ -2619,6 +2636,9 @@
             </group>
             <file>
                 <name>$PROJ_DIR$\Applications\Sensor\BME280.hpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Applications\Sensor\Event.hpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\Applications\Sensor\SensorDirector.cpp</name>
