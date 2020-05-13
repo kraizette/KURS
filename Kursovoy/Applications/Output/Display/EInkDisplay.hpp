@@ -78,6 +78,5 @@ public:
   
   void ClearWindow() override {
     myDriver.Clear();
-  } 
-
+  }
 };

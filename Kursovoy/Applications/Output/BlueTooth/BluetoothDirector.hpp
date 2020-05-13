@@ -12,9 +12,9 @@ class BluetoothDirector: public OsWrapper::Thread<512> {
 private:
   Bluetooth& bluetooth ;
   Format format ;
-  SensorDirector sensordirector ;
+  SensorDirector& sensordirector ;
 
 public:
-  BluetoothDirector (Bluetooth& mybluetooth); 
+  BluetoothDirector (Bluetooth& mybluetooth, SensorDirector& mysensordirector); 
   void Execute() override;
 } ;

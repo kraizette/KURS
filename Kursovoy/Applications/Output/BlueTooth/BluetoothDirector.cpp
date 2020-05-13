@@ -1,9 +1,10 @@
 #include "BluetoothDirector.hpp" 
 
-BluetoothDirector::BluetoothDirector(Bluetooth& mybluetooth): bluetooth(mybluetooth) {}; 
+BluetoothDirector::BluetoothDirector(Bluetooth& mybluetooth, SensorDirector& mysensordirector): bluetooth(mybluetooth), sensordirector(mysensordirector) {}; 
 
 void BluetoothDirector::Execute() { 
   for (;;) {
+    Sleep(500ms) ;
     tFormatData x = sensordirector.GetData();
     auto f = Format::GetBlueToothFormat(x);
     auto pres = std::get<0>(f) ;
@@ -14,7 +15,7 @@ void BluetoothDirector::Execute() {
     bluetooth.Send(temp) ;
     auto dewp = std::get<3>(f) ; 
     bluetooth.Send(dewp) ;
-    Sleep(1000ms) ;
+    Sleep(500ms) ;
   }
 }
   

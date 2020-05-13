@@ -3,7 +3,8 @@
 #pragma once
 
 #include "susudefs.hpp"
+#include "IVariable.hpp"
 
 struct IUnits {
-  virtual std::pair<SusuStringView, float> GetTemperature(float code) const = 0 ;
+  virtual vFormat GetTemperature(float code) const = 0 ;
 } ;

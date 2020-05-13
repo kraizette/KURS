@@ -110,13 +110,15 @@ DisplayDirector.pbi: \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Button\ISubscriber.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\IVariable.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\IUnits.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables/IVariable.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Kelvin.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables/IUnits.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Fahrenheit.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Celsius.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Temperature.hpp \
-  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables/IVariable.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Pressure.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\Humidity.hpp \
   D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\DewPoint.hpp \
-  C:\Programs\IAR\ Arm\arm\inc\c\stdarg.h
+  C:\Programs\IAR\ Arm\arm\inc\c\stdarg.h \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor/BME280.hpp \
+  D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Driver\ISensorDriver.hpp

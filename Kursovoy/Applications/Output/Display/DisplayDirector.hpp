@@ -9,9 +9,9 @@
 
 class DisplayDirector : public OsWrapper::Thread<512>{ 
 public:
-  DisplayDirector(IDisplayView& view);
+  DisplayDirector(IDisplayView& view, SensorDirector& mysensordirector );
   void Execute() override ;
 private:
   IDisplayView& myView;
-  SensorDirector sensordirector ;
+  SensorDirector& sensordirector ;
 } ;

@@ -4,9 +4,10 @@
 
 class Celsius : public IUnits { 
 public:
-  std::pair<SusuStringView, float> GetTemperature(float code) const override {
+  vFormat GetTemperature(float code) const override {
     float value = code;
-    SusuStringView name("C");
+    SusuString<5> name;
+    name.Set("C   ");
     return std::make_pair(name,value) ;
   }
 } ;

@@ -105,14 +105,15 @@ using MISOPin = Pin<GPIOA, 11U>; //SPI4_MISO PA11
 using CSPin = Pin<GPIOC, 4U>; //PC4 alternative
 
 SensorDriver<SPI<SPI4>,MOSIPin,SCKPin, MISOPin,CSPin> BME280Driver;
-SensorDirector mySensorDirector;
+BME280 Sensor(BME280Driver);
+SensorDirector mySensorDirector(Sensor);
 
 //for BlueTooth
 using TXPin = Pin<GPIOA, 3U>;
 using RXPin = Pin<GPIOA, 2U>;
 BluetoothDriver<USART<USART2, 16000000U>,TXPin,RXPin> bluetoothdriver ;
 Bluetooth bluetooth(bluetoothdriver) ;
-BluetoothDirector myBluetoothDirector(bluetooth) ;
+BluetoothDirector myBluetoothDirector(bluetooth, mySensorDirector) ;
 
 //for SPI2 - display
 using ResetPin = Pin<GPIOC, 3U>; //mosi
@@ -125,7 +126,7 @@ using ClkPin = Pin<GPIOB, 10U>;
 DisplayDriver<SPI<SPI2>,DinPin,ClkPin,CsPin,DcPin, ResetPin,BusyPin, 400,300> EInkDisplayDriver;
 EInkDisplay<400,300> Display(EInkDisplayDriver);
 DisplayView View(Display);
-DisplayDirector myDisplayDirector(View);
+DisplayDirector myDisplayDirector(View, mySensorDirector);
 
 TaskButton myTaskButton(mySensorDirector);
 

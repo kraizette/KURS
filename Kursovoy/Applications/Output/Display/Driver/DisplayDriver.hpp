@@ -139,18 +139,18 @@ public :
   }
   
   void Clear() override {
-    const std::uint8_t WhiteColor = 0xff;
+    const std::uint8_t BlackColor = 0x00;
     SetResolution();
     SendCommand(CommandEInk::DisplayStartTransmission1);
     StartSendData();
     for (int i = 0; i < W / 8 * H; i ++) {
-      SendData(WhiteColor);
+      SendData(BlackColor);
     }
     EndSendData();
     SendCommand(CommandEInk::DisplayStartTransmission2);
     StartSendData();
     for (int i = 0; i < W / 8 * H; i ++) {
-      SendData(WhiteColor);
+      SendData(BlackColor);
     }    
     EndSendData();
     Refresh();

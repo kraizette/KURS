@@ -10,7 +10,7 @@ public:
   
   void Update(SusuString<40>& Pressure,SusuString<40>& Humidity,
               SusuString<40>& Temperature, SusuString<40>& DewPoint) override {
-    myDisplay.ClearWindow() ;            
+    myDisplay.ClearWindow() ;   
     DrawFirstString(Pressure);
     DrawSecondString(Humidity);
     DrawThirdString(Temperature);

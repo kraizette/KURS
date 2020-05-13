@@ -4,9 +4,10 @@
 
 class Kelvin : public IUnits { 
 public:
-  std::pair<SusuStringView, float> GetTemperature(float code) const override {
+  vFormat GetTemperature(float code) const override {
     float value = code + 273.15F;
-    SusuStringView name("K");
+    SusuString<5> name;
+    name.Set("K ");
     return std::make_pair(name,value) ;
   }
 } ;

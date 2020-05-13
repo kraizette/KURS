@@ -1,7 +1,8 @@
 //IVariable.hpp
 
 #pragma once
-using vFormat =  std::pair<SusuStringView, float>;
+using vFormat =  std::pair<SusuString<5U>, float>;
 struct IVariable {
-  virtual vFormat Get(float data, ...) = 0 ;
+  virtual vFormat Get() = 0 ;
+  virtual void Calculate(float data, ...) = 0;
 } ;

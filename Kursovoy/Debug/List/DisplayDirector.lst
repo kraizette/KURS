@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         12/May/2020  13:47:32
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         13/May/2020  12:28:59
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWF6B9.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW725C.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -118,8 +118,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x0   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
-   \   __interwork __vfp SusuStringView &std::forward<SusuStringView &>(SusuStringView &)
-   \                     _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE: (+1)
+   \   __interwork __vfp SusuString<5U> &std::forward<SusuString<5U> &>(SusuString<5U> &)
+   \                     _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE: (+1)
    \        0x0   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
@@ -128,25 +128,25 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x0   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
-   \   __code __interwork __vfp std::pair<SusuStringView, float>::pair<SusuStringView &, float &, void>(SusuStringView &, float &)
-   \                     _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_: (+1)
+   \   __code __interwork __vfp std::pair<SusuString<5U>, float>::pair<SusuString<5U> &, float &, void>(SusuString<5U> &, float &)
+   \                     _ZNSt4pairI10SusuStringILj5EEfEC1IRS1_RfvEEOT_OT0_: (+1)
    \        0x0   0xB538             PUSH     {R3-R5,LR}
    \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0x0008             MOVS     R0,R1
-   \        0x6   0x0015             MOVS     R5,R2
-   \        0x8   0x....'....        BL       _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
-   \        0xC   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
-   \       0x10   0xE9C4 0x2300      STRD     R2,R3,[R4, #+0]
+   \        0x4   0x0015             MOVS     R5,R2
+   \        0x6   0x0008             MOVS     R0,R1
+   \        0x8   0x....'....        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
+   \        0xC   0xE890 0x000E      LDM      R0,{R1-R3}
+   \       0x10   0xE884 0x000E      STM      R4,{R1-R3}
    \       0x14   0x0028             MOVS     R0,R5
    \       0x16   0x....'....        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
    \       0x1A   0x6800             LDR      R0,[R0, #+0]
-   \       0x1C   0x60A0             STR      R0,[R4, #+8]
+   \       0x1C   0x60E0             STR      R0,[R4, #+12]
    \       0x1E   0x0020             MOVS     R0,R4
    \       0x20   0xBD32             POP      {R1,R4,R5,PC}    ;; return
 
    \                                 In section .text, align 2
-   \   __interwork __vfp std::pair<SusuStringView, float> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-   \                     _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_: (+1)
+   \   __interwork __vfp std::pair<SusuString<5U>, float> std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
+   \                     _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_: (+1)
    \        0x0   0xB57F             PUSH     {R0-R6,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x000D             MOVS     R5,R1
@@ -154,14 +154,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x8   0x....'....        BL       _ZSt7forwardIRfEOT_RNSt16remove_referenceIS1_E4typeE
    \        0xC   0x0006             MOVS     R6,R0
    \        0xE   0x0028             MOVS     R0,R5
-   \       0x10   0x....'....        BL       _ZSt7forwardIR14SusuStringViewEOT_RNSt16remove_referenceIS2_E4typeE
+   \       0x10   0x....'....        BL       _ZSt7forwardIR10SusuStringILj5EEEOT_RNSt16remove_referenceIS3_E4typeE
    \       0x14   0x0032             MOVS     R2,R6
    \       0x16   0x0001             MOVS     R1,R0
    \       0x18   0x4668             MOV      R0,SP
-   \       0x1A   0x....'....        BL       _ZNSt4pairI14SusuStringViewfEC1IRS0_RfvEEOT_OT0_
-   \       0x1E   0xE890 0x000E      LDM      R0,{R1-R3}
-   \       0x22   0xE884 0x000E      STM      R4,{R1-R3}
-   \       0x26   0xBD7F             POP      {R0-R6,PC}       ;; return
+   \       0x1A   0x....'....        BL       _ZNSt4pairI10SusuStringILj5EEfEC1IRS1_RfvEEOT_OT0_
+   \       0x1E   0x0001             MOVS     R1,R0
+   \       0x20   0x0020             MOVS     R0,R4
+   \       0x22   0x2210             MOVS     R2,#+16
+   \       0x24   0x....'....        BL       __aeabi_memcpy4
+   \       0x28   0xBD7F             POP      {R0-R6,PC}       ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp char const *std::_Unchecked<char const *>(char const *)
@@ -181,10 +183,24 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x4   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_const_iterator<char, 5U>::_Array_const_iterator(char const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj: (+1)
+   \        0x0   0x4411             ADD      R1,R1,R2
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
    \   __code __interwork __vfp std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
    \                     _ZNSt21_Array_const_iteratorIcLj40EEC2EPKcj: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj40EEC1EPKcj
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_const_iterator<char, 5U>::subobject _Array_const_iterator(char const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj5EEC1EPKcj
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
@@ -194,8 +210,20 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x2   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_const_iterator<char, 5U> &std::_Array_const_iterator<char, 5U>::_Rechecked(char const *)
+   \                     _ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc: (+1)
+   \        0x0   0x6001             STR      R1,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
    \   __interwork __vfp char const * std::_Array_const_iterator<char, 40U>::_Unchecked() const
    \                     _ZNKSt21_Array_const_iteratorIcLj40EE10_UncheckedEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp char const * std::_Array_const_iterator<char, 5U>::_Unchecked() const
+   \                     _ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv: (+1)
    \        0x0   0x6800             LDR      R0,[R0, #+0]
    \        0x2   0x4770             BX       LR               ;; return
 
@@ -210,12 +238,32 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0xC   0xBD10             POP      {R4,PC}          ;; return
 
    \                                 In section .text, align 2
+   \   __code __interwork __vfp std::_Array_iterator<char, 5U>::_Array_iterator(char *, size_t)
+   \                     _ZNSt15_Array_iteratorIcLj5EEC1EPcj: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj5EEC2EPKcj
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
    \   __interwork __vfp std::_Array_iterator<char, 40U> &std::_Array_iterator<char, 40U>::_Rechecked(char *)
    \                     _ZNSt15_Array_iteratorIcLj40EE10_RecheckedEPc: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
    \        0x6   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj40EE10_RecheckedEPKc
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_iterator<char, 5U> &std::_Array_iterator<char, 5U>::_Rechecked(char *)
+   \                     _ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZNSt21_Array_const_iteratorIcLj5EE10_RecheckedEPKc
    \        0xA   0x0020             MOVS     R0,R4
    \        0xC   0xBD10             POP      {R4,PC}          ;; return
 
@@ -227,6 +275,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
+   \   __interwork __vfp char * std::_Array_iterator<char, 5U>::_Unchecked() const
+   \                     _ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNKSt21_Array_const_iteratorIcLj5EE10_UncheckedEv
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
    \   __interwork __vfp char * std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
    \                     _ZSt10_UncheckedIcLj40EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_: (+1)
    \        0x0   0xB501             PUSH     {R0,LR}
@@ -235,10 +290,25 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x8   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
+   \   __interwork __vfp char * std::_Unchecked<char, 5U>(std::_Array_iterator<char, 5U>)
+   \                     _ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_: (+1)
+   \        0x0   0xB501             PUSH     {R0,LR}
+   \        0x2   0x4668             MOV      R0,SP
+   \        0x4   0x....'....        BL       _ZNKSt15_Array_iteratorIcLj5EE10_UncheckedEv
+   \        0x8   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
    \   __interwork __vfp std::_Array_iterator<char, 40U> &std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
    \                     _ZSt10_RecheckedIcLj40EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x....'....        BL       _ZNSt15_Array_iteratorIcLj40EE10_RecheckedEPc
+   \        0x6   0xBD02             POP      {R1,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::_Array_iterator<char, 5U> &std::_Rechecked<char, 5U>(std::_Array_iterator<char, 5U> &, char *)
+   \                     _ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZNSt15_Array_iteratorIcLj5EE10_RecheckedEPc
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
@@ -293,6 +363,29 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x24   0x0001             MOVS     R1,R0
    \       0x26   0xA801             ADD      R0,SP,#+4
    \       0x28   0x....'....        BL       _ZSt10_RecheckedIcLj40EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
+   \       0x2C   0x6800             LDR      R0,[R0, #+0]
+   \       0x2E   0xBD76             POP      {R1,R2,R4-R6,PC}  ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp std::array<char, 5U>::iterator std::copy<char const *, std::array<char, 5U>::iterator>(char const *, char const *, std::array<char, 5U>::iterator)
+   \                     _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_: (+1)
+   \        0x0   0xB576             PUSH     {R1,R2,R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x9801             LDR      R0,[SP, #+4]
+   \        0x8   0x....'....        BL       _ZSt10_UncheckedIcLj5EENSt15_Array_iteratorIT_XT0_EE15_Unchecked_typeES2_
+   \        0xC   0x0006             MOVS     R6,R0
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x....'....        BL       _ZSt10_UncheckedIPKcET_S2_
+   \       0x14   0x0005             MOVS     R5,R0
+   \       0x16   0x0020             MOVS     R0,R4
+   \       0x18   0x....'....        BL       _ZSt10_UncheckedIPKcET_S2_
+   \       0x1C   0x0032             MOVS     R2,R6
+   \       0x1E   0x0029             MOVS     R1,R5
+   \       0x20   0x....'....        BL       _ZSt10_Copy_implIPKcPcET0_T_S4_S3_
+   \       0x24   0x0001             MOVS     R1,R0
+   \       0x26   0xA801             ADD      R0,SP,#+4
+   \       0x28   0x....'....        BL       _ZSt10_RecheckedIcLj5EERSt15_Array_iteratorIT_XT0_EES3_NS2_15_Unchecked_typeE
    \       0x2C   0x6800             LDR      R0,[R0, #+0]
    \       0x2E   0xBD76             POP      {R1,R2,R4-R6,PC}  ;; return
 
@@ -526,10 +619,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x12   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
-   \   __interwork __vfp IUnits const *& std::array<IUnits const *, 3U>::operator[](size_t)
-   \                     _ZNSt5arrayIPK6IUnitsLj3EEixEj: (+1)
-   \        0x0   0xEB00 0x0081      ADD      R0,R0,R1, LSL #+2
-   \        0x4   0x4770             BX       LR               ;; return
+   \   __interwork __vfp std::array<char, 5U>::iterator std::array<char, 5U>::begin()
+   \                     _ZNSt5arrayIcLj5EE5beginEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x....'....        BL       _ZSt9addressofIcEPT_RS0_
+   \        0x6   0x2200             MOVS     R2,#+0
+   \        0x8   0x0001             MOVS     R1,R0
+   \        0xA   0x4668             MOV      R0,SP
+   \        0xC   0x....'....        BL       _ZNSt15_Array_iteratorIcLj5EEC1EPcj
+   \       0x10   0x6800             LDR      R0,[R0, #+0]
+   \       0x12   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp char const *std::array<char, 5U>::data() const
@@ -561,6 +660,30 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0xE   0x0020             MOVS     R0,R4
    \       0x10   0x....'....        BL       _ZSt4copyIPKcSt15_Array_iteratorIcLj40EEET0_T_S5_S4_
    \       0x14   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void SusuString<5U>::Set<3U>(char const (&)[3])
+   \                     _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x000C             MOVS     R4,R1
+   \        0x4   0x....'....        BL       _ZNSt5arrayIcLj5EE5beginEv
+   \        0x8   0x0002             MOVS     R2,R0
+   \        0xA   0x1CA1             ADDS     R1,R4,#+2
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x....'....        BL       _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_
+   \       0x12   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 2
+   \   __interwork __vfp void SusuString<5U>::Set<5U>(char const (&)[5])
+   \                     _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x000C             MOVS     R4,R1
+   \        0x4   0x....'....        BL       _ZNSt5arrayIcLj5EE5beginEv
+   \        0x8   0x0002             MOVS     R2,R0
+   \        0xA   0x1D21             ADDS     R1,R4,#+4
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x....'....        BL       _ZSt4copyIPKcSt15_Array_iteratorIcLj5EEET0_T_S5_S4_
+   \       0x12   0xBD10             POP      {R4,PC}          ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp char const *SusuString<5U>::GetString() const
@@ -656,28 +779,11 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x18   0xBD00             POP      {PC}             ;; return
 
    \                                 In section .text, align 2
-   \   __code __interwork __vfp OsWrapper::Thread<256U>::subobject Thread()
-   \                     _ZN9OsWrapper6ThreadILj256EEC2Ev: (+1)
-   \        0x0   0xB580             PUSH     {R7,LR}
-   \        0x2   0x....'....        BL       _ZN9OsWrapper6ThreadILj256EEC1Ev
-   \        0x6   0xBD02             POP      {R1,PC}          ;; return
-
-   \                                 In section .text, align 2
    \   __code __interwork __vfp OsWrapper::Thread<512U>::subobject Thread()
    \                     _ZN9OsWrapper6ThreadILj512EEC2Ev: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x....'....        BL       _ZN9OsWrapper6ThreadILj512EEC1Ev
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
-
-   \                                 In section .text, align 2
-   \   __code __interwork __vfp OsWrapper::Thread<256U>::Thread()
-   \                     _ZN9OsWrapper6ThreadILj256EEC1Ev: (+1)
-   \        0x0   0xB510             PUSH     {R4,LR}
-   \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0x0020             MOVS     R0,R4
-   \        0x6   0x....'....        BL       _ZN9OsWrapper7IThreadC2Ev
-   \        0xA   0x0020             MOVS     R0,R4
-   \        0xC   0xBD10             POP      {R4,PC}          ;; return
 
    \                                 In section .text, align 2
    \   __code __interwork __vfp OsWrapper::Thread<512U>::Thread()
@@ -888,328 +994,145 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x4C   0x....'....        DC32     _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
    \       0x50   0x....'....        DC32     _ZZN6Format24GetDisplayDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
-   \                                 In section .text, align 2
-   \   __code __interwork __vfp ISubscriber::subobject ISubscriber()
-   \                     _ZN11ISubscriberC2Ev: (+1)
-   \        0x0   0xB580             PUSH     {R7,LR}
-   \        0x2   0x....'....        BL       _ZN11ISubscriberC1Ev
-   \        0x6   0xBD02             POP      {R1,PC}          ;; return
-
-   \                                 In section .text, align 2
-   \   __code __interwork __vfp ISubscriber::ISubscriber()
-   \                     _ZN11ISubscriberC1Ev: (+1)
-   \        0x0   0x4770             BX       LR               ;; return
-
-   \                                 In section .text, align 2
-   \   __code __interwork __vfp IVariable::subobject IVariable()
-   \                     _ZN9IVariableC2Ev: (+1)
-   \        0x0   0xB580             PUSH     {R7,LR}
-   \        0x2   0x....'....        BL       _ZN9IVariableC1Ev
-   \        0x6   0xBD02             POP      {R1,PC}          ;; return
-
-   \                                 In section .text, align 2
-   \   __code __interwork __vfp IVariable::IVariable()
-   \                     _ZN9IVariableC1Ev: (+1)
-   \        0x0   0x4770             BX       LR               ;; return
-
    \                                 In section .text, align 4
-   \   __interwork __vfp std::pair<SusuStringView, float> Kelvin::GetTemperature(float) const
+   \   __interwork __vfp vFormat Kelvin::GetTemperature(float) const
    \                     _ZNK6Kelvin14GetTemperatureEf: (+1)
-   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
-   \        0x2   0xEDDF 0x0A08      VLDR.W   S1,??GetTemperature_0  ;; 0x43889333
-   \        0x6   0xEE30 0x0A20      VADD.F32 S0,S0,S1
-   \        0xA   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \        0xE   0x4906             LDR.N    R1,??GetTemperature_0+0x4
-   \       0x10   0xE9D1 0x2300      LDRD     R2,R3,[R1, #+0]
-   \       0x14   0xE9CD 0x2301      STRD     R2,R3,[SP, #+4]
-   \       0x18   0x466A             MOV      R2,SP
-   \       0x1A   0xA901             ADD      R1,SP,#+4
-   \       0x1C   0x....'....        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-   \       0x20   0xBD07             POP      {R0-R2,PC}       ;; return
-   \       0x22   0xBF00             Nop      
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xEDDF 0x0A08      VLDR.W   S1,??GetTemperature_0  ;; 0x43889333
+   \        0x8   0xEE30 0x0A20      VADD.F32 S0,S0,S1
+   \        0xC   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
+   \       0x10   0xA801             ADD      R0,SP,#+4
+   \       0x12   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \       0x16   0x4905             LDR.N    R1,??GetTemperature_0+0x4
+   \       0x18   0x....'....        BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
+   \       0x1C   0x466A             MOV      R2,SP
+   \       0x1E   0xA901             ADD      R1,SP,#+4
+   \       0x20   0x0020             MOVS     R0,R4
+   \       0x22   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x26   0xBD1F             POP      {R0-R4,PC}       ;; return
    \                     ??GetTemperature_0:
-   \       0x24   0x4388'9333        DC32     0x43889333
-   \       0x28   0x....'....        DC32     ?_1
+   \       0x28   0x4388'9333        DC32     0x43889333
+   \       0x2C   0x....'....        DC32     _ZZNK6Kelvin14GetTemperatureEfEs
 
    \                                 In section .text, align 4
-   \   __interwork __vfp std::pair<SusuStringView, float> Fahrenheit::GetTemperature(float) const
+   \   __interwork __vfp vFormat Fahrenheit::GetTemperature(float) const
    \                     _ZNK10Fahrenheit14GetTemperatureEf: (+1)
-   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
-   \        0x2   0xEDDF 0x0A08      VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
-   \        0x6   0xEE30 0x0A20      VADD.F32 S0,S0,S1
-   \        0xA   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \        0xE   0x4906             LDR.N    R1,??GetTemperature_1+0x4
-   \       0x10   0xE9D1 0x2300      LDRD     R2,R3,[R1, #+0]
-   \       0x14   0xE9CD 0x2301      STRD     R2,R3,[SP, #+4]
-   \       0x18   0x466A             MOV      R2,SP
-   \       0x1A   0xA901             ADD      R1,SP,#+4
-   \       0x1C   0x....'....        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-   \       0x20   0xBD07             POP      {R0-R2,PC}       ;; return
-   \       0x22   0xBF00             Nop      
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xEDDF 0x0A08      VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
+   \        0x8   0xEE30 0x0A20      VADD.F32 S0,S0,S1
+   \        0xC   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
+   \       0x10   0xA801             ADD      R0,SP,#+4
+   \       0x12   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \       0x16   0x4905             LDR.N    R1,??GetTemperature_1+0x4
+   \       0x18   0x....'....        BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
+   \       0x1C   0x466A             MOV      R2,SP
+   \       0x1E   0xA901             ADD      R1,SP,#+4
+   \       0x20   0x0020             MOVS     R0,R4
+   \       0x22   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x26   0xBD1F             POP      {R0-R4,PC}       ;; return
    \                     ??GetTemperature_1:
-   \       0x24   0x4200'0000        DC32     0x42000000
-   \       0x28   0x....'....        DC32     ?_3
+   \       0x28   0x4200'0000        DC32     0x42000000
+   \       0x2C   0x....'....        DC32     _ZZNK10Fahrenheit14GetTemperatureEfEs
 
    \                                 In section .text, align 4
-   \   __interwork __vfp std::pair<SusuStringView, float> Celsius::GetTemperature(float) const
+   \   __interwork __vfp vFormat Celsius::GetTemperature(float) const
    \                     _ZNK7Celsius14GetTemperatureEf: (+1)
-   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
-   \        0x2   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \        0x6   0x4905             LDR.N    R1,??GetTemperature_2
-   \        0x8   0xE9D1 0x2300      LDRD     R2,R3,[R1, #+0]
-   \        0xC   0xE9CD 0x2301      STRD     R2,R3,[SP, #+4]
-   \       0x10   0x466A             MOV      R2,SP
-   \       0x12   0xA901             ADD      R1,SP,#+4
-   \       0x14   0x....'....        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-   \       0x18   0xBD07             POP      {R0-R2,PC}       ;; return
-   \       0x1A   0xBF00             Nop      
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
+   \        0x8   0xA801             ADD      R0,SP,#+4
+   \        0xA   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \        0xE   0x4904             LDR.N    R1,??GetTemperature_2
+   \       0x10   0x....'....        BL       _ZN10SusuStringILj5EE3SetILj5EEEvRAT__Kc
+   \       0x14   0x466A             MOV      R2,SP
+   \       0x16   0xA901             ADD      R1,SP,#+4
+   \       0x18   0x0020             MOVS     R0,R4
+   \       0x1A   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x1E   0xBD1F             POP      {R0-R4,PC}       ;; return
    \                     ??GetTemperature_2:
-   \       0x1C   0x....'....        DC32     ?_5
-
-   \                                 In section .text, align 4
-   \   __code __interwork __vfp Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Temperature()
-   \                     _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEEC1Ev: (+1)
-   \        0x0   0xB538             PUSH     {R3-R5,LR}
-   \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0x0020             MOVS     R0,R4
-   \        0x6   0x....'....        BL       _ZN9IVariableC2Ev
-   \        0xA   0x4806             LDR.N    R0,??Temperature_0
-   \        0xC   0x6020             STR      R0,[R4, #+0]
-   \        0xE   0x1D20             ADDS     R0,R4,#+4
-   \       0x10   0x4905             LDR.N    R1,??Temperature_0+0x4
-   \       0x12   0xE891 0x002C      LDM      R1,{R2,R3,R5}
-   \       0x16   0xE880 0x002C      STM      R0,{R2,R3,R5}
-   \       0x1A   0x2000             MOVS     R0,#+0
-   \       0x1C   0x6120             STR      R0,[R4, #+16]
-   \       0x1E   0x0020             MOVS     R0,R4
-   \       0x20   0xBD32             POP      {R1,R4,R5,PC}    ;; return
-   \       0x22   0xBF00             Nop      
-   \                     ??Temperature_0:
-   \       0x24   0x....'....        DC32     _ZTV11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE+0x8
-   \       0x28   0x....'....        DC32     ?_13
-
-   \                                 In section .text, align 2
-   \   __interwork __softfp vFormat Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Get(float, ...)
-   \                     _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE3GetEfz: (+1)
-   \        0x0   0xB408             PUSH     {R3}
-   \        0x2   0xB518             PUSH     {R3,R4,LR}
-   \        0x4   0xED2D 0x8B02      VPUSH    {D8}
-   \        0x8   0xB086             SUB      SP,SP,#+24
-   \        0xA   0x0004             MOVS     R4,R0
-   \        0xC   0x0008             MOVS     R0,R1
-   \        0xE   0xEE08 0x2A10      VMOV     S16,R2
-   \       0x12   0x6901             LDR      R1,[R0, #+16]
-   \       0x14   0x1D00             ADDS     R0,R0,#+4
-   \       0x16   0x....'....        BL       _ZNSt5arrayIPK6IUnitsLj3EEixEj
-   \       0x1A   0x6801             LDR      R1,[R0, #+0]
-   \       0x1C   0xEEB0 0x0A48      VMOV.F32 S0,S16
-   \       0x20   0xA803             ADD      R0,SP,#+12
-   \       0x22   0x680A             LDR      R2,[R1, #+0]
-   \       0x24   0x6812             LDR      R2,[R2, #+0]
-   \       0x26   0x4790             BLX      R2
-   \       0x28   0xE9DD 0x0103      LDRD     R0,R1,[SP, #+12]
-   \       0x2C   0xE9CD 0x0101      STRD     R0,R1,[SP, #+4]
-   \       0x30   0x9805             LDR      R0,[SP, #+20]
-   \       0x32   0x9000             STR      R0,[SP, #+0]
-   \       0x34   0x466A             MOV      R2,SP
-   \       0x36   0xA901             ADD      R1,SP,#+4
-   \       0x38   0x0020             MOVS     R0,R4
-   \       0x3A   0x....'....        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-   \       0x3E   0xB006             ADD      SP,SP,#+24
-   \       0x40   0xECBD 0x8B02      VPOP     {D8}
-   \       0x44   0xBC11             POP      {R0,R4}
-   \       0x46   0xF85D 0xFB08      LDR      PC,[SP], #+8     ;; return
-
-   \                                 In section .text, align 4
-   \   __code __interwork __vfp Pressure::Pressure()
-   \                     _ZN8PressureC1Ev: (+1)
-   \        0x0   0xB510             PUSH     {R4,LR}
-   \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0x0020             MOVS     R0,R4
-   \        0x6   0x....'....        BL       _ZN9IVariableC2Ev
-   \        0xA   0x4802             LDR.N    R0,??Pressure_0
-   \        0xC   0x6020             STR      R0,[R4, #+0]
-   \        0xE   0x0020             MOVS     R0,R4
-   \       0x10   0xBD10             POP      {R4,PC}          ;; return
-   \       0x12   0xBF00             Nop      
-   \                     ??Pressure_0:
-   \       0x14   0x....'....        DC32     _ZTV8Pressure+0x8
-
-   \                                 In section .text, align 4
-   \   __interwork __softfp vFormat Pressure::Get(float, ...)
-   \                     _ZN8Pressure3GetEfz: (+1)
-   \        0x0   0xB408             PUSH     {R3}
-   \        0x2   0xB5F0             PUSH     {R4-R7,LR}
-   \        0x4   0xEE00 0x2A10      VMOV     S0,R2
-   \        0x8   0x4906             LDR.N    R1,??Get_0
-   \        0xA   0xE9D1 0x2300      LDRD     R2,R3,[R1, #+0]
-   \        0xE   0xE9CD 0x2301      STRD     R2,R3,[SP, #+4]
-   \       0x12   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \       0x16   0x466A             MOV      R2,SP
-   \       0x18   0xA901             ADD      R1,SP,#+4
-   \       0x1A   0x....'....        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-   \       0x1E   0xBC0F             POP      {R0-R3}
-   \       0x20   0xF85D 0xFB08      LDR      PC,[SP], #+8     ;; return
-   \                     ??Get_0:
-   \       0x24   0x....'....        DC32     ?_7
-
-   \                                 In section .text, align 4
-   \   __code __interwork __vfp Humidity::Humidity()
-   \                     _ZN8HumidityC1Ev: (+1)
-   \        0x0   0xB510             PUSH     {R4,LR}
-   \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0x0020             MOVS     R0,R4
-   \        0x6   0x....'....        BL       _ZN9IVariableC2Ev
-   \        0xA   0x4802             LDR.N    R0,??Humidity_0
-   \        0xC   0x6020             STR      R0,[R4, #+0]
-   \        0xE   0x0020             MOVS     R0,R4
-   \       0x10   0xBD10             POP      {R4,PC}          ;; return
-   \       0x12   0xBF00             Nop      
-   \                     ??Humidity_0:
-   \       0x14   0x....'....        DC32     _ZTV8Humidity+0x8
-
-   \                                 In section .text, align 4
-   \   __interwork __softfp vFormat Humidity::Get(float, ...)
-   \                     _ZN8Humidity3GetEfz: (+1)
-   \        0x0   0xB408             PUSH     {R3}
-   \        0x2   0xB5F0             PUSH     {R4-R7,LR}
-   \        0x4   0xEE00 0x2A10      VMOV     S0,R2
-   \        0x8   0x4906             LDR.N    R1,??Get_1
-   \        0xA   0xE9D1 0x2300      LDRD     R2,R3,[R1, #+0]
-   \        0xE   0xE9CD 0x2301      STRD     R2,R3,[SP, #+4]
-   \       0x12   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \       0x16   0x466A             MOV      R2,SP
-   \       0x18   0xA901             ADD      R1,SP,#+4
-   \       0x1A   0x....'....        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-   \       0x1E   0xBC0F             POP      {R0-R3}
-   \       0x20   0xF85D 0xFB08      LDR      PC,[SP], #+8     ;; return
-   \                     ??Get_1:
-   \       0x24   0x....'....        DC32     ?_9
-
-   \                                 In section .text, align 4
-   \   __code __interwork __vfp DewPoint::DewPoint()
-   \                     _ZN8DewPointC1Ev: (+1)
-   \        0x0   0xB510             PUSH     {R4,LR}
-   \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0x0020             MOVS     R0,R4
-   \        0x6   0x....'....        BL       _ZN9IVariableC2Ev
-   \        0xA   0x4802             LDR.N    R0,??DewPoint_0
-   \        0xC   0x6020             STR      R0,[R4, #+0]
-   \        0xE   0x0020             MOVS     R0,R4
-   \       0x10   0xBD10             POP      {R4,PC}          ;; return
-   \       0x12   0xBF00             Nop      
-   \                     ??DewPoint_0:
-   \       0x14   0x....'....        DC32     _ZTV8DewPoint+0x8
-
-   \                                 In section .text, align 4
-   \   __interwork __softfp vFormat DewPoint::Get(float, ...)
-   \                     _ZN8DewPoint3GetEfz: (+1)
-   \        0x0   0xB408             PUSH     {R3}
-   \        0x2   0xB518             PUSH     {R3,R4,LR}
-   \        0x4   0xED2D 0x8B04      VPUSH    {D8-D9}
-   \        0x8   0xB084             SUB      SP,SP,#+16
-   \        0xA   0x0004             MOVS     R4,R0
-   \        0xC   0xEE08 0x2A10      VMOV     S16,R2
-   \       0x10   0xA80B             ADD      R0,SP,#+44
-
-        float H = va_arg(args,float);
-                              ^
-"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\DewPoint.hpp",14  Warning[Pe1145]: 
-          "float" would have been promoted to "double" when passed through the
-          ellipsis parameter; use the latter type instead
-   \       0x12   0x1DC0             ADDS     R0,R0,#+7
-   \       0x14   0xF030 0x0007      BICS     R0,R0,#0x7
-   \       0x18   0xED90 0x0B00      VLDR     D0,[R0, #0]
-   \       0x1C   0x3008             ADDS     R0,R0,#+8
-   \       0x1E   0xEC51 0x0B10      VMOV     R0,R1,D0
-   \       0x22   0x....'....        BL       __aeabi_d2f
-   \       0x26   0xEE00 0x0A10      VMOV     S0,R0
-   \       0x2A   0xEDDF 0x8A15      VLDR.W   S17,??Get_2      ;; 0x418a28f6
-   \       0x2E   0xED9F 0x9A15      VLDR.W   S18,??Get_2+0x4  ;; 0x436db333
-   \       0x32   0xEDDF 0x0A15      VLDR.W   S1,??Get_2+0x8   ;; 0x42c80000
-   \       0x36   0xEE80 0x0A20      VDIV.F32 S0,S0,S1
-   \       0x3A   0x....'....        BL       logf
-   \       0x3E   0xEE68 0x0A88      VMUL.F32 S1,S17,S16
-   \       0x42   0xEE39 0x1A08      VADD.F32 S2,S18,S16
-   \       0x46   0xEEC0 0x0A81      VDIV.F32 S1,S1,S2
-   \       0x4A   0xEE30 0x0A80      VADD.F32 S0,S1,S0
-   \       0x4E   0xEE69 0x0A00      VMUL.F32 S1,S18,S0
-   \       0x52   0xEE38 0x0AC0      VSUB.F32 S0,S17,S0
-   \       0x56   0xEE80 0x0A80      VDIV.F32 S0,S1,S0
-   \       0x5A   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \       0x5E   0x480B             LDR.N    R0,??Get_2+0xC
-   \       0x60   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
-   \       0x64   0xE9CD 0x2301      STRD     R2,R3,[SP, #+4]
-   \       0x68   0x466A             MOV      R2,SP
-   \       0x6A   0xA901             ADD      R1,SP,#+4
-   \       0x6C   0x0020             MOVS     R0,R4
-   \       0x6E   0x....'....        BL       _ZSt9make_pairIR14SusuStringViewRfESt4pairINSt10_UnrefwrapIT_E4typeENS4_IT0_E4typeEEOS5_OS8_
-   \       0x72   0xB004             ADD      SP,SP,#+16
-   \       0x74   0xECBD 0x8B04      VPOP     {D8-D9}
-   \       0x78   0xBC11             POP      {R0,R4}
-   \       0x7A   0xF85D 0xFB08      LDR      PC,[SP], #+8     ;; return
-   \       0x7E   0xBF00             Nop      
-   \                     ??Get_2:
-   \       0x80   0x418A'28F6        DC32     0x418a28f6
-   \       0x84   0x436D'B333        DC32     0x436db333
-   \       0x88   0x42C8'0000        DC32     0x42c80000
-   \       0x8C   0x....'....        DC32     ?_11
+   \       0x20   0x....'....        DC32     _ZZNK7Celsius14GetTemperatureEfEs
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
-   \                     _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev>()
+   \                     _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
    \        0x6   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
-   \        0xA   0xF114 0x0010      ADDS     R0,R4,#+16
-   \        0xE   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
-   \       0x12   0xF114 0x0020      ADDS     R0,R4,#+32
-   \       0x16   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
-   \       0x1A   0xF114 0x0030      ADDS     R0,R4,#+48
-   \       0x1E   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
-   \       0x22   0x0020             MOVS     R0,R4
-   \       0x24   0xBD10             POP      {R4,PC}          ;; return
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
 
    \                                 In section .text, align 2, keep-with-next
    \   static __intrinsic __interwork __vfp void __sti__routine()
    \                     __sti__routine: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x....             LDR.N    R0,??DataTable3
-   \        0x4   0x....'....        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev
-   \        0x8   0xBD01             POP      {R0,PC}          ;; return
+   \        0x4   0x....'....        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev
+   \        0x8   0x....             LDR.N    R0,??DataTable3_1
+   \        0xA   0x....'....        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev
+   \        0xE   0x....             LDR.N    R0,??DataTable3_2
+   \       0x10   0x....'....        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev
+   \       0x14   0x....             LDR.N    R0,??DataTable3_3
+   \       0x16   0x....'....        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev
+   \       0x1A   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .bss, align 4
-   \   static __absolute struct <unnamed> SensorData
-   \                     SensorData:
-   \        0x0                      DS8 64
+   \   static __absolute struct <unnamed> TData
+   \                     TData:
+   \        0x0                      DS8 16
 
-   \                                 In section .text, align 4
-   \   __code __interwork __vfp SensorDirector::SensorDirector()
-   \                     _ZN14SensorDirectorC1Ev: (+1)
+   \                                 In section .text, align 2, keep-with-next
+   \   static __code __interwork __vfp <unnamed>#2::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev>()
+   \                     _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
-   \        0x6   0x....'....        BL       _ZN9OsWrapper6ThreadILj256EEC2Ev
-   \        0xA   0xF204 0x405C      ADDW     R0,R4,#+1116
-   \        0xE   0x....'....        BL       _ZN11ISubscriberC2Ev
-   \       0x12   0x480C             LDR.N    R0,??SensorDirector_0
-   \       0x14   0xF110 0x0108      ADDS     R1,R0,#+8
-   \       0x18   0x6021             STR      R1,[R4, #+0]
-   \       0x1A   0x3018             ADDS     R0,R0,#+24
-   \       0x1C   0xF8C4 0x045C      STR      R0,[R4, #+1116]
-   \       0x20   0xF514 0x608C      ADDS     R0,R4,#+1120
-   \       0x24   0x....'....        BL       _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEEC1Ev
-   \       0x28   0xF204 0x4074      ADDW     R0,R4,#+1140
-   \       0x2C   0x....'....        BL       _ZN8PressureC1Ev
-   \       0x30   0xF514 0x608F      ADDS     R0,R4,#+1144
-   \       0x34   0x....'....        BL       _ZN8HumidityC1Ev
-   \       0x38   0xF204 0x407C      ADDW     R0,R4,#+1148
-   \       0x3C   0x....'....        BL       _ZN8DewPointC1Ev
-   \       0x40   0x0020             MOVS     R0,R4
-   \       0x42   0xBD10             POP      {R4,PC}          ;; return
-   \                     ??SensorDirector_0:
-   \       0x44   0x....'....        DC32     _ZTV14SensorDirector
+   \        0x6   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \   static __absolute struct <unnamed>#2 PData
+   \                     PData:
+   \        0x0                      DS8 16
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __code __interwork __vfp <unnamed>#3::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev>()
+   \                     _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \   static __absolute struct <unnamed>#3 HData
+   \                     HData:
+   \        0x0                      DS8 16
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __code __interwork __vfp <unnamed>#4::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev>()
+   \                     _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .bss, align 4
+   \   static __absolute struct <unnamed>#4 DPData
+   \                     DPData:
+   \        0x0                      DS8 16
+
+        float H = va_arg(args,float);
+                              ^
+"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\DewPoint.hpp",25  Warning[Pe1145]: 
+          "float" would have been promoted to "double" when passed through the
+          ellipsis parameter; use the latter type instead
 
    \                                 In section .rodata, align 4
    \   __absolute Fahrenheit const SensorDirector::fahrenheit
@@ -1229,27 +1152,27 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
       5          
 
    \                                 In section .text, align 2, keep-with-next
-   \   __code __interwork __vfp DisplayDirector::subobject DisplayDirector(IDisplayView &)
-   \                     _ZN15DisplayDirectorC2ER12IDisplayView: (+1)
+   \   __code __interwork __vfp DisplayDirector::subobject DisplayDirector(IDisplayView &, SensorDirector &)
+   \                     _ZN15DisplayDirectorC2ER12IDisplayViewR14SensorDirector: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-   \        0x2   0x....'....        BL       _ZN15DisplayDirectorC1ER12IDisplayView
+   \        0x2   0x....'....        BL       _ZN15DisplayDirectorC1ER12IDisplayViewR14SensorDirector
    \        0x6   0xBD02             POP      {R1,PC}          ;; return
 
    \                                 In section .text, align 2, keep-with-next
-      6          DisplayDirector::DisplayDirector(IDisplayView& view): myView(view) { };
-   \                     _ZN15DisplayDirectorC1ER12IDisplayView: (+1)
-   \        0x0   0xB538             PUSH     {R3-R5,LR}
+      6          DisplayDirector::DisplayDirector(IDisplayView& view, SensorDirector& mysensordirector ): myView(view), sensordirector(mysensordirector) { };
+   \                     _ZN15DisplayDirectorC1ER12IDisplayViewR14SensorDirector: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x000D             MOVS     R5,R1
-   \        0x6   0x0020             MOVS     R0,R4
-   \        0x8   0x....'....        BL       _ZN9OsWrapper6ThreadILj512EEC2Ev
-   \        0xC   0x....             LDR.N    R0,??DataTable3_1
-   \        0xE   0x6020             STR      R0,[R4, #+0]
-   \       0x10   0xF8C4 0x585C      STR      R5,[R4, #+2140]
-   \       0x14   0xF514 0x6006      ADDS     R0,R4,#+2144
-   \       0x18   0x....'....        BL       _ZN14SensorDirectorC1Ev
-   \       0x1C   0x0020             MOVS     R0,R4
-   \       0x1E   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x....'....        BL       _ZN9OsWrapper6ThreadILj512EEC2Ev
+   \        0xE   0x....             LDR.N    R0,??DataTable3_4
+   \       0x10   0x6020             STR      R0,[R4, #+0]
+   \       0x12   0xF8C4 0x585C      STR      R5,[R4, #+2140]
+   \       0x16   0xF8C4 0x6860      STR      R6,[R4, #+2144]
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xBD70             POP      {R4-R6,PC}       ;; return
       7          
 
    \                                 In section .text, align 2, keep-with-next
@@ -1258,154 +1181,124 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x0   0xB530             PUSH     {R4,R5,LR}
    \        0x2   0xB0E9             SUB      SP,SP,#+420
    \        0x4   0x0004             MOVS     R4,R0
-      9            for(;;){
-     10            tFormatData x = sensordirector.GetData();
    \                     ??Execute_0: (+1)
-   \        0x6   0xF514 0x6106      ADDS     R1,R4,#+2144
-   \        0xA   0xA859             ADD      R0,SP,#+356
-   \        0xC   0x....'....        BL       _ZN14SensorDirector7GetDataEv
-     11            auto f = Format::GetDisplayFormat(x); 
-   \       0x10   0xA959             ADD      R1,SP,#+356
-   \       0x12   0xA82D             ADD      R0,SP,#+180
-   \       0x14   0x....'....        BL       _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
-     12            auto f0 = std::get<0>(f); 
-   \       0x18   0xA82D             ADD      R0,SP,#+180
-   \       0x1A   0x....'....        BL       _ZSt3getILj0EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
-   \       0x1E   0x0001             MOVS     R1,R0
-   \       0x20   0xA822             ADD      R0,SP,#+136
-   \       0x22   0x222C             MOVS     R2,#+44
-   \       0x24   0x....'....        BL       __aeabi_memcpy4
-     13            auto f1 = std::get<1>(f);
-   \       0x28   0xA82D             ADD      R0,SP,#+180
-   \       0x2A   0x....'....        BL       _ZSt3getILj1EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
-   \       0x2E   0x0001             MOVS     R1,R0
-   \       0x30   0xA817             ADD      R0,SP,#+92
-   \       0x32   0x222C             MOVS     R2,#+44
-   \       0x34   0x....'....        BL       __aeabi_memcpy4
-     14            auto f2 = std::get<2>(f);
-   \       0x38   0xA82D             ADD      R0,SP,#+180
-   \       0x3A   0x....'....        BL       _ZSt3getILj2EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
-   \       0x3E   0x0001             MOVS     R1,R0
-   \       0x40   0xA80C             ADD      R0,SP,#+48
-   \       0x42   0x222C             MOVS     R2,#+44
-   \       0x44   0x....'....        BL       __aeabi_memcpy4
-     15            auto f3 = std::get<3>(f);
-   \       0x48   0xA82D             ADD      R0,SP,#+180
-   \       0x4A   0x....'....        BL       _ZSt3getILj3EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
-   \       0x4E   0x0001             MOVS     R1,R0
-   \       0x50   0xA801             ADD      R0,SP,#+4
-   \       0x52   0x222C             MOVS     R2,#+44
-   \       0x54   0x....'....        BL       __aeabi_memcpy4
-     16            myView.Update(f0,f1,f2,f3);
-   \       0x58   0xA801             ADD      R0,SP,#+4
-   \       0x5A   0x9000             STR      R0,[SP, #+0]
-   \       0x5C   0xAB0C             ADD      R3,SP,#+48
-   \       0x5E   0xAA17             ADD      R2,SP,#+92
-   \       0x60   0xA922             ADD      R1,SP,#+136
-   \       0x62   0xF8D4 0x085C      LDR      R0,[R4, #+2140]
-   \       0x66   0xF8D4 0x585C      LDR      R5,[R4, #+2140]
-   \       0x6A   0x682D             LDR      R5,[R5, #+0]
-   \       0x6C   0x682D             LDR      R5,[R5, #+0]
-   \       0x6E   0x47A8             BLX      R5
-   \       0x70   0x....             LDR.N    R2,??DataTable3_2
-   \       0x72   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
-     17            Sleep(3000ms) ;
-   \       0x76   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
-   \       0x7A   0xE7C4             B.N      ??Execute_0
-     18            }
-     19          }
+   \        0x6   0x....             LDR.N    R2,??DataTable3_5
+   \        0x8   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+      9            for(;;){
+     10            Sleep(1500ms) ;
+   \        0xC   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+     11            tFormatData x = sensordirector.GetData();
+   \       0x10   0xF8D4 0x1860      LDR      R1,[R4, #+2144]
+   \       0x14   0xA859             ADD      R0,SP,#+356
+   \       0x16   0x....'....        BL       _ZN14SensorDirector7GetDataEv
+     12            auto f = Format::GetDisplayFormat(x); 
+   \       0x1A   0xA959             ADD      R1,SP,#+356
+   \       0x1C   0xA82D             ADD      R0,SP,#+180
+   \       0x1E   0x....'....        BL       _ZN6Format16GetDisplayFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE
+     13            auto f0 = std::get<0>(f); 
+   \       0x22   0xA82D             ADD      R0,SP,#+180
+   \       0x24   0x....'....        BL       _ZSt3getILj0EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
+   \       0x28   0x0001             MOVS     R1,R0
+   \       0x2A   0xA822             ADD      R0,SP,#+136
+   \       0x2C   0x222C             MOVS     R2,#+44
+   \       0x2E   0x....'....        BL       __aeabi_memcpy4
+     14            auto f1 = std::get<1>(f);
+   \       0x32   0xA82D             ADD      R0,SP,#+180
+   \       0x34   0x....'....        BL       _ZSt3getILj1EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
+   \       0x38   0x0001             MOVS     R1,R0
+   \       0x3A   0xA817             ADD      R0,SP,#+92
+   \       0x3C   0x222C             MOVS     R2,#+44
+   \       0x3E   0x....'....        BL       __aeabi_memcpy4
+     15            auto f2 = std::get<2>(f);
+   \       0x42   0xA82D             ADD      R0,SP,#+180
+   \       0x44   0x....'....        BL       _ZSt3getILj2EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
+   \       0x48   0x0001             MOVS     R1,R0
+   \       0x4A   0xA80C             ADD      R0,SP,#+48
+   \       0x4C   0x222C             MOVS     R2,#+44
+   \       0x4E   0x....'....        BL       __aeabi_memcpy4
+     16            auto f3 = std::get<3>(f);
+   \       0x52   0xA82D             ADD      R0,SP,#+180
+   \       0x54   0x....'....        BL       _ZSt3getILj3EJ10SusuStringILj40EES1_S1_S1_EERNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERS6_
+   \       0x58   0x0001             MOVS     R1,R0
+   \       0x5A   0xA801             ADD      R0,SP,#+4
+   \       0x5C   0x222C             MOVS     R2,#+44
+   \       0x5E   0x....'....        BL       __aeabi_memcpy4
+     17            myView.Update(f0,f1,f2,f3);
+   \       0x62   0xA801             ADD      R0,SP,#+4
+   \       0x64   0x9000             STR      R0,[SP, #+0]
+   \       0x66   0xAB0C             ADD      R3,SP,#+48
+   \       0x68   0xAA17             ADD      R2,SP,#+92
+   \       0x6A   0xA922             ADD      R1,SP,#+136
+   \       0x6C   0xF8D4 0x085C      LDR      R0,[R4, #+2140]
+   \       0x70   0xF8D4 0x585C      LDR      R5,[R4, #+2140]
+   \       0x74   0x682D             LDR      R5,[R5, #+0]
+   \       0x76   0x682D             LDR      R5,[R5, #+0]
+   \       0x78   0x47A8             BLX      R5
+   \       0x7A   0x....             LDR.N    R2,??DataTable3_6
+   \       0x7C   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+     18            Sleep(1500ms) ;
+   \       0x80   0x....'....        BL       _ZN9OsWrapper7IThread5SleepENSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x84   0xE7BF             B.N      ??Execute_0
+     19            }
+     20          }
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3:
-   \        0x0   0x....'....        DC32     SensorData
+   \        0x0   0x....'....        DC32     TData
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3_1:
-   \        0x0   0x....'....        DC32     _ZTV15DisplayDirector+0x8
+   \        0x0   0x....'....        DC32     PData
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3_2:
-   \        0x0   0x....'....        DC32     ?_12
+   \        0x0   0x....'....        DC32     HData
 
-   \                                 In section .rodata, align 2
-   \                     ?_0:
-   \        0x0   0x4B 0x00          DC8 "K"
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_3:
+   \        0x0   0x....'....        DC32     DPData
 
-   \                                 In section .rodata, align 4
-   \                     ?_1:
-   \        0x0   0x....'....        DC32 ?_0, 1
-   \              0x0000'0001  
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \        0x0   0x....'....        DC32     _ZTV15DisplayDirector+0x8
 
-   \                                 In section .rodata, align 2
-   \                     ?_2:
-   \        0x0   0x46 0x00          DC8 "F"
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \        0x0   0x....'....        DC32     ?_0
 
-   \                                 In section .rodata, align 4
-   \                     ?_3:
-   \        0x0   0x....'....        DC32 ?_2, 1
-   \              0x0000'0001  
-
-   \                                 In section .rodata, align 2
-   \                     ?_4:
-   \        0x0   0x43 0x00          DC8 "C"
-
-   \                                 In section .rodata, align 4
-   \                     ?_5:
-   \        0x0   0x....'....        DC32 ?_4, 1
-   \              0x0000'0001  
-
-   \                                 In section .rodata, align 4
-   \                     ?_6:
-   \        0x0   0x50 0x61          DC8 "Pa"
-   \              0x00         
-   \        0x3   0x00               DC8 0
-
-   \                                 In section .rodata, align 4
-   \                     ?_7:
-   \        0x0   0x....'....        DC32 ?_6, 2
-   \              0x0000'0002  
-
-   \                                 In section .rodata, align 2
-   \                     ?_8:
-   \        0x0   0x25 0x00          DC8 "%"
-
-   \                                 In section .rodata, align 4
-   \                     ?_9:
-   \        0x0   0x....'....        DC32 ?_8, 1
-   \              0x0000'0001  
-
-   \                                 In section .rodata, align 2
-   \                     ?_10:
-   \        0x0   0x43 0x00          DC8 "C"
-
-   \                                 In section .rodata, align 4
-   \                     ?_11:
-   \        0x0   0x....'....        DC32 ?_10, 1
-   \              0x0000'0001  
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_6:
+   \        0x0   0x....'....        DC32     ?_1
 
    \                                 In section .rodata, align 8
-   \                     ?_12:
-   \        0x0   0x0000'0000'0      DC64 3'000
-   \              000'0BB8     
-     20          
+   \                     ?_0:
+   \        0x0   0x0000'0000'0      DC64 1'500
+   \              000'05DC     
+
+   \                                 In section .rodata, align 8
+   \                     ?_1:
+   \        0x0   0x0000'0000'0      DC64 1'500
+   \              000'05DC     
+     21          
 
    Maximum stack usage in bytes:
 
    .cstack Function
    ------- --------
-       8   <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
+       8   <unnamed>#2::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-      16   Celsius::GetTemperature(float) const
-        16   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-       8   DewPoint::DewPoint()
-         8   -> IVariable::subobject IVariable()
-      48   DewPoint::Get(float, ...)
-        48   -> __aeabi_d2f
-        48   -> logf
-        48   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-      16   DisplayDirector::DisplayDirector(IDisplayView &)
+       8   <unnamed>#3::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev>()
+         8   -> SusuString<5U>::SusuString()
+       8   <unnamed>#4::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev>()
+         8   -> SusuString<5U>::SusuString()
+       8   <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev>()
+         8   -> SusuString<5U>::SusuString()
+      24   Celsius::GetTemperature(float) const
+        24   -> SusuString<5U>::Set<5U>(char const (&)[5])
+        24   -> SusuString<5U>::SusuString()
+        24   -> std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
+      16   DisplayDirector::DisplayDirector(IDisplayView &, SensorDirector &)
         16   -> OsWrapper::Thread<512U>::subobject Thread()
-        16   -> SensorDirector::SensorDirector()
      432   DisplayDirector::Execute()
        432   -- Indirect call
        432   -> Format::GetDisplayFormat(tFormatData const &)
@@ -1416,10 +1309,12 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        432   -> std::get<1U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        432   -> std::get<2U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        432   -> std::get<3U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       8   DisplayDirector::subobject DisplayDirector(IDisplayView &)
-         8   -> DisplayDirector::DisplayDirector(IDisplayView &)
-      16   Fahrenheit::GetTemperature(float) const
-        16   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
+       8   DisplayDirector::subobject DisplayDirector(IDisplayView &, SensorDirector &)
+         8   -> DisplayDirector::DisplayDirector(IDisplayView &, SensorDirector &)
+      24   Fahrenheit::GetTemperature(float) const
+        24   -> SusuString<5U>::Set<3U>(char const (&)[3])
+        24   -> SusuString<5U>::SusuString()
+        24   -> std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
      104   Format::GetDisplayDewPointFormat(tFormatData const &)
        104   -> SusuString<40U>::Set<40U>(char const (&)[40])
        104   -> SusuString<40U>::SusuString()
@@ -1463,18 +1358,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        104   -> sprintf
        104   -> std::get<4U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        104   -> std::get<5U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-      24   Humidity::Get(float, ...)
-        24   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-       8   Humidity::Humidity()
-         8   -> IVariable::subobject IVariable()
-       0   ISubscriber::ISubscriber()
-       8   ISubscriber::subobject ISubscriber()
-         8   -> ISubscriber::ISubscriber()
-       0   IVariable::IVariable()
-       8   IVariable::subobject IVariable()
-         8   -> IVariable::IVariable()
-      16   Kelvin::GetTemperature(float) const
-        16   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
+      24   Kelvin::GetTemperature(float) const
+        24   -> SusuString<5U>::Set<3U>(char const (&)[3])
+        24   -> SusuString<5U>::SusuString()
+        24   -> std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
        0   OsWrapper::IThread::IThread()
       24   OsWrapper::IThread::Sleep(std::chrono::milliseconds)
         24   -> OsWrapper::RtosWrapper::wSleep(uint32_t)
@@ -1484,52 +1371,51 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
          8   -> OsWrapper::IThread::IThread()
        8   OsWrapper::RtosWrapper::wSleep(uint32_t)
          8   -> vTaskDelay
-       8   OsWrapper::Thread<256U>::Thread()
-         8   -> OsWrapper::IThread::subobject IThread()
-       8   OsWrapper::Thread<256U>::subobject Thread()
-         8   -> OsWrapper::Thread<256U>::Thread()
        8   OsWrapper::Thread<512U>::Thread()
          8   -> OsWrapper::IThread::subobject IThread()
        8   OsWrapper::Thread<512U>::subobject Thread()
          8   -> OsWrapper::Thread<512U>::Thread()
-      24   Pressure::Get(float, ...)
-        24   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-       8   Pressure::Pressure()
-         8   -> IVariable::subobject IVariable()
-       8   SensorDirector::SensorDirector()
-         8   -> DewPoint::DewPoint()
-         8   -> Humidity::Humidity()
-         8   -> ISubscriber::subobject ISubscriber()
-         8   -> OsWrapper::Thread<256U>::subobject Thread()
-         8   -> Pressure::Pressure()
-         8   -> Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Temperature()
        8   SusuString<40U>::Set<40U>(char const (&)[40])
          8   -> std::array<char, 40U>::begin()
          8   -> std::copy<char const *, std::array<char, 40U>::iterator>(char const *, char const *, std::array<char, 40U>::iterator)
        0   SusuString<40U>::SusuString()
        8   SusuString<5U>::GetString() const
          8   -> std::array<char, 5U>::data() const
+       8   SusuString<5U>::Set<3U>(char const (&)[3])
+         8   -> std::array<char, 5U>::begin()
+         8   -> std::copy<char const *, std::array<char, 5U>::iterator>(char const *, char const *, std::array<char, 5U>::iterator)
+       8   SusuString<5U>::Set<5U>(char const (&)[5])
+         8   -> std::array<char, 5U>::begin()
+         8   -> std::copy<char const *, std::array<char, 5U>::iterator>(char const *, char const *, std::array<char, 5U>::iterator)
        0   SusuString<5U>::SusuString()
-      48   Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Get(float, ...)
-        48   -- Indirect call
-        48   -> std::array<IUnits const *, 3U>::operator[](size_t)
-        48   -> std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-      16   Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Temperature()
-        16   -> IVariable::subobject IVariable()
        8   __sti__routine()
-         8   -> <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
+         8   -> <unnamed>#2::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev>()
+         8   -> <unnamed>#3::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev>()
+         8   -> <unnamed>#4::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev>()
+         8   -> <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev>()
        0   std::_Addressof<char>(char &, std::false_type)
        0   std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
        0   std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
        0   std::_Array_const_iterator<char, 40U>::_Unchecked() const
        8   std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
          8   -> std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
+       0   std::_Array_const_iterator<char, 5U>::_Array_const_iterator(char const *, size_t)
+       0   std::_Array_const_iterator<char, 5U>::_Rechecked(char const *)
+       0   std::_Array_const_iterator<char, 5U>::_Unchecked() const
+       8   std::_Array_const_iterator<char, 5U>::subobject _Array_const_iterator(char const *, size_t)
+         8   -> std::_Array_const_iterator<char, 5U>::_Array_const_iterator(char const *, size_t)
        8   std::_Array_iterator<char, 40U>::_Array_iterator(char *, size_t)
          8   -> std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
        8   std::_Array_iterator<char, 40U>::_Rechecked(char *)
          8   -> std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
        8   std::_Array_iterator<char, 40U>::_Unchecked() const
          8   -> std::_Array_const_iterator<char, 40U>::_Unchecked() const
+       8   std::_Array_iterator<char, 5U>::_Array_iterator(char *, size_t)
+         8   -> std::_Array_const_iterator<char, 5U>::subobject _Array_const_iterator(char const *, size_t)
+       8   std::_Array_iterator<char, 5U>::_Rechecked(char *)
+         8   -> std::_Array_const_iterator<char, 5U>::_Rechecked(char const *)
+       8   std::_Array_iterator<char, 5U>::_Unchecked() const
+         8   -> std::_Array_const_iterator<char, 5U>::_Unchecked() const
       16   std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
         16   -> std::_Copy_impl<char const *, char *>(char const *, char const *, char *, std::_Scalar_ptr_iterator_tag)
         16   -> std::_Ptr_cat(char const *, char *)
@@ -1538,17 +1424,23 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        0   std::_Ptr_cat(char const *, char *)
        8   std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
          8   -> std::_Array_iterator<char, 40U>::_Rechecked(char *)
+       8   std::_Rechecked<char, 5U>(std::_Array_iterator<char, 5U> &, char *)
+         8   -> std::_Array_iterator<char, 5U>::_Rechecked(char *)
        8   std::_Tuple_val<SusuString<40U>>::_Tuple_val<SusuString<40U>>(SusuString<40U> &&)
          8   -> __aeabi_memcpy4
          8   -> std::forward<SusuString<40U>>(SusuString<40U> &)
        0   std::_Unchecked<char const *>(char const *)
        8   std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
          8   -> std::_Array_iterator<char, 40U>::_Unchecked() const
+       8   std::_Unchecked<char, 5U>(std::_Array_iterator<char, 5U>)
+         8   -> std::_Array_iterator<char, 5U>::_Unchecked() const
        8   std::addressof<char>(char &)
          8   -> std::_Addressof<char>(char &, std::false_type)
-       0   std::array<IUnits const *, 3U>::operator[](size_t)
        8   std::array<char, 40U>::begin()
          8   -> std::_Array_iterator<char, 40U>::_Array_iterator(char *, size_t)
+         8   -> std::addressof<char>(char &)
+       8   std::array<char, 5U>::begin()
+         8   -> std::_Array_iterator<char, 5U>::_Array_iterator(char *, size_t)
          8   -> std::addressof<char>(char &)
        0   std::array<char, 5U>::data() const
        0   std::chrono::duration<__int64_t, std::milli>::count() const
@@ -1563,8 +1455,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
         24   -> std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
         24   -> std::_Unchecked<char const *>(char const *)
         24   -> std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
+      24   std::copy<char const *, std::array<char, 5U>::iterator>(char const *, char const *, std::array<char, 5U>::iterator)
+        24   -> std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
+        24   -> std::_Rechecked<char, 5U>(std::_Array_iterator<char, 5U> &, char *)
+        24   -> std::_Unchecked<char const *>(char const *)
+        24   -> std::_Unchecked<char, 5U>(std::_Array_iterator<char, 5U>)
        0   std::forward<SusuString<40U>>(SusuString<40U> &)
-       0   std::forward<SusuStringView &>(SusuStringView &)
+       0   std::forward<SusuString<5U> &>(SusuString<5U> &)
        0   std::forward<float &>(float &)
        0   std::get<0U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        0   std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
@@ -1578,15 +1475,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        0   std::get<5U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<6U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-      32   std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
-        32   -> std::forward<SusuStringView &>(SusuStringView &)
+      32   std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
+        32   -> __aeabi_memcpy4
+        32   -> std::forward<SusuString<5U> &>(SusuString<5U> &)
         32   -> std::forward<float &>(float &)
-        32   -> std::pair<SusuStringView, float>::pair<SusuStringView &, float &, void>(SusuStringView &, float &)
+        32   -> std::pair<SusuString<5U>, float>::pair<SusuString<5U> &, float &, void>(SusuString<5U> &, float &)
       32   std::make_tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
         32   -> std::forward<SusuString<40U>>(SusuString<40U> &)
         32   -> std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>, void **>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
-      16   std::pair<SusuStringView, float>::pair<SusuStringView &, float &, void>(SusuStringView &, float &)
-        16   -> std::forward<SusuStringView &>(SusuStringView &)
+      16   std::pair<SusuString<5U>, float>::pair<SusuString<5U> &, float &, void>(SusuString<5U> &, float &)
+        16   -> std::forward<SusuString<5U> &>(SusuString<5U> &)
         16   -> std::forward<float &>(float &)
       24   std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>, void **>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
         24   -> std::_Tuple_val<SusuString<40U>>::_Tuple_val<SusuString<40U>>(SusuString<40U> &&)
@@ -1615,82 +1513,77 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
 
    Bytes  Function/Label
    -----  --------------
-      38  <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_9dbfdf62Ut_C1Ev>()
+      14  <unnamed>#2::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev>()
+      14  <unnamed>#3::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev>()
+      14  <unnamed>#4::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev>()
+      14  <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev>()
        4  ??DataTable3
        4  ??DataTable3_1
        4  ??DataTable3_2
-       2  ?_0
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+       4  ??DataTable3_6
+       8  ?_0
        8  ?_1
-       2  ?_10
-       8  ?_11
-       8  ?_12
-       2  ?_2
-       8  ?_3
-       2  ?_4
-       8  ?_5
-       4  ?_6
-       8  ?_7
-       2  ?_8
-       8  ?_9
-      32  Celsius::GetTemperature(float) const
-      24  DewPoint::DewPoint()
-     144  DewPoint::Get(float, ...)
-      32  DisplayDirector::DisplayDirector(IDisplayView &)
-     124  DisplayDirector::Execute()
-       8  DisplayDirector::subobject DisplayDirector(IDisplayView &)
-      44  Fahrenheit::GetTemperature(float) const
+      36  Celsius::GetTemperature(float) const
+      16  DPData
+      30  DisplayDirector::DisplayDirector(IDisplayView &, SensorDirector &)
+     134  DisplayDirector::Execute()
+       8  DisplayDirector::subobject DisplayDirector(IDisplayView &, SensorDirector &)
+      48  Fahrenheit::GetTemperature(float) const
       84  Format::GetDisplayDewPointFormat(tFormatData const &)
      100  Format::GetDisplayFormat(tFormatData const &)
       84  Format::GetDisplayHumidityFormat(tFormatData const &)
       84  Format::GetDisplayPressureFormat(tFormatData const &)
       84  Format::GetDisplayTemperatureFormat(tFormatData const &)
-      40  Humidity::Get(float, ...)
-      24  Humidity::Humidity()
-       2  ISubscriber::ISubscriber()
-       8  ISubscriber::subobject ISubscriber()
-       2  IVariable::IVariable()
-       8  IVariable::subobject IVariable()
-      44  Kelvin::GetTemperature(float) const
+      16  HData
+      48  Kelvin::GetTemperature(float) const
       10  OsWrapper::IThread::IThread()
       26  OsWrapper::IThread::Sleep(std::chrono::milliseconds)
        8  OsWrapper::IThread::subobject IThread()
        8  OsWrapper::RtosWrapper::wSleep(uint32_t)
-      14  OsWrapper::Thread<256U>::Thread()
-       8  OsWrapper::Thread<256U>::subobject Thread()
       14  OsWrapper::Thread<512U>::Thread()
        8  OsWrapper::Thread<512U>::subobject Thread()
-      40  Pressure::Get(float, ...)
-      24  Pressure::Pressure()
-      64  SensorData
-      72  SensorDirector::SensorDirector()
+      16  PData
        4  SensorDirector::celsius
        4  SensorDirector::fahrenheit
        4  SensorDirector::kelvin
       22  SusuString<40U>::Set<40U>(char const (&)[40])
        6  SusuString<40U>::SusuString()
        8  SusuString<5U>::GetString() const
+      20  SusuString<5U>::Set<3U>(char const (&)[3])
+      20  SusuString<5U>::Set<5U>(char const (&)[5])
        6  SusuString<5U>::SusuString()
-      74  Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Get(float, ...)
-      44  Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Temperature()
-      10  __sti__routine()
+      16  TData
+      28  __sti__routine()
        2  std::_Addressof<char>(char &, std::false_type)
        6  std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
        4  std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
        4  std::_Array_const_iterator<char, 40U>::_Unchecked() const
        8  std::_Array_const_iterator<char, 40U>::subobject _Array_const_iterator(char const *, size_t)
+       6  std::_Array_const_iterator<char, 5U>::_Array_const_iterator(char const *, size_t)
+       4  std::_Array_const_iterator<char, 5U>::_Rechecked(char const *)
+       4  std::_Array_const_iterator<char, 5U>::_Unchecked() const
+       8  std::_Array_const_iterator<char, 5U>::subobject _Array_const_iterator(char const *, size_t)
       14  std::_Array_iterator<char, 40U>::_Array_iterator(char *, size_t)
       14  std::_Array_iterator<char, 40U>::_Rechecked(char *)
        8  std::_Array_iterator<char, 40U>::_Unchecked() const
+      14  std::_Array_iterator<char, 5U>::_Array_iterator(char *, size_t)
+      14  std::_Array_iterator<char, 5U>::_Rechecked(char *)
+       8  std::_Array_iterator<char, 5U>::_Unchecked() const
       30  std::_Copy_impl<char const *, char *>(char const *, char const *, char *)
       26  std::_Copy_impl<char const *, char *>(char const *, char const *, char *, std::_Scalar_ptr_iterator_tag)
        2  std::_Ptr_cat(char const *, char *)
        8  std::_Rechecked<char, 40U>(std::_Array_iterator<char, 40U> &, char *)
+       8  std::_Rechecked<char, 5U>(std::_Array_iterator<char, 5U> &, char *)
       24  std::_Tuple_val<SusuString<40U>>::_Tuple_val<SusuString<40U>>(SusuString<40U> &&)
        2  std::_Unchecked<char const *>(char const *)
       10  std::_Unchecked<char, 40U>(std::_Array_iterator<char, 40U>)
+      10  std::_Unchecked<char, 5U>(std::_Array_iterator<char, 5U>)
        8  std::addressof<char>(char &)
-       6  std::array<IUnits const *, 3U>::operator[](size_t)
       20  std::array<char, 40U>::begin()
+      20  std::array<char, 5U>::begin()
        2  std::array<char, 5U>::data() const
        6  std::chrono::duration<__int64_t, std::milli>::count() const
        4  std::chrono::duration<uint32_t, std::ratio<10LL, 1000LL>>::count() const
@@ -1700,8 +1593,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        1  std::chrono::system_clock::is_monotonic
        1  std::chrono::system_clock::is_steady
       48  std::copy<char const *, std::array<char, 40U>::iterator>(char const *, char const *, std::array<char, 40U>::iterator)
+      48  std::copy<char const *, std::array<char, 5U>::iterator>(char const *, char const *, std::array<char, 5U>::iterator)
        2  std::forward<SusuString<40U>>(SusuString<40U> &)
-       2  std::forward<SusuStringView &>(SusuStringView &)
+       2  std::forward<SusuString<5U> &>(SusuString<5U> &)
        2  std::forward<float &>(float &)
        4  std::get<0U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        4  std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
@@ -1715,9 +1609,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
        4  std::get<5U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        4  std::get<6U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        2  std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-      40  std::make_pair<SusuStringView &, float &>(SusuStringView &, float &)
+      42  std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
       62  std::make_tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
-      34  std::pair<SusuStringView, float>::pair<SusuStringView &, float &, void>(SusuStringView &, float &)
+      34  std::pair<SusuString<5U>, float>::pair<SusuString<5U> &, float &, void>(SusuString<5U> &, float &)
       68  std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>, void **>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
        8  std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>>::subobject tuple(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
       52  std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>>::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, void **>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
@@ -1725,16 +1619,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
       40  std::tuple<SusuString<40U>, SusuString<40U>>::tuple<SusuString<40U>, SusuString<40U>, void **>(SusuString<40U> &&, SusuString<40U> &&)
        8  std::tuple<SusuString<40U>>::subobject tuple(SusuString<40U> &&)
       22  std::tuple<SusuString<40U>>::tuple<SusuString<40U>, void **>(SusuString<40U> &&)
-     664  -- Other
+     428  -- Other
 
  
     64 bytes in section .bss
      4 bytes in section .init_array
-   745 bytes in section .rodata
- 2'106 bytes in section .text
+   455 bytes in section .rodata
+ 1'830 bytes in section .text
  
- 228 bytes of CODE  memory (+ 1'882 bytes shared)
-  82 bytes of CONST memory (+   663 bytes shared)
+ 288 bytes of CODE  memory (+ 1'546 bytes shared)
+  16 bytes of CONST memory (+   439 bytes shared)
   64 bytes of DATA  memory
 
 Errors: none

@@ -14,20 +14,11 @@
 #include "DewPoint.hpp"
 #include "susudefs.hpp"
 #include "Format.hpp"
+#include "BME280.hpp"
 
-static struct {
-  SusuString<5> pname;
-  float p;
-  SusuString<5> hname;
-  float h;
-  SusuString<5> tname;
-  float t;
-  SusuString<5> dpname;
-  float dp;
-} SensorData;
-
-class SensorDirector : public OsWrapper::Thread<256>, public ISubscriber { 
+class SensorDirector : public OsWrapper::Thread<512>, public ISubscriber { 
 public:
+  SensorDirector(BME280& sensor) ;
   void Execute() override ;
   void HandleButtonPushed() override ;
   tFormatData GetData() ;
@@ -39,4 +30,5 @@ private:
   Pressure pressure;
   Humidity humidity;
   DewPoint dewpoint;
+  BME280& mySensor;
 } ;

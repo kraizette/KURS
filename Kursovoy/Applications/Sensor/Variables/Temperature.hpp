@@ -5,6 +5,11 @@
 #include "IVariable.hpp"
 #include "IUnits.hpp"
 
+static struct {
+  SusuString<5> tname;
+  float t;
+} TData;
+
 template <const auto&... units>
 class Temperature: public IVariable {
 private:
@@ -15,12 +20,21 @@ public:
   Temperature() {} ;
   void SetNextUnits() {
     (index < UnitsCounts) ? index++ : index = 0U ;
+    if (index == 3) {
+      index = 0U;
+    }
   }
-  vFormat Get(float data, ...) override {
+  vFormat Get() override {
+    return std::make_pair(TData.tname, TData.t);
+  }
+  
+  void Calculate(float data, ...) {
     auto const& currentUnits = *unitsList[index] ;
     vFormat temperature = currentUnits.GetTemperature(data) ;
-    auto name = temperature.first;
-    auto value = temperature.second;
-    return std::make_pair(name,value);
+    SusuString<5> name;
+    char str[5];
+    sprintf(str, "%s", (temperature.first).GetString()) ;
+     TData.tname.Set(str);
+    TData.t = temperature.second;
   }
 };
