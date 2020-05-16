@@ -184,13 +184,13 @@ private :
   void SendCommand(CommandEInk command) {
     DC :: Reset(); //DEV_Digital_Write(EPD_DC_PIN, 0);
     CS :: Reset(); //DEV_Digital_Write(EPD_CS_PIN, 0);
-    SPI::WriteByte(static_cast<std::uint8_t>(command)); //DEV_SPI_WriteByte(Reg);
+    SPI::WriteByteU(static_cast<std::uint8_t>(command)); //DEV_SPI_WriteByte(Reg);
 	CS::Set() ; //    DEV_Digital_Write(EPD_CS_PIN, 1);
   }
   
   void SendData(std::uint8_t data) {
    // StartSendData();
-    SPI :: WriteByte(data); //DEV_SPI_WriteByte(Data);
+    SPI :: WriteByteU(data); //DEV_SPI_WriteByte(Data);
    // EndSendData();//DEV_Digital_Write(EPD_CS_PIN, 1);
   }
   

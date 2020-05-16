@@ -236,6 +236,14 @@ struct SPI4_DR_DR_Values: public RegisterField<Reg, offset, size, AccessMode>
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 
 struct SPI4_CRCPR_CRCPOLY_Values: public RegisterField<Reg, offset, size, AccessMode> 
 {
+  using Value0 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 0U> ;
+  using Value1 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 1U> ;
+  using Value2 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 0U> ;
+  using Value3 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 1U> ;
+  using Value4 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 0U> ;
+  using Value5 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 1U> ;
+  using Value6 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 0U> ;
+  using Value7 = FieldValue<SPI4_CRCPR_CRCPOLY_Values, BaseType, 1U> ;
 } ;
 
 template <typename Reg, size_t offset, size_t size, typename AccessMode, typename BaseType> 

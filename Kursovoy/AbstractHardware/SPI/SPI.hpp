@@ -31,30 +31,11 @@ public:
     for (size_t index = 0; index < lenght; index++)
     {
       //передаем байт данных
-      WriteByte(data[index]);
+      WriteByteU(data[index]);
     }
   }
   
-  static bool ReadData(uint8_t *data, size_t lenght) {
-    bool result = true;
-    //если длина нулевая (нечего читать)
-    assert(lenght > 0);
-    for (size_t index = 0; index < lenght; index++)
-    {
-      //передаем байт данных
-      auto bytedata= ReadByte();
-      if(std::get<bool>(bytedata) == true){
-      data[index] = std::get<int8_t>(bytedata);
-      }
-      else {
-        result = false; 
-        break;
-      }
-    }
-    return result;
-  }
-  
-  static void WriteByte(uint8_t Byte) {
+  static void WriteByteU(uint8_t Byte) {
     //ждем, пока буфер передатчика не освободится
     while (SPIModule :: SR :: TXE :: TxBufferNotEmpty :: IsSet()) {
     } 
@@ -65,13 +46,24 @@ public:
     }
   }
   
-  static std::pair<int8_t, bool> ReadByte() {
+    static void WriteByteS(int8_t Byte) {
+    //ждем, пока буфер передатчика не освободится
+    while (SPIModule :: SR :: TXE :: TxBufferNotEmpty :: IsSet()) {
+    } 
+    //передаем байт данных
+    SPIModule :: DR :: Write(Byte) ;
+    //ждем, пока SPI освободится от предыдущей передачи
+    while (SPIModule :: SR :: BSY :: Busy :: IsSet()) {
+    }
+  }
+  
+  static std::pair<int8_t, bool> ReadByteS() {
     /*
     Bit 0 RXNE: Receive buffer not empty
     0: Rx buffer empty
     1: Rx buffer not empty
     */
-    int8_t value = 0U;
+    int8_t value = 0;
     bool result = true;
     int i = 0;
     //ждем, пока закончит чтение
@@ -82,6 +74,20 @@ public:
       result = false;
     };
     //читаем байт данных
+    value = SPIModule :: DR :: Get() ;
+    return std::make_pair(value,result) ;
+  }
+  
+    static std::pair<uint8_t, bool> ReadByteU() {
+    uint8_t value = 0U;
+    bool result = true;
+    int i = 0;
+    while ((SPIModule :: SR :: RXNE :: Value0 :: IsSet()) && (i< 1000)) {
+      i++ ;
+    } 
+    if (i == 1000) {
+      result = false;
+    };
     value = SPIModule :: DR :: Get() ;
     return std::make_pair(value,result) ;
   }

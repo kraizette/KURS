@@ -93,19 +93,17 @@ extern "C" {
     GPIOB::AFRH::AFRH15::Af5::Set() ;
     
     //for SPI4 - BME280
-    RCC::APB2ENR::SPI4EN::Enable::Set();
-    //for SPI4 - BME280
     GPIOA::AFRL::AFRL1::Af5::Set();
     GPIOB::AFRH::AFRH13::Af6::Set() ;
     GPIOA::AFRH::AFRH11::Af6::Set() ;
+    RCC::APB2ENR::SPI4EN::Enable::Set();
     
     //for SPI1 - BME280
     //SPI1::CRCPR::CRCPOLY::Value7::Set();
-    
     //RCC::APB2ENR::SPI1EN::Enable::Set();
-    
     //GPIOA::AFRL::AFRL6::Af5::Set();
     //GPIOA::AFRL::AFRL7::Af5::Set() ;
+    //GPIOA::AFRL::AFRL5::Af5::Set() ;
     
     return 1;
   }
@@ -115,7 +113,7 @@ extern "C" {
 using MOSIPin = Pin<GPIOA, 1U>; //SPI4_MOSI PA1 AF5
 using SCKPin = Pin<GPIOB, 13U>; //SPI4_SCK PB13 AF6
 using MISOPin = Pin<GPIOA, 11U>; //SPI4_MISO PA11 AF6
-using CSPin = Pin<GPIOA, 4U>; //PC4 output
+using CSPin = Pin<GPIOA, 5U>; //PC4 output
 
 //for SPI1 - BME280
 //using MOSIPin = Pin<GPIOA, 7U>; //SPI4_MOSI 
@@ -151,14 +149,30 @@ TaskButton myTaskButton(mySensorDirector);
 
 int main()
 {
-  //BME280Driver.Init();
-  //uint8_t res =  BME280Driver.ReadReg(REG_ID);
-  //std::cout << res << std::endl;
-  using namespace OsWrapper;
- Rtos::CreateThread(myDisplayDirector, "Display", ThreadPriority::normal);
- Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
-  Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);
-  Rtos::CreateThread(myBluetoothDirector, "BluetoothDirector", ThreadPriority::normal) ;
-  Rtos::Start() ;
-  return 0;
+  std::cout << std::hex << std::uint32_t(BME280Driver.ReadReg(REG_ID)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16U(REGISTER_DIG_T1)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_T2)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_T3)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16U(REGISTER_DIG_P1)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P2)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P3)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P4)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P5)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P6)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P7)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P8)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P9)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg(REGISTER_DIG_H1)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_H2)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg(REGISTER_DIG_H3)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_H4)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_H5)) << std::endl;
+  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg(REGISTER_DIG_H6)) << std::endl;
+  //using namespace OsWrapper;
+ //Rtos::CreateThread(myDisplayDirector, "Display", ThreadPriority::normal);
+ //Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
+  //Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);
+  //Rtos::CreateThread(myBluetoothDirector, "BluetoothDirector", ThreadPriority::normal) ;
+  //Rtos::Start() ;
+ // return 0;
 };

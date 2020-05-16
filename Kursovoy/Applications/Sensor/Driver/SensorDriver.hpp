@@ -98,6 +98,7 @@ constexpr int8_t REGISTER_DIG_H4 = 0xE4;
 constexpr int8_t REGISTER_DIG_H5 = 0xE5;
 constexpr int8_t REGISTER_DIG_H6 = 0xE7;
 
+
 //    Compensation parameter structure
 
 struct {
@@ -118,7 +119,7 @@ struct {
   uint8_t dig_H3;
   int16_t dig_H4;
   int16_t dig_H5;
-  int8_t dig_H6;
+  uint8_t dig_H6;
 } CalibData;
 
 template <typename SPI, typename MOSI, typename SCK,
@@ -135,7 +136,7 @@ public :
     SPI4Config.mode = Mode :: Master;
     SPI4Config.dataformat = DataFormat :: Bit8;
     SPI4Config.frameformat = FrameFormat :: MSB;
-    SPI4Config.baudrate = BaudRate :: DIV4;
+    SPI4Config.baudrate = BaudRate :: DIV16;
     SPI4Config.timingrelationships = TimingRelationships :: MODE11;
     SPI4Config.bidimode = BIDImode :: LINE2;
     SPI4Config.csmode = CSmode :: SOFTEN;
@@ -229,10 +230,10 @@ public :
 //private:
  
   void ReadCoefficients(void) {
-    CalibData.dig_T1 = ReadReg_U16(REGISTER_DIG_T1);
-    CalibData.dig_T2 = ReadReg_S16(REGISTER_DIG_T2);
+    //CalibData.dig_T1 = ReadReg_U16(REGISTER_DIG_T1);
+    //CalibData.dig_T2 = ReadReg_S16(REGISTER_DIG_T2);
     CalibData.dig_T3 = ReadReg(REGISTER_DIG_T3);
-    CalibData.dig_P1 = ReadReg_U16(REGISTER_DIG_P1);
+    //CalibData.dig_P1 = ReadReg_U16(REGISTER_DIG_P1);
     CalibData.dig_P2 = ReadReg(REGISTER_DIG_P2);
     CalibData.dig_P3 = ReadReg(REGISTER_DIG_P3);
     CalibData.dig_P4 = ReadReg(REGISTER_DIG_P4);
@@ -240,10 +241,10 @@ public :
     CalibData.dig_P6 = ReadReg(REGISTER_DIG_P6);
     CalibData.dig_P7 = ReadReg(REGISTER_DIG_P7);
     CalibData.dig_P8 = ReadReg(REGISTER_DIG_P8);
-    CalibData.dig_P9 = ReadReg_S16(REGISTER_DIG_P9);
-    CalibData.dig_H1 = ReadReg_U16(REGISTER_DIG_H1);
-    CalibData.dig_H2 = ReadReg_S16(REGISTER_DIG_H2);
-    CalibData.dig_H3 = ReadReg_U16(REGISTER_DIG_H3);
+    //CalibData.dig_P9 = ReadReg_S16(REGISTER_DIG_P9);
+   // CalibData.dig_H1 = ReadReg_U16(REGISTER_DIG_H1);
+    //CalibData.dig_H2 = ReadReg_S16(REGISTER_DIG_H2);
+    //CalibData.dig_H3 = ReadReg_U16(REGISTER_DIG_H3);
     CalibData.dig_H4 = (ReadReg(REGISTER_DIG_H4) << 4) | (ReadReg(REGISTER_DIG_H4+1) & 0xF);
     CalibData.dig_H5 = (ReadReg(REGISTER_DIG_H5+1) << 4) | (ReadReg(REGISTER_DIG_H5) >> 4);
     CalibData.dig_H6 = (int8_t)ReadReg(REGISTER_DIG_H6);
@@ -304,67 +305,60 @@ public :
     int8_t rslt = 0; 
     // CS :: Set() ;
     CS :: Reset() ;
-    SPI :: WriteByte(reg_addr);
-    SPI :: WriteByte(reg_data);
+    SPI :: WriteByteU(reg_addr);
+    SPI :: WriteByteU(reg_data);
     CS :: Set() ;
     return rslt;
   };
   
+  
   static uint8_t ReadReg(uint8_t RegAddr) {
-    int8_t rslt;
+    uint8_t rslt;
     CS :: Set() ;
     CS :: Reset() ;
-    SPI :: WriteByte(RegAddr);
-    rslt = (SPI::ReadByte()).first  ;
+    SPI :: WriteByteU(RegAddr);
+    rslt = (SPI::ReadByteU()).first  ;
+    SPI :: WriteByteU(RegAddr);
+    rslt = (SPI::ReadByteU()).first  ;
     CS :: Set() ;
     return rslt;
   }
   
-  static std::uint16_t ReadReg_U16(uint8_t RegAddr)
-{
+    std::uint16_t ReadReg16U(uint8_t RegAddr) {
    std::uint8_t buf [2] ;
    assert(buf != nullptr) ;
 
    CS :: Reset() ;
-   SPI :: WriteByte(RegAddr);
-   buf[0] = (SPI::ReadByte()).first  ;
-   buf[1] = (SPI::ReadByte()).first  ;
+   SPI :: WriteByteU(RegAddr);
+   buf[1] = (SPI::ReadByteU()).first  ;
+   SPI :: WriteByteU(RegAddr);
+   buf[1] = (SPI::ReadByteU()).first  ;
+    SPI :: WriteByteU(RegAddr);
+    buf[0] = (SPI::ReadByteU()).first  ;
+    SPI :: WriteByteU(RegAddr);
+    buf[0] = (SPI::ReadByteU()).first  ;
    CS :: Set() ;
 
    std::uint16_t result = *reinterpret_cast<std::uint16_t*>(buf) ;
    return result ;
 }
-
-  static std::int16_t ReadReg_S16(uint8_t RegAddr)
-{
+  
+  std::int16_t ReadReg16S(int8_t RegAddr) {
    std::int8_t buf [2] ;
    assert(buf != nullptr) ;
 
    CS :: Reset() ;
-   SPI :: WriteByte(RegAddr);
-   buf[0] = (SPI::ReadByte()).first  ;
-   buf[1] = (SPI::ReadByte()).first  ;
+   SPI :: WriteByteS(RegAddr);
+   buf[1] = (SPI::ReadByteS()).first  ;
+   SPI :: WriteByteS(RegAddr);
+   buf[1] = (SPI::ReadByteS()).first  ;
+    SPI :: WriteByteS(RegAddr);
+    buf[0] = (SPI::ReadByteS()).first  ;
+    SPI :: WriteByteS(RegAddr);
+    buf[0] = (SPI::ReadByteS()).first  ;
    CS :: Set() ;
 
    std::int16_t result = *reinterpret_cast<std::int16_t*>(buf) ;
    return result ;
-}
-
-std::uint32_t ReadReg32(uint8_t RegAddr)
-{
-   std::uint8_t buf [4] ;
-   assert(buf != nullptr) ;
-
-   CS :: Reset() ;
-  SPI :: WriteByte(RegAddr);
-  buf[0]  = SPI::ReadByte() ;
-  buf[1] = SPI::ReadByte() ;
-  buf[2]  = SPI::ReadByte() ;
-  buf[3] = SPI::ReadByte() ;
-  CS :: Set() ;
-
-  std::uint32_t result = *reinterpret_cast<std::uint32_t*>(buf) ;
-
-  return result ;
 }
 };
