@@ -135,7 +135,7 @@ public :
     SPI4Config.mode = Mode :: Master;
     SPI4Config.dataformat = DataFormat :: Bit8;
     SPI4Config.frameformat = FrameFormat :: MSB;
-    SPI4Config.baudrate = BaudRate :: DIV256;
+    SPI4Config.baudrate = BaudRate :: DIV4;
     SPI4Config.timingrelationships = TimingRelationships :: MODE11;
     SPI4Config.bidimode = BIDImode :: LINE2;
     SPI4Config.csmode = CSmode :: SOFTEN;

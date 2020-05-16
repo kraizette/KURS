@@ -15,7 +15,7 @@ public:
     return std::make_pair(PData.pname, PData.p);
   }
   
-  void Calculate(float data, ...) {
+  void Calculate(float data, ...) override {
     char str[5];
     sprintf(str, "%s","Pa") ;
     PData.pname.Set(str);

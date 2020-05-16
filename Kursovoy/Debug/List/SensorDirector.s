@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        13/May/2020  12:32:45
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        16/May/2020  10:54:55
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWE401.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EW6800.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -1019,26 +1019,26 @@ __sti__routine:
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
         LDR.N    R0,??DataTable2
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev
         LDR.N    R0,??DataTable2_1
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev
         LDR.N    R0,??DataTable2_2
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev
         LDR.N    R0,??DataTable2_3
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock12
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock13 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev:
+// static __code __interwork __vfp <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1053,10 +1053,10 @@ _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock14 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev:
+// static __code __interwork __vfp <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1071,10 +1071,10 @@ _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock15 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev:
+// static __code __interwork __vfp <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1089,10 +1089,10 @@ _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock16 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev:
+// static __code __interwork __vfp <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -2538,13 +2538,14 @@ _ZNK10Fahrenheit14GetTemperatureEf:
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+24
         MOVS     R4,R0
-        VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
-        VADD.F32 S0,S0,S1
-        VSTR     S0,[SP, #+0]
+        VLDR.W   S1,??GetTemperature_1  ;; 0x3fe66666
+        VLDR.W   S2,??GetTemperature_1+0x4  ;; 0x42000000
+        VMLA.F32 S2,S0,S1
+        VSTR     S2,[SP, #+0]
         ADD      R0,SP,#+4
           CFI FunCall _ZN10SusuStringILj5EEC1Ev
         BL       _ZN10SusuStringILj5EEC1Ev
-        LDR.N    R1,??GetTemperature_1+0x4
+        LDR.N    R1,??GetTemperature_1+0x8
           CFI FunCall _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
         BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
         MOV      R2,SP
@@ -2556,6 +2557,7 @@ _ZNK10Fahrenheit14GetTemperatureEf:
         DATA
 ??GetTemperature_1:
         DATA32
+        DC32     0x3fe66666
         DC32     0x42000000
         DC32     _ZZNK10Fahrenheit14GetTemperatureEfEs
           CFI EndBlock cfiBlock67
@@ -3308,9 +3310,9 @@ _ZN6BME28011GetHumidityEv:
 //    64 bytes in section .bss
 //     4 bytes in section .init_array
 //   667 bytes in section .rodata
-// 2'568 bytes in section .text
+// 2'576 bytes in section .text
 // 
-// 528 bytes of CODE  memory (+ 2'044 bytes shared)
+// 528 bytes of CODE  memory (+ 2'052 bytes shared)
 //  12 bytes of CONST memory (+   655 bytes shared)
 //  64 bytes of DATA  memory
 //

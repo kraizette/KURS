@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        13/May/2020  12:28:59
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        16/May/2020  10:54:53
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EW725C.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EW629E.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -1430,26 +1430,26 @@ __sti__routine:
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
         LDR.N    R0,??DataTable3
-          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev
-        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev
+          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut_C1Ev
+        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut_C1Ev
         LDR.N    R0,??DataTable3_1
-          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev
-        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev
+          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut0_C1Ev
+        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut0_C1Ev
         LDR.N    R0,??DataTable3_2
-          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev
-        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev
+          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut1_C1Ev
+        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut1_C1Ev
         LDR.N    R0,??DataTable3_3
-          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev
-        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev
+          CFI FunCall _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut2_C1Ev
+        BL       _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut2_C1Ev
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock37
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock38 Using cfiCommon0
-          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev
+          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev>()
-_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev:
+// static __code __interwork __vfp <unnamed>::<_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut_C1Ev>()
+_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1464,10 +1464,10 @@ _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock39 Using cfiCommon0
-          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev
+          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut0_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#2::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev>()
-_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev:
+// static __code __interwork __vfp <unnamed>#2::<_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut0_C1Ev>()
+_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut0_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1482,10 +1482,10 @@ _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt0_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock40 Using cfiCommon0
-          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev
+          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut1_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#3::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev>()
-_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev:
+// static __code __interwork __vfp <unnamed>#3::<_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut1_C1Ev>()
+_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut1_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1500,10 +1500,10 @@ _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt1_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock41 Using cfiCommon0
-          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev
+          CFI Function _ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut2_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#4::<_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev>()
-_ZN41_INTERNAL_19_DisplayDirector_cpp_2af00c2aUt2_C1Ev:
+// static __code __interwork __vfp <unnamed>#4::<_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut2_C1Ev>()
+_ZN41_INTERNAL_19_DisplayDirector_cpp_dab20045Ut2_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1786,20 +1786,8 @@ _ZSt3getILj1EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tuple
           CFI EndBlock cfiBlock51
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI Block cfiBlock52 Using cfiCommon0
-          CFI Function _ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI NoCalls
-        THUMB
-// __interwork __vfp SusuString<5U> const &std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-_ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
-        ADDS     R0,R0,#+52
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock52
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZSt3getILj3EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI Block cfiBlock53 Using cfiCommon0
+          CFI Block cfiBlock52 Using cfiCommon0
           CFI Function _ZSt3getILj3EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
           CFI NoCalls
         THUMB
@@ -1807,23 +1795,11 @@ _ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tuple
 _ZSt3getILj3EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
         ADDS     R0,R0,#+32
         BX       LR               ;; return
-          CFI EndBlock cfiBlock53
-
-        SECTION `.text`:CODE:REORDER:NOROOT(1)
-        SECTION_GROUP _ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI Block cfiBlock54 Using cfiCommon0
-          CFI Function _ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI NoCalls
-        THUMB
-// __interwork __vfp SusuString<5U> const &std::get<2U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-_ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
-        ADDS     R0,R0,#+36
-        BX       LR               ;; return
-          CFI EndBlock cfiBlock54
+          CFI EndBlock cfiBlock52
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZSt3getILj5EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI Block cfiBlock55 Using cfiCommon0
+          CFI Block cfiBlock53 Using cfiCommon0
           CFI Function _ZSt3getILj5EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
           CFI NoCalls
         THUMB
@@ -1831,11 +1807,11 @@ _ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tuple
 _ZSt3getILj5EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
         ADDS     R0,R0,#+16
         BX       LR               ;; return
-          CFI EndBlock cfiBlock55
+          CFI EndBlock cfiBlock53
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZSt3getILj4EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI Block cfiBlock56 Using cfiCommon0
+          CFI Block cfiBlock54 Using cfiCommon0
           CFI Function _ZSt3getILj4EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
           CFI NoCalls
         THUMB
@@ -1843,16 +1819,40 @@ _ZSt3getILj5EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tuple
 _ZSt3getILj4EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
         ADDS     R0,R0,#+20
         BX       LR               ;; return
-          CFI EndBlock cfiBlock56
+          CFI EndBlock cfiBlock54
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZSt3getILj7EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-          CFI Block cfiBlock57 Using cfiCommon0
+          CFI Block cfiBlock55 Using cfiCommon0
           CFI Function _ZSt3getILj7EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
           CFI NoCalls
         THUMB
 // __interwork __vfp float const &std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
 _ZSt3getILj7EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock55
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
+          CFI Block cfiBlock56 Using cfiCommon0
+          CFI Function _ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
+          CFI NoCalls
+        THUMB
+// __interwork __vfp SusuString<5U> const &std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
+_ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
+        ADDS     R0,R0,#+52
+        BX       LR               ;; return
+          CFI EndBlock cfiBlock56
+
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
+        SECTION_GROUP _ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
+          CFI Block cfiBlock57 Using cfiCommon0
+          CFI Function _ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
+          CFI NoCalls
+        THUMB
+// __interwork __vfp SusuString<5U> const &std::get<2U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
+_ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_:
+        ADDS     R0,R0,#+36
         BX       LR               ;; return
           CFI EndBlock cfiBlock57
 
@@ -2582,13 +2582,14 @@ _ZNK10Fahrenheit14GetTemperatureEf:
           CFI R4 Frame(CFA, -8)
           CFI CFA R13+24
         MOVS     R4,R0
-        VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
-        VADD.F32 S0,S0,S1
-        VSTR     S0,[SP, #+0]
+        VLDR.W   S1,??GetTemperature_1  ;; 0x3fe66666
+        VLDR.W   S2,??GetTemperature_1+0x4  ;; 0x42000000
+        VMLA.F32 S2,S0,S1
+        VSTR     S2,[SP, #+0]
         ADD      R0,SP,#+4
           CFI FunCall _ZN10SusuStringILj5EEC1Ev
         BL       _ZN10SusuStringILj5EEC1Ev
-        LDR.N    R1,??GetTemperature_1+0x4
+        LDR.N    R1,??GetTemperature_1+0x8
           CFI FunCall _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
         BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
         MOV      R2,SP
@@ -2600,6 +2601,7 @@ _ZNK10Fahrenheit14GetTemperatureEf:
         DATA
 ??GetTemperature_1:
         DATA32
+        DC32     0x3fe66666
         DC32     0x42000000
         DC32     _ZZNK10Fahrenheit14GetTemperatureEfEs
           CFI EndBlock cfiBlock85
@@ -2751,9 +2753,9 @@ _ZNK7Celsius14GetTemperatureEf:
 //    64 bytes in section .bss
 //     4 bytes in section .init_array
 //   455 bytes in section .rodata
-// 1'830 bytes in section .text
+// 1'838 bytes in section .text
 // 
-// 288 bytes of CODE  memory (+ 1'546 bytes shared)
+// 288 bytes of CODE  memory (+ 1'554 bytes shared)
 //  16 bytes of CONST memory (+   439 bytes shared)
 //  64 bytes of DATA  memory
 //

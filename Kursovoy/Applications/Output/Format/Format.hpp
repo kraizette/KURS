@@ -17,7 +17,7 @@ public:
 private:
   static SusuString<40> GetBlueToothPressureFormat(const tFormatData& data) {
     char str[40];
-    sprintf(str, "%s%.3f %s\n", "Pressure: ", std::get<1>(data), (std::get<0>(data)).GetString()) ;
+    sprintf(str, "%s%.3f %s", "*P", std::get<1>(data), "*") ;
     SusuString<40> pressure;
     pressure.Set(str);
     return pressure;
@@ -25,7 +25,7 @@ private:
   
     static SusuString<40> GetBlueToothHumidityFormat(const tFormatData& data) {
     char str[40];
-    sprintf(str, "%s%.3f %s\n", "Humidity: ", std::get<3>(data), (std::get<2>(data)).GetString()) ;
+    sprintf(str, "%s%.3f %s\n", "*H", std::get<3>(data), "*") ;
     SusuString<40> humidity;
     humidity.Set(str);
     return humidity;
@@ -33,7 +33,7 @@ private:
   
     static SusuString<40> GetBlueToothTemperatureFormat(const tFormatData& data) {
     char str[40];
-    sprintf(str, "\%s%.3f %s\n", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
+    sprintf(str, "\%s%.3f %s%s%s\n", "*T", std::get<5>(data),"* *V", (std::get<4>(data)).GetString(),"*") ;
     SusuString<40> temperature;
     temperature.Set(str);
     return temperature;
@@ -41,7 +41,7 @@ private:
   
     static SusuString<40> GetBlueToothDewPointFormat(const tFormatData& data) {
     char str[40];
-    sprintf(str, "%s%.3f %s\n", "DewPoint: ", std::get<7>(data), (std::get<6>(data)).GetString()) ;
+    sprintf(str, "%s%.3f %s\n", "*D", std::get<7>(data), "*") ;
     SusuString<40> dewpoint;
     dewpoint.Set(str);
     return dewpoint;

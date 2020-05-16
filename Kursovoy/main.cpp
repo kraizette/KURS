@@ -6,6 +6,7 @@
 #include "gpiobregisters.hpp" //for gpiob
 #include "gpiocregisters.hpp" //for gpioc
 #include "rccregisters.hpp" // for RCC
+#include "spi1registers.hpp" //for SPI2
 #include "spi2registers.hpp" //for SPI2
 #include "spi4registers.hpp" //for SPI2
 #include "tim2registers.hpp"   //for SPI2
@@ -84,25 +85,43 @@ extern "C" {
     
     GPIOA::AFRL::AFRL2::Af7::Set(); 
     GPIOA::AFRL::AFRL3::Af7::Set(); 
+    
     //for SPI2 - display
     RCC::APB1ENR::SPI2EN::Enable::Set() ;
     //for SPI2 - display
     GPIOB::AFRH::AFRH10::Af5::Set() ;
     GPIOB::AFRH::AFRH15::Af5::Set() ;
+    
     //for SPI4 - BME280
     RCC::APB2ENR::SPI4EN::Enable::Set();
     //for SPI4 - BME280
     GPIOA::AFRL::AFRL1::Af5::Set();
-    GPIOB::AFRH::AFRH13::Af5::Set() ;
+    GPIOB::AFRH::AFRH13::Af6::Set() ;
+    GPIOA::AFRH::AFRH11::Af6::Set() ;
+    
+    //for SPI1 - BME280
+    //SPI1::CRCPR::CRCPOLY::Value7::Set();
+    
+    //RCC::APB2ENR::SPI1EN::Enable::Set();
+    
+    //GPIOA::AFRL::AFRL6::Af5::Set();
+    //GPIOA::AFRL::AFRL7::Af5::Set() ;
+    
     return 1;
   }
 }
 
 //for SPI4 - BME280
-using MOSIPin = Pin<GPIOA, 1U>; //SPI4_MOSI PA1
-using SCKPin = Pin<GPIOB, 13U>; //SPI4_SCK PB13
-using MISOPin = Pin<GPIOA, 11U>; //SPI4_MISO PA11
-using CSPin = Pin<GPIOC, 4U>; //PC4 alternative
+using MOSIPin = Pin<GPIOA, 1U>; //SPI4_MOSI PA1 AF5
+using SCKPin = Pin<GPIOB, 13U>; //SPI4_SCK PB13 AF6
+using MISOPin = Pin<GPIOA, 11U>; //SPI4_MISO PA11 AF6
+using CSPin = Pin<GPIOA, 4U>; //PC4 output
+
+//for SPI1 - BME280
+//using MOSIPin = Pin<GPIOA, 7U>; //SPI4_MOSI 
+//using SCKPin = Pin<GPIOA, 5U>; //SPI4_SCK 
+//using MISOPin = Pin<GPIOA, 6U>; //SPI4_MISO 
+//using CSPin = Pin<GPIOB, 6U>; //alternative
 
 SensorDriver<SPI<SPI4>,MOSIPin,SCKPin, MISOPin,CSPin> BME280Driver;
 BME280 Sensor(BME280Driver);
@@ -132,9 +151,12 @@ TaskButton myTaskButton(mySensorDirector);
 
 int main()
 {
+  //BME280Driver.Init();
+  //uint8_t res =  BME280Driver.ReadReg(REG_ID);
+  //std::cout << res << std::endl;
   using namespace OsWrapper;
-  Rtos::CreateThread(myDisplayDirector, "Display", ThreadPriority::normal);
-  Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
+ Rtos::CreateThread(myDisplayDirector, "Display", ThreadPriority::normal);
+ Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
   Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);
   Rtos::CreateThread(myBluetoothDirector, "BluetoothDirector", ThreadPriority::normal) ;
   Rtos::Start() ;

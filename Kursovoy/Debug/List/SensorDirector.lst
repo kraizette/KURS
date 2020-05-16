@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         13/May/2020  12:32:45
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         16/May/2020  10:54:55
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWE401.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW6800.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -857,21 +857,23 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \                     _ZNK10Fahrenheit14GetTemperatureEf: (+1)
    \        0x0   0xB51F             PUSH     {R0-R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0xEDDF 0x0A08      VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
-   \        0x8   0xEE30 0x0A20      VADD.F32 S0,S0,S1
-   \        0xC   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \       0x10   0xA801             ADD      R0,SP,#+4
-   \       0x12   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
-   \       0x16   0x4905             LDR.N    R1,??GetTemperature_1+0x4
-   \       0x18   0x....'....        BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
-   \       0x1C   0x466A             MOV      R2,SP
-   \       0x1E   0xA901             ADD      R1,SP,#+4
-   \       0x20   0x0020             MOVS     R0,R4
-   \       0x22   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
-   \       0x26   0xBD1F             POP      {R0-R4,PC}       ;; return
+   \        0x4   0xEDDF 0x0A09      VLDR.W   S1,??GetTemperature_1  ;; 0x3fe66666
+   \        0x8   0xED9F 0x1A09      VLDR.W   S2,??GetTemperature_1+0x4  ;; 0x42000000
+   \        0xC   0xEE00 0x1A20      VMLA.F32 S2,S0,S1
+   \       0x10   0xED8D 0x1A00      VSTR     S2,[SP, #+0]
+   \       0x14   0xA801             ADD      R0,SP,#+4
+   \       0x16   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \       0x1A   0x4906             LDR.N    R1,??GetTemperature_1+0x8
+   \       0x1C   0x....'....        BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
+   \       0x20   0x466A             MOV      R2,SP
+   \       0x22   0xA901             ADD      R1,SP,#+4
+   \       0x24   0x0020             MOVS     R0,R4
+   \       0x26   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x2A   0xBD1F             POP      {R0-R4,PC}       ;; return
    \                     ??GetTemperature_1:
-   \       0x28   0x4200'0000        DC32     0x42000000
-   \       0x2C   0x....'....        DC32     _ZZNK10Fahrenheit14GetTemperatureEfEs
+   \       0x2C   0x3FE6'6666        DC32     0x3fe66666
+   \       0x30   0x4200'0000        DC32     0x42000000
+   \       0x34   0x....'....        DC32     _ZZNK10Fahrenheit14GetTemperatureEfEs
 
    \                                 In section .text, align 4
    \   __interwork __vfp vFormat Celsius::GetTemperature(float) const
@@ -892,8 +894,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \       0x20   0x....'....        DC32     _ZZNK7Celsius14GetTemperatureEfEs
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev>()
-   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev>()
+   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -906,13 +908,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \                     __sti__routine: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x....             LDR.N    R0,??DataTable2
-   \        0x4   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev
+   \        0x4   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev
    \        0x8   0x....             LDR.N    R0,??DataTable2_1
-   \        0xA   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev
+   \        0xA   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev
    \        0xE   0x....             LDR.N    R0,??DataTable2_2
-   \       0x10   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev
+   \       0x10   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev
    \       0x14   0x....             LDR.N    R0,??DataTable2_3
-   \       0x16   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev
+   \       0x16   0x....'....        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev
    \       0x1A   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .bss, align 4
@@ -1022,8 +1024,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \       0x64   0x....'....        DC32     TData
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev>()
-   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev>()
+   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1091,8 +1093,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \       0x3C   0x....'....        DC32     PData
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev>()
-   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev>()
+   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1161,8 +1163,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \       0x40   0x....'....        DC32     HData
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev>()
-   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev>()
+   \                     _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1257,7 +1259,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \       0x8C   0x....'....        DC32     _ZZN8DewPoint9CalculateEfzEs_0
    \       0x90   0x....'....        DC32     _ZZN8DewPoint9CalculateEfzEs
 
-      sprintf(str, "\%s%.3f %s\n", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
+      sprintf(str, "\%s%.3f %s%s%s\n", "*T", std::get<5>(data),"* *V", (std::get<4>(data)).GetString(),"*") ;
                     ^
 "D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",36  Warning[Pe192]: 
           unrecognized character escape sequence
@@ -1522,13 +1524,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
 
    .cstack Function
    ------- --------
-       8   <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev>()
+       8   <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-       8   <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev>()
+       8   <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-       8   <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev>()
+       8   <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-       8   <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev>()
+       8   <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev>()
          8   -> SusuString<5U>::SusuString()
        0   BME280::GetHumidity()
        0   BME280::GetPressure()
@@ -1634,10 +1636,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
       16   Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::Temperature()
         16   -> IVariable::subobject IVariable()
        8   __sti__routine()
-         8   -> <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev>()
-         8   -> <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev>()
-         8   -> <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev>()
-         8   -> <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev>()
+         8   -> <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev>()
+         8   -> <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev>()
+         8   -> <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev>()
+         8   -> <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev>()
        0   std::_Addressof<char>(char &, std::false_type)
        0   std::_Array_const_iterator<char, 5U>::_Array_const_iterator(char const *, size_t)
        0   std::_Array_const_iterator<char, 5U>::_Rechecked(char const *)
@@ -1751,10 +1753,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
 
    Bytes  Function/Label
    -----  --------------
-      14  <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt0_C1Ev>()
-      14  <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt1_C1Ev>()
-      14  <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt2_C1Ev>()
-      14  <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_4c6fa9cdUt_C1Ev>()
+      14  <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev>()
+      14  <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev>()
+      14  <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev>()
+      14  <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev>()
        4  ??DataTable2
        4  ??DataTable2_1
        4  ??DataTable2_2
@@ -1768,7 +1770,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
      148  DewPoint::Calculate(float, ...)
       24  DewPoint::DewPoint()
       20  DewPoint::Get()
-      48  Fahrenheit::GetTemperature(float) const
+      56  Fahrenheit::GetTemperature(float) const
       16  HData
       68  Humidity::Calculate(float, ...)
       20  Humidity::Get()
@@ -1857,9 +1859,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
     64 bytes in section .bss
      4 bytes in section .init_array
    667 bytes in section .rodata
- 2'568 bytes in section .text
+ 2'576 bytes in section .text
  
- 528 bytes of CODE  memory (+ 2'044 bytes shared)
+ 528 bytes of CODE  memory (+ 2'052 bytes shared)
   12 bytes of CONST memory (+   655 bytes shared)
   64 bytes of DATA  memory
 

@@ -18,7 +18,7 @@ public:
     return std::make_pair(DPData.dpname, DPData.dp);
   }
   
-  void Calculate(float data, ...) {
+  void Calculate(float data, ...) override {
     va_list args;
       va_start(args,data);
       float T = data;

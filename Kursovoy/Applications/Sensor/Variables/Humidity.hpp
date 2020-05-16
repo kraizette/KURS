@@ -14,7 +14,7 @@ public:
     return std::make_pair(HData.hname, HData.h);
   }
   
-  void Calculate(float data, ...) {
+  void Calculate(float data, ...) override {
     SusuString<5> name;
     char str[5];
     sprintf(str, "%s","%") ;

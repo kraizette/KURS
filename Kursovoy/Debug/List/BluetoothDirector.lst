@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         13/May/2020  12:30:47
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         16/May/2020  10:54:53
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EW1757.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW629F.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -537,21 +537,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \        0x2   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
-   \   __interwork __vfp SusuString<5U> const &std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-   \                     _ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_: (+1)
-   \        0x0   0x3034             ADDS     R0,R0,#+52
-   \        0x2   0x4770             BX       LR               ;; return
-
-   \                                 In section .text, align 2
    \   __interwork __vfp float const &std::get<3U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
    \                     _ZSt3getILj3EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_: (+1)
    \        0x0   0x3020             ADDS     R0,R0,#+32
-   \        0x2   0x4770             BX       LR               ;; return
-
-   \                                 In section .text, align 2
-   \   __interwork __vfp SusuString<5U> const &std::get<2U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-   \                     _ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_: (+1)
-   \        0x0   0x3024             ADDS     R0,R0,#+36
    \        0x2   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
@@ -570,12 +558,6 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \   __interwork __vfp float const &std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
    \                     _ZSt3getILj7EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_: (+1)
    \        0x0   0x4770             BX       LR               ;; return
-
-   \                                 In section .text, align 2
-   \   __interwork __vfp SusuString<5U> const &std::get<6U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-   \                     _ZSt3getILj6EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_: (+1)
-   \        0x0   0x1D00             ADDS     R0,R0,#+4
-   \        0x2   0x4770             BX       LR               ;; return
 
    \                                 In section .text, align 2
    \   __interwork __vfp void std::make_tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
@@ -853,74 +835,68 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \                                 In section .text, align 4
    \   __interwork __vfp SusuString<40U> Format::GetBlueToothPressureFormat(tFormatData const &)
    \                     _ZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
-   \        0x0   0xB578             PUSH     {R3-R6,LR}
+   \        0x0   0xB518             PUSH     {R3,R4,LR}
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
-   \        0x6   0x000D             MOVS     R5,R1
-   \        0x8   0x0028             MOVS     R0,R5
-   \        0xA   0x....'....        BL       _ZSt3getILj0EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-   \        0xE   0x....'....        BL       _ZNK10SusuStringILj5EE9GetStringEv
-   \       0x12   0x0006             MOVS     R6,R0
-   \       0x14   0x0028             MOVS     R0,R5
-   \       0x16   0x....'....        BL       _ZSt3getILj1EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-   \       0x1A   0x9602             STR      R6,[SP, #+8]
-   \       0x1C   0x6800             LDR      R0,[R0, #+0]
-   \       0x1E   0x....'....        BL       __aeabi_f2d
-   \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothPressureFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetBlueToothPressureFormat_0+0x4
-   \       0x2A   0xA80B             ADD      R0,SP,#+44
-   \       0x2C   0x....'....        BL       sprintf
-   \       0x30   0x4668             MOV      R0,SP
-   \       0x32   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
-   \       0x36   0xA90B             ADD      R1,SP,#+44
-   \       0x38   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
-   \       0x3C   0x0020             MOVS     R0,R4
-   \       0x3E   0x4669             MOV      R1,SP
-   \       0x40   0x222C             MOVS     R2,#+44
-   \       0x42   0x....'....        BL       __aeabi_memcpy4
-   \       0x46   0xB016             ADD      SP,SP,#+88
-   \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
-   \       0x4A   0xBF00             Nop      
+   \        0x6   0x0008             MOVS     R0,R1
+   \        0x8   0x....'....        BL       _ZSt3getILj1EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
+   \        0xC   0x490C             LDR.N    R1,??GetBlueToothPressureFormat_0
+   \        0xE   0x9102             STR      R1,[SP, #+8]
+   \       0x10   0x6800             LDR      R0,[R0, #+0]
+   \       0x12   0x....'....        BL       __aeabi_f2d
+   \       0x16   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
+   \       0x1A   0x4A0A             LDR.N    R2,??GetBlueToothPressureFormat_0+0x4
+   \       0x1C   0x490A             LDR.N    R1,??GetBlueToothPressureFormat_0+0x8
+   \       0x1E   0xA80B             ADD      R0,SP,#+44
+   \       0x20   0x....'....        BL       sprintf
+   \       0x24   0x4668             MOV      R0,SP
+   \       0x26   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+   \       0x2A   0xA90B             ADD      R1,SP,#+44
+   \       0x2C   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
+   \       0x30   0x0020             MOVS     R0,R4
+   \       0x32   0x4669             MOV      R1,SP
+   \       0x34   0x222C             MOVS     R2,#+44
+   \       0x36   0x....'....        BL       __aeabi_memcpy4
+   \       0x3A   0xB016             ADD      SP,SP,#+88
+   \       0x3C   0xBD10             POP      {R4,PC}          ;; return
+   \       0x3E   0xBF00             Nop      
    \                     ??GetBlueToothPressureFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \       0x40   0x....'....        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_1
+   \       0x44   0x....'....        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x48   0x....'....        DC32     _ZZN6Format26GetBlueToothPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
    \                                 In section .text, align 4
    \   __interwork __vfp SusuString<40U> Format::GetBlueToothHumidityFormat(tFormatData const &)
    \                     _ZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
-   \        0x0   0xB578             PUSH     {R3-R6,LR}
+   \        0x0   0xB518             PUSH     {R3,R4,LR}
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
-   \        0x6   0x000D             MOVS     R5,R1
-   \        0x8   0x0028             MOVS     R0,R5
-   \        0xA   0x....'....        BL       _ZSt3getILj2EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-   \        0xE   0x....'....        BL       _ZNK10SusuStringILj5EE9GetStringEv
-   \       0x12   0x0006             MOVS     R6,R0
-   \       0x14   0x0028             MOVS     R0,R5
-   \       0x16   0x....'....        BL       _ZSt3getILj3EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-   \       0x1A   0x9602             STR      R6,[SP, #+8]
-   \       0x1C   0x6800             LDR      R0,[R0, #+0]
-   \       0x1E   0x....'....        BL       __aeabi_f2d
-   \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothHumidityFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetBlueToothHumidityFormat_0+0x4
-   \       0x2A   0xA80B             ADD      R0,SP,#+44
-   \       0x2C   0x....'....        BL       sprintf
-   \       0x30   0x4668             MOV      R0,SP
-   \       0x32   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
-   \       0x36   0xA90B             ADD      R1,SP,#+44
-   \       0x38   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
-   \       0x3C   0x0020             MOVS     R0,R4
-   \       0x3E   0x4669             MOV      R1,SP
-   \       0x40   0x222C             MOVS     R2,#+44
-   \       0x42   0x....'....        BL       __aeabi_memcpy4
-   \       0x46   0xB016             ADD      SP,SP,#+88
-   \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
-   \       0x4A   0xBF00             Nop      
+   \        0x6   0x0008             MOVS     R0,R1
+   \        0x8   0x....'....        BL       _ZSt3getILj3EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
+   \        0xC   0x490C             LDR.N    R1,??GetBlueToothHumidityFormat_0
+   \        0xE   0x9102             STR      R1,[SP, #+8]
+   \       0x10   0x6800             LDR      R0,[R0, #+0]
+   \       0x12   0x....'....        BL       __aeabi_f2d
+   \       0x16   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
+   \       0x1A   0x4A0A             LDR.N    R2,??GetBlueToothHumidityFormat_0+0x4
+   \       0x1C   0x490A             LDR.N    R1,??GetBlueToothHumidityFormat_0+0x8
+   \       0x1E   0xA80B             ADD      R0,SP,#+44
+   \       0x20   0x....'....        BL       sprintf
+   \       0x24   0x4668             MOV      R0,SP
+   \       0x26   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+   \       0x2A   0xA90B             ADD      R1,SP,#+44
+   \       0x2C   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
+   \       0x30   0x0020             MOVS     R0,R4
+   \       0x32   0x4669             MOV      R1,SP
+   \       0x34   0x222C             MOVS     R2,#+44
+   \       0x36   0x....'....        BL       __aeabi_memcpy4
+   \       0x3A   0xB016             ADD      SP,SP,#+88
+   \       0x3C   0xBD10             POP      {R4,PC}          ;; return
+   \       0x3E   0xBF00             Nop      
    \                     ??GetBlueToothHumidityFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \       0x40   0x....'....        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_1
+   \       0x44   0x....'....        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x48   0x....'....        DC32     _ZZN6Format26GetBlueToothHumidityFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
    \                                 In section .text, align 4
    \   __interwork __vfp SusuString<40U> Format::GetBlueToothTemperatureFormat(tFormatData const &)
@@ -930,7 +906,7 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \        0x4   0x0004             MOVS     R4,R0
    \        0x6   0x000D             MOVS     R5,R1
 
-      sprintf(str, "\%s%.3f %s\n", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
+      sprintf(str, "\%s%.3f %s%s%s\n", "*T", std::get<5>(data),"* *V", (std::get<4>(data)).GetString(),"*") ;
                     ^
 "D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",36  Warning[Pe192]: 
           unrecognized character escape sequence
@@ -940,64 +916,67 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \       0x12   0x0006             MOVS     R6,R0
    \       0x14   0x0028             MOVS     R0,R5
    \       0x16   0x....'....        BL       _ZSt3getILj5EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-   \       0x1A   0x9602             STR      R6,[SP, #+8]
-   \       0x1C   0x6800             LDR      R0,[R0, #+0]
-   \       0x1E   0x....'....        BL       __aeabi_f2d
-   \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothTemperatureFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetBlueToothTemperatureFormat_0+0x4
-   \       0x2A   0xA80B             ADD      R0,SP,#+44
-   \       0x2C   0x....'....        BL       sprintf
-   \       0x30   0x4668             MOV      R0,SP
-   \       0x32   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
-   \       0x36   0xA90B             ADD      R1,SP,#+44
-   \       0x38   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
-   \       0x3C   0x0020             MOVS     R0,R4
-   \       0x3E   0x4669             MOV      R1,SP
-   \       0x40   0x222C             MOVS     R2,#+44
-   \       0x42   0x....'....        BL       __aeabi_memcpy4
-   \       0x46   0xB016             ADD      SP,SP,#+88
-   \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
-   \       0x4A   0xBF00             Nop      
+   \       0x1A   0x490E             LDR.N    R1,??GetBlueToothTemperatureFormat_0
+   \       0x1C   0x9104             STR      R1,[SP, #+16]
+   \       0x1E   0x9603             STR      R6,[SP, #+12]
+   \       0x20   0x490D             LDR.N    R1,??GetBlueToothTemperatureFormat_0+0x4
+   \       0x22   0x9102             STR      R1,[SP, #+8]
+   \       0x24   0x6800             LDR      R0,[R0, #+0]
+   \       0x26   0x....'....        BL       __aeabi_f2d
+   \       0x2A   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
+   \       0x2E   0x4A0B             LDR.N    R2,??GetBlueToothTemperatureFormat_0+0x8
+   \       0x30   0x490B             LDR.N    R1,??GetBlueToothTemperatureFormat_0+0xC
+   \       0x32   0xA80B             ADD      R0,SP,#+44
+   \       0x34   0x....'....        BL       sprintf
+   \       0x38   0x4668             MOV      R0,SP
+   \       0x3A   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+   \       0x3E   0xA90B             ADD      R1,SP,#+44
+   \       0x40   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
+   \       0x44   0x0020             MOVS     R0,R4
+   \       0x46   0x4669             MOV      R1,SP
+   \       0x48   0x222C             MOVS     R2,#+44
+   \       0x4A   0x....'....        BL       __aeabi_memcpy4
+   \       0x4E   0xB016             ADD      SP,SP,#+88
+   \       0x50   0xBD70             POP      {R4-R6,PC}       ;; return
+   \       0x52   0xBF00             Nop      
    \                     ??GetBlueToothTemperatureFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \       0x54   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_2
+   \       0x58   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_1
+   \       0x5C   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x60   0x....'....        DC32     _ZZN6Format29GetBlueToothTemperatureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
    \                                 In section .text, align 4
    \   __interwork __vfp SusuString<40U> Format::GetBlueToothDewPointFormat(tFormatData const &)
    \                     _ZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
-   \        0x0   0xB578             PUSH     {R3-R6,LR}
+   \        0x0   0xB518             PUSH     {R3,R4,LR}
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
-   \        0x6   0x000D             MOVS     R5,R1
-   \        0x8   0x0028             MOVS     R0,R5
-   \        0xA   0x....'....        BL       _ZSt3getILj6EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-   \        0xE   0x....'....        BL       _ZNK10SusuStringILj5EE9GetStringEv
-   \       0x12   0x0006             MOVS     R6,R0
-   \       0x14   0x0028             MOVS     R0,R5
-   \       0x16   0x....'....        BL       _ZSt3getILj7EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
-   \       0x1A   0x9602             STR      R6,[SP, #+8]
-   \       0x1C   0x6800             LDR      R0,[R0, #+0]
-   \       0x1E   0x....'....        BL       __aeabi_f2d
-   \       0x22   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
-   \       0x26   0x4A09             LDR.N    R2,??GetBlueToothDewPointFormat_0
-   \       0x28   0x4909             LDR.N    R1,??GetBlueToothDewPointFormat_0+0x4
-   \       0x2A   0xA80B             ADD      R0,SP,#+44
-   \       0x2C   0x....'....        BL       sprintf
-   \       0x30   0x4668             MOV      R0,SP
-   \       0x32   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
-   \       0x36   0xA90B             ADD      R1,SP,#+44
-   \       0x38   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
-   \       0x3C   0x0020             MOVS     R0,R4
-   \       0x3E   0x4669             MOV      R1,SP
-   \       0x40   0x222C             MOVS     R2,#+44
-   \       0x42   0x....'....        BL       __aeabi_memcpy4
-   \       0x46   0xB016             ADD      SP,SP,#+88
-   \       0x48   0xBD70             POP      {R4-R6,PC}       ;; return
-   \       0x4A   0xBF00             Nop      
+   \        0x6   0x0008             MOVS     R0,R1
+   \        0x8   0x....'....        BL       _ZSt3getILj7EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
+   \        0xC   0x490C             LDR.N    R1,??GetBlueToothDewPointFormat_0
+   \        0xE   0x9102             STR      R1,[SP, #+8]
+   \       0x10   0x6800             LDR      R0,[R0, #+0]
+   \       0x12   0x....'....        BL       __aeabi_f2d
+   \       0x16   0xE9CD 0x0100      STRD     R0,R1,[SP, #+0]
+   \       0x1A   0x4A0A             LDR.N    R2,??GetBlueToothDewPointFormat_0+0x4
+   \       0x1C   0x490A             LDR.N    R1,??GetBlueToothDewPointFormat_0+0x8
+   \       0x1E   0xA80B             ADD      R0,SP,#+44
+   \       0x20   0x....'....        BL       sprintf
+   \       0x24   0x4668             MOV      R0,SP
+   \       0x26   0x....'....        BL       _ZN10SusuStringILj40EEC1Ev
+   \       0x2A   0xA90B             ADD      R1,SP,#+44
+   \       0x2C   0x....'....        BL       _ZN10SusuStringILj40EE3SetILj40EEEvRAT__Kc
+   \       0x30   0x0020             MOVS     R0,R4
+   \       0x32   0x4669             MOV      R1,SP
+   \       0x34   0x222C             MOVS     R2,#+44
+   \       0x36   0x....'....        BL       __aeabi_memcpy4
+   \       0x3A   0xB016             ADD      SP,SP,#+88
+   \       0x3C   0xBD10             POP      {R4,PC}          ;; return
+   \       0x3E   0xBF00             Nop      
    \                     ??GetBlueToothDewPointFormat_0:
-   \       0x4C   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
-   \       0x50   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
+   \       0x40   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_1
+   \       0x44   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
+   \       0x48   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
 
       sprintf(str, "\%s%.3f %s", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
                     ^
@@ -1030,21 +1009,23 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \                     _ZNK10Fahrenheit14GetTemperatureEf: (+1)
    \        0x0   0xB51F             PUSH     {R0-R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
-   \        0x4   0xEDDF 0x0A08      VLDR.W   S1,??GetTemperature_1  ;; 0x42000000
-   \        0x8   0xEE30 0x0A20      VADD.F32 S0,S0,S1
-   \        0xC   0xED8D 0x0A00      VSTR     S0,[SP, #+0]
-   \       0x10   0xA801             ADD      R0,SP,#+4
-   \       0x12   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
-   \       0x16   0x4905             LDR.N    R1,??GetTemperature_1+0x4
-   \       0x18   0x....'....        BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
-   \       0x1C   0x466A             MOV      R2,SP
-   \       0x1E   0xA901             ADD      R1,SP,#+4
-   \       0x20   0x0020             MOVS     R0,R4
-   \       0x22   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
-   \       0x26   0xBD1F             POP      {R0-R4,PC}       ;; return
+   \        0x4   0xEDDF 0x0A09      VLDR.W   S1,??GetTemperature_1  ;; 0x3fe66666
+   \        0x8   0xED9F 0x1A09      VLDR.W   S2,??GetTemperature_1+0x4  ;; 0x42000000
+   \        0xC   0xEE00 0x1A20      VMLA.F32 S2,S0,S1
+   \       0x10   0xED8D 0x1A00      VSTR     S2,[SP, #+0]
+   \       0x14   0xA801             ADD      R0,SP,#+4
+   \       0x16   0x....'....        BL       _ZN10SusuStringILj5EEC1Ev
+   \       0x1A   0x4906             LDR.N    R1,??GetTemperature_1+0x8
+   \       0x1C   0x....'....        BL       _ZN10SusuStringILj5EE3SetILj3EEEvRAT__Kc
+   \       0x20   0x466A             MOV      R2,SP
+   \       0x22   0xA901             ADD      R1,SP,#+4
+   \       0x24   0x0020             MOVS     R0,R4
+   \       0x26   0x....'....        BL       _ZSt9make_pairIR10SusuStringILj5EERfESt4pairINSt10_UnrefwrapIT_E4typeENS5_IT0_E4typeEEOS6_OS9_
+   \       0x2A   0xBD1F             POP      {R0-R4,PC}       ;; return
    \                     ??GetTemperature_1:
-   \       0x28   0x4200'0000        DC32     0x42000000
-   \       0x2C   0x....'....        DC32     _ZZNK10Fahrenheit14GetTemperatureEfEs
+   \       0x2C   0x3FE6'6666        DC32     0x3fe66666
+   \       0x30   0x4200'0000        DC32     0x42000000
+   \       0x34   0x....'....        DC32     _ZZNK10Fahrenheit14GetTemperatureEfEs
 
    \                                 In section .text, align 4
    \   __interwork __vfp vFormat Celsius::GetTemperature(float) const
@@ -1065,8 +1046,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \       0x20   0x....'....        DC32     _ZZNK7Celsius14GetTemperatureEfEs
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut_C1Ev>()
-   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut_C1Ev>()
+   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1079,13 +1060,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \                     __sti__routine: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
    \        0x2   0x....             LDR.N    R0,??DataTable3
-   \        0x4   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut_C1Ev
+   \        0x4   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut_C1Ev
    \        0x8   0x....             LDR.N    R0,??DataTable3_1
-   \        0xA   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut0_C1Ev
+   \        0xA   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut0_C1Ev
    \        0xE   0x....             LDR.N    R0,??DataTable3_2
-   \       0x10   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut1_C1Ev
+   \       0x10   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut1_C1Ev
    \       0x14   0x....             LDR.N    R0,??DataTable3_3
-   \       0x16   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut2_C1Ev
+   \       0x16   0x....'....        BL       _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut2_C1Ev
    \       0x1A   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .bss, align 4
@@ -1094,8 +1075,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \        0x0                      DS8 16
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut0_C1Ev>()
-   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut0_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut0_C1Ev>()
+   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut0_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1109,8 +1090,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \        0x0                      DS8 16
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut1_C1Ev>()
-   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut1_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut1_C1Ev>()
+   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut1_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1124,8 +1105,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \        0x0                      DS8 16
 
    \                                 In section .text, align 2, keep-with-next
-   \   static __code __interwork __vfp <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut2_C1Ev>()
-   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut2_C1Ev: (+1)
+   \   static __code __interwork __vfp <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut2_C1Ev>()
+   \                     _ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut2_C1Ev: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
    \        0x2   0x0004             MOVS     R4,R0
    \        0x4   0x0020             MOVS     R0,R4
@@ -1299,13 +1280,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
 
    .cstack Function
    ------- --------
-       8   <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut0_C1Ev>()
+       8   <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut0_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-       8   <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut1_C1Ev>()
+       8   <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut1_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-       8   <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut2_C1Ev>()
+       8   <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut2_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-       8   <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut_C1Ev>()
+       8   <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut_C1Ev>()
          8   -> SusuString<5U>::SusuString()
        8   Bluetooth::Send(SusuString<40U> &)
          8   -- Indirect call
@@ -1331,15 +1312,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
         24   -> SusuString<5U>::Set<3U>(char const (&)[3])
         24   -> SusuString<5U>::SusuString()
         24   -> std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
-     104   Format::GetBlueToothDewPointFormat(tFormatData const &)
-       104   -> SusuString<40U>::Set<40U>(char const (&)[40])
-       104   -> SusuString<40U>::SusuString()
-       104   -> SusuString<5U>::GetString() const
-       104   -> __aeabi_f2d
-       104   -> __aeabi_memcpy4
-       104   -> sprintf
-       104   -> std::get<6U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-       104   -> std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
+      96   Format::GetBlueToothDewPointFormat(tFormatData const &)
+        96   -> SusuString<40U>::Set<40U>(char const (&)[40])
+        96   -> SusuString<40U>::SusuString()
+        96   -> __aeabi_f2d
+        96   -> __aeabi_memcpy4
+        96   -> sprintf
+        96   -> std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
      232   Format::GetBlueToothFormat(tFormatData const &)
        232   -> Format::GetBlueToothDewPointFormat(tFormatData const &)
        232   -> Format::GetBlueToothHumidityFormat(tFormatData const &)
@@ -1347,24 +1326,20 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
        232   -> Format::GetBlueToothTemperatureFormat(tFormatData const &)
        232   -> __aeabi_memcpy4
        232   -> std::make_tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
-     104   Format::GetBlueToothHumidityFormat(tFormatData const &)
-       104   -> SusuString<40U>::Set<40U>(char const (&)[40])
-       104   -> SusuString<40U>::SusuString()
-       104   -> SusuString<5U>::GetString() const
-       104   -> __aeabi_f2d
-       104   -> __aeabi_memcpy4
-       104   -> sprintf
-       104   -> std::get<2U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-       104   -> std::get<3U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-     104   Format::GetBlueToothPressureFormat(tFormatData const &)
-       104   -> SusuString<40U>::Set<40U>(char const (&)[40])
-       104   -> SusuString<40U>::SusuString()
-       104   -> SusuString<5U>::GetString() const
-       104   -> __aeabi_f2d
-       104   -> __aeabi_memcpy4
-       104   -> sprintf
-       104   -> std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-       104   -> std::get<1U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
+      96   Format::GetBlueToothHumidityFormat(tFormatData const &)
+        96   -> SusuString<40U>::Set<40U>(char const (&)[40])
+        96   -> SusuString<40U>::SusuString()
+        96   -> __aeabi_f2d
+        96   -> __aeabi_memcpy4
+        96   -> sprintf
+        96   -> std::get<3U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
+      96   Format::GetBlueToothPressureFormat(tFormatData const &)
+        96   -> SusuString<40U>::Set<40U>(char const (&)[40])
+        96   -> SusuString<40U>::SusuString()
+        96   -> __aeabi_f2d
+        96   -> __aeabi_memcpy4
+        96   -> sprintf
+        96   -> std::get<1U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
      104   Format::GetBlueToothTemperatureFormat(tFormatData const &)
        104   -> SusuString<40U>::Set<40U>(char const (&)[40])
        104   -> SusuString<40U>::SusuString()
@@ -1405,10 +1380,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
          8   -> std::copy<char const *, std::array<char, 5U>::iterator>(char const *, char const *, std::array<char, 5U>::iterator)
        0   SusuString<5U>::SusuString()
        8   __sti__routine()
-         8   -> <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut0_C1Ev>()
-         8   -> <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut1_C1Ev>()
-         8   -> <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut2_C1Ev>()
-         8   -> <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut_C1Ev>()
+         8   -> <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut0_C1Ev>()
+         8   -> <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut1_C1Ev>()
+         8   -> <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut2_C1Ev>()
+         8   -> <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut_C1Ev>()
        0   std::_Addressof<char>(char &, std::false_type)
        0   std::_Array_const_iterator<char, 40U>::_Array_const_iterator(char const *, size_t)
        0   std::_Array_const_iterator<char, 40U>::_Rechecked(char const *)
@@ -1480,16 +1455,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
        0   std::forward<SusuString<5U> &>(SusuString<5U> &)
        0   std::forward<float &>(float &)
        0   std::get<0U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       0   std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<1U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        0   std::get<1U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<2U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       0   std::get<2U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<3U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        0   std::get<3U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<4U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<5U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-       0   std::get<6U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        0   std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
       32   std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
         32   -> __aeabi_memcpy4
@@ -1529,10 +1501,10 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
 
    Bytes  Function/Label
    -----  --------------
-      14  <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut0_C1Ev>()
-      14  <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut1_C1Ev>()
-      14  <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut2_C1Ev>()
-      14  <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_a5dd8581Ut_C1Ev>()
+      14  <unnamed>#2::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut0_C1Ev>()
+      14  <unnamed>#3::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut1_C1Ev>()
+      14  <unnamed>#4::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut2_C1Ev>()
+      14  <unnamed>::<_ZN43_INTERNAL_21_BluetoothDirector_cpp_4c75cda3Ut_C1Ev>()
        4  ??DataTable3
        4  ??DataTable3_1
        4  ??DataTable3_2
@@ -1548,12 +1520,12 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
        8  BluetoothDirector::subobject BluetoothDirector(Bluetooth &, SensorDirector &)
       36  Celsius::GetTemperature(float) const
       16  DPData
-      48  Fahrenheit::GetTemperature(float) const
-      84  Format::GetBlueToothDewPointFormat(tFormatData const &)
+      56  Fahrenheit::GetTemperature(float) const
+      76  Format::GetBlueToothDewPointFormat(tFormatData const &)
      100  Format::GetBlueToothFormat(tFormatData const &)
-      84  Format::GetBlueToothHumidityFormat(tFormatData const &)
-      84  Format::GetBlueToothPressureFormat(tFormatData const &)
-      84  Format::GetBlueToothTemperatureFormat(tFormatData const &)
+      76  Format::GetBlueToothHumidityFormat(tFormatData const &)
+      76  Format::GetBlueToothPressureFormat(tFormatData const &)
+     100  Format::GetBlueToothTemperatureFormat(tFormatData const &)
       16  HData
       48  Kelvin::GetTemperature(float) const
       10  OsWrapper::IThread::IThread()
@@ -1615,16 +1587,13 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
        2  std::forward<SusuString<5U> &>(SusuString<5U> &)
        2  std::forward<float &>(float &)
        4  std::get<0U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       4  std::get<0U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        4  std::get<1U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        4  std::get<1U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        4  std::get<2U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
-       4  std::get<2U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        2  std::get<3U, SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(std::tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>> &)
        4  std::get<3U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        4  std::get<4U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        4  std::get<5U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
-       4  std::get<6U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
        2  std::get<7U, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float>(std::tuple<SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float, SusuString<5U>, float> const &)
       42  std::make_pair<SusuString<5U> &, float &>(SusuString<5U> &, float &)
       62  std::make_tuple<SusuString<40U>, SusuString<40U>, SusuString<40U>, SusuString<40U>>(SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&, SusuString<40U> &&)
@@ -1636,16 +1605,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
       40  std::tuple<SusuString<40U>, SusuString<40U>>::tuple<SusuString<40U>, SusuString<40U>, void **>(SusuString<40U> &&, SusuString<40U> &&)
        8  std::tuple<SusuString<40U>>::subobject tuple(SusuString<40U> &&)
       22  std::tuple<SusuString<40U>>::tuple<SusuString<40U>, void **>(SusuString<40U> &&)
-     432  -- Other
+     416  -- Other
 
  
     64 bytes in section .bss
      4 bytes in section .init_array
-   459 bytes in section .rodata
- 1'862 bytes in section .text
+   443 bytes in section .rodata
+ 1'850 bytes in section .text
  
- 304 bytes of CODE  memory (+ 1'562 bytes shared)
-  16 bytes of CONST memory (+   443 bytes shared)
+ 304 bytes of CODE  memory (+ 1'550 bytes shared)
+  16 bytes of CONST memory (+   427 bytes shared)
   64 bytes of DATA  memory
 
 Errors: none

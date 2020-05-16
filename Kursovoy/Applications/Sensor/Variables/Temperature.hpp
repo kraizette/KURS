@@ -28,7 +28,7 @@ public:
     return std::make_pair(TData.tname, TData.t);
   }
   
-  void Calculate(float data, ...) {
+  void Calculate(float data, ...) override {
     auto const& currentUnits = *unitsList[index] ;
     vFormat temperature = currentUnits.GetTemperature(data) ;
     SusuString<5> name;
