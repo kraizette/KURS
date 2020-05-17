@@ -4,6 +4,7 @@
 
 #include "ISensorDriver.hpp"  //for ISensorDriver
 #include "SPIConfig.hpp" //for SPI::Config(SPIConfig spiconfig)
+#include <iostream>
 
 // BME280 registers
 constexpr uint8_t ADDRESS = 0xEC; //BME280 I2C ADDRES (0x76<<1)
@@ -126,6 +127,8 @@ template <typename SPI, typename MOSI, typename SCK,
           typename MISO, typename CS>
 class SensorDriver : public ISensorDriver { 
 public :
+  int32_t temper_int;
+  
   SensorDriver() {
     MOSI :: SetAlternate();
     SCK :: SetAlternate();
@@ -148,44 +151,50 @@ public :
   void Init(void) {
     uint32_t value32=0;
     WriteReg(REG_SOFTRESET,SOFTRESET_VALUE);
-    //while (ReadStatus() & STATUS_IM_UPDATE) ;
+    while (ReadStatus() & STATUS_IM_UPDATE) ;
     ReadCoefficients();
     SetStandby(STBY_1000);
     SetFilter(FILTER_4);
     SetOversamplingTemper(OSRS_T_x4);
     SetOversamplingPressure(OSRS_P_x2);
     SetOversamplingHum(OSRS_H_x1);
-    value32 = ReadReg(REG_CTRL_MEAS);
-    value32 |= ReadReg(REG_CTRL_HUM) << 8;
+    value32 = ReadReg8U(REG_CTRL_MEAS);
+    value32 |= ReadReg8U(REG_CTRL_HUM) << 8;
     SetMode(MODE_NORMAL);
   }
   
-  
-    float ReadTemperature(void) {
+  float ReadTemperature() {
     float temper_float = 0.0f;
     uint32_t temper_raw;
     int32_t val1, val2;
-    temper_raw = ReadReg(REGISTER_TEMPDATA);
+    temper_raw = ((ReadReg8U(REGISTER_TEMPDATA) << 16U) | (ReadReg8U(REGISTER_TEMPDATA + 0x01) << 8U) | (ReadReg8U(REGISTER_TEMPDATA + 0x02))) & 0x00FFFFFF;
     temper_raw >>= 4;
-    val1 = ((((temper_raw>>3) - (CalibData.dig_T1 <<1))) *
-            (CalibData.dig_T2)) >> 11;
+    val1 = ((((temper_raw>>3) - ((int32_t)CalibData.dig_T1 <<1))) *
+		((int32_t)CalibData.dig_T2)) >> 11;
     val2 = (((((temper_raw>>4) - ((int32_t)CalibData.dig_T1)) *
 		((temper_raw>>4) - ((int32_t)CalibData.dig_T1))) >> 12) *
 		((int32_t)CalibData.dig_T3)) >> 14;
-    //temper_int = val1 + val2;
-    //temper_float = ((temper_int * 5 + 128) >> 8);
+    temper_int = val1 + val2;
+    temper_float = ((temper_int * 5 + 128) >> 8);
     temper_float /= 100.0f;
     return temper_float;
   }
 
-  float ReadPressure(void) {
+  float ReadPressure() {
     float press_float = 0.0f;
     uint32_t press_raw, pres_int;
     int64_t val1, val2, p;
-    ReadTemperature(); // must be done first to get t_fine
-    press_raw = ReadReg(REGISTER_PRESSUREDATA);
-    press_raw >>= 4;
-   // val1 = ((int64_t) temper_int) - 128000;
+    ReadTemperature();
+    int8_t buf [3] ;
+    assert(buf != nullptr) ;
+    uint8_t RegAddr = REGISTER_PRESSUREDATA;
+    buf[0] = ReadReg8S(RegAddr);
+    RegAddr = RegAddr + 0x01;
+    buf[1] = ReadReg8S(RegAddr);
+    RegAddr = RegAddr + 0x01;
+    buf[2] = ReadReg8S(RegAddr);
+    press_raw = *reinterpret_cast<int16_t*>(buf) ;
+    val1 = ((int64_t) temper_int) - 128000;
     val2 = val1 * val1 * (int64_t)CalibData.dig_P6;
     val2 = val2 + ((val1 * (int64_t)CalibData.dig_P5) << 17);
     val2 = val2 + ((int64_t)CalibData.dig_P4 << 35);
@@ -205,14 +214,20 @@ public :
     return press_float;
   }
 
-  float ReadHumidity(void) {
+  float ReadHumidity() {
     float hum_float = 0.0f;
     int16_t hum_raw;
     int32_t hum_raw_sign, v_x1_u32r;
-    ReadTemperature(); // must be done first to get t_fine
-    hum_raw = ReadReg(REGISTER_HUMIDDATA);
+    ReadTemperature();
+    int8_t buf [2] ;
+    assert(buf != nullptr) ;// must be done first to get t_fine
+    uint8_t RegAddr = REGISTER_PRESSUREDATA;
+    buf[0] = ReadReg8S(RegAddr);
+    RegAddr = RegAddr + 0x01;
+    buf[1] = ReadReg8S(RegAddr);
+    hum_raw = *reinterpret_cast<int16_t*>(buf) ;
     hum_raw_sign = ((int32_t)hum_raw)&0x0000FFFF;
-    //v_x1_u32r = (temper_int - ((int32_t)76800));
+    v_x1_u32r = (temper_int - ((int32_t)76800));
     v_x1_u32r = (((((hum_raw_sign << 14) - (((int32_t)CalibData.dig_H4) << 20) -
 		(((int32_t)CalibData.dig_H5) * v_x1_u32r)) + ((int32_t)16384)) >> 15) *
 		(((((((v_x1_u32r * ((int32_t)CalibData.dig_H6)) >> 10) *
@@ -227,69 +242,90 @@ public :
     return hum_float;
   }
   
-//private:
+  uint8_t ReadStatus(void) {
+    uint8_t res = ReadReg8U(REGISTER_STATUS)&0x09;
+    return res;
+  }
  
-  void ReadCoefficients(void) {
-    //CalibData.dig_T1 = ReadReg_U16(REGISTER_DIG_T1);
-    //CalibData.dig_T2 = ReadReg_S16(REGISTER_DIG_T2);
-    CalibData.dig_T3 = ReadReg(REGISTER_DIG_T3);
-    //CalibData.dig_P1 = ReadReg_U16(REGISTER_DIG_P1);
-    CalibData.dig_P2 = ReadReg(REGISTER_DIG_P2);
-    CalibData.dig_P3 = ReadReg(REGISTER_DIG_P3);
-    CalibData.dig_P4 = ReadReg(REGISTER_DIG_P4);
-    CalibData.dig_P5 = ReadReg(REGISTER_DIG_P5);
-    CalibData.dig_P6 = ReadReg(REGISTER_DIG_P6);
-    CalibData.dig_P7 = ReadReg(REGISTER_DIG_P7);
-    CalibData.dig_P8 = ReadReg(REGISTER_DIG_P8);
-    //CalibData.dig_P9 = ReadReg_S16(REGISTER_DIG_P9);
-   // CalibData.dig_H1 = ReadReg_U16(REGISTER_DIG_H1);
-    //CalibData.dig_H2 = ReadReg_S16(REGISTER_DIG_H2);
-    //CalibData.dig_H3 = ReadReg_U16(REGISTER_DIG_H3);
-    CalibData.dig_H4 = (ReadReg(REGISTER_DIG_H4) << 4) | (ReadReg(REGISTER_DIG_H4+1) & 0xF);
-    CalibData.dig_H5 = (ReadReg(REGISTER_DIG_H5+1) << 4) | (ReadReg(REGISTER_DIG_H5) >> 4);
-    CalibData.dig_H6 = (int8_t)ReadReg(REGISTER_DIG_H6);
+  void ReadCoefficients() {
+    CalibData.dig_T1 = ReadReg16U(REGISTER_DIG_T1);
+    //std::cout << std::dec << std::int32_t(CalibData.dig_T1) << std::endl;
+    CalibData.dig_T2 = ReadReg16S(REGISTER_DIG_T2);
+     //std::cout << std::dec << std::int32_t(CalibData.dig_T2) << std::endl;
+    CalibData.dig_T3 = ReadReg16S(REGISTER_DIG_T3);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_T3) << std::endl;
+    CalibData.dig_P1 = ReadReg16U(REGISTER_DIG_P1);
+     //std::cout << std::dec << std::int32_t(CalibData.dig_P1) << std::endl;
+    CalibData.dig_P2 = ReadReg16S(REGISTER_DIG_P2);
+     //std::cout << std::dec << std::int32_t(CalibData.dig_P2) << std::endl;
+    CalibData.dig_P3 = ReadReg16S(REGISTER_DIG_P3);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_P3) << std::endl;
+    CalibData.dig_P4 = ReadReg16S(REGISTER_DIG_P4);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_P4) << std::endl;
+    CalibData.dig_P5 = ReadReg16S(REGISTER_DIG_P5);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_P5) << std::endl;
+    CalibData.dig_P6 = ReadReg16S(REGISTER_DIG_P6);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_P6) << std::endl;
+    CalibData.dig_P7 = ReadReg16S(REGISTER_DIG_P7);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_P7) << std::endl;
+    CalibData.dig_P8 = ReadReg16S(REGISTER_DIG_P8);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_P8) << std::endl;
+    CalibData.dig_P9 = ReadReg16S(REGISTER_DIG_P9);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_P9) << std::endl;
+    CalibData.dig_H1 = ReadReg8U(REGISTER_DIG_H1);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_H1) << std::endl;
+    CalibData.dig_H2 = ReadReg16S(REGISTER_DIG_H2);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_H2) << std::endl;
+    CalibData.dig_H3 = ReadReg8U(REGISTER_DIG_H3);
+    // std::cout << std::dec << std::int32_t(CalibData.dig_H3) << std::endl;
+    CalibData.dig_H4 = ((ReadReg8S(REGISTER_DIG_H4) * 16) | (ReadReg8S(REGISTER_DIG_H4+0x01) & 0xF));
+    // std::cout << std::dec << std::int32_t(CalibData.dig_H4) << std::endl;
+    CalibData.dig_H5 = ((ReadReg8S(REGISTER_DIG_H5+0x01) * 16) | (ReadReg8S(REGISTER_DIG_H5) >> 4));
+    // std::cout << std::dec << std::int32_t(CalibData.dig_H5) << std::endl;
+    CalibData.dig_H6 = ReadReg8S(REGISTER_DIG_H6);
+   //  std::cout << std::dec << std::int32_t(CalibData.dig_H6) << std::endl;
   }
   
   void SetStandby(uint8_t tsb) {
     uint8_t reg;
-    reg = ReadReg(REG_CONFIG) & ~STBY_MSK;
+    reg = ReadReg8U(REG_CONFIG) & ~STBY_MSK;
     reg |= tsb & STBY_MSK;
     WriteReg(REG_CONFIG,reg);
   }
   
   void SetFilter(uint8_t filter) {
   uint8_t reg;
-  reg = ReadReg(REG_CONFIG) & ~FILTER_MSK;
+  reg = ReadReg8U(REG_CONFIG) & ~FILTER_MSK;
   reg |= filter & FILTER_MSK;
   WriteReg(REG_CONFIG,reg);
   }
 
   void SetOversamplingTemper(uint8_t osrs) {
     uint8_t reg;
-    reg = ReadReg(REG_CTRL_MEAS) & ~OSRS_T_MSK;
+    reg = ReadReg8U(REG_CTRL_MEAS) & ~OSRS_T_MSK;
     reg |= osrs & OSRS_T_MSK;
     WriteReg(REG_CTRL_MEAS,reg);
   }
 
   void SetOversamplingPressure(uint8_t osrs) {
     uint8_t reg;
-    reg = ReadReg(REG_CTRL_MEAS) & ~OSRS_P_MSK;
+    reg = ReadReg8U(REG_CTRL_MEAS) & ~OSRS_P_MSK;
     reg |= osrs & OSRS_P_MSK;
     WriteReg(REG_CTRL_MEAS,reg);
   }
   
   void SetOversamplingHum(uint8_t osrs) {
     uint8_t reg;
-    reg = ReadReg(REG_CTRL_HUM) & ~OSRS_H_MSK;
+    reg = ReadReg8U(REG_CTRL_HUM) & ~OSRS_H_MSK;
     reg |= osrs & OSRS_H_MSK;
     WriteReg(REG_CTRL_HUM,reg);
-    reg = ReadReg(REG_CTRL_MEAS);
+    reg = ReadReg8U(REG_CTRL_MEAS);
     WriteReg(REG_CTRL_MEAS,reg);
   }
 
   void SetMode(uint8_t mode) {
     uint8_t reg;
-    reg = ReadReg(REG_CTRL_MEAS) & ~MODE_MSK;
+    reg = ReadReg8U(REG_CTRL_MEAS) & ~MODE_MSK;
     reg |= mode & MODE_MSK;
     WriteReg(REG_CTRL_MEAS,reg);
   }
@@ -301,18 +337,33 @@ public :
     return att;
   }
   
+  
   static int8_t WriteReg(uint8_t reg_addr, uint8_t reg_data) {
     int8_t rslt = 0; 
-    // CS :: Set() ;
+    CS :: Set() ;
     CS :: Reset() ;
     SPI :: WriteByteU(reg_addr);
+    SPI :: WriteByteU(reg_data);
     SPI :: WriteByteU(reg_data);
     CS :: Set() ;
     return rslt;
   };
   
   
-  static uint8_t ReadReg(uint8_t RegAddr) {
+  static int8_t ReadReg8S(int8_t RegAddr) {
+    int8_t rslt;
+    CS :: Set() ;
+    CS :: Reset() ;
+    SPI :: WriteByteS(RegAddr);
+    rslt = (SPI::ReadByteS()).first  ;
+    SPI :: WriteByteS(RegAddr);
+    rslt = (SPI::ReadByteS()).first  ;
+    CS :: Set() ;
+    return rslt;
+  }
+  
+  
+  static uint8_t ReadReg8U(uint8_t RegAddr) {
     uint8_t rslt;
     CS :: Set() ;
     CS :: Reset() ;
@@ -324,41 +375,23 @@ public :
     return rslt;
   }
   
-    std::uint16_t ReadReg16U(uint8_t RegAddr) {
-   std::uint8_t buf [2] ;
+  static uint16_t ReadReg16U(uint8_t RegAddr) {
+   uint8_t buf [2] ;
    assert(buf != nullptr) ;
-
-   CS :: Reset() ;
-   SPI :: WriteByteU(RegAddr);
-   buf[1] = (SPI::ReadByteU()).first  ;
-   SPI :: WriteByteU(RegAddr);
-   buf[1] = (SPI::ReadByteU()).first  ;
-    SPI :: WriteByteU(RegAddr);
-    buf[0] = (SPI::ReadByteU()).first  ;
-    SPI :: WriteByteU(RegAddr);
-    buf[0] = (SPI::ReadByteU()).first  ;
-   CS :: Set() ;
-
-   std::uint16_t result = *reinterpret_cast<std::uint16_t*>(buf) ;
+   buf[0] = ReadReg8U(RegAddr);
+   RegAddr = RegAddr + 0x01U;
+   buf[1] = ReadReg8U(RegAddr);
+   uint16_t result = *reinterpret_cast<uint16_t*>(buf) ;
    return result ;
-}
+  }
   
-  std::int16_t ReadReg16S(int8_t RegAddr) {
-   std::int8_t buf [2] ;
+  static int16_t ReadReg16S(int8_t RegAddr) {
+   int8_t buf [2] ;
    assert(buf != nullptr) ;
-
-   CS :: Reset() ;
-   SPI :: WriteByteS(RegAddr);
-   buf[1] = (SPI::ReadByteS()).first  ;
-   SPI :: WriteByteS(RegAddr);
-   buf[1] = (SPI::ReadByteS()).first  ;
-    SPI :: WriteByteS(RegAddr);
-    buf[0] = (SPI::ReadByteS()).first  ;
-    SPI :: WriteByteS(RegAddr);
-    buf[0] = (SPI::ReadByteS()).first  ;
-   CS :: Set() ;
-
-   std::int16_t result = *reinterpret_cast<std::int16_t*>(buf) ;
-   return result ;
-}
+   buf[0] = ReadReg8S(RegAddr);
+   RegAddr = RegAddr + 0x01;
+   buf[1] = ReadReg8S(RegAddr);
+   int16_t result = *reinterpret_cast<int16_t*>(buf) ;
+   return result;
+  }
 };

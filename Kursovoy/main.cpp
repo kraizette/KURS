@@ -149,25 +149,12 @@ TaskButton myTaskButton(mySensorDirector);
 
 int main()
 {
-  std::cout << std::hex << std::uint32_t(BME280Driver.ReadReg(REG_ID)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16U(REGISTER_DIG_T1)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_T2)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_T3)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16U(REGISTER_DIG_P1)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P2)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P3)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P4)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P5)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P6)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P7)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P8)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_P9)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg(REGISTER_DIG_H1)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_H2)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg(REGISTER_DIG_H3)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_H4)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg16S(REGISTER_DIG_H5)) << std::endl;
-  std::cout << std::dec << std::uint32_t(BME280Driver.ReadReg(REGISTER_DIG_H6)) << std::endl;
+  auto res = BME280Driver.ReadReg8U( 0xF4 );
+  std::cout << std::hex << std::int32_t(res) << std::endl;
+  BME280Driver.WriteReg(0xF4,0x11);
+  res = BME280Driver.ReadReg8U( 0xF4 );
+  std::cout << std::hex << std::int32_t(res) << std::endl;
+  
   //using namespace OsWrapper;
  //Rtos::CreateThread(myDisplayDirector, "Display", ThreadPriority::normal);
  //Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
