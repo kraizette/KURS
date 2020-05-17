@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        17/May/2020  14:51:50
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        17/May/2020  17:08:05
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWB45A.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EW7314.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -2760,4 +2760,4 @@ _ZNK7Celsius14GetTemperatureEf:
 //  64 bytes of DATA  memory
 //
 //Errors: none
-//Warnings: 3
+//Warnings: 1

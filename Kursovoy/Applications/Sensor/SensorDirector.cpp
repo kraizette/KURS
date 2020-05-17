@@ -7,13 +7,9 @@ SensorDirector::SensorDirector(BME280& sensor) : mySensor(sensor) {};
 
 void SensorDirector::Execute() {
   for(;;) {
-  //temperature 
   temperature.Calculate(mySensor.GetTemperature()) ;  
-  //pressure
   pressure.Calculate(mySensor.GetPressure());
-  //humidity
   humidity.Calculate(mySensor.GetHumidity());
-  //DewPOint
   dewpoint.Calculate(mySensor.GetTemperature(),mySensor.GetHumidity());
   }
 }

@@ -20,12 +20,12 @@ public:
   
   void Calculate(float data, ...) override {
     va_list args;
-      va_start(args,data);
-      float T = data;
-      float H = va_arg(args,float);
-      float a = 17.27F;
-      float b = 237.7F;
-      float f = ((a * T)/(b + T)) + log(H/100);
+    va_start(args,data);
+    float T = data;
+    float H = va_arg(args,float);
+    float a = 17.27F;
+    float b = 237.7F;
+    float f = ((a * T)/(b + T)) + log(H/100);
     DPData.dp = (b * f)/(a - f);
     char str[5];
     sprintf(str, "%s","C") ;

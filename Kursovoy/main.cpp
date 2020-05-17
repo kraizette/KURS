@@ -97,14 +97,6 @@ extern "C" {
     GPIOB::AFRH::AFRH13::Af6::Set() ;
     GPIOA::AFRH::AFRH11::Af6::Set() ;
     RCC::APB2ENR::SPI4EN::Enable::Set();
-    
-    //for SPI1 - BME280
-    //SPI1::CRCPR::CRCPOLY::Value7::Set();
-    //RCC::APB2ENR::SPI1EN::Enable::Set();
-    //GPIOA::AFRL::AFRL6::Af5::Set();
-    //GPIOA::AFRL::AFRL7::Af5::Set() ;
-    //GPIOA::AFRL::AFRL5::Af5::Set() ;
-    
     return 1;
   }
 }
@@ -114,12 +106,6 @@ using MOSIPin = Pin<GPIOA, 1U>; //SPI4_MOSI PA1 AF5
 using SCKPin = Pin<GPIOB, 13U>; //SPI4_SCK PB13 AF6
 using MISOPin = Pin<GPIOA, 11U>; //SPI4_MISO PA11 AF6
 using CSPin = Pin<GPIOA, 5U>; //PC4 output
-
-//for SPI1 - BME280
-//using MOSIPin = Pin<GPIOA, 7U>; //SPI4_MOSI 
-//using SCKPin = Pin<GPIOA, 5U>; //SPI4_SCK 
-//using MISOPin = Pin<GPIOA, 6U>; //SPI4_MISO 
-//using CSPin = Pin<GPIOB, 6U>; //alternative
 
 SensorDriver<SPI<SPI4>,MOSIPin,SCKPin, MISOPin,CSPin> BME280Driver;
 BME280 Sensor(BME280Driver);

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         17/May/2020  14:51:50
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         17/May/2020  17:08:05
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWB45A.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW7314.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\DisplayDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -840,11 +840,6 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \       0x60   0xB037             ADD      SP,SP,#+220
    \       0x62   0xBD30             POP      {R4,R5,PC}       ;; return
 
-      sprintf(str, "\%s%.3f %s%s%s\n", "*T", std::get<5>(data),"* *V", (std::get<4>(data)).GetString(),"*") ;
-                    ^
-"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",36  Warning[Pe192]: 
-          unrecognized character escape sequence
-
    \                                 In section .text, align 4
    \   __interwork __vfp SusuString<40U> Format::GetDisplayPressureFormat(tFormatData const &)
    \                     _ZN6Format24GetDisplayPressureFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEE: (+1)
@@ -924,11 +919,6 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
    \        0x6   0x000D             MOVS     R5,R1
-
-      sprintf(str, "\%s%.3f %s", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
-                    ^
-"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",67  Warning[Pe192]: 
-          unrecognized character escape sequence
    \        0x8   0x0028             MOVS     R0,R5
    \        0xA   0x....'....        BL       _ZSt3getILj4EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
    \        0xE   0x....'....        BL       _ZNK10SusuStringILj5EE9GetStringEv
@@ -1130,8 +1120,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
    \                     DPData:
    \        0x0                      DS8 16
 
-        float H = va_arg(args,float);
-                              ^
+      float H = va_arg(args,float);
+                            ^
 "D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\DewPoint.hpp",25  Warning[Pe1145]: 
           "float" would have been promoted to "double" when passed through the
           ellipsis parameter; use the latter type instead
@@ -1634,4 +1624,4 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Display\Di
   64 bytes of DATA  memory
 
 Errors: none
-Warnings: 3
+Warnings: 1

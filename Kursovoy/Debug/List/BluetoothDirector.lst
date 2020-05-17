@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         17/May/2020  14:51:50
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         17/May/2020  17:08:05
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWB459.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EW7313.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\BluetoothDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -905,11 +905,6 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \        0x2   0xB095             SUB      SP,SP,#+84
    \        0x4   0x0004             MOVS     R4,R0
    \        0x6   0x000D             MOVS     R5,R1
-
-      sprintf(str, "\%s%.3f %s%s%s\n", "*T", std::get<5>(data),"* *V", (std::get<4>(data)).GetString(),"*") ;
-                    ^
-"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",36  Warning[Pe192]: 
-          unrecognized character escape sequence
    \        0x8   0x0028             MOVS     R0,R5
    \        0xA   0x....'....        BL       _ZSt3getILj4EJ10SusuStringILj5EEfS1_fS1_fS1_fEERKNSt13tuple_elementIXT_ESt5tupleIJDpT0_EEE4typeERKS6_
    \        0xE   0x....'....        BL       _ZNK10SusuStringILj5EE9GetStringEv
@@ -977,11 +972,6 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \       0x40   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_1
    \       0x44   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs_0
    \       0x48   0x....'....        DC32     _ZZN6Format26GetBlueToothDewPointFormatERKSt5tupleIJ10SusuStringILj5EEfS2_fS2_fS2_fEEEs
-
-      sprintf(str, "\%s%.3f %s", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
-                    ^
-"D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\Format\Format.hpp",67  Warning[Pe192]: 
-          unrecognized character escape sequence
 
    \                                 In section .text, align 4
    \   __interwork __vfp vFormat Kelvin::GetTemperature(float) const
@@ -1119,8 +1109,8 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
    \                     DPData:
    \        0x0                      DS8 16
 
-        float H = va_arg(args,float);
-                              ^
+      float H = va_arg(args,float);
+                            ^
 "D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\Variables\DewPoint.hpp",25  Warning[Pe1145]: 
           "float" would have been promoted to "double" when passed through the
           ellipsis parameter; use the latter type instead
@@ -1618,4 +1608,4 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Output\BlueTooth\
   64 bytes of DATA  memory
 
 Errors: none
-Warnings: 3
+Warnings: 1

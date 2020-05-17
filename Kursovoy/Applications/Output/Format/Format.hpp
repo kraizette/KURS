@@ -33,7 +33,7 @@ private:
   
     static SusuString<40> GetBlueToothTemperatureFormat(const tFormatData& data) {
     char str[40];
-    sprintf(str, "\%s%.3f %s%s%s\n", "*T", std::get<5>(data),"* *V", (std::get<4>(data)).GetString(),"*") ;
+    sprintf(str, "%s%.3f %s%s%s\n", "*T", std::get<5>(data),"* *V", (std::get<4>(data)).GetString(),"*") ;
     SusuString<40> temperature;
     temperature.Set(str);
     return temperature;
@@ -64,7 +64,7 @@ private:
   
     static SusuString<40> GetDisplayTemperatureFormat(const tFormatData& data) {
     char str[40];
-    sprintf(str, "\%s%.3f %s", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
+    sprintf(str, "%s%.3f %s", "Temperature: ", std::get<5>(data), (std::get<4>(data)).GetString()) ;
     SusuString<40> temperature;
     temperature.Set(str);
     return temperature;

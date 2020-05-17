@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        17/May/2020  14:51:51
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        17/May/2020  17:08:06
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWB90F.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EW77AA.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -556,11 +556,12 @@ _ZZN8Pressure9CalculateEfzEs:
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZZN8Pressure9CalculateEfzEs_0
         DATA
-// __absolute char const <_ZZN8Pressure9CalculateEfzEs_0>[3]
+// __absolute char const <_ZZN8Pressure9CalculateEfzEs_0>[5]
 _ZZN8Pressure9CalculateEfzEs_0:
         DATA8
-        DC8 "Pa"
-        DC8 0
+        DC8 "mmHg"
+        DATA
+        DC8 0, 0, 0
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV8Humidity
@@ -1037,26 +1038,26 @@ __sti__routine:
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
         LDR.N    R0,??DataTable2
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt_C1Ev
         LDR.N    R0,??DataTable2_1
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt0_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt0_C1Ev
         LDR.N    R0,??DataTable2_2
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt1_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt1_C1Ev
         LDR.N    R0,??DataTable2_3
-          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev
-        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev
+          CFI FunCall _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt2_C1Ev
+        BL       _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt2_C1Ev
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock12
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock13 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev:
+// static __code __interwork __vfp <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1071,10 +1072,10 @@ _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock14 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt0_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev:
+// static __code __interwork __vfp <unnamed>#2::<_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt0_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt0_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1089,10 +1090,10 @@ _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut0_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock15 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt1_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev:
+// static __code __interwork __vfp <unnamed>#3::<_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt1_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt1_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1107,10 +1108,10 @@ _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut1_C1Ev:
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock16 Using cfiCommon0
-          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev
+          CFI Function _ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt2_C1Ev
         THUMB
-// static __code __interwork __vfp <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev>()
-_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut2_C1Ev:
+// static __code __interwork __vfp <unnamed>#4::<_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt2_C1Ev>()
+_ZN40_INTERNAL_18_SensorDirector_cpp_6423e6fcUt2_C1Ev:
         PUSH     {R4,LR}
           CFI R14 Frame(CFA, -4)
           CFI R4 Frame(CFA, -8)
@@ -1215,8 +1216,7 @@ _ZN14SensorDirector7ExecuteEv:
           CFI CFA R13+16
         MOVS     R4,R0
 //    9   for(;;) {
-//   10   //temperature 
-//   11   temperature.Calculate(mySensor.GetTemperature()) ;  
+//   10   temperature.Calculate(mySensor.GetTemperature()) ;  
 ??Execute_0:
         LDR      R0,[R4, #+2176]
           CFI FunCall _ZN6BME28014GetTemperatureEv
@@ -1225,8 +1225,7 @@ _ZN14SensorDirector7ExecuteEv:
         ADDS     R0,R4,#+2144
           CFI FunCall _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE9CalculateEfz
         BL       _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE9CalculateEfz
-//   12   //pressure
-//   13   pressure.Calculate(mySensor.GetPressure());
+//   11   pressure.Calculate(mySensor.GetPressure());
         LDR      R0,[R4, #+2176]
           CFI FunCall _ZN6BME28011GetPressureEv
         BL       _ZN6BME28011GetPressureEv
@@ -1234,8 +1233,7 @@ _ZN14SensorDirector7ExecuteEv:
         ADDW     R0,R4,#+2164
           CFI FunCall _ZN8Pressure9CalculateEfz
         BL       _ZN8Pressure9CalculateEfz
-//   14   //humidity
-//   15   humidity.Calculate(mySensor.GetHumidity());
+//   12   humidity.Calculate(mySensor.GetHumidity());
         LDR      R0,[R4, #+2176]
           CFI FunCall _ZN6BME28011GetHumidityEv
         BL       _ZN6BME28011GetHumidityEv
@@ -1243,8 +1241,7 @@ _ZN14SensorDirector7ExecuteEv:
         ADDW     R0,R4,#+2168
           CFI FunCall _ZN8Humidity9CalculateEfz
         BL       _ZN8Humidity9CalculateEfz
-//   16   //DewPOint
-//   17   dewpoint.Calculate(mySensor.GetTemperature(),mySensor.GetHumidity());
+//   13   dewpoint.Calculate(mySensor.GetTemperature(),mySensor.GetHumidity());
         LDR      R0,[R4, #+2176]
           CFI FunCall _ZN6BME28011GetHumidityEv
         BL       _ZN6BME28011GetHumidityEv
@@ -1263,8 +1260,8 @@ _ZN14SensorDirector7ExecuteEv:
           CFI FunCall _ZN8DewPoint9CalculateEfz
         BL       _ZN8DewPoint9CalculateEfz
         B.N      ??Execute_0
-//   18   }
-//   19 }
+//   14   }
+//   15 }
           CFI EndBlock cfiBlock18
 
         SECTION `.text`:CODE:NOROOT(1)
@@ -1278,31 +1275,31 @@ _ZThn2140_N14SensorDirector18HandleButtonPushedEv:
           CFI EndBlock cfiBlock19
         REQUIRE _ZN14SensorDirector18HandleButtonPushedEv
         ;; // Fall through to label SensorDirector::HandleButtonPushed()
-//   20 
+//   16 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock20 Using cfiCommon0
           CFI Function _ZN14SensorDirector18HandleButtonPushedEv
         THUMB
-//   21 void SensorDirector::HandleButtonPushed() {
+//   17 void SensorDirector::HandleButtonPushed() {
 _ZN14SensorDirector18HandleButtonPushedEv:
         PUSH     {R7,LR}
           CFI R14 Frame(CFA, -4)
           CFI CFA R13+8
-//   22    temperature.SetNextUnits();
+//   18    temperature.SetNextUnits();
         ADDS     R0,R0,#+2144
           CFI FunCall _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv
         BL       _ZN11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE12SetNextUnitsEv
-//   23 }
+//   19 }
         POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock20
-//   24 
+//   20 
 
         SECTION `.text`:CODE:NOROOT(1)
           CFI Block cfiBlock21 Using cfiCommon0
           CFI Function _ZN14SensorDirector7GetDataEv
         THUMB
-//   25 tFormatData SensorDirector::GetData() {
+//   21 tFormatData SensorDirector::GetData() {
 _ZN14SensorDirector7GetDataEv:
         PUSH     {R4,R5,LR}
           CFI R14 Frame(CFA, -4)
@@ -1317,10 +1314,10 @@ _ZN14SensorDirector7GetDataEv:
         MOV      R0,SP
           CFI FunCall _ZN8DewPoint3GetEv
         BL       _ZN8DewPoint3GetEv
-//   26   return std::make_tuple((pressure.Get()).first,(pressure.Get()).second,
-//   27                          (humidity.Get()).first, (humidity.Get()).second,
-//   28                          (temperature.Get()).first, (temperature.Get()).second ,
-//   29                          (dewpoint.Get()).first, (dewpoint.Get()).second );
+//   22   return std::make_tuple((pressure.Get()).first,(pressure.Get()).second,
+//   23                          (humidity.Get()).first, (humidity.Get()).second,
+//   24                          (temperature.Get()).first, (temperature.Get()).second ,
+//   25                          (dewpoint.Get()).first, (dewpoint.Get()).second );
         ADD      R0,SP,#+132
         MOV      R1,SP
         MOVS     R2,#+16
@@ -1408,7 +1405,7 @@ _ZN14SensorDirector7GetDataEv:
         ADD      SP,SP,#+148
           CFI CFA R13+12
         POP      {R4,R5,PC}       ;; return
-//   30 }
+//   26 }
           CFI EndBlock cfiBlock21
 
         SECTION `.text`:CODE:REORDER:NOROOT(1)
@@ -3384,17 +3381,17 @@ _ZN6BME28011GetHumidityEv:
         DC32 0
 
         END
-//   31 
-//   32 
+//   27 
+//   28 
 // 
 //    64 bytes in section .bss
 //     4 bytes in section .init_array
-//   691 bytes in section .rodata
+//   695 bytes in section .rodata
 // 2'606 bytes in section .text
 // 
 // 528 bytes of CODE  memory (+ 2'082 bytes shared)
-//  12 bytes of CONST memory (+   679 bytes shared)
+//  12 bytes of CONST memory (+   683 bytes shared)
 //  64 bytes of DATA  memory
 //
 //Errors: none
-//Warnings: 3
+//Warnings: 1
