@@ -17,7 +17,7 @@ public:
   
   void Calculate(float data, ...) override {
     char str[5];
-    sprintf(str, "%s","Pa") ;
+    sprintf(str, "%s","mmHg") ;
     PData.pname.Set(str);
     PData.p = data;
   }

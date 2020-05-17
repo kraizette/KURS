@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         17/May/2020  13:39:41
+# IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM         17/May/2020  14:51:51
 # Copyright 1999-2019 IAR Systems AB.
 #
 #    Cpu mode     =  
@@ -8,7 +8,7 @@
 #    Source file  =
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #    Command line =
-#        -f C:\Users\User\AppData\Local\Temp\EWAB39.tmp
+#        -f C:\Users\User\AppData\Local\Temp\EWB90F.tmp
 #        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 #        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 #        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -1272,26 +1272,42 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
    \                                 In section .text, align 2
    \   __interwork __vfp float BME280::GetTemperature()
    \                     _ZN6BME28014GetTemperatureEv: (+1)
-   \        0x0   0xEEB3 0x0A05      VMOV.F32 S0,#21.0
-   \        0x4   0x4770             BX       LR               ;; return
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0001             MOVS     R1,R0
+   \        0x4   0x6808             LDR      R0,[R1, #+0]
+   \        0x6   0x6809             LDR      R1,[R1, #+0]
+   \        0x8   0x6809             LDR      R1,[R1, #+0]
+   \        0xA   0x6849             LDR      R1,[R1, #+4]
+   \        0xC   0x4788             BLX      R1
+   \        0xE   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .text, align 4
    \   __interwork __vfp float BME280::GetPressure()
    \                     _ZN6BME28011GetPressureEv: (+1)
-   \        0x0   0xED9F 0x0A01      VLDR.W   S0,??GetPressure_0  ;; 0x443d4000
-   \        0x4   0x4770             BX       LR               ;; return
-   \        0x6   0xBF00             Nop      
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0001             MOVS     R1,R0
+   \        0x4   0x6808             LDR      R0,[R1, #+0]
+   \        0x6   0x6809             LDR      R1,[R1, #+0]
+   \        0x8   0x6809             LDR      R1,[R1, #+0]
+   \        0xA   0x6889             LDR      R1,[R1, #+8]
+   \        0xC   0x4788             BLX      R1
+   \        0xE   0xEDDF 0x0A02      VLDR.W   S1,??GetPressure_0  ;; 0x3a449fca
+   \       0x12   0xEE20 0x0A20      VMUL.F32 S0,S0,S1
+   \       0x16   0xBD01             POP      {R0,PC}          ;; return
    \                     ??GetPressure_0:
-   \        0x8   0x443D'4000        DC32     0x443d4000
+   \       0x18   0x3A44'9FCA        DC32     0x3a449fca
 
-   \                                 In section .text, align 4
+   \                                 In section .text, align 2
    \   __interwork __vfp float BME280::GetHumidity()
    \                     _ZN6BME28011GetHumidityEv: (+1)
-   \        0x0   0xED9F 0x0A01      VLDR.W   S0,??GetHumidity_0  ;; 0x42140000
-   \        0x4   0x4770             BX       LR               ;; return
-   \        0x6   0xBF00             Nop      
-   \                     ??GetHumidity_0:
-   \        0x8   0x4214'0000        DC32     0x42140000
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x0001             MOVS     R1,R0
+   \        0x4   0x6808             LDR      R0,[R1, #+0]
+   \        0x6   0x6809             LDR      R1,[R1, #+0]
+   \        0x8   0x6809             LDR      R1,[R1, #+0]
+   \        0xA   0x68C9             LDR      R1,[R1, #+12]
+   \        0xC   0x4788             BLX      R1
+   \        0xE   0xBD01             POP      {R0,PC}          ;; return
 
    \                                 In section .rodata, align 4
    \   __absolute Fahrenheit const SensorDirector::fahrenheit
@@ -1532,9 +1548,12 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
          8   -> SusuString<5U>::SusuString()
        8   <unnamed>::<_ZN40_INTERNAL_18_SensorDirector_cpp_9f303484Ut_C1Ev>()
          8   -> SusuString<5U>::SusuString()
-       0   BME280::GetHumidity()
-       0   BME280::GetPressure()
-       0   BME280::GetTemperature()
+       8   BME280::GetHumidity()
+         8   -- Indirect call
+       8   BME280::GetPressure()
+         8   -- Indirect call
+       8   BME280::GetTemperature()
+         8   -- Indirect call
       24   Celsius::GetTemperature(float) const
         24   -> SusuString<5U>::Set<5U>(char const (&)[5])
         24   -> SusuString<5U>::SusuString()
@@ -1762,9 +1781,9 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
        4  ??DataTable2_2
        4  ??DataTable2_3
        4  ??DataTable2_4
-      12  BME280::GetHumidity()
-      12  BME280::GetPressure()
-       6  BME280::GetTemperature()
+      16  BME280::GetHumidity()
+      28  BME280::GetPressure()
+      16  BME280::GetTemperature()
       36  Celsius::GetTemperature(float) const
       16  DPData
      148  DewPoint::Calculate(float, ...)
@@ -1853,16 +1872,16 @@ D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDire
       52  std::tuple<float, SusuString<5U>, float>::tuple<float, SusuString<5U>, float, void **>(float &&, SusuString<5U> &&, float &&)
        8  std::tuple<float>::subobject tuple(float &&)
       22  std::tuple<float>::tuple<float, void **>(float &&)
-     656  -- Other
+     680  -- Other
 
  
     64 bytes in section .bss
      4 bytes in section .init_array
-   667 bytes in section .rodata
- 2'576 bytes in section .text
+   691 bytes in section .rodata
+ 2'606 bytes in section .text
  
- 528 bytes of CODE  memory (+ 2'052 bytes shared)
-  12 bytes of CONST memory (+   655 bytes shared)
+ 528 bytes of CODE  memory (+ 2'082 bytes shared)
+  12 bytes of CONST memory (+   679 bytes shared)
   64 bytes of DATA  memory
 
 Errors: none

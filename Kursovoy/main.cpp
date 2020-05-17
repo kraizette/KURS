@@ -149,17 +149,11 @@ TaskButton myTaskButton(mySensorDirector);
 
 int main()
 {
-  auto res = BME280Driver.ReadReg8U( 0xF4 );
-  std::cout << std::hex << std::int32_t(res) << std::endl;
-  BME280Driver.WriteReg(0xF4,0x11);
-  res = BME280Driver.ReadReg8U( 0xF4 );
-  std::cout << std::hex << std::int32_t(res) << std::endl;
-  
-  //using namespace OsWrapper;
- //Rtos::CreateThread(myDisplayDirector, "Display", ThreadPriority::normal);
- //Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
-  //Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);
-  //Rtos::CreateThread(myBluetoothDirector, "BluetoothDirector", ThreadPriority::normal) ;
-  //Rtos::Start() ;
- // return 0;
+  using namespace OsWrapper;
+ Rtos::CreateThread(myDisplayDirector, "Display", ThreadPriority::normal);
+ Rtos::CreateThread(mySensorDirector, "SensorDirector", ThreadPriority::normal);
+ Rtos::CreateThread(myTaskButton, "Button", ThreadPriority::normal);
+ Rtos::CreateThread(myBluetoothDirector, "BluetoothDirector", ThreadPriority::normal) ;
+ Rtos::Start() ;
+ return 0;
 };

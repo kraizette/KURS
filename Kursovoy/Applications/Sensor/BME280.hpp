@@ -10,17 +10,18 @@ private:
   
 public:
   BME280(ISensorDriver& sensordriver): mySensorDriver(sensordriver) {
+    mySensorDriver.Init();
   }
   
   float GetTemperature() {
-    return 21.0F;
+    return mySensorDriver.ReadTemperature();
   }
   
   float GetPressure() {
-    return 757.0F;
+    return mySensorDriver.ReadPressure()* 0.000750061683f;
   }
   
    float GetHumidity() {
-    return 37.0F;
+    return mySensorDriver.ReadHumidity();
   }
 } ;

@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        17/May/2020  13:39:41
+// IAR ANSI C/C++ Compiler V8.40.2.214/W32 for ARM        17/May/2020  14:51:51
 // Copyright 1999-2019 IAR Systems AB.
 //
 //    Cpu mode     =  
@@ -8,7 +8,7 @@
 //    Source file  =
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //    Command line =
-//        -f C:\Users\User\AppData\Local\Temp\EWAB39.tmp
+//        -f C:\Users\User\AppData\Local\Temp\EWB90F.tmp
 //        (D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Applications\Sensor\SensorDirector.cpp
 //        -lC D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -lA
 //        D:\kraizette\STD\VII-VIII\POIP\KURS\KURS\Kursovoy\Debug\List -o
@@ -207,6 +207,7 @@
         PUBLIC _ZTI10Fahrenheit
         PUBLIC _ZTI11ISubscriber
         PUBLIC _ZTI11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE
+        PUBLIC _ZTI13ISensorDriver
         PUBLIC _ZTI14SensorDirector
         PUBLIC _ZTI6IUnits
         PUBLIC _ZTI6Kelvin
@@ -222,6 +223,7 @@
         PUBLIC _ZTS10Fahrenheit
         PUBLIC _ZTS11ISubscriber
         PUBLIC _ZTS11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE
+        PUBLIC _ZTS13ISensorDriver
         PUBLIC _ZTS14SensorDirector
         PUBLIC _ZTS6IUnits
         PUBLIC _ZTS6Kelvin
@@ -611,6 +613,14 @@ _ZZN8DewPoint9CalculateEfzEs_0:
         DC8 "C"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZTI13ISensorDriver
+        DATA
+// __absolute __class_type_info const <Typeinfo for ISensorDriver>
+_ZTI13ISensorDriver:
+        DATA32
+        DC32 _ZTVN10__cxxabiv117__class_type_infoE + 0x8, _ZTS13ISensorDriver
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTV11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE
         DATA
 // __absolute void (*const Temperature<SensorDirector::fahrenheit, SensorDirector::kelvin, SensorDirector::celsius>::__vtbl[4])()
@@ -832,6 +842,14 @@ _ZTS8DewPoint:
         DC8 "8DewPoint"
         DATA16
         DC8 0, 0
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+        SECTION_GROUP _ZTS13ISensorDriver
+        DATA
+// __absolute char const <Typeinfo name for ISensorDriver>[16]
+_ZTS13ISensorDriver:
+        DATA8
+        DC8 "13ISensorDriver"
 
         SECTION `.rodata`:CONST:REORDER:NOROOT(2)
         SECTION_GROUP _ZTS11TemperatureIJL_ZN14SensorDirector10fahrenheitEEL_ZNS0_6kelvinEEL_ZNS0_7celsiusEEEE
@@ -3068,46 +3086,66 @@ _ZN8DewPoint9CalculateEfz:
         SECTION_GROUP _ZN6BME28014GetTemperatureEv
           CFI Block cfiBlock82 Using cfiCommon0
           CFI Function _ZN6BME28014GetTemperatureEv
-          CFI NoCalls
         THUMB
 // __interwork __vfp float BME280::GetTemperature()
 _ZN6BME28014GetTemperatureEv:
-        VMOV.F32 S0,#21.0
-        BX       LR               ;; return
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R1,R0
+        LDR      R0,[R1, #+0]
+        LDR      R1,[R1, #+0]
+        LDR      R1,[R1, #+0]
+        LDR      R1,[R1, #+4]
+          CFI FunCall
+        BLX      R1
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock82
 
         SECTION `.text`:CODE:REORDER:NOROOT(2)
         SECTION_GROUP _ZN6BME28011GetPressureEv
           CFI Block cfiBlock83 Using cfiCommon0
           CFI Function _ZN6BME28011GetPressureEv
-          CFI NoCalls
         THUMB
 // __interwork __vfp float BME280::GetPressure()
 _ZN6BME28011GetPressureEv:
-        VLDR.W   S0,??GetPressure_0  ;; 0x443d4000
-        BX       LR               ;; return
-        Nop      
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R1,R0
+        LDR      R0,[R1, #+0]
+        LDR      R1,[R1, #+0]
+        LDR      R1,[R1, #+0]
+        LDR      R1,[R1, #+8]
+          CFI FunCall
+        BLX      R1
+        VLDR.W   S1,??GetPressure_0  ;; 0x3a449fca
+        VMUL.F32 S0,S0,S1
+        POP      {R0,PC}          ;; return
         DATA
 ??GetPressure_0:
         DATA32
-        DC32     0x443d4000
+        DC32     0x3a449fca
           CFI EndBlock cfiBlock83
 
-        SECTION `.text`:CODE:REORDER:NOROOT(2)
+        SECTION `.text`:CODE:REORDER:NOROOT(1)
         SECTION_GROUP _ZN6BME28011GetHumidityEv
           CFI Block cfiBlock84 Using cfiCommon0
           CFI Function _ZN6BME28011GetHumidityEv
-          CFI NoCalls
         THUMB
 // __interwork __vfp float BME280::GetHumidity()
 _ZN6BME28011GetHumidityEv:
-        VLDR.W   S0,??GetHumidity_0  ;; 0x42140000
-        BX       LR               ;; return
-        Nop      
-        DATA
-??GetHumidity_0:
-        DATA32
-        DC32     0x42140000
+        PUSH     {R7,LR}
+          CFI R14 Frame(CFA, -4)
+          CFI CFA R13+8
+        MOVS     R1,R0
+        LDR      R0,[R1, #+0]
+        LDR      R1,[R1, #+0]
+        LDR      R1,[R1, #+0]
+        LDR      R1,[R1, #+12]
+          CFI FunCall
+        BLX      R1
+        POP      {R0,PC}          ;; return
           CFI EndBlock cfiBlock84
 
         SECTION `.iar_vfe_vtableinfo_ZTV6Kelvin`:DATA:NOALLOC:NOROOT(2)
@@ -3298,6 +3336,48 @@ _ZN6BME28011GetHumidityEv:
         DC32    0
         DC32    0
 
+        SECTION `.iar_vfe_vcallinfo_ZN6BME28014GetTemperatureEv`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        SECTION_GROUP _ZN6BME28014GetTemperatureEv
+        DATA
+        DC32    _ZN6BME28014GetTemperatureEv
+        DC32    0
+        DC32    0
+        DC32    1
+        DC32    _ZTI13ISensorDriver
+        DC32    1
+        DC32    2
+        DC32    0
+        DC32    0
+
+        SECTION `.iar_vfe_vcallinfo_ZN6BME28011GetPressureEv`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        SECTION_GROUP _ZN6BME28011GetPressureEv
+        DATA
+        DC32    _ZN6BME28011GetPressureEv
+        DC32    0
+        DC32    0
+        DC32    1
+        DC32    _ZTI13ISensorDriver
+        DC32    1
+        DC32    4
+        DC32    0
+        DC32    0
+
+        SECTION `.iar_vfe_vcallinfo_ZN6BME28011GetHumidityEv`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        SECTION_GROUP _ZN6BME28011GetHumidityEv
+        DATA
+        DC32    _ZN6BME28011GetHumidityEv
+        DC32    0
+        DC32    0
+        DC32    1
+        DC32    _ZTI13ISensorDriver
+        DC32    1
+        DC32    8
+        DC32    0
+        DC32    0
+
         SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
         SECTION_TYPE SHT_PROGBITS, 0
         DATA
@@ -3309,11 +3389,11 @@ _ZN6BME28011GetHumidityEv:
 // 
 //    64 bytes in section .bss
 //     4 bytes in section .init_array
-//   667 bytes in section .rodata
-// 2'576 bytes in section .text
+//   691 bytes in section .rodata
+// 2'606 bytes in section .text
 // 
-// 528 bytes of CODE  memory (+ 2'052 bytes shared)
-//  12 bytes of CONST memory (+   655 bytes shared)
+// 528 bytes of CODE  memory (+ 2'082 bytes shared)
+//  12 bytes of CONST memory (+   679 bytes shared)
 //  64 bytes of DATA  memory
 //
 //Errors: none

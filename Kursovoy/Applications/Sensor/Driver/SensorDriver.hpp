@@ -185,15 +185,8 @@ public :
     uint32_t press_raw, pres_int;
     int64_t val1, val2, p;
     ReadTemperature();
-    int8_t buf [3] ;
-    assert(buf != nullptr) ;
-    uint8_t RegAddr = REGISTER_PRESSUREDATA;
-    buf[0] = ReadReg8S(RegAddr);
-    RegAddr = RegAddr + 0x01;
-    buf[1] = ReadReg8S(RegAddr);
-    RegAddr = RegAddr + 0x01;
-    buf[2] = ReadReg8S(RegAddr);
-    press_raw = *reinterpret_cast<int16_t*>(buf) ;
+    press_raw = ((ReadReg8U(REGISTER_PRESSUREDATA) << 16U) | (ReadReg8U(REGISTER_PRESSUREDATA + 0x01) << 8U) | (ReadReg8U(REGISTER_PRESSUREDATA + 0x02))) & 0x00FFFFFF;
+    press_raw >>= 4;
     val1 = ((int64_t) temper_int) - 128000;
     val2 = val1 * val1 * (int64_t)CalibData.dig_P6;
     val2 = val2 + ((val1 * (int64_t)CalibData.dig_P5) << 17);
@@ -219,13 +212,7 @@ public :
     int16_t hum_raw;
     int32_t hum_raw_sign, v_x1_u32r;
     ReadTemperature();
-    int8_t buf [2] ;
-    assert(buf != nullptr) ;// must be done first to get t_fine
-    uint8_t RegAddr = REGISTER_PRESSUREDATA;
-    buf[0] = ReadReg8S(RegAddr);
-    RegAddr = RegAddr + 0x01;
-    buf[1] = ReadReg8S(RegAddr);
-    hum_raw = *reinterpret_cast<int16_t*>(buf) ;
+    hum_raw = ((ReadReg8U(REGISTER_HUMIDDATA) << 8U) | (ReadReg8U(REGISTER_HUMIDDATA + 0x01)));
     hum_raw_sign = ((int32_t)hum_raw)&0x0000FFFF;
     v_x1_u32r = (temper_int - ((int32_t)76800));
     v_x1_u32r = (((((hum_raw_sign << 14) - (((int32_t)CalibData.dig_H4) << 20) -
@@ -342,8 +329,7 @@ public :
     int8_t rslt = 0; 
     CS :: Set() ;
     CS :: Reset() ;
-    SPI :: WriteByteU(reg_addr);
-    SPI :: WriteByteU(reg_data);
+    SPI :: WriteByteU(reg_addr & 127);
     SPI :: WriteByteU(reg_data);
     CS :: Set() ;
     return rslt;
